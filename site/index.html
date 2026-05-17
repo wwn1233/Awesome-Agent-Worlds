@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Awesome Agent Worlds</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="#home">Awesome Agent Worlds</a>
+        <nav class="navLinks" aria-label="Primary navigation">
+          <a href="#home" data-i18n="navHome">首页</a>
+          <a href="#explorer" data-i18n="navExplorer">资源索引</a>
+          <a href="#watchlist" data-i18n="navWatchlist">热点论文</a>
+        </nav>
+        <div class="languageSwitch" role="group" aria-label="Language">
+          <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </header>
+
+      <section id="home" class="home" aria-label="Homepage">
+        <div class="homeCopy">
+          <div>
+            <p class="eyebrow" data-i18n="heroEyebrow">Awesome Agent Worlds</p>
+            <h1 data-i18n="heroTitle">可验证智能体世界索引</h1>
+          </div>
+          <p class="heroLead" data-i18n="heroLead">面向专业读者的 LLM/VLM 智能体环境、验证器、轨迹、安全评测与生产信号汇总库。</p>
+          <div class="homeActions">
+            <a href="#explorer" data-i18n="primaryAction">浏览索引</a>
+            <a href="#watchlist" data-i18n="secondaryAction">热点论文</a>
+          </div>
+          <div class="homeFacts" aria-label="Homepage metrics">
+            <div><b id="homeWorlds">0</b><span data-i18n="homeWorlds">世界型资源</span></div>
+            <div><b id="homeBenchmarks">0</b><span data-i18n="homeBenchmarks">评测基准</span></div>
+            <div><b id="homeProduction">0</b><span data-i18n="homeProduction">生产级资源</span></div>
+            <div><b id="homeCategories">0</b><span data-i18n="homeCategories">分类方向</span></div>
+          </div>
+        </div>
+        <aside class="homeRail" aria-label="Project position">
+          <div class="thesisBox">
+            <p class="eyebrow" data-i18n="thesisLabel">核心判断</p>
+            <p data-i18n="thesisText">智能体的反馈瓶颈不只是更多聊天语料，而是能产出可复用轨迹的可验证世界。</p>
+          </div>
+          <div class="homeCards">
+            <article class="homeCard">
+              <p class="eyebrow" data-i18n="homeKickerA">覆盖范围</p>
+              <h3 data-i18n="homeTitleA">精选世界与基准</h3>
+              <p data-i18n="homeTextA">覆盖 Web、GUI、移动端、代码、工具、研究、具身、生成世界，以及安全评测环境，并保留结构化证据。</p>
+            </article>
+            <article class="homeCard">
+              <p class="eyebrow" data-i18n="homeKickerB">评测方法</p>
+              <h3 data-i18n="homeTitleB">验证器优先的分类体系</h3>
+              <p data-i18n="homeTextB">每个资源按运行环境、奖励、重置、轨迹、沙箱、可训练性和来源可信度进行评分。</p>
+            </article>
+            <article class="homeCard">
+              <p class="eyebrow" data-i18n="homeKickerC">研究方向</p>
+              <h3 data-i18n="homeTitleC">智能体安全与后训练</h3>
+              <p data-i18n="homeTextC">重点追踪 phone-use safety、computer-use safety、公开 rollout 和环境反馈循环。</p>
+            </article>
+          </div>
+        </aside>
+      </section>
+
+      <section class="worldMap" aria-label="World surface map">
+        <div class="worldMapHead">
+          <p class="eyebrow" data-i18n="mapEyebrow">世界表面地图</p>
+          <h2 data-i18n="mapTitle">从交互表面进入智能体世界</h2>
+          <p data-i18n="mapText">先按 agent 进入的世界表面定位，再用验证器、轨迹、沙箱和训练价值做筛选。</p>
+        </div>
+        <div class="worldMapGrid">
+          <a href="#explorer" class="surface web"><b>Web</b><span>browser / DOM / sites</span></a>
+          <a href="#explorer" class="surface gui"><b>GUI</b><span>desktop / screen / apps</span></a>
+          <a href="#explorer" class="surface mobile"><b>Mobile</b><span>phone / apps / privacy</span></a>
+          <a href="#explorer" class="surface code"><b>Code</b><span>repos / tests / terminals</span></a>
+          <a href="#explorer" class="surface api"><b>API</b><span>tools / business state</span></a>
+          <a href="#explorer" class="surface research"><b>Research</b><span>papers / analysis / evidence</span></a>
+          <a href="#explorer" class="surface embodied"><b>Embodied</b><span>robots / games / 3D</span></a>
+          <a href="#explorer" class="surface training"><b>Training</b><span>rollouts / rewards / RL</span></a>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Index metrics">
+        <div><b id="metricResources">0</b><span data-i18n="metricResources">内容资源</span></div>
+        <div><b id="metricRunnable">0</b><span data-i18n="metricRunnable">公开可运行</span></div>
+        <div><b id="metricTrajectories">0</b><span data-i18n="metricTrajectories">轨迹资产</span></div>
+        <div><b id="metricSourceCheck">0</b><span data-i18n="metricSourceCheck">来源待确认</span></div>
+        <div><b id="metricHot">0</b><span data-i18n="metricHot">热点论文</span></div>
+      </section>
+
+      <section id="watchlist" class="hotline" aria-label="Hot papers">
+        <div class="hotHead">
+          <div>
+            <p class="eyebrow" data-i18n="hotEyebrow">每周 arXiv 监控</p>
+            <h2 data-i18n="hotTitle">每周热点论文候选</h2>
+          </div>
+        </div>
+        <div id="hotPapers" class="hotGrid"></div>
+      </section>
+
+      <section id="explorer" class="workbench" aria-label="Resource explorer">
+        <aside class="filters">
+          <label>
+            <span data-i18n="filterSearch">搜索</span>
+            <input id="searchInput" type="search" placeholder="OSWorld、验证器、桌面环境" data-i18n-placeholder="searchPlaceholder">
+          </label>
+          <label>
+            <span data-i18n="filterPath">阅读路径</span>
+            <select id="pathSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="filterKind">资源类型</span>
+            <select id="kindSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="filterCategory">分类</span>
+            <select id="categorySelect"></select>
+          </label>
+          <label>
+            <span data-i18n="filterReadiness">成熟度</span>
+            <select id="labelSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="filterSource">来源</span>
+            <select id="sourceSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="filterTrajectory">轨迹</span>
+            <select id="trajectorySelect"></select>
+          </label>
+          <label>
+            <span data-i18n="filterReset">重置</span>
+            <select id="resetSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="filterSort">排序</span>
+            <select id="sortSelect"></select>
+          </label>
+          <label class="check">
+            <input id="repoOnly" type="checkbox">
+            <span data-i18n="repoOnly">仅看公开仓库</span>
+          </label>
+          <button id="resetButton" type="button" data-i18n="reset">重置筛选</button>
+        </aside>
+
+        <section class="results" aria-live="polite">
+          <div class="resultTop">
+            <div>
+              <p class="eyebrow" data-i18n="liveSlice">当前筛选</p>
+              <h2><span id="resultCount">0</span> <span data-i18n="resources">项资源</span></h2>
+            </div>
+            <div class="legend">
+              <span><i class="dot prod"></i><span data-i18n="legendProd">生产级</span></span>
+              <span><i class="dot train"></i><span data-i18n="legendTrain">训练候选</span></span>
+              <span><i class="dot eval"></i><span data-i18n="legendEval">产品或评测信号</span></span>
+            </div>
+          </div>
+          <div id="categoryBars" class="bars"></div>
+          <div class="tableWrap">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="thResource">资源</th>
+                  <th data-i18n="thKind">类型</th>
+                  <th data-i18n="thReadiness">成熟度</th>
+                  <th data-i18n="thEvidence">证据</th>
+                  <th data-i18n="thReward">奖励 / 验证器</th>
+                  <th data-i18n="thFlags">标签</th>
+                </tr>
+              </thead>
+              <tbody id="resourceRows"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="data.js"></script>
+    <script src="i18n.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
