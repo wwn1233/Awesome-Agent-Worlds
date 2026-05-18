@@ -31,10 +31,10 @@
       metricResources: "resources",
       metricRunnable: "public runnable",
       metricTrajectories: "trajectory assets",
-      metricSourceCheck: "source checks",
+      metricSourceCheck: "source check",
       metricHot: "hot papers",
-      hotEyebrow: "Weekly arXiv watchlist",
-      hotTitle: "Weekly hot-paper candidates",
+      hotEyebrow: "Weekly arXiv feed",
+      hotTitle: "Weekly hot-paper feed",
       explorerLabel: "Resource explorer",
       filterSearch: "Search",
       filterPath: "Reader path",
@@ -70,7 +70,8 @@
       allResetModes: "All reset modes",
       sortBy: "Sort by",
       score: "score",
-      watchlistCandidate: "candidate"
+      watchlistCandidate: "watchlist candidate",
+      watchlist: { indexed: "indexed", monitor: "monitor", watchlist: "watchlist" }
     },
     zh: {
       documentTitle: "Awesome Agent Worlds｜智能体世界索引",
@@ -105,8 +106,8 @@
       metricTrajectories: "轨迹资产",
       metricSourceCheck: "来源待确认",
       metricHot: "热点论文",
-      hotEyebrow: "每周 arXiv 监控",
-      hotTitle: "每周热点论文候选",
+      hotEyebrow: "每周 arXiv feed",
+      hotTitle: "每周热点论文 feed",
       explorerLabel: "资源浏览器",
       filterSearch: "搜索",
       filterPath: "阅读路径",
@@ -142,7 +143,7 @@
       allResetModes: "全部重置方式",
       sortBy: "排序方式",
       score: "评分",
-      watchlistCandidate: "候选"
+      watchlistCandidate: "候选论文"
     }
   };
 
@@ -221,9 +222,9 @@
       score: "成熟度评分",
       newest: "最新年份",
       name: "名称",
-      priority: "编排优先级"
+      priority: "策展优先级"
     },
-    watchlist: { candidate: "候选", indexed: "已入库" },
+    watchlist: { indexed: "已入库", monitor: "监测", watchlist: "观察" },
     flag: {
       "agent-infrastructure": "智能体基础设施",
       benchmark: "评测基准",

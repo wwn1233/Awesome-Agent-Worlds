@@ -1,0 +1,5184 @@
+---
+generated_at: '2026-05-17T11:59:18Z'
+source: arxiv
+source_url: https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Acs.RO+OR+cat%3Acs.SE+OR+cat%3Acs.HC%29+AND+%28all%3A%22agent+world%22+OR+all%3A%22computer+use%22+OR+all%3A%22computer-use+agent%22+OR+all%3A%22computer-use+agents%22+OR+all%3A%22GUI+agent%22+OR+all%3A%22web+agent%22+OR+all%3A%22browser+agent%22+OR+all%3A%22mobile+agent%22+OR+all%3A%22phone-use+agent%22+OR+all%3A%22phone-use+agents%22+OR+all%3A%22phone+use+agents%22+OR+all%3A%22tool+agent%22+OR+all%3A%22software+engineering+agent%22+OR+all%3A%22embodied+agent%22+OR+all%3A%22interactive+environment%22+OR+all%3A%22agent+benchmark%22+OR+all%3A%22verifiable+reward%22+OR+all%3A%22agent+safety%22+OR+all%3A%22mobile+privacy%22+OR+all%3A%22privacy+compliance%22+OR+all%3A%22phone-use+safety%22+OR+all%3A%22phone+safety%22+OR+all%3A%22post-training%22+OR+all%3A%22environment+synthesis%22+OR+all%3A%22environment+generation%22+OR+all%3A%22real-world+environment%22+OR+all%3A%22tool+ecosystem%22+OR+all%3A%22mcp+benchmark%22+OR+all%3A%22mcp-gui%22+OR+all%3A%22skill+environment%22+OR+all%3A%22mcp+server%22+OR+all%3A%22mcp+servers%22+OR+all%3A%22mcp+tool%22+OR+all%3A%22mcp+tools%22+OR+all%3A%22tool+routing%22+OR+all%3A%22tool+composition%22+OR+all%3A%22large-scale+mcp%22+OR+all%3A%22tool+poisoning%22+OR+all%3A%22mcp+safety%22+OR+all%3A%22agentic+world+modeling%22+OR+all%3A%22generative+sketch+world+model%22+OR+all%3A%22self-evolving+agent%22+OR+all%3A%22agent+training+arena%22+OR+all%3A%22world+model%22+OR+all%3A%22synthetic+environment%22+OR+all%3A%22tool-use+environment%22+OR+all%3A%22stateful+tool%22+OR+all%3A%22language+world+model%22+OR+all%3A%22language+environment+simulation%22+OR+all%3A%22environment+simulation%22+OR+all%3A%22professional+task%22+OR+all%3A%22occupational+task%22+OR+all%3A%22hybrid+verifier%22+OR+all%3A%22process+reward%22+OR+all%3A%22gui+world+model%22+OR+all%3A%22mobile+world+model%22+OR+all%3A%22state+transition%22+OR+all%3A%22mcpworld%22+OR+all%3A%22mobileworld%22+OR+all%3A%22digiworld%22+OR+all%3A%22cuaharm%22+OR+all%3A%22riosworld%22+OR+all%3A%22phone-harm%22+OR+all%3A%22computer-use+safety%22+OR+all%3A%22mcp+security%22+OR+all%3A%22mcp-safetybench%22+OR+all%3A%22mcpsecbench%22+OR+all%3A%22agentgym-rl%22+OR+all%3A%22agent-rlvr%22+OR+all%3A%22agent+rlvr%22+OR+all%3A%22multi-turn+reinforcement+learning%22+OR+all%3A%22mobile+task+world%22+OR+all%3A%22mcp-cosmos%22+OR+all%3A%22byowm%22+OR+all%3A%22tool+decathlon%22+OR+all%3A%22toolathlon%22+OR+all%3A%22toucan%22+OR+all%3A%22mcp-agentbench%22+OR+all%3A%22mcp-mediated%22+OR+all%3A%22tool-agentic%22+OR+all%3A%22tool-agentic+data%22+OR+all%3A%22mcp+environments%22+OR+all%3A%22execution-based+evaluation%22+OR+all%3A%22long-horizon+task+execution%22%29&start=0&max_results=320&sortBy=submittedDate&sortOrder=descending
+source_urls:
+- https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Acs.RO+OR+cat%3Acs.SE+OR+cat%3Acs.HC%29+AND+%28all%3A%22agent+world%22+OR+all%3A%22computer+use%22+OR+all%3A%22computer-use+agent%22+OR+all%3A%22computer-use+agents%22+OR+all%3A%22GUI+agent%22+OR+all%3A%22web+agent%22+OR+all%3A%22browser+agent%22+OR+all%3A%22mobile+agent%22+OR+all%3A%22phone-use+agent%22+OR+all%3A%22phone-use+agents%22+OR+all%3A%22phone+use+agents%22+OR+all%3A%22tool+agent%22+OR+all%3A%22software+engineering+agent%22+OR+all%3A%22embodied+agent%22+OR+all%3A%22interactive+environment%22+OR+all%3A%22agent+benchmark%22+OR+all%3A%22verifiable+reward%22+OR+all%3A%22agent+safety%22+OR+all%3A%22mobile+privacy%22+OR+all%3A%22privacy+compliance%22+OR+all%3A%22phone-use+safety%22+OR+all%3A%22phone+safety%22+OR+all%3A%22post-training%22+OR+all%3A%22environment+synthesis%22+OR+all%3A%22environment+generation%22+OR+all%3A%22real-world+environment%22+OR+all%3A%22tool+ecosystem%22+OR+all%3A%22mcp+benchmark%22+OR+all%3A%22mcp-gui%22+OR+all%3A%22skill+environment%22+OR+all%3A%22mcp+server%22+OR+all%3A%22mcp+servers%22+OR+all%3A%22mcp+tool%22+OR+all%3A%22mcp+tools%22+OR+all%3A%22tool+routing%22+OR+all%3A%22tool+composition%22+OR+all%3A%22large-scale+mcp%22+OR+all%3A%22tool+poisoning%22+OR+all%3A%22mcp+safety%22+OR+all%3A%22agentic+world+modeling%22+OR+all%3A%22generative+sketch+world+model%22+OR+all%3A%22self-evolving+agent%22+OR+all%3A%22agent+training+arena%22+OR+all%3A%22world+model%22+OR+all%3A%22synthetic+environment%22+OR+all%3A%22tool-use+environment%22+OR+all%3A%22stateful+tool%22+OR+all%3A%22language+world+model%22+OR+all%3A%22language+environment+simulation%22+OR+all%3A%22environment+simulation%22+OR+all%3A%22professional+task%22+OR+all%3A%22occupational+task%22+OR+all%3A%22hybrid+verifier%22+OR+all%3A%22process+reward%22+OR+all%3A%22gui+world+model%22+OR+all%3A%22mobile+world+model%22+OR+all%3A%22state+transition%22+OR+all%3A%22mcpworld%22+OR+all%3A%22mobileworld%22+OR+all%3A%22digiworld%22+OR+all%3A%22cuaharm%22+OR+all%3A%22riosworld%22+OR+all%3A%22phone-harm%22+OR+all%3A%22computer-use+safety%22+OR+all%3A%22mcp+security%22+OR+all%3A%22mcp-safetybench%22+OR+all%3A%22mcpsecbench%22+OR+all%3A%22agentgym-rl%22+OR+all%3A%22agent-rlvr%22+OR+all%3A%22agent+rlvr%22+OR+all%3A%22multi-turn+reinforcement+learning%22+OR+all%3A%22mobile+task+world%22+OR+all%3A%22mcp-cosmos%22+OR+all%3A%22byowm%22+OR+all%3A%22tool+decathlon%22+OR+all%3A%22toolathlon%22+OR+all%3A%22toucan%22+OR+all%3A%22mcp-agentbench%22+OR+all%3A%22mcp-mediated%22+OR+all%3A%22tool-agentic%22+OR+all%3A%22tool-agentic+data%22+OR+all%3A%22mcp+environments%22+OR+all%3A%22execution-based+evaluation%22+OR+all%3A%22long-horizon+task+execution%22%29&start=0&max_results=320&sortBy=submittedDate&sortOrder=descending
+- https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Acs.RO+OR+cat%3Acs.SE+OR+cat%3Acs.HC%29+AND+%28all%3A%22phone-use+agents%22+OR+all%3A%22phone-use+safety%22+OR+all%3A%22phone+safety%22+OR+all%3A%22safety-critical+moments%22+OR+all%3A%22safe+unsafe+incapable%22+OR+all%3A%22simply+incapable%22+OR+all%3A%22computer-use+agents%22+OR+all%3A%22agent+world%22+OR+all%3A%22environment+synthesis%22+OR+all%3A%22environment+generation%22+OR+all%3A%22self-evolving+training%22+OR+all%3A%22agent+training+arena%22+OR+all%3A%22mcp+benchmark%22+OR+all%3A%22skill+environment%22+OR+all%3A%22mcp+server%22+OR+all%3A%22mcp+tools%22+OR+all%3A%22multi-server+routing%22+OR+all%3A%22tool+composition%22+OR+all%3A%22mcp+atlas%22+OR+all%3A%22tool+poisoning%22+OR+all%3A%22tool-use+environment%22+OR+all%3A%22agent+world+model%22+OR+all%3A%22language+world+model%22+OR+all%3A%22environment+simulation%22+OR+all%3A%22hybrid+verifier%22+OR+all%3A%22mobile+world+model%22+OR+all%3A%22gui+world+model%22+OR+all%3A%22professional+task%22+OR+all%3A%22mcpworld%22+OR+all%3A%22mobileworld%22+OR+all%3A%22digiworld%22+OR+all%3A%22cuaharm%22+OR+all%3A%22riosworld%22+OR+all%3A%22phone-harm%22+OR+all%3A%22computer-use+safety%22+OR+all%3A%22mcp+security%22+OR+all%3A%22mcp-safetybench%22+OR+all%3A%22mcpsecbench%22+OR+all%3A%22agentgym-rl%22+OR+all%3A%22agent-rlvr%22+OR+all%3A%22agent+rlvr%22+OR+all%3A%22mcp-cosmos%22+OR+all%3A%22tool+decathlon%22+OR+all%3A%22toolathlon%22+OR+all%3A%22toucan%22+OR+all%3A%22mcp-agentbench%22+OR+all%3A%22tool-agentic%22+OR+all%3A%22mcp+environments%22%29&start=0&max_results=120&sortBy=submittedDate&sortOrder=descending
+query:
+  days: 90
+  max_results: 320
+  focused_max_results: 120
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.CV
+  - cs.LG
+  - cs.RO
+  - cs.SE
+  - cs.HC
+  terms:
+  - agent world
+  - computer use
+  - computer-use agent
+  - computer-use agents
+  - GUI agent
+  - web agent
+  - browser agent
+  - mobile agent
+  - phone-use agent
+  - phone-use agents
+  - phone use agents
+  - tool agent
+  - software engineering agent
+  - embodied agent
+  - interactive environment
+  - agent benchmark
+  - verifiable reward
+  - agent safety
+  - mobile privacy
+  - privacy compliance
+  - phone-use safety
+  - phone safety
+  - post-training
+  - environment synthesis
+  - environment generation
+  - real-world environment
+  - tool ecosystem
+  - mcp benchmark
+  - mcp-gui
+  - skill environment
+  - mcp server
+  - mcp servers
+  - mcp tool
+  - mcp tools
+  - tool routing
+  - tool composition
+  - large-scale mcp
+  - tool poisoning
+  - mcp safety
+  - agentic world modeling
+  - generative sketch world model
+  - self-evolving agent
+  - agent training arena
+  - world model
+  - synthetic environment
+  - tool-use environment
+  - stateful tool
+  - language world model
+  - language environment simulation
+  - environment simulation
+  - professional task
+  - occupational task
+  - hybrid verifier
+  - process reward
+  - gui world model
+  - mobile world model
+  - state transition
+  - mcpworld
+  - mobileworld
+  - digiworld
+  - cuaharm
+  - riosworld
+  - phone-harm
+  - computer-use safety
+  - mcp security
+  - mcp-safetybench
+  - mcpsecbench
+  - agentgym-rl
+  - agent-rlvr
+  - agent rlvr
+  - multi-turn reinforcement learning
+  - mobile task world
+  - mcp-cosmos
+  - byowm
+  - tool decathlon
+  - toolathlon
+  - toucan
+  - mcp-agentbench
+  - mcp-mediated
+  - tool-agentic
+  - tool-agentic data
+  - mcp environments
+  - execution-based evaluation
+  - long-horizon task execution
+  focused_terms:
+  - phone-use agents
+  - phone-use safety
+  - phone safety
+  - safety-critical moments
+  - safe unsafe incapable
+  - simply incapable
+  - computer-use agents
+  - agent world
+  - environment synthesis
+  - environment generation
+  - self-evolving training
+  - agent training arena
+  - mcp benchmark
+  - skill environment
+  - mcp server
+  - mcp tools
+  - multi-server routing
+  - tool composition
+  - mcp atlas
+  - tool poisoning
+  - tool-use environment
+  - agent world model
+  - language world model
+  - environment simulation
+  - hybrid verifier
+  - mobile world model
+  - gui world model
+  - professional task
+  - mcpworld
+  - mobileworld
+  - digiworld
+  - cuaharm
+  - riosworld
+  - phone-harm
+  - computer-use safety
+  - mcp security
+  - mcp-safetybench
+  - mcpsecbench
+  - agentgym-rl
+  - agent-rlvr
+  - agent rlvr
+  - mcp-cosmos
+  - tool decathlon
+  - toolathlon
+  - toucan
+  - mcp-agentbench
+  - tool-agentic
+  - mcp environments
+  scoring_terms:
+  - agent world
+  - computer use
+  - gui agent
+  - web agent
+  - browser agent
+  - mobile agent
+  - tool agent
+  - software engineering agent
+  - embodied agent
+  - interactive environment
+  - agent benchmark
+  - verifiable reward
+  - verifier
+  - trajectory
+  - sandbox
+  - post-training
+  - rlvr
+  - rollout
+  - resettable
+  - evaluation
+  - benchmark
+  - computer-use agent
+  - computer-use agents
+  - phone-use agent
+  - phone-use agents
+  - phone use agent
+  - phone use agents
+  - agent safety
+  - safety evaluation
+  - mobile privacy
+  - privacy compliance
+  - phone-use safety
+  - phone safety
+  - safety-critical moments
+  - safe unsafe incapable
+  - incapable
+  - unintended behavior
+  - harmful behavior
+  - environment synthesis
+  - environment generation
+  - real-world environment
+  - real-world environments
+  - tool ecosystem
+  - mcp
+  - mcp benchmark
+  - mcp-gui
+  - skill environment
+  - mcp server
+  - mcp servers
+  - mcp tool
+  - mcp tools
+  - tool routing
+  - multi-server routing
+  - tool composition
+  - large-scale mcp
+  - mcp atlas
+  - tool poisoning
+  - mcp safety
+  - agentic world modeling
+  - generative sketch world model
+  - self-evolving agent
+  - self-evolving training
+  - agent training arena
+  - world model
+  - synthetic environment
+  - tool-use environment
+  - stateful tool
+  - crud operation
+  - language world model
+  - language environment simulation
+  - environment simulation
+  - professional task
+  - occupational task
+  - hybrid verifier
+  - process reward
+  - gui world model
+  - mobile world model
+  - state transition
+  - mcpworld
+  - mobileworld
+  - digiworld
+  - cuaharm
+  - riosworld
+  - phone-harm
+  - computer-use safety
+  - mcp security
+  - mcp-safetybench
+  - mcpsecbench
+  - agentgym-rl
+  - agent-rlvr
+  - agent rlvr
+  - multi-turn reinforcement learning
+  - mobile task world
+  - mcp-cosmos
+  - byowm
+  - tool decathlon
+  - toolathlon
+  - toucan
+  - mcp-agentbench
+  - mcp-mediated
+  - tool-agentic
+  - tool-agentic data
+  - mcp environments
+  - execution-based evaluation
+  - long-horizon task execution
+papers:
+- id: 2604.18292v1
+  title: 'Agent-World: Scaling Real-World Environment Synthesis for Evolving General
+    Agent Intelligence'
+  published: '2026-04-20T14:01:10Z'
+  updated: '2026-04-20T14:01:10Z'
+  authors:
+  - Guanting Dong
+  - Junting Lu
+  - Junjie Huang
+  - Wanjun Zhong
+  - Longxiang Liu
+  - Shijue Huang
+  - Zhenyu Li
+  - Yang Zhao
+  categories:
+  - cs.AI
+  - cs.LG
+  score: 46
+  matched_terms:
+  - agent world
+  - environment synthesis
+  - real-world environment
+  - tool ecosystem
+  - mcp
+  - self-evolving training
+  - agent training arena
+  - verifiable reward
+  url: https://arxiv.org/abs/2604.18292v1
+  pdf_url: https://arxiv.org/pdf/2604.18292v1
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: &1
+  - world_or_infrastructure_role
+  - observation_and_action_surface
+  - verifier_or_reward
+  - reset_or_replay_support
+  - trajectory_access
+  - sandbox_or_safety_boundary
+  - first_party_source
+- id: 2602.10090v2
+  title: 'Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement
+    Learning'
+  url: https://arxiv.org/abs/2602.10090v2
+  pdf_url: https://arxiv.org/pdf/2602.10090v2
+  published: '2026-02-11T18:20:25Z'
+  updated: '2026-02-11T18:20:25Z'
+  authors:
+  - Zhaoyang Wang
+  - Canwen Xu
+  - Boyi Liu
+  - Yite Wang
+  - Siwei Han
+  - Zhewei Yao
+  - Huaxiu Yao
+  - Yuxiong He
+  categories:
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  score: 42
+  matched_terms:
+  - world model
+  - synthetic environment
+  - tool-use environment
+  - mcp
+  - verifiable reward
+  - reinforcement learning agent
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2602.00933v2
+  title: 'MCP-Atlas: A Large-Scale Benchmark for Tool-Use Competency with Real MCP
+    Servers'
+  published: '2026-01-31T23:19:39Z'
+  updated: '2026-05-04T02:49:08Z'
+  authors:
+  - Chaithanya Bandi
+  - Ben Hertzberg
+  - Geobio Boo
+  - Tejas Polakam
+  - Jeff Da
+  - Sami Hassaan
+  - Manasi Sharma
+  - Andrew Park
+  categories:
+  - cs.AI
+  score: 39
+  matched_terms:
+  - mcp atlas
+  - mcp servers
+  - tool routing
+  - tool composition
+  - mcp benchmark
+  - benchmark
+  url: https://arxiv.org/abs/2602.00933v2
+  pdf_url: https://arxiv.org/pdf/2602.00933v2
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.07247v1
+  title: 'EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment
+    Simulation'
+  url: https://arxiv.org/abs/2605.07247v1
+  pdf_url: https://arxiv.org/pdf/2605.07247v1
+  published: '2026-05-08T05:08:16Z'
+  updated: '2026-05-08T05:08:16Z'
+  authors:
+  - Yi Liu
+  - TingFeng Hui
+  - Wei Zhang
+  - Li Sun
+  - Ningxin Su
+  - Jian Wang
+  - Sen Su
+  categories:
+  - cs.AI
+  score: 38
+  matched_terms:
+  - environment simulation
+  - language world model
+  - state transition
+  - verifier
+  - benchmark
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2604.09815v1
+  title: 'EE-MCP: Self-Evolving MCP-GUI Agents via Automated Environment Generation
+    and Experience Learning'
+  url: https://arxiv.org/abs/2604.09815v1
+  pdf_url: https://arxiv.org/pdf/2604.09815v1
+  published: '2026-04-10T18:46:05Z'
+  updated: '2026-04-10T18:46:05Z'
+  authors:
+  - Tiantian He
+  - Yihang Chen
+  - Keyue Jiang
+  - Ka Yiu Lee
+  - Kaiwen Zhou
+  - Kun Shao
+  - Shuai Wang
+  categories:
+  - cs.AI
+  score: 38
+  matched_terms:
+  - mcp-gui
+  - environment generation
+  - self-evolving agent
+  - trajectory
+  - tool-use environment
+  - gui agent
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2604.10866v2
+  title: 'OccuBench: Evaluating AI Agents on Real-World Professional Tasks via Language
+    Environment Simulation'
+  url: https://arxiv.org/abs/2604.10866v2
+  pdf_url: https://arxiv.org/pdf/2604.10866v2
+  published: '2026-04-13T00:27:32Z'
+  updated: '2026-04-16T16:00:33Z'
+  authors:
+  - Xiaomeng Hu
+  - Yinger Zhang
+  - Fei Huang
+  - Jianhong Tu
+  - Yang Su
+  - Lianghao Deng
+  - Yuxuan Liu
+  - Yantao Liu
+  categories:
+  - cs.CL
+  score: 36
+  matched_terms:
+  - language environment simulation
+  - language world model
+  - professional task
+  - occupational task
+  - tool agent
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2510.25726v2
+  title: 'The Tool Decathlon: Benchmarking Language Agents for Diverse, Realistic,
+    and Long-Horizon Task Execution'
+  published: '2025-10-29T17:32:49Z'
+  updated: '2026-02-26T09:46:48Z'
+  authors:
+  - Junlong Li
+  - Wenshuo Zhao
+  - Jian Zhao
+  - Weihao Zeng
+  - Haoze Wu
+  - Xiaochen Wang
+  - Rui Ge
+  - Yuxuan Cao
+  categories:
+  - cs.CL
+  - cs.AI
+  score: 36
+  matched_terms:
+  - tool decathlon
+  - toolathlon
+  - mcp
+  - execution-based evaluation
+  - long-horizon task execution
+  - benchmark
+  url: https://arxiv.org/abs/2510.25726v2
+  pdf_url: https://arxiv.org/pdf/2510.25726v2
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09131v1
+  title: 'MCP-Cosmos: World Model-Augmented Agents for Complex Task Execution in MCP
+    Environments'
+  published: '2026-05-09T19:25:56Z'
+  updated: '2026-05-09T19:25:56Z'
+  authors:
+  - Giridhar Ganapavarapu
+  - Dhaval Patel
+  categories:
+  - cs.AI
+  - cs.MA
+  score: 35
+  matched_terms:
+  - mcp-cosmos
+  - mcp environments
+  - world model
+  - tool-use environment
+  - state transition
+  url: https://arxiv.org/abs/2605.09131v1
+  pdf_url: https://arxiv.org/pdf/2605.09131v1
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2510.01179v1
+  title: 'TOUCAN: Synthesizing 1.5M Tool-Agentic Data from Real-World MCP Environments'
+  published: '2025-10-01T17:58:03Z'
+  updated: '2025-10-01T17:58:03Z'
+  authors:
+  - Zhangchen Xu
+  - Adriana Meza Soria
+  - Shawn Tan
+  - Anurag Roy
+  - Ashish Sunil Agrawal
+  - Radha Poovendran
+  - Rameswar Panda
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  score: 35
+  matched_terms:
+  - toucan
+  - tool-agentic data
+  - mcp environments
+  - trajectory
+  - tool-use environment
+  url: https://arxiv.org/abs/2510.01179v1
+  pdf_url: https://arxiv.org/pdf/2510.01179v1
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2604.22748v1
+  title: 'Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond'
+  url: https://arxiv.org/abs/2604.22748v1
+  pdf_url: https://arxiv.org/pdf/2604.22748v1
+  published: '2026-04-24T17:48:47Z'
+  updated: '2026-04-24T17:48:47Z'
+  authors:
+  - Meng Chu
+  - Xuan Billy Zhang
+  - Kevin Qinghong Lin
+  - Lingdong Kong
+  - Jize Zhang
+  - Teng Tu
+  - Weijian Ma
+  - Ziqi Huang
+  categories:
+  - cs.AI
+  score: 34
+  matched_terms:
+  - agentic world modeling
+  - world model
+  - environment simulation
+  - trajectory
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2602.14093v1
+  title: 'GUI-GENESIS: Automated Synthesis of Efficient Environments with Verifiable
+    Rewards for GUI Agent Post-Training'
+  published: '2026-02-15T10:58:01Z'
+  updated: '2026-02-15T10:58:01Z'
+  authors:
+  - Yuan Cao
+  - Dezhi Ran
+  - Mengzhou Wu
+  - Yuzhe Guo
+  - Xin Chen
+  - Ang Li
+  - Gang Cao
+  - Gong Zhi
+  categories:
+  - cs.AI
+  - cs.LG
+  score: 34
+  matched_terms:
+  - gui agent
+  - environment synthesis
+  - verifiable reward
+  - post-training
+  - synthetic environment
+  url: https://arxiv.org/abs/2602.14093v1
+  pdf_url: https://arxiv.org/pdf/2602.14093v1
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2509.24002v1
+  title: 'MCPMark: A Benchmark for Stress-Testing Realistic and Comprehensive MCP
+    Use'
+  url: https://arxiv.org/abs/2509.24002v1
+  pdf_url: https://arxiv.org/pdf/2509.24002v1
+  published: '2025-09-28T17:53:27Z'
+  updated: '2025-09-28T17:53:27Z'
+  authors:
+  - Zijian Wu
+  - Xiangyan Liu
+  - Xinyuan Zhang
+  - Lingjun Chen
+  - Fanqing Meng
+  - Lingxiao Du
+  - Yiran Zhao
+  - Fanshi Zhang
+  categories:
+  - cs.AI
+  score: 34
+  matched_terms:
+  - mcp benchmark
+  - mcp
+  - agent benchmark
+  - stateful tool
+  - crud operation
+  - verifier
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2604.02947v1
+  title: 'AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use
+    Agents'
+  published: '2026-04-03T10:29:31Z'
+  updated: '2026-04-03T10:29:31Z'
+  authors:
+  - Yunhao Feng
+  - Yifan Ding
+  - Yingshui Tan
+  - Xingjun Ma
+  - Yige Li
+  - Yutao Wu
+  - Yifeng Gao
+  - Kun Zhai
+  categories:
+  - cs.AI
+  score: 33
+  matched_terms:
+  - computer-use agents
+  - agent safety
+  - harmful behavior
+  - benchmark
+  - tool-use environment
+  url: https://arxiv.org/abs/2604.02947v1
+  pdf_url: https://arxiv.org/pdf/2604.02947v1
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2509.09734v1
+  title: 'MCP-AgentBench: Evaluating Real-World Language Agent Performance with MCP-Mediated
+    Tools'
+  published: '2025-09-10T14:08:40Z'
+  updated: '2025-09-10T14:08:40Z'
+  authors:
+  - Zikang Guo
+  - Benfeng Xu
+  - Chiwei Zhu
+  - Wentao Hong
+  - Xiaorui Wang
+  - Zhendong Mao
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  score: 33
+  matched_terms:
+  - mcp-agentbench
+  - mcp-mediated
+  - mcp server
+  - mcp tools
+  - benchmark
+  url: https://arxiv.org/abs/2509.09734v1
+  pdf_url: https://arxiv.org/pdf/2509.09734v1
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.07630v1
+  title: Safe, or Simply Incapable? Rethinking Safety Evaluation for Phone-Use Agents
+  published: '2026-05-08T11:58:57Z'
+  updated: '2026-05-08T11:58:57Z'
+  authors:
+  - Zhengyang Tang
+  - Yi Zhang
+  - Chenxin Li
+  - Xin Lai
+  - Pengyuan Lyu
+  - Yiduo Guo
+  - Weinong Wang
+  - Junyi Li
+  categories:
+  - cs.AI
+  score: 32
+  matched_terms:
+  - phone-use agent
+  - phone-use agents
+  - safety evaluation
+  - safety-critical moments
+  - incapable
+  - benchmark
+  url: https://arxiv.org/abs/2605.07630v1
+  pdf_url: https://arxiv.org/pdf/2605.07630v1
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2508.01780v2
+  title: 'LiveMCPBench: Can Agents Navigate an Ocean of MCP Tools?'
+  url: https://arxiv.org/abs/2508.01780v2
+  pdf_url: https://arxiv.org/pdf/2508.01780v2
+  published: '2025-08-03T14:36:42Z'
+  updated: '2026-02-26T03:19:15Z'
+  authors:
+  - Guozhao Mo
+  - Wenliang Zhong
+  - Jiawei Chen
+  - Qianhao Yuan
+  - Xuanang Chen
+  - Yaojie Lu
+  - Hongyu Lin
+  - Ben He
+  categories:
+  - cs.AI
+  - cs.CL
+  score: 31
+  matched_terms:
+  - mcp
+  - mcp tools
+  - mcp servers
+  - multi-server routing
+  - tool composition
+  - benchmark
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2601.04035v1
+  title: 'MobileDreamer: Generative Sketch World Model for GUI Agent'
+  url: https://arxiv.org/abs/2601.04035v1
+  pdf_url: https://arxiv.org/pdf/2601.04035v1
+  published: '2026-01-07T15:51:44Z'
+  updated: '2026-01-07T15:51:44Z'
+  authors:
+  - Yilin Cao
+  - Yufeng Zhong
+  - Zhixiong Zeng
+  - Liming Zheng
+  - Jing Huang
+  - Haibo Qiu
+  - Peng Shi
+  - Wenji Mao
+  categories:
+  - cs.AI
+  score: 31
+  matched_terms:
+  - generative sketch world model
+  - mobile world model
+  - gui agent
+  - world model
+  - rollout
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10325v1
+  title: Verifiable Process Rewards for Agentic Reasoning
+  url: https://arxiv.org/abs/2605.10325v1
+  pdf_url: https://arxiv.org/pdf/2605.10325v1
+  published: '2026-05-11T10:30:53Z'
+  updated: '2026-05-11T10:30:53Z'
+  authors:
+  - Huining Yuan
+  - Zelai Xu
+  - Huaijie Wang
+  - Xiangmin Yi
+  - Jiaxuan Gao
+  - Xiao-Ping Zhang
+  - Yu Wang
+  - Chao Yu
+  categories:
+  - cs.AI
+  score: 30
+  matched_terms:
+  - verifiable reward
+  - verifier
+  - trajectory
+  - rlvr
+  - rollout
+  - benchmark
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2604.24964v1
+  title: 'Odysseys: Benchmarking Web Agents on Realistic Long Horizon Tasks'
+  url: https://arxiv.org/abs/2604.24964v1
+  pdf_url: https://arxiv.org/pdf/2604.24964v1
+  published: '2026-04-27T20:05:41Z'
+  updated: '2026-04-27T20:05:41Z'
+  authors:
+  - Lawrence Keunho Jang
+  - Jing Yu Koh
+  - Daniel Fried
+  - Ruslan Salakhutdinov
+  categories:
+  - cs.LG
+  - cs.CL
+  score: 30
+  matched_terms:
+  - web agent
+  - agent benchmark
+  - trajectory
+  - evaluation
+  - benchmark
+  - computer-use agent
+  - computer-use agents
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2602.16819v1
+  title: 'Hybrid-Gym: Training Coding Agents to Generalize Across Tasks'
+  url: https://arxiv.org/abs/2602.16819v1
+  pdf_url: https://arxiv.org/pdf/2602.16819v1
+  published: '2026-02-18T19:30:55Z'
+  updated: '2026-02-18T19:30:55Z'
+  authors:
+  - Yiqing Xie
+  - Emmy Liu
+  - Gaokai Zhang
+  - Nachiket Kotalwar
+  - Shubham Gandhi
+  - Sathwik Acharya
+  - Xingyao Wang
+  - Carolyn Rose
+  categories:
+  - cs.SE
+  - cs.CL
+  - cs.LG
+  score: 30
+  matched_terms:
+  - software engineering agent
+  - trajectory
+  - agent benchmark
+  - state transition
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2508.14925v1
+  title: 'MCPTox: A Benchmark for Tool Poisoning Attack on Real-World MCP Servers'
+  url: https://arxiv.org/abs/2508.14925v1
+  pdf_url: https://arxiv.org/pdf/2508.14925v1
+  published: '2025-08-19T10:12:35Z'
+  updated: '2025-08-19T10:12:35Z'
+  authors:
+  - Zhiqiang Wang
+  - Yichao Gao
+  - Yanting Wang
+  - Suyuan Liu
+  - Haifeng Sun
+  - Haoran Cheng
+  - Guanquan Shi
+  - Haohua Du
+  categories:
+  - cs.CR
+  - cs.LG
+  score: 30
+  matched_terms:
+  - tool poisoning
+  - mcp safety
+  - mcp servers
+  - agent safety
+  - benchmark
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2508.14704v1
+  title: 'MCP-Universe: Benchmarking Large Language Models with Real-World Model Context
+    Protocol Servers'
+  url: https://arxiv.org/abs/2508.14704v1
+  pdf_url: https://arxiv.org/pdf/2508.14704v1
+  published: '2025-08-20T00:00:00Z'
+  updated: '2025-08-20T00:00:00Z'
+  authors:
+  - Ziyang Luo
+  - Zhiqi Shen
+  - Wenzhuo Yang
+  - Zirui Zhao
+  - Prathyusha Jwalapuram
+  - Amrita Saha
+  - Doyen Sahoo
+  - Silvio Savarese
+  categories:
+  - cs.AI
+  score: 29
+  matched_terms:
+  - mcp
+  - mcp servers
+  - mcp benchmark
+  - tool routing
+  - tool composition
+  - benchmark
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09487v1
+  title: 'Kintsugi: Learning Policies by Repairing Executable Knowledge Bases'
+  url: https://arxiv.org/abs/2605.09487v1
+  pdf_url: https://arxiv.org/pdf/2605.09487v1
+  published: '2026-05-10T11:51:18Z'
+  updated: '2026-05-10T11:51:18Z'
+  authors:
+  - Teng Cao
+  - Yu Deng
+  - Hikaru Shindo
+  - Quentin Delfosse
+  - Lanxi Wen
+  - Suli Wang
+  - Jannis Blüml
+  - Christopher Tauchmann
+  categories:
+  - cs.LG
+  score: 28
+  matched_terms:
+  - embodied agent
+  - agent benchmark
+  - verifier
+  - trajectory
+  - rollout
+  - benchmark
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14355v1
+  title: 'Herculean: An Agentic Benchmark for Financial Intelligence'
+  url: https://arxiv.org/abs/2605.14355v1
+  pdf_url: https://arxiv.org/pdf/2605.14355v1
+  published: '2026-05-14T04:30:49Z'
+  updated: '2026-05-14T04:30:49Z'
+  authors:
+  - Xueqing Peng
+  - Zhuohan Xie
+  - Yupeng Cao
+  - Haohang Li
+  - Lingfei Qian
+  - Yan Wang
+  - Vincent Jim Zhang
+  - Huan He
+  categories:
+  - cs.AI
+  - cs.CL
+  score: 27
+  matched_terms:
+  - agent benchmark
+  - mcp
+  - skill environment
+  - stateful tool
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10218v1
+  title: Relative Score Policy Optimization for Diffusion Language Models
+  url: https://arxiv.org/abs/2605.10218v1
+  pdf_url: https://arxiv.org/pdf/2605.10218v1
+  published: '2026-05-11T08:58:40Z'
+  updated: '2026-05-11T08:58:40Z'
+  authors:
+  - Zichao Yu
+  - Shengze Xu
+  - Bingqing Jiang
+  - Wenyi Zhang
+  - Difan Zou
+  categories:
+  - cs.CL
+  score: 27
+  matched_terms:
+  - verifiable reward
+  - verifier
+  - post-training
+  - rlvr
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.09920v1
+  title: Verifier-Free RL for LLMs via Intrinsic Gradient-Norm Reward
+  url: https://arxiv.org/abs/2605.09920v1
+  pdf_url: https://arxiv.org/pdf/2605.09920v1
+  published: '2026-05-11T03:15:37Z'
+  updated: '2026-05-11T03:15:37Z'
+  authors:
+  - Xuexiang Wen
+  - Hang Yu
+  - Linchao Zhu
+  - Gaoang Wang
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 27
+  matched_terms:
+  - verifiable reward
+  - verifier
+  - post-training
+  - rlvr
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.15113v1
+  title: Learning from Language Feedback via Variational Policy Distillation
+  url: https://arxiv.org/abs/2605.15113v1
+  pdf_url: https://arxiv.org/pdf/2605.15113v1
+  published: '2026-05-14T17:27:34Z'
+  updated: '2026-05-14T17:27:34Z'
+  authors:
+  - Yang Li
+  - Erik Nijkamp
+  - Semih Yavuz
+  - Shafiq Rayhan Joty
+  categories:
+  - cs.LG
+  score: 23
+  matched_terms:
+  - verifiable reward
+  - trajectory
+  - rlvr
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11611v2
+  title: 'CuSearch: Curriculum Rollout Sampling via Search Depth for Agentic RAG'
+  url: https://arxiv.org/abs/2605.11611v2
+  pdf_url: https://arxiv.org/pdf/2605.11611v2
+  published: '2026-05-12T06:42:17Z'
+  updated: '2026-05-14T03:20:26Z'
+  authors:
+  - Jianghan Shen
+  - Siqi Luo
+  - Xinyu Cheng
+  - Jing Xiong
+  - Yue Li
+  - Jiyao Liu
+  - Jiashi Lin
+  - Yirong Chen
+  categories:
+  - cs.AI
+  score: 23
+  matched_terms:
+  - verifiable reward
+  - trajectory
+  - rlvr
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12969v1
+  title: Revisiting Reinforcement Learning with Verifiable Rewards from a Contrastive
+    Perspective
+  url: https://arxiv.org/abs/2605.12969v1
+  pdf_url: https://arxiv.org/pdf/2605.12969v1
+  published: '2026-05-13T04:02:36Z'
+  updated: '2026-05-13T04:02:36Z'
+  authors:
+  - Feng Zhang
+  - Xinhong Ma
+  - Ziqiang Dong
+  - Xi Leng
+  - Jianfei Zhao
+  - Xin Sun
+  - Yang Yang
+  - Guanjun Jiang
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 23
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  - rollout
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12913v1
+  title: Revisiting DAgger in the Era of LLM-Agents
+  url: https://arxiv.org/abs/2605.12913v1
+  pdf_url: https://arxiv.org/pdf/2605.12913v1
+  published: '2026-05-13T02:40:28Z'
+  updated: '2026-05-13T02:40:28Z'
+  authors:
+  - Changhao Li
+  - Rushi Qiang
+  - Jiawei Huang
+  - Chenxiao Gao
+  - Chao Zhang
+  - Niao He
+  - Bo Dai
+  categories:
+  - cs.LG
+  score: 23
+  matched_terms:
+  - verifiable reward
+  - trajectory
+  - post-training
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12501v1
+  title: 'Covering Human Action Space for Computer Use: Data Synthesis and Benchmark'
+  url: https://arxiv.org/abs/2605.12501v1
+  pdf_url: https://arxiv.org/pdf/2605.12501v1
+  published: '2026-05-12T17:59:58Z'
+  updated: '2026-05-12T17:59:58Z'
+  authors:
+  - Miaosen Zhang
+  - Xiaohan Zhao
+  - Zhihong Tan
+  - Zhou Huoshen
+  - Yijia Fan
+  - Yifan Yang
+  - Kai Qiu
+  - Bei Liu
+  categories:
+  - cs.CV
+  score: 23
+  matched_terms:
+  - computer use
+  - benchmark
+  - computer-use agent
+  - computer-use agents
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10347v1
+  title: How Mobile World Model Guides GUI Agents?
+  url: https://arxiv.org/abs/2605.10347v1
+  pdf_url: https://arxiv.org/pdf/2605.10347v1
+  published: '2026-05-11T10:49:31Z'
+  updated: '2026-05-11T10:49:31Z'
+  authors:
+  - Weikai Xu
+  - Kun Huang
+  - Yunren Feng
+  - Jiaxing Li
+  - Yuhan Chen
+  - Yuxuan Liu
+  - Zhizheng Jiang
+  - Heng Qu
+  categories:
+  - cs.AI
+  - cs.CL
+  score: 23
+  matched_terms:
+  - gui agent
+  - mobile agent
+  - verifier
+  - rollout
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2604.27776v1
+  title: 'WindowsWorld: A Process-Centric Benchmark of Autonomous GUI Agents in Professional
+    Cross-Application Environments'
+  url: https://arxiv.org/abs/2604.27776v1
+  pdf_url: https://arxiv.org/pdf/2604.27776v1
+  published: '2026-04-30T12:13:27Z'
+  updated: '2026-04-30T12:13:27Z'
+  authors:
+  - Jinchao Li
+  - Yunxin Li
+  - Chenrui Zhao
+  - Zhenran Xu
+  - Baotian Hu
+  - Min Zhang
+  categories:
+  - cs.AI
+  - cs.CL
+  score: 22
+  matched_terms:
+  - gui agent
+  - evaluation
+  - benchmark
+  - computer-use agent
+  - computer-use agents
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.15012v1
+  title: Boosting Reinforcement Learning with Verifiable Rewards via Randomly Selected
+    Few-Shot Guidance
+  url: https://arxiv.org/abs/2605.15012v1
+  pdf_url: https://arxiv.org/pdf/2605.15012v1
+  published: '2026-05-14T16:12:30Z'
+  updated: '2026-05-14T16:12:30Z'
+  authors:
+  - Kai Yan
+  - Alexander G. Schwing
+  - Yu-Xiong Wang
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  score: 21
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  - rollout
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11775v2
+  title: 'Entropy Polarity in Reinforcement Fine-Tuning: Direction, Asymmetry, and
+    Control'
+  url: https://arxiv.org/abs/2605.11775v2
+  pdf_url: https://arxiv.org/pdf/2605.11775v2
+  published: '2026-05-12T08:47:05Z'
+  updated: '2026-05-14T14:02:12Z'
+  authors:
+  - Jiazheng Zhang
+  - Ziche Fu
+  - Junrui Shen
+  - Yunbin Zhao
+  - Yunke Zhang
+  - Zhiheng Xi
+  - Long Ma
+  - Chenxin An
+  categories:
+  - cs.LG
+  - cs.CL
+  score: 21
+  matched_terms:
+  - verifiable reward
+  - trajectory
+  - rlvr
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12015v1
+  title: 'SkillSafetyBench: Evaluating Agent Safety under Skill-Facing Attack Surfaces'
+  url: https://arxiv.org/abs/2605.12015v1
+  pdf_url: https://arxiv.org/pdf/2605.12015v1
+  published: '2026-05-12T12:03:54Z'
+  updated: '2026-05-12T12:03:54Z'
+  authors:
+  - Chang Jin
+  - An Wang
+  - Zeming Wei
+  - Kai Wang
+  - Biaojie Zeng
+  - Qiaosheng Zhang
+  - Chao Yang
+  - Jingjing Qu
+  categories:
+  - cs.CR
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  - cs.MA
+  score: 21
+  matched_terms:
+  - verifier
+  - evaluation
+  - benchmark
+  - agent safety
+  - safety evaluation
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10194v1
+  title: 'TRACE: Distilling Where It Matters via Token-Routed Self On-Policy Alignment'
+  url: https://arxiv.org/abs/2605.10194v1
+  pdf_url: https://arxiv.org/pdf/2605.10194v1
+  published: '2026-05-11T08:45:03Z'
+  updated: '2026-05-11T08:45:03Z'
+  authors:
+  - Jiaxuan Wang
+  - Xuan Ouyang
+  - Zhiyu Chen
+  - Yulan Hu
+  - Zheng Pan
+  - Xin Li
+  - Lan-Zhe Guo
+  categories:
+  - cs.AI
+  - cs.LG
+  score: 21
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  - rollout
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.08261v1
+  title: Computer Use at the Edge of the Statistical Precipice
+  url: https://arxiv.org/abs/2605.08261v1
+  pdf_url: https://arxiv.org/pdf/2605.08261v1
+  published: '2026-05-07T22:43:43Z'
+  updated: '2026-05-07T22:43:43Z'
+  authors:
+  - Pierluca D'Oro
+  - Sneha Silwal
+  - William Wong
+  - Yuxuan Sun
+  - Fanyi Xiao
+  - Manchen Wang
+  - Eric Gan
+  - Allen Bolourchi
+  categories:
+  - cs.SE
+  - cs.AI
+  score: 21
+  matched_terms:
+  - computer use
+  - interactive environment
+  - sandbox
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12474v1
+  title: Reward Hacking in Rubric-Based Reinforcement Learning
+  url: https://arxiv.org/abs/2605.12474v1
+  pdf_url: https://arxiv.org/pdf/2605.12474v1
+  published: '2026-05-12T17:54:25Z'
+  updated: '2026-05-12T17:54:25Z'
+  authors:
+  - Anas Mahmoud
+  - MohammadHossein Rezaei
+  - Zihao Wang
+  - Anisha Gunjal
+  - Bing Liu
+  - Yunzhong He
+  categories:
+  - cs.AI
+  score: 20
+  matched_terms:
+  - verifiable reward
+  - verifier
+  - post-training
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11666v1
+  title: 'Evolutionary Task Discovery: Advancing Reasoning Frontiers via Skill Composition
+    and Complexity Scaling'
+  url: https://arxiv.org/abs/2605.11666v1
+  pdf_url: https://arxiv.org/pdf/2605.11666v1
+  published: '2026-05-12T07:26:40Z'
+  updated: '2026-05-12T07:26:40Z'
+  authors:
+  - Liqin Ye
+  - Yanbin Yin
+  - Michael Galarnyk
+  - Yuzhao Heng
+  - Sudheer Chava
+  - Chao Zhang
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 20
+  matched_terms:
+  - verifiable reward
+  - post-training
+  - rlvr
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.02729v1
+  title: Augmenting Interface Usability Heuristics for Reliable Computer-Use Agents
+  url: https://arxiv.org/abs/2605.02729v1
+  pdf_url: https://arxiv.org/pdf/2605.02729v1
+  published: '2026-05-04T15:28:59Z'
+  updated: '2026-05-04T15:28:59Z'
+  authors:
+  - Jiateng Liu
+  - Rushi Wang
+  - Bingxuan Li
+  - Kunlun Zhu
+  - Yifan Shen
+  - Qingyun Wang
+  - Ahmed Abbasi
+  - Denghui Zhang
+  categories:
+  - cs.HC
+  score: 20
+  matched_terms:
+  - computer use
+  - computer-use agent
+  - computer-use agents
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.15040v1
+  title: 'Orchard: An Open-Source Agentic Modeling Framework'
+  url: https://arxiv.org/abs/2605.15040v1
+  pdf_url: https://arxiv.org/pdf/2605.15040v1
+  published: '2026-05-14T16:35:12Z'
+  updated: '2026-05-14T16:35:12Z'
+  authors:
+  - Baolin Peng
+  - Wenlin Yao
+  - Qianhui Wu
+  - Hao Cheng
+  - Xiao Yu
+  - Rui Yang
+  - Tao Ge
+  - Alessandrio Sordoni
+  categories:
+  - cs.AI
+  - cs.CL
+  score: 19
+  matched_terms:
+  - sandbox
+  - rollout
+  - evaluation
+  - computer-use agent
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11403v1
+  title: 'fg-expo: Frontier-guided exploration-prioritized policy optimization via
+    adaptive kl and gaussian curriculum'
+  url: https://arxiv.org/abs/2605.11403v1
+  pdf_url: https://arxiv.org/pdf/2605.11403v1
+  published: '2026-05-12T01:48:48Z'
+  updated: '2026-05-12T01:48:48Z'
+  authors:
+  - Mingxiong Lin
+  - Zhangquan Gong
+  - Maowen Tang
+  - Qian Li
+  - Chuangchuang Wang
+  - Jian Ma
+  - Sutian Huang
+  - Kai Tang
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  score: 19
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10141v1
+  title: 'FormalRewardBench: A Benchmark for Formal Theorem Proving Reward Models'
+  url: https://arxiv.org/abs/2605.10141v1
+  pdf_url: https://arxiv.org/pdf/2605.10141v1
+  published: '2026-05-11T07:51:15Z'
+  updated: '2026-05-11T07:51:15Z'
+  authors:
+  - Zeynel A. Uluşan
+  - Burak S. Akbudak
+  - Can S. Erer
+  - Gözde Gül Şahin
+  categories:
+  - cs.AI
+  score: 19
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.09725v2
+  title: On-Policy Distillation with Best-of-N Teacher Rollout Selection
+  url: https://arxiv.org/abs/2605.09725v2
+  pdf_url: https://arxiv.org/pdf/2605.09725v2
+  published: '2026-05-10T19:49:00Z'
+  updated: '2026-05-13T03:08:23Z'
+  authors:
+  - Ke Zhang
+  - Yunjie Tian
+  - Dongdi Zhao
+  - Yijiang Li
+  - Yuanye Liu
+  - Vishal M Patel
+  - Di Fu
+  categories:
+  - cs.CV
+  score: 18
+  matched_terms:
+  - trajectory
+  - post-training
+  - rollout
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12920v1
+  title: Embodied Multi-Agent Coordination by Aligning World Models Through Dialogue
+  url: https://arxiv.org/abs/2605.12920v1
+  pdf_url: https://arxiv.org/pdf/2605.12920v1
+  published: '2026-05-13T02:48:14Z'
+  updated: '2026-05-13T02:48:14Z'
+  authors:
+  - Vardhan Dongre
+  - Dilek Hakkani-Tür
+  categories:
+  - cs.MA
+  - cs.AI
+  - cs.CL
+  score: 18
+  matched_terms:
+  - agent world
+  - embodied agent
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.14539v1
+  title: 'Learning from Failures: Correction-Oriented Policy Optimization with Verifiable
+    Rewards'
+  url: https://arxiv.org/abs/2605.14539v1
+  pdf_url: https://arxiv.org/pdf/2605.14539v1
+  published: '2026-05-14T08:22:21Z'
+  updated: '2026-05-14T08:22:21Z'
+  authors:
+  - Mengjie Ren
+  - Jie Lou
+  - Boxi Cao
+  - Xueru Wen
+  - Hongyu Lin
+  - Xianpei Han
+  - Le Sun
+  - Xing Yu
+  categories:
+  - cs.CL
+  score: 17
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12034v2
+  title: 'Boosting Omni-Modal Language Models: Staged Post-Training with Visually
+    Debiased Evaluation'
+  url: https://arxiv.org/abs/2605.12034v2
+  pdf_url: https://arxiv.org/pdf/2605.12034v2
+  published: '2026-05-12T12:16:11Z'
+  updated: '2026-05-13T20:38:46Z'
+  authors:
+  - Che Liu
+  - Lichao Ma
+  - Xiangyu Tony Zhang
+  - Yuxin Zhang
+  - Haoyang Zhang
+  - Xuerui Yang
+  - Fei Tian
+  categories:
+  - cs.MM
+  - cs.AI
+  - cs.CV
+  score: 17
+  matched_terms:
+  - post-training
+  - rlvr
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11212v2
+  title: 'ReVision: Scaling Computer-Use Agents via Temporal Visual Redundancy Reduction'
+  url: https://arxiv.org/abs/2605.11212v2
+  pdf_url: https://arxiv.org/pdf/2605.11212v2
+  published: '2026-05-11T20:27:54Z'
+  updated: '2026-05-13T16:34:05Z'
+  authors:
+  - Amirhossein Abaskohi
+  - Yuhang He
+  - Peter West
+  - Giuseppe Carenini
+  - Pranit Chawla
+  - Vibhav Vineet
+  categories:
+  - cs.CL
+  score: 17
+  matched_terms:
+  - benchmark
+  - computer-use agent
+  - computer-use agents
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13467v1
+  title: 'PDCR: Perception-Decomposed Confidence Reward for Vision-Language Reasoning'
+  url: https://arxiv.org/abs/2605.13467v1
+  pdf_url: https://arxiv.org/pdf/2605.13467v1
+  published: '2026-05-13T12:55:18Z'
+  updated: '2026-05-13T12:55:18Z'
+  authors:
+  - Hee Suk Yoon
+  - Eunseop Yoon
+  - Ji Woo Hong
+  - SooHwan Eom
+  - Gwanhyeong Koo
+  - Mark Hasegawa-Johnson
+  - Qi Dai
+  - Chong Luo
+  categories:
+  - cs.CL
+  score: 17
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.09923v2
+  title: 'expo: Exploration-prioritized policy optimization via adaptive kl regulation
+    and gaussian curriculum sampling'
+  url: https://arxiv.org/abs/2605.09923v2
+  pdf_url: https://arxiv.org/pdf/2605.09923v2
+  published: '2026-05-11T03:19:04Z'
+  updated: '2026-05-13T06:42:03Z'
+  authors:
+  - Mingxiong Lin
+  - Zhangquan Gong
+  - Maowen Tang
+  - Qian Li
+  - Chuangchuang Wang
+  - Jian Ma
+  - Sutian Huang
+  - Kai Tang
+  categories:
+  - cs.AI
+  score: 17
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11882v1
+  title: On-Policy Self-Evolution via Failure Trajectories for Agentic Safety Alignment
+  url: https://arxiv.org/abs/2605.11882v1
+  pdf_url: https://arxiv.org/pdf/2605.11882v1
+  published: '2026-05-12T09:56:28Z'
+  updated: '2026-05-12T09:56:28Z'
+  authors:
+  - Bo Yin
+  - Qi Li
+  - Xinchao Wang
+  categories:
+  - cs.AI
+  score: 17
+  matched_terms:
+  - verifier
+  - trajectory
+  - agent safety
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11491v1
+  title: Understanding and Preventing Entropy Collapse in RLVR with On-Policy Entropy
+    Flow Optimization
+  url: https://arxiv.org/abs/2605.11491v1
+  pdf_url: https://arxiv.org/pdf/2605.11491v1
+  published: '2026-05-12T04:08:17Z'
+  updated: '2026-05-12T04:08:17Z'
+  authors:
+  - Huimin Xu
+  - Shuai Zhao
+  - Xiaobao Wu
+  - Anh Tuan Luu
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 17
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10899v1
+  title: 'RubricEM: Meta-RL with Rubric-guided Policy Decomposition beyond Verifiable
+    Rewards'
+  url: https://arxiv.org/abs/2605.10899v1
+  pdf_url: https://arxiv.org/pdf/2605.10899v1
+  published: '2026-05-11T17:40:38Z'
+  updated: '2026-05-11T17:40:38Z'
+  authors:
+  - Gaotang Li
+  - Bhavana Dalvi Mishra
+  - Zifeng Wang
+  - Jun Yan
+  - Yanfei Chen
+  - Chun-Liang Li
+  - Long T. Le
+  - Rujun Han
+  categories:
+  - cs.CL
+  - cs.LG
+  score: 17
+  matched_terms:
+  - verifiable reward
+  - post-training
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10781v1
+  title: 'Rebellious Student: Reversing Teacher Signals for Reasoning Exploration
+    with Self-Distilled RLVR'
+  url: https://arxiv.org/abs/2605.10781v1
+  pdf_url: https://arxiv.org/pdf/2605.10781v1
+  published: '2026-05-11T16:16:00Z'
+  updated: '2026-05-11T16:16:00Z'
+  authors:
+  - Jeonghye Kim
+  - Jiwon Jeon
+  - Dongsheng Li
+  - Yuqing Yang
+  categories:
+  - cs.LG
+  - cs.CL
+  score: 17
+  matched_terms:
+  - post-training
+  - rlvr
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10716v1
+  title: What should post-training optimize? A test-time scaling law perspective
+  url: https://arxiv.org/abs/2605.10716v1
+  pdf_url: https://arxiv.org/pdf/2605.10716v1
+  published: '2026-05-11T15:25:29Z'
+  updated: '2026-05-11T15:25:29Z'
+  authors:
+  - Muheng Li
+  - Jian Qian
+  - Wenlong Mou
+  categories:
+  - cs.LG
+  - stat.ML
+  score: 17
+  matched_terms:
+  - verifier
+  - post-training
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.09996v1
+  title: 'Omni-Persona: Systematic Benchmarking and Improving Omnimodal Personalization'
+  url: https://arxiv.org/abs/2605.09996v1
+  pdf_url: https://arxiv.org/pdf/2605.09996v1
+  published: '2026-05-11T05:11:22Z'
+  updated: '2026-05-11T05:11:22Z'
+  authors:
+  - Yeongtak Oh
+  - Dongwook Lee
+  - Sangkwon Park
+  - Heeseung Kim
+  - Sungroh Yoon
+  categories:
+  - cs.CV
+  score: 17
+  matched_terms:
+  - post-training
+  - rlvr
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13527v2
+  title: 'MMSkills: Towards Multimodal Skills for General Visual Agents'
+  url: https://arxiv.org/abs/2605.13527v2
+  pdf_url: https://arxiv.org/pdf/2605.13527v2
+  published: '2026-05-13T13:40:31Z'
+  updated: '2026-05-14T13:52:04Z'
+  authors:
+  - Kangning Zhang
+  - Shuai Shao
+  - Qingyao Li
+  - Jianghao Lin
+  - Lingyue Fu
+  - Shijian Wang
+  - Wenxiang Jiao
+  - Yuan Lu
+  categories:
+  - cs.AI
+  score: 16
+  matched_terms:
+  - agent benchmark
+  - trajectory
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.14133v1
+  title: 'ClawForge: Generating Executable Interactive Benchmarks for Command-Line
+    Agents'
+  url: https://arxiv.org/abs/2605.14133v1
+  pdf_url: https://arxiv.org/pdf/2605.14133v1
+  published: '2026-05-13T21:34:08Z'
+  updated: '2026-05-13T21:34:08Z'
+  authors:
+  - Yuxiang Lai
+  - Peng Xia
+  - Haonian Ji
+  - Kaiwen Xiong
+  - Kaide Zeng
+  - Jiaqi Liu
+  - Fang Wu
+  - Jike Zhong
+  categories:
+  - cs.AI
+  score: 16
+  matched_terms:
+  - agent benchmark
+  - trajectory
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.13935v1
+  title: 'Beyond Mode-Seeking RL: Trajectory-Balance Post-Training for Diffusion Language
+    Models'
+  url: https://arxiv.org/abs/2605.13935v1
+  pdf_url: https://arxiv.org/pdf/2605.13935v1
+  published: '2026-05-13T16:14:46Z'
+  updated: '2026-05-13T16:14:46Z'
+  authors:
+  - Saba Ahmadi
+  - Prasanna Parthasarathi
+  - Yufei Cui
+  categories:
+  - cs.LG
+  - cs.CL
+  score: 16
+  matched_terms:
+  - trajectory
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13217v1
+  title: 'GAGPO: Generalized Advantage Grouped Policy Optimization'
+  url: https://arxiv.org/abs/2605.13217v1
+  pdf_url: https://arxiv.org/pdf/2605.13217v1
+  published: '2026-05-13T09:10:03Z'
+  updated: '2026-05-13T09:10:03Z'
+  authors:
+  - Siyuan Zhu
+  - Chao Yu
+  - Rongxin Yang
+  - Zongkai Liu
+  - Jinjun Hu
+  - Qiwen Chen
+  - Yibo Zhang
+  categories:
+  - cs.CL
+  - cs.LG
+  score: 16
+  matched_terms:
+  - trajectory
+  - post-training
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11505v2
+  title: Selective Off-Policy Reference Tuning with Plan Guidance
+  url: https://arxiv.org/abs/2605.11505v2
+  pdf_url: https://arxiv.org/pdf/2605.11505v2
+  published: '2026-05-12T04:25:41Z'
+  updated: '2026-05-13T06:41:19Z'
+  authors:
+  - Duc Anh Le
+  - Tien-Phat Nguyen
+  - Thien Huu Nguyen
+  - Linh Ngo Van
+  - Trung Le
+  categories:
+  - cs.AI
+  score: 16
+  matched_terms:
+  - verifiable reward
+  - rollout
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10912v1
+  title: 'WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation'
+  url: https://arxiv.org/abs/2605.10912v1
+  pdf_url: https://arxiv.org/pdf/2605.10912v1
+  published: '2026-05-11T17:49:43Z'
+  updated: '2026-05-11T17:49:43Z'
+  authors:
+  - Shuangrui Ding
+  - Xuanlang Dai
+  - Long Xing
+  - Shengyuan Ding
+  - Ziyu Liu
+  - Yang JingYi
+  - Penghui Yang
+  - Zhixiong Zhang
+  categories:
+  - cs.CL
+  score: 16
+  matched_terms:
+  - agent benchmark
+  - sandbox
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.09998v1
+  title: 'Continual Harness: Online Adaptation for Self-Improving Foundation Agents'
+  url: https://arxiv.org/abs/2605.09998v1
+  pdf_url: https://arxiv.org/pdf/2605.09998v1
+  published: '2026-05-11T05:21:33Z'
+  updated: '2026-05-11T05:21:33Z'
+  authors:
+  - Seth Karten
+  - Joel Zhang
+  - Tersoo Upaa
+  - Ruirong Feng
+  - Wenzhe Li
+  - Chengshuai Shi
+  - Chi Jin
+  - Kiran Vodrahalli
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 16
+  matched_terms:
+  - embodied agent
+  - trajectory
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.07110v1
+  title: 'Securing Computer-Use Agents: A Unified Architecture-Lifecycle Framework
+    for Deployment-Grounded Reliability'
+  url: https://arxiv.org/abs/2605.07110v1
+  pdf_url: https://arxiv.org/pdf/2605.07110v1
+  published: '2026-05-08T01:38:46Z'
+  updated: '2026-05-08T01:38:46Z'
+  authors:
+  - Zejian Chen
+  - Zhanyuan Liu
+  - Chaozhuo Li
+  - Mengxiang Han
+  - Songyang Liu
+  - Litian Zhang
+  - Feng Gao
+  - Yiming Hei
+  categories:
+  - cs.CL
+  - cs.SE
+  score: 16
+  matched_terms:
+  - benchmark
+  - computer-use agent
+  - computer-use agents
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.14290v1
+  title: Web Agents Should Adopt the Plan-Then-Execute Paradigm
+  url: https://arxiv.org/abs/2605.14290v1
+  pdf_url: https://arxiv.org/pdf/2605.14290v1
+  published: '2026-05-14T02:48:57Z'
+  updated: '2026-05-14T02:48:57Z'
+  authors:
+  - Julien Piet
+  - Annabella Chow
+  - Yiwei Hou
+  - Muxi Lyu
+  - Sylvie Venuto
+  - Jinhao Zhu
+  - Raluca Ada Popa
+  - David Wagner
+  categories:
+  - cs.CR
+  - cs.AI
+  - cs.CL
+  - cs.SE
+  score: 15
+  matched_terms:
+  - web agent
+  - agent benchmark
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.14117v1
+  title: Generative Floor Plan Design with LLMs via Reinforcement Learning with Verifiable
+    Rewards
+  url: https://arxiv.org/abs/2605.14117v1
+  pdf_url: https://arxiv.org/pdf/2605.14117v1
+  published: '2026-05-13T21:06:12Z'
+  updated: '2026-05-13T21:06:12Z'
+  authors:
+  - Luis Lara
+  - Aristides Milios
+  - Zhi Hao Luo
+  - Aditya Sharma
+  - Ge Ya Luo
+  - Christopher Beckham
+  - Florian Golemo
+  - Christopher Pal
+  categories:
+  - cs.CL
+  - cs.AI
+  score: 15
+  matched_terms:
+  - verifiable reward
+  - rlvr
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12620v1
+  title: 'Think Twice, Act Once: Verifier-Guided Action Selection For Embodied Agents'
+  url: https://arxiv.org/abs/2605.12620v1
+  pdf_url: https://arxiv.org/pdf/2605.12620v1
+  published: '2026-05-12T18:08:24Z'
+  updated: '2026-05-12T18:08:24Z'
+  authors:
+  - Nishad Singhi
+  - Christian Bialas
+  - Snehal Jauhri
+  - Vignesh Prasad
+  - Georgia Chalvatzaki
+  - Marcus Rohrbach
+  - Anna Rohrbach
+  categories:
+  - cs.AI
+  score: 15
+  matched_terms:
+  - embodied agent
+  - verifier
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11853v2
+  title: 'GEAR: Granularity-Adaptive Advantage Reweighting for LLM Agents via Self-Distillation'
+  url: https://arxiv.org/abs/2605.11853v2
+  pdf_url: https://arxiv.org/pdf/2605.11853v2
+  published: '2026-05-12T09:38:38Z'
+  updated: '2026-05-14T10:19:32Z'
+  authors:
+  - Sijia Li
+  - Yuchen Huang
+  - Zifan Liu
+  - Yanping Li
+  - Jingjing Fu
+  - Li Zhao
+  - Jiang Bian
+  - Ling Zhang
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  score: 14
+  matched_terms:
+  - trajectory
+  - post-training
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.14274v1
+  title: 'CreFlow: Corrective Reflow for Sparse-Reward Embodied Video Diffusion RL'
+  url: https://arxiv.org/abs/2605.14274v1
+  pdf_url: https://arxiv.org/pdf/2605.14274v1
+  published: '2026-05-14T02:18:58Z'
+  updated: '2026-05-14T02:18:58Z'
+  authors:
+  - Zhenyang Ni
+  - Yijiang Li
+  - Ruochen Jiao
+  - Simon Sinong Zhan
+  - Sipeng Chen
+  - Zhenfei Yin
+  - Minshuo Chen
+  - Philip Torr
+  categories:
+  - cs.CV
+  score: 14
+  matched_terms:
+  - post-training
+  - rollout
+  - evaluation
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13779v1
+  title: 'MinT: Managed Infrastructure for Training and Serving Millions of LLMs'
+  url: https://arxiv.org/abs/2605.13779v1
+  pdf_url: https://arxiv.org/pdf/2605.13779v1
+  published: '2026-05-13T16:59:08Z'
+  updated: '2026-05-13T16:59:08Z'
+  authors:
+  - Mind Lab
+  - ":"
+  - Song Cao
+  - Vic Cao
+  - Andrew Chen
+  - Kaijie Chen
+  - Cleon Cheng
+  - Steven Chiang
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.DC
+  score: 14
+  matched_terms:
+  - post-training
+  - rollout
+  - evaluation
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11726v2
+  title: 'Block-R1: Rethinking the Role of Block Size in Multi-domain Reinforcement
+    Learning for Diffusion Large Language Models'
+  url: https://arxiv.org/abs/2605.11726v2
+  pdf_url: https://arxiv.org/pdf/2605.11726v2
+  published: '2026-05-12T08:09:42Z'
+  updated: '2026-05-13T15:38:02Z'
+  authors:
+  - Yan Jiang
+  - Ruihong Qiu
+  - Zi Huang
+  categories:
+  - cs.LG
+  score: 14
+  matched_terms:
+  - post-training
+  - rollout
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2604.27996v2
+  title: Exploring Interaction Paradigms for LLM Agents in Scientific Visualization
+  url: https://arxiv.org/abs/2604.27996v2
+  pdf_url: https://arxiv.org/pdf/2604.27996v2
+  published: '2026-04-30T15:22:28Z'
+  updated: '2026-05-13T03:48:48Z'
+  authors:
+  - Jackson Vonderhorst
+  - Kuangshi Ai
+  - Haichao Miao
+  - Shusen Liu
+  - Chaoli Wang
+  categories:
+  - cs.AI
+  - cs.GR
+  - cs.HC
+  score: 14
+  matched_terms:
+  - benchmark
+  - computer-use agent
+  - computer-use agents
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12741v1
+  title: Learning with Rare Success but Rich Feedback via Reflection-Enhanced Self-Distillation
+  url: https://arxiv.org/abs/2605.12741v1
+  pdf_url: https://arxiv.org/pdf/2605.12741v1
+  published: '2026-05-12T20:46:05Z'
+  updated: '2026-05-12T20:46:05Z'
+  authors:
+  - Yuwei Zhang
+  - Sha Li
+  - Changlong Yu
+  - Qin Lu
+  - Shuowei Jin
+  - Chengyu Dong
+  - Haoran Liu
+  - Ilgee Hong
+  categories:
+  - cs.LG
+  score: 14
+  matched_terms:
+  - post-training
+  - rollout
+  - evaluation
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12493v1
+  title: 'LongMemEval-V2: Evaluating Long-Term Agent Memory Toward Experienced Colleagues'
+  url: https://arxiv.org/abs/2605.12493v1
+  pdf_url: https://arxiv.org/pdf/2605.12493v1
+  published: '2026-05-12T17:59:34Z'
+  updated: '2026-05-12T17:59:34Z'
+  authors:
+  - Di Wu
+  - Zixiang Ji
+  - Asmi Kawatkar
+  - Bryan Kwan
+  - Jia-Chen Gu
+  - Nanyun Peng
+  - Kai-Wei Chang
+  categories:
+  - cs.CL
+  score: 14
+  matched_terms:
+  - web agent
+  - sandbox
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12004v1
+  title: Learning Agentic Policy from Action Guidance
+  url: https://arxiv.org/abs/2605.12004v1
+  pdf_url: https://arxiv.org/pdf/2605.12004v1
+  published: '2026-05-12T11:54:23Z'
+  updated: '2026-05-12T11:54:23Z'
+  authors:
+  - Yuxiang Ji
+  - Zengbin Wang
+  - Yong Wang
+  - Shidong Yang
+  - Ziyu Ma
+  - Guanhua Chen
+  - Zonghua Sun
+  - Liaoni Wu
+  categories:
+  - cs.CL
+  score: 14
+  matched_terms:
+  - agent benchmark
+  - rollout
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11712v1
+  title: 'Toward Stable Value Alignment: Introducing Independent Modules for Consistent
+    Value Guidance'
+  url: https://arxiv.org/abs/2605.11712v1
+  pdf_url: https://arxiv.org/pdf/2605.11712v1
+  published: '2026-05-12T08:02:34Z'
+  updated: '2026-05-12T08:02:34Z'
+  authors:
+  - Wenhao Chen
+  - Sirui Sun
+  - Shengyuan Bai
+  - Guojie Song
+  categories:
+  - cs.AI
+  score: 14
+  matched_terms:
+  - trajectory
+  - post-training
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11633v1
+  title: Can LLM Agents Respond to Disasters? Benchmarking Heterogeneous Geospatial
+    Reasoning in Emergency Operations
+  url: https://arxiv.org/abs/2605.11633v1
+  pdf_url: https://arxiv.org/pdf/2605.11633v1
+  published: '2026-05-12T06:57:41Z'
+  updated: '2026-05-12T06:57:41Z'
+  authors:
+  - Junjue Wang
+  - Weihao Xuan
+  - Heli Qi
+  - Pengyu Dai
+  - Kunyi Liu
+  - Hongruixuan Chen
+  - Zhuo Zheng
+  - Junshi Xia
+  categories:
+  - cs.AI
+  score: 14
+  matched_terms:
+  - agent benchmark
+  - trajectory
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11613v1
+  title: From Generic Correlation to Input-Specific Credit in On-Policy Self Distillation
+  url: https://arxiv.org/abs/2605.11613v1
+  pdf_url: https://arxiv.org/pdf/2605.11613v1
+  published: '2026-05-12T06:43:17Z'
+  updated: '2026-05-12T06:43:17Z'
+  authors:
+  - Guobin Shen
+  - Lei Huang
+  - Xiang Cheng
+  - Chenxiao Zhao
+  - Jindong Li
+  - Dongcheng Zhao
+  - Xing Yu
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 14
+  matched_terms:
+  - trajectory
+  - post-training
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11036v1
+  title: Sequential Behavioral Watermarking for LLM Agents
+  url: https://arxiv.org/abs/2605.11036v1
+  pdf_url: https://arxiv.org/pdf/2605.11036v1
+  published: '2026-05-11T02:28:34Z'
+  updated: '2026-05-11T02:28:34Z'
+  authors:
+  - Hyeseon An
+  - Shinwoo Park
+  - Dongsu Kim
+  - Yo-Sub Han
+  categories:
+  - cs.CR
+  - cs.AI
+  score: 14
+  matched_terms:
+  - agent benchmark
+  - trajectory
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2604.27151v1
+  title: Step-level Optimization for Efficient Computer-use Agents
+  url: https://arxiv.org/abs/2604.27151v1
+  pdf_url: https://arxiv.org/pdf/2604.27151v1
+  published: '2026-04-29T19:59:36Z'
+  updated: '2026-04-29T19:59:36Z'
+  authors:
+  - Jinbiao Wei
+  - Kangqi Ni
+  - Yilun Zhao
+  - Guo Gan
+  - Arman Cohan
+  categories:
+  - cs.AI
+  score: 14
+  matched_terms:
+  - benchmark
+  - computer-use agent
+  - computer-use agents
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.14311v1
+  title: 'Beyond Binary: Reframing GUI Critique as Continuous Semantic Alignment'
+  url: https://arxiv.org/abs/2605.14311v1
+  pdf_url: https://arxiv.org/pdf/2605.14311v1
+  published: '2026-05-14T03:23:44Z'
+  updated: '2026-05-14T03:23:44Z'
+  authors:
+  - Yuchen Sun
+  - Pei Fu
+  - Shaojie Zhang
+  - Anan Du
+  - Xiuwen Xi
+  - Ruoceng Zhang
+  - Zhenbo Luo
+  - Jian Luan
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.HC
+  score: 13
+  matched_terms:
+  - gui agent
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13119v1
+  title: Towards Long-horizon Embodied Agents with Tool-Aligned Vision-Language-Action
+    Models
+  url: https://arxiv.org/abs/2605.13119v1
+  pdf_url: https://arxiv.org/pdf/2605.13119v1
+  published: '2026-05-13T07:40:34Z'
+  updated: '2026-05-13T07:40:34Z'
+  authors:
+  - Zixing Lei
+  - Changxing Liu
+  - Yichen Xiong
+  - Minhao Xiong
+  - Yuanzhuo Ding
+  - Zhipeng Zhang
+  - Weixin Li
+  - Siheng Chen
+  categories:
+  - cs.RO
+  - cs.AI
+  - cs.CV
+  score: 13
+  matched_terms:
+  - embodied agent
+  - post-training
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12481v1
+  title: 'ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents'
+  url: https://arxiv.org/abs/2605.12481v1
+  pdf_url: https://arxiv.org/pdf/2605.12481v1
+  published: '2026-05-12T17:57:04Z'
+  updated: '2026-05-12T17:57:04Z'
+  authors:
+  - Xuhao Hu
+  - Xi Zhang
+  - Haiyang Xu
+  - Kyle Qiao
+  - Jingyi Yang
+  - Xuanjing Huang
+  - Jing Shao
+  - Ming Yan
+  categories:
+  - cs.AI
+  score: 13
+  matched_terms:
+  - computer use
+  - trajectory
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11182v1
+  title: 'The Many Faces of On-Policy Distillation: Pitfalls, Mechanisms, and Fixes'
+  url: https://arxiv.org/abs/2605.11182v1
+  pdf_url: https://arxiv.org/pdf/2605.11182v1
+  published: '2026-05-11T19:44:59Z'
+  updated: '2026-05-11T19:44:59Z'
+  authors:
+  - Siqi Zhu
+  - Xuyan Ye
+  - Hongyu Lu
+  - Weiye Shi
+  - Ge Liu
+  categories:
+  - cs.AI
+  score: 13
+  matched_terms:
+  - post-training
+  - rlvr
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.15182v1
+  title: 'Warp-as-History: Generalizable Camera-Controlled Video Generation from One
+    Training Video'
+  url: https://arxiv.org/abs/2605.15182v1
+  pdf_url: https://arxiv.org/pdf/2605.15182v1
+  published: '2026-05-14T17:58:26Z'
+  updated: '2026-05-14T17:58:26Z'
+  authors:
+  - Yifan Wang
+  - Tong He
+  categories:
+  - cs.CV
+  score: 12
+  matched_terms:
+  - trajectory
+  - post-training
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.15155v1
+  title: Self-Distilled Agentic Reinforcement Learning
+  url: https://arxiv.org/abs/2605.15155v1
+  pdf_url: https://arxiv.org/pdf/2605.15155v1
+  published: '2026-05-14T17:51:26Z'
+  updated: '2026-05-14T17:51:26Z'
+  authors:
+  - Zhengxi Lu
+  - Zhiyuan Yao
+  - Zhuowen Han
+  - Zi-Han Wang
+  - Jinyang Wu
+  - Qi Gu
+  - Xunliang Cai
+  - Weiming Lu
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  score: 12
+  matched_terms:
+  - trajectory
+  - post-training
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.15138v1
+  title: 'Forgetting That Sticks: Quantization-Permanent Unlearning via Circuit Attribution'
+  url: https://arxiv.org/abs/2605.15138v1
+  pdf_url: https://arxiv.org/pdf/2605.15138v1
+  published: '2026-05-14T17:44:10Z'
+  updated: '2026-05-14T17:44:10Z'
+  authors:
+  - Saisab Sadhu
+  - Pratinav Seth
+  - Vinay Kumar Sankarapu
+  categories:
+  - cs.LG
+  - cs.CL
+  - cs.ET
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12483v2
+  title: 'Beyond GRPO and On-Policy Distillation: An Empirical Sparse-to-Dense Reward
+    Principle for Language-Model Post-Training'
+  url: https://arxiv.org/abs/2605.12483v2
+  pdf_url: https://arxiv.org/pdf/2605.12483v2
+  published: '2026-05-12T17:57:48Z'
+  updated: '2026-05-14T15:02:43Z'
+  authors:
+  - Yuanda Xu
+  - Hejian Sang
+  - Zhengze Zhou
+  - Ran He
+  - Zhipeng Wang
+  - Alborz Geramifard
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 12
+  matched_terms:
+  - post-training
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.14126v1
+  title: Reinforcement Learning for Tool-Calling Agents in Fast Healthcare Interoperability
+    Resources (FHIR)
+  url: https://arxiv.org/abs/2605.14126v1
+  pdf_url: https://arxiv.org/pdf/2605.14126v1
+  published: '2026-05-13T21:27:21Z'
+  updated: '2026-05-13T21:27:21Z'
+  authors:
+  - Marius S. Knorr
+  - Robert Müller
+  - Jan P. Bremer
+  - Nils Schweingruber
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.14062v1
+  title: 'Know When To Fold ''Em: Token-Efficient LLM Synthetic Data Generation via
+    Multi-Stage In-Flight Rejection'
+  url: https://arxiv.org/abs/2605.14062v1
+  pdf_url: https://arxiv.org/pdf/2605.14062v1
+  published: '2026-05-13T19:35:49Z'
+  updated: '2026-05-13T19:35:49Z'
+  authors:
+  - Anjir Ahmed Chowdhury
+  - Syed Zawad
+  - Feng Yan
+  categories:
+  - cs.AI
+  - cs.CL
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13821v1
+  title: Harnessing Agentic Evolution
+  url: https://arxiv.org/abs/2605.13821v1
+  pdf_url: https://arxiv.org/pdf/2605.13821v1
+  published: '2026-05-13T17:45:16Z'
+  updated: '2026-05-13T17:45:16Z'
+  authors:
+  - Jiayi Zhang
+  - Yongfeng Gu
+  - Jianhao Ruan
+  - Maojia Song
+  - Yiran Peng
+  - Zhiguang Han
+  - Jinyu Xiang
+  - Zhitao Wang
+  categories:
+  - cs.AI
+  - cs.LG
+  score: 12
+  matched_terms:
+  - interactive environment
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13501v1
+  title: Reward-Weighted On-Policy Distillation with an Open Property-Equivalence
+    Verifier for NL-to-SVA Generation
+  url: https://arxiv.org/abs/2605.13501v1
+  pdf_url: https://arxiv.org/pdf/2605.13501v1
+  published: '2026-05-13T13:23:54Z'
+  updated: '2026-05-13T13:23:54Z'
+  authors:
+  - Qingyun Zou
+  - Yingze Li
+  - Tianen Liu
+  - Bingsheng He
+  - Weng-Fai Wong
+  categories:
+  - cs.AR
+  - cs.LG
+  score: 12
+  matched_terms:
+  - verifier
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13335v1
+  title: 'Ego2World: Compiling Egocentric Cooking Videos into Executable Worlds for
+    Belief-State Planning'
+  url: https://arxiv.org/abs/2605.13335v1
+  pdf_url: https://arxiv.org/pdf/2605.13335v1
+  published: '2026-05-13T10:53:15Z'
+  updated: '2026-05-13T10:53:15Z'
+  authors:
+  - Qinchuan Cheng
+  - Zhantao Gong
+  - Pengzhan Sun
+  - Angela Yao
+  - Xulei Yang
+  - Shijie Li
+  categories:
+  - cs.AI
+  - cs.CV
+  score: 12
+  matched_terms:
+  - embodied agent
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11739v2
+  title: 'Learning to Foresee: Unveiling the Unlocking Efficiency of On-Policy Distillation'
+  url: https://arxiv.org/abs/2605.11739v2
+  pdf_url: https://arxiv.org/pdf/2605.11739v2
+  published: '2026-05-12T08:19:15Z'
+  updated: '2026-05-13T09:15:00Z'
+  authors:
+  - Yuchen Cai
+  - Ding Cao
+  - Liang Lin
+  - Chunxi Luo
+  - Xin Xu
+  - Kai Yang
+  - Weijie Liu
+  - Saiyong Yang
+  categories:
+  - cs.CL
+  score: 12
+  matched_terms:
+  - trajectory
+  - post-training
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13130v1
+  title: 'GRACE: Gradient-aligned Reasoning Data Curation for Efficient Post-training'
+  url: https://arxiv.org/abs/2605.13130v1
+  pdf_url: https://arxiv.org/pdf/2605.13130v1
+  published: '2026-05-13T07:55:39Z'
+  updated: '2026-05-13T07:55:39Z'
+  authors:
+  - Junjie Li
+  - Ziao Wang
+  - NingXuan Ma
+  - Jianghong Ma
+  - Xiaofeng Zhang
+  categories:
+  - cs.AI
+  score: 12
+  matched_terms:
+  - trajectory
+  - post-training
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.13041v1
+  title: 'EgoForce: Robust Online Egocentric Motion Reconstruction via Diffusion Forcing'
+  url: https://arxiv.org/abs/2605.13041v1
+  pdf_url: https://arxiv.org/pdf/2605.13041v1
+  published: '2026-05-13T05:53:26Z'
+  updated: '2026-05-13T05:53:26Z'
+  authors:
+  - Inwoo Hwang
+  - Donggeun Lim
+  - Hojun Jang
+  - Young Min Kim
+  categories:
+  - cs.CV
+  score: 12
+  matched_terms:
+  - embodied agent
+  - trajectory
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12673v1
+  title: Do Androids Dream of Breaking the Game? Systematically Auditing AI Agent
+    Benchmarks with BenchJack
+  url: https://arxiv.org/abs/2605.12673v1
+  pdf_url: https://arxiv.org/pdf/2605.12673v1
+  published: '2026-05-12T19:22:45Z'
+  updated: '2026-05-12T19:22:45Z'
+  authors:
+  - Hao Wang
+  - Hanchen Li
+  - Qiuyang Mang
+  - Alvin Cheung
+  - Koushik Sen
+  - Dawn Song
+  categories:
+  - cs.AI
+  - cs.CR
+  score: 12
+  matched_terms:
+  - agent benchmark
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12495v1
+  title: 'AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional
+    Verifiable Reward'
+  url: https://arxiv.org/abs/2605.12495v1
+  pdf_url: https://arxiv.org/pdf/2605.12495v1
+  published: '2026-05-12T17:59:47Z'
+  updated: '2026-05-12T17:59:47Z'
+  authors:
+  - Runhui Huang
+  - Jie Wu
+  - Rui Yang
+  - Zhe Liu
+  - Hengshuang Zhao
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.LG
+  score: 12
+  matched_terms:
+  - verifiable reward
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12380v1
+  title: 'Trust the Batch, On- or Off-Policy: Adaptive Policy Optimization for RL
+    Post-Training'
+  url: https://arxiv.org/abs/2605.12380v1
+  pdf_url: https://arxiv.org/pdf/2605.12380v1
+  published: '2026-05-12T16:44:47Z'
+  updated: '2026-05-12T16:44:47Z'
+  authors:
+  - Rasool Fakoor
+  - Murdock Aubry
+  - Nicholas Stranges
+  - Alexander J. Smola
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 12
+  matched_terms:
+  - post-training
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12366v1
+  title: 'Classifier Context Rot: Monitor Performance Degrades with Context Length'
+  url: https://arxiv.org/abs/2605.12366v1
+  pdf_url: https://arxiv.org/pdf/2605.12366v1
+  published: '2026-05-12T16:34:03Z'
+  updated: '2026-05-12T16:34:03Z'
+  authors:
+  - Sam Martin
+  - Fabien Roger
+  categories:
+  - cs.AI
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.12334v1
+  title: Reinforcing VLAs in Task-Agnostic World Models
+  url: https://arxiv.org/abs/2605.12334v1
+  pdf_url: https://arxiv.org/pdf/2605.12334v1
+  published: '2026-05-12T16:16:15Z'
+  updated: '2026-05-12T16:16:15Z'
+  authors:
+  - Yucen Wang
+  - Rui Yu
+  - Fengming Zhang
+  - Junjie Lu
+  - Xinyao Qin
+  - Tianxiang Zhang
+  - Kaixin Wang
+  - Li Zhao
+  categories:
+  - cs.AI
+  score: 12
+  matched_terms:
+  - post-training
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11978v1
+  title: On Predicting the Post-training Potential of Pre-trained LLMs
+  url: https://arxiv.org/abs/2605.11978v1
+  pdf_url: https://arxiv.org/pdf/2605.11978v1
+  published: '2026-05-12T11:33:49Z'
+  updated: '2026-05-12T11:33:49Z'
+  authors:
+  - Xiaoyuan Li
+  - Yubo Ma
+  - Kexin Yang
+  - Moxin Li
+  - Keqin Bao
+  - Wenie Wang
+  - Fuli Feng
+  - Dayiheng Liu
+  categories:
+  - cs.CL
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11887v1
+  title: 'Qwen-Scope: Turning Sparse Features into Development Tools for Large Language
+    Models'
+  url: https://arxiv.org/abs/2605.11887v1
+  pdf_url: https://arxiv.org/pdf/2605.11887v1
+  published: '2026-05-12T10:01:06Z'
+  updated: '2026-05-12T10:01:06Z'
+  authors:
+  - Boyi Deng
+  - Xu Wang
+  - Yaoning Wang
+  - Yu Wan
+  - Yubo Ma
+  - Baosong Yang
+  - Haoran Wei
+  - Jialong Tang
+  categories:
+  - cs.CL
+  - cs.LG
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11854v1
+  title: 'Self-Distilled Trajectory-Aware Boltzmann Modeling: Bridging the Training-Inference
+    Discrepancy in Diffusion Language Models'
+  url: https://arxiv.org/abs/2605.11854v1
+  pdf_url: https://arxiv.org/pdf/2605.11854v1
+  published: '2026-05-12T09:39:06Z'
+  updated: '2026-05-12T09:39:06Z'
+  authors:
+  - Kecheng Chen
+  - Ziru Liu
+  - Xijia Tao
+  - Hui Liu
+  - Yibing Liu
+  - Xinyu Fu
+  - Shi Wu
+  - Suiyun Zhang
+  categories:
+  - cs.CL
+  score: 12
+  matched_terms:
+  - trajectory
+  - post-training
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.11636v1
+  title: 'Seirênes: Adversarial Self-Play with Evolving Distractions for LLM Reasoning'
+  url: https://arxiv.org/abs/2605.11636v1
+  pdf_url: https://arxiv.org/pdf/2605.11636v1
+  published: '2026-05-12T06:58:35Z'
+  updated: '2026-05-12T06:58:35Z'
+  authors:
+  - Chi Zhang
+  - Haibo Qiu
+  - Qiming Zhang
+  - Yufei Xu
+  - Xinbo Gao
+  - Jing Zhang
+  categories:
+  - cs.AI
+  score: 12
+  matched_terms:
+  - verifiable reward
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10937v1
+  title: Power Reinforcement Post-Training of Text-to-Image Models with Super-Linear
+    Advantage Shaping
+  url: https://arxiv.org/abs/2605.10937v1
+  pdf_url: https://arxiv.org/pdf/2605.10937v1
+  published: '2026-05-11T17:59:25Z'
+  updated: '2026-05-11T17:59:25Z'
+  authors:
+  - Haoyuan Sun
+  - Jing Wang
+  - Yuxin Song
+  - Yu Lu
+  - Bo Fang
+  - Yifu Luo
+  - Jun Yin
+  - Pengyu Zeng
+  categories:
+  - cs.CV
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10833v1
+  title: 'MMVIAD: Multi-view Multi-task Video Understanding for Industrial Anomaly
+    Detection'
+  url: https://arxiv.org/abs/2605.10833v1
+  pdf_url: https://arxiv.org/pdf/2605.10833v1
+  published: '2026-05-11T16:49:38Z'
+  updated: '2026-05-11T16:49:38Z'
+  authors:
+  - Xiran Zhao
+  - Jing Jin
+  - Yan Bai
+  - Zhongan Wang
+  - Yifeng Sun
+  - Yihang Lou
+  - Xuanyu Zhu
+  - Tao Feng
+  categories:
+  - cs.CV
+  - cs.AI
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10761v1
+  title: 'RadThinking: A Dataset for Longitudinal Clinical Reasoning in Radiology'
+  url: https://arxiv.org/abs/2605.10761v1
+  pdf_url: https://arxiv.org/pdf/2605.10761v1
+  published: '2026-05-11T15:57:35Z'
+  updated: '2026-05-11T15:57:35Z'
+  authors:
+  - Wenxuan Li
+  - Pedro R. A. S. Bassi
+  - Xinze Zhou
+  - Jakob Wasserthal
+  - Alan L. Yuille
+  - Zongwei Zhou
+  categories:
+  - cs.CV
+  score: 12
+  matched_terms:
+  - verifiable reward
+  - evaluation
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10759v1
+  title: 'Reinforce Adjoint Matching: Scaling RL Post-Training of Diffusion and Flow-Matching
+    Models'
+  url: https://arxiv.org/abs/2605.10759v1
+  pdf_url: https://arxiv.org/pdf/2605.10759v1
+  published: '2026-05-11T15:56:29Z'
+  updated: '2026-05-11T15:56:29Z'
+  authors:
+  - Andreas Bergmeister
+  - Stefanie Jegelka
+  - Nikolas Nüsken
+  - Carles Domingo-Enrich
+  - Jakiw Pidstrigach
+  categories:
+  - cs.LG
+  - cs.CV
+  score: 12
+  matched_terms:
+  - post-training
+  - rollout
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10448v1
+  title: Can Agent Benchmarks Support Their Scores? Evidence-Supported Bounds for
+    Interactive-Agent Evaluation
+  url: https://arxiv.org/abs/2605.10448v1
+  pdf_url: https://arxiv.org/pdf/2605.10448v1
+  published: '2026-05-11T12:20:15Z'
+  updated: '2026-05-11T12:20:15Z'
+  authors:
+  - Shanshan Gao
+  - Liyi Zhou
+  categories:
+  - cs.AI
+  score: 12
+  matched_terms:
+  - agent benchmark
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10391v1
+  title: Phoenix-VL 1.5 Medium Technical Report
+  url: https://arxiv.org/abs/2605.10391v1
+  pdf_url: https://arxiv.org/pdf/2605.10391v1
+  published: '2026-05-11T11:36:37Z'
+  updated: '2026-05-11T11:36:37Z'
+  authors:
+  - Team Phoenix
+  - ":"
+  - Arka Ray
+  - Askar Ali Mohamed Jawad
+  - Biondi Lee
+  - Elijah Seah
+  - Eva Lim
+  - Fiona Teo
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.CV
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.10332v1
+  title: 'EmbodiSkill: Skill-Aware Reflection for Self-Evolving Embodied Agents'
+  url: https://arxiv.org/abs/2605.10332v1
+  pdf_url: https://arxiv.org/pdf/2605.10332v1
+  published: '2026-05-11T10:33:29Z'
+  updated: '2026-05-11T10:33:29Z'
+  authors:
+  - Ruofei Ju
+  - Xinrui Wang
+  - Xin Ding
+  - Yifan Yang
+  - Hao Wu
+  - Shiqi Jiang
+  - Qianxi Zhang
+  - Hao Wen
+  categories:
+  - cs.AI
+  score: 12
+  matched_terms:
+  - embodied agent
+  - trajectory
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.09823v1
+  title: 'CalBench: Evaluating Coordination-Privacy Trade-offs in Multi-Agent LLMs'
+  url: https://arxiv.org/abs/2605.09823v1
+  pdf_url: https://arxiv.org/pdf/2605.09823v1
+  published: '2026-05-10T23:56:02Z'
+  updated: '2026-05-10T23:56:02Z'
+  authors:
+  - Chelsea Zou
+  - Yiheng Yao
+  - Selena She
+  - Robert D. Hawkins
+  categories:
+  - cs.MA
+  - cs.AI
+  score: 12
+  matched_terms:
+  - agent benchmark
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.09584v1
+  title: 'CLR-voyance: Reinforcing Open-Ended Reasoning for Inpatient Clinical Decision
+    Support with Outcome-Aware Rubrics'
+  url: https://arxiv.org/abs/2605.09584v1
+  pdf_url: https://arxiv.org/pdf/2605.09584v1
+  published: '2026-05-10T14:51:31Z'
+  updated: '2026-05-10T14:51:31Z'
+  authors:
+  - Aishik Nagar
+  - Arun-Kumar Kaliya-Perumal
+  - Yu-Hsuan Han
+  - Andrew Sheng-Han Huang
+  - Kristen Kee
+  - Yushi Cao
+  - Yiming Chen
+  - Hongchao Jiang
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  score: 12
+  matched_terms:
+  - post-training
+  - evaluation
+  - benchmark
+  bucket: likely_agent_world
+  reason: watchlist
+  curated_match: false
+  watchlist_status: watchlist
+  watchlist_candidate: true
+  watchlist_checklist: *1
+- id: 2605.14747v1
+  title: 'Video2GUI: Synthesizing Large-Scale Interaction Trajectories for Generalized
+    GUI Agent Pretraining'
+  url: https://arxiv.org/abs/2605.14747v1
+  pdf_url: https://arxiv.org/pdf/2605.14747v1
+  published: '2026-05-14T12:14:24Z'
+  updated: '2026-05-14T12:14:24Z'
+  authors:
+  - Weimin Xiong
+  - Shuhao Gu
+  - Bowen Ye
+  - Zihao Yue
+  - Lei Li
+  - Feifan Song
+  - Sujian Li
+  - Hao Tian
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.CV
+  - cs.LG
+  score: 11
+  matched_terms:
+  - gui agent
+  - benchmark
+  bucket: watch
+  reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11027v1
+  title: 'From Code-Centric to Intent-Centric Software Engineering: A Reflexive Thematic
+    Analysis of Generative AI, Agentic Systems, and Engineering Accountability'
+  url: https://arxiv.org/abs/2605.11027v1
+  pdf_url: https://arxiv.org/pdf/2605.11027v1
+  published: '2026-05-10T20:45:06Z'
+  updated: '2026-05-10T20:45:06Z'
+  authors:
+  - Elyson De La Cruz
+  categories:
+  - cs.SE
+  - cs.AI
+  score: 11
+  matched_terms:
+  - software engineering agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.15102v1
+  title: Improving Multi-turn Dialogue Consistency with Self-Recall Thinking
+  url: https://arxiv.org/abs/2605.15102v1
+  pdf_url: https://arxiv.org/pdf/2605.15102v1
+  published: '2026-05-14T17:20:14Z'
+  updated: '2026-05-14T17:20:14Z'
+  authors:
+  - Renning Pang
+  - Tian Lan
+  - Leyuan Liu
+  - Xiaoming Huang
+  - Piao Tong
+  - Xiaosong Zhang
+  categories:
+  - cs.CL
+  - cs.AI
+  score: 10
+  matched_terms:
+  - verifiable reward
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.15030v1
+  title: 'WARD: Adversarially Robust Defense of Web Agents Against Prompt Injections'
+  url: https://arxiv.org/abs/2605.15030v1
+  pdf_url: https://arxiv.org/pdf/2605.15030v1
+  published: '2026-05-14T16:26:27Z'
+  updated: '2026-05-14T16:26:27Z'
+  authors:
+  - Tri Cao
+  - Yulin Chen
+  - Hieu Cao
+  - Yibo Li
+  - Khoi Le
+  - Thong Nguyen
+  - Yuexin Li
+  - Yufei He
+  categories:
+  - cs.CR
+  - cs.AI
+  score: 10
+  matched_terms:
+  - web agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14929v1
+  title: A Hardware-Aware, Per-Layer Methodology for Post-Training Quantization of
+    Large Language Models
+  url: https://arxiv.org/abs/2605.14929v1
+  pdf_url: https://arxiv.org/pdf/2605.14929v1
+  published: '2026-05-14T15:03:58Z'
+  updated: '2026-05-14T15:03:58Z'
+  authors:
+  - Earl Killian
+  categories:
+  - cs.LG
+  - cs.AR
+  score: 10
+  matched_terms:
+  - post-training
+  - evaluation
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10310v2
+  title: 'Positive Alignment: Artificial Intelligence for Human Flourishing'
+  url: https://arxiv.org/abs/2605.10310v2
+  pdf_url: https://arxiv.org/pdf/2605.10310v2
+  published: '2026-05-11T10:11:08Z'
+  updated: '2026-05-14T08:50:45Z'
+  authors:
+  - Ruben Laukkonen
+  - Seb Krier
+  - Chloé Bakalar
+  - Shamil Chandaria
+  - Morten Kringelbach
+  - Adam Elwood
+  - Daniel Ford
+  - Fernando Rosas
+  categories:
+  - cs.AI
+  - cs.CY
+  - cs.HC
+  - q-bio.NC
+  score: 10
+  matched_terms:
+  - post-training
+  - evaluation
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14537v1
+  title: 'Cattle Trade: A Multi-Agent Benchmark for LLM Bluffing, Bidding, and Bargaining'
+  url: https://arxiv.org/abs/2605.14537v1
+  pdf_url: https://arxiv.org/pdf/2605.14537v1
+  published: '2026-05-14T08:20:03Z'
+  updated: '2026-05-14T08:20:03Z'
+  authors:
+  - Robert Müller
+  - Clemens Müller
+  categories:
+  - cs.AI
+  score: 10
+  matched_terms:
+  - agent benchmark
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14504v1
+  title: 'When Robots Do the Chores: A Benchmark and Agent for Long-Horizon Household
+    Task Execution'
+  url: https://arxiv.org/abs/2605.14504v1
+  pdf_url: https://arxiv.org/pdf/2605.14504v1
+  published: '2026-05-14T07:47:53Z'
+  updated: '2026-05-14T07:47:53Z'
+  authors:
+  - Zilin Zhu
+  - Longteng Guo
+  - Yanghong Mei
+  - Bowen Pang
+  - Zongxun Zhang
+  - Xingjian He
+  - Ruyi Ji
+  - Jing Liu
+  categories:
+  - cs.AI
+  score: 10
+  matched_terms:
+  - embodied agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.13276v2
+  title: 'D-VLA: A High-Concurrency Distributed Asynchronous Reinforcement Learning
+    Framework for Vision-Language-Action Models'
+  url: https://arxiv.org/abs/2605.13276v2
+  pdf_url: https://arxiv.org/pdf/2605.13276v2
+  published: '2026-05-13T09:54:31Z'
+  updated: '2026-05-14T06:59:41Z'
+  authors:
+  - Yucheng Guo
+  - Yongjian Guo
+  - Zhong Guan
+  - Wen Huang
+  - Haoran Sun
+  - Haodong Yue
+  - Xiaolong Xiang
+  - Shuai Di
+  categories:
+  - cs.AI
+  - cs.RO
+  score: 10
+  matched_terms:
+  - embodied agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14403v1
+  title: 'DermAgent: A Self-Reflective Agentic System for Dermatological Image Analysis
+    with Multi-Tool Reasoning and Traceable Decision-Making'
+  url: https://arxiv.org/abs/2605.14403v1
+  pdf_url: https://arxiv.org/pdf/2605.14403v1
+  published: '2026-05-14T05:41:11Z'
+  updated: '2026-05-14T05:41:11Z'
+  authors:
+  - Yize Liu
+  - Siyuan Yan
+  - Ming Hu
+  - Lie Ju
+  - Xieji Li
+  - Feilong Tang
+  - Wei Feng
+  - Zongyuan Ge
+  categories:
+  - cs.CV
+  score: 10
+  matched_terms:
+  - tool agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14269v1
+  title: 'PhyMotion: Structured 3D Motion Reward for Physics-Grounded Human Video
+    Generation'
+  url: https://arxiv.org/abs/2605.14269v1
+  pdf_url: https://arxiv.org/pdf/2605.14269v1
+  published: '2026-05-14T02:12:13Z'
+  updated: '2026-05-14T02:12:13Z'
+  authors:
+  - Yidong Huang
+  - Zun Wang
+  - Han Lin
+  - Dong-Ki Kim
+  - Shayegan Omidshafiei
+  - Jaehong Yoon
+  - Jaemin Cho
+  - Yue Zhang
+  categories:
+  - cs.CV
+  - cs.AI
+  score: 10
+  matched_terms:
+  - post-training
+  - evaluation
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.13641v1
+  title: Multi-Objective and Mixed-Reward Reinforcement Learning via Reward-Decorrelated
+    Policy Optimization
+  url: https://arxiv.org/abs/2605.13641v1
+  pdf_url: https://arxiv.org/pdf/2605.13641v1
+  published: '2026-05-13T15:05:18Z'
+  updated: '2026-05-13T15:05:18Z'
+  authors:
+  - Yang Bai
+  - Kaiyuan Liu
+  - Ziyuan Zhuang
+  - Jiahong Zhou
+  - Rongxiang Weng
+  - Xin Chen
+  - Jingang Wang
+  - Xunliang Cai
+  categories:
+  - cs.LG
+  - cs.CL
+  score: 10
+  matched_terms:
+  - post-training
+  - evaluation
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.13301v1
+  title: Achieving Gold-Medal-Level Olympiad Reasoning via Simple and Unified Scaling
+  url: https://arxiv.org/abs/2605.13301v1
+  pdf_url: https://arxiv.org/pdf/2605.13301v1
+  published: '2026-05-13T10:13:26Z'
+  updated: '2026-05-13T10:13:26Z'
+  authors:
+  - Yafu Li
+  - Runzhe Zhan
+  - Haoran Zhang
+  - Shunkai Zhang
+  - Yizhuo Li
+  - Zhilin Wang
+  - Jiacheng Chen
+  - Futing Wang
+  categories:
+  - cs.AI
+  - cs.CL
+  score: 10
+  matched_terms:
+  - verifiable reward
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12179v1
+  title: 'SyncDPO: Enhancing Temporal Synchronization in Video-Audio Joint Generation
+    via Preference Learning'
+  url: https://arxiv.org/abs/2605.12179v1
+  pdf_url: https://arxiv.org/pdf/2605.12179v1
+  published: '2026-05-12T14:22:13Z'
+  updated: '2026-05-12T14:22:13Z'
+  authors:
+  - Xin Cheng
+  - Xihua Wang
+  - Ying Ba
+  - Yuyue Wang
+  - Kaisi Guan
+  - Yinbo Wang
+  - Wenpu Li
+  - Ruihua Song
+  categories:
+  - cs.CV
+  score: 10
+  matched_terms:
+  - post-training
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11906v1
+  title: 'YFPO: A Preliminary Study of Yoked Feature Preference Optimization with
+    Neuron-Guided Rewards for Mathematical Reasoning'
+  url: https://arxiv.org/abs/2605.11906v1
+  pdf_url: https://arxiv.org/pdf/2605.11906v1
+  published: '2026-05-12T10:18:49Z'
+  updated: '2026-05-12T10:18:49Z'
+  authors:
+  - Yifan Le
+  categories:
+  - cs.CL
+  score: 10
+  matched_terms:
+  - post-training
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11800v1
+  title: 'ROMER: Expert Replacement and Router Calibration for Robust MoE LLMs on
+    Analog Compute-in-Memory Systems'
+  url: https://arxiv.org/abs/2605.11800v1
+  pdf_url: https://arxiv.org/pdf/2605.11800v1
+  published: '2026-05-12T08:57:59Z'
+  updated: '2026-05-12T08:57:59Z'
+  authors:
+  - Wenyong Zhou
+  - Yuannuo Feng
+  - Yizhe Chen
+  - Taiqiang Wu
+  - Wendong Xu
+  - Wenbo Qi
+  - Zhengwu Liu
+  - Wang Kang
+  categories:
+  - cs.LG
+  - cs.CL
+  score: 10
+  matched_terms:
+  - post-training
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11608v1
+  title: 'PRISM: A Geometric Risk Bound that Decomposes Drift into Scale, Shape, and
+    Head'
+  url: https://arxiv.org/abs/2605.11608v1
+  pdf_url: https://arxiv.org/pdf/2605.11608v1
+  published: '2026-05-12T06:40:34Z'
+  updated: '2026-05-12T06:40:34Z'
+  authors:
+  - Chieh-Yen Lin
+  - Shao-Hua Sun
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.LG
+  score: 10
+  matched_terms:
+  - post-training
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11592v1
+  title: 'SoK: Unlearnability and Unlearning for Model Dememorization'
+  url: https://arxiv.org/abs/2605.11592v1
+  pdf_url: https://arxiv.org/pdf/2605.11592v1
+  published: '2026-05-12T06:17:13Z'
+  updated: '2026-05-12T06:17:13Z'
+  authors:
+  - Mengying Zhang
+  - Derui Wang
+  - Ruoxi Sun
+  - Xiaoyu Xia
+  - Shuang Hao
+  - Minhui Xue
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CR
+  score: 10
+  matched_terms:
+  - post-training
+  - evaluation
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11534v1
+  title: 'PRISM: : Planning and Reasoning with Intent in Simulated Embodied Environments'
+  url: https://arxiv.org/abs/2605.11534v1
+  pdf_url: https://arxiv.org/pdf/2605.11534v1
+  published: '2026-05-12T04:59:47Z'
+  updated: '2026-05-12T04:59:47Z'
+  authors:
+  - Yunn Kang Lim
+  - Pengzhan Sun
+  - Ziyi Bai
+  - Xun Xu
+  - Angela Yao
+  - Xulei Yang
+  - Shijie Li
+  categories:
+  - cs.RO
+  score: 10
+  matched_terms:
+  - embodied agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11367v1
+  title: '3D-Belief: Embodied Belief Inference via Generative 3D World Modeling'
+  url: https://arxiv.org/abs/2605.11367v1
+  pdf_url: https://arxiv.org/pdf/2605.11367v1
+  published: '2026-05-12T00:42:27Z'
+  updated: '2026-05-12T00:42:27Z'
+  authors:
+  - Yifan Yin
+  - Zehao Wen
+  - Jieneng Chen
+  - Zehan Zheng
+  - Nanru Dai
+  - Haojun Shi
+  - Suyu Ye
+  - Aydan Huang
+  categories:
+  - cs.CV
+  score: 10
+  matched_terms:
+  - embodied agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11224v1
+  title: 'ABRA: Agent Benchmark for Radiology Applications'
+  url: https://arxiv.org/abs/2605.11224v1
+  pdf_url: https://arxiv.org/pdf/2605.11224v1
+  published: '2026-05-11T20:34:20Z'
+  updated: '2026-05-11T20:34:20Z'
+  authors:
+  - Bulat Maksudov
+  - Vladislav Kurenkov
+  - Kathleen M. Curran
+  - Alessandra Mileo
+  categories:
+  - cs.CV
+  - cs.AI
+  score: 10
+  matched_terms:
+  - agent benchmark
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10793v1
+  title: 'ConQuR: Corner Aligned Activation Quantization via Optimized Rotations for
+    LLMs'
+  url: https://arxiv.org/abs/2605.10793v1
+  pdf_url: https://arxiv.org/pdf/2605.10793v1
+  published: '2026-05-11T16:23:10Z'
+  updated: '2026-05-11T16:23:10Z'
+  authors:
+  - Chayne Thrash
+  - Ali Abbasi
+  - Soheil Kolouri
+  categories:
+  - cs.LG
+  score: 10
+  matched_terms:
+  - post-training
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10106v1
+  title: 'ViSRA: A Video-based Spatial Reasoning Agent for Multi-modal Large Language
+    Models'
+  url: https://arxiv.org/abs/2605.10106v1
+  pdf_url: https://arxiv.org/pdf/2605.10106v1
+  published: '2026-05-11T07:20:09Z'
+  updated: '2026-05-11T07:20:09Z'
+  authors:
+  - Tingshu Mou
+  - Jiabo He
+  - Renying Wang
+  - Ce Liu
+  - Hao Yang
+  - Tiehua Zhang
+  - Jingjing Chen
+  - Xingjun Ma
+  categories:
+  - cs.CV
+  - cs.AI
+  score: 10
+  matched_terms:
+  - post-training
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09874v1
+  title: 'EgoMemReason: A Memory-Driven Reasoning Benchmark for Long-Horizon Egocentric
+    Video Understanding'
+  url: https://arxiv.org/abs/2605.09874v1
+  pdf_url: https://arxiv.org/pdf/2605.09874v1
+  published: '2026-05-11T01:59:59Z'
+  updated: '2026-05-11T01:59:59Z'
+  authors:
+  - Ziyang Wang
+  - Yue Zhang
+  - Shoubin Yu
+  - Ce Zhang
+  - Zengqi Zhao
+  - Jaehong Yoon
+  - Hyunji Lee
+  - Gedas Bertasius
+  categories:
+  - cs.CV
+  - cs.AI
+  - cs.CL
+  score: 10
+  matched_terms:
+  - embodied agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09853v1
+  title: Exploration-Driven Optimization for Test-Time Large Language Model Reasoning
+  url: https://arxiv.org/abs/2605.09853v1
+  pdf_url: https://arxiv.org/pdf/2605.09853v1
+  published: '2026-05-11T01:10:48Z'
+  updated: '2026-05-11T01:10:48Z'
+  authors:
+  - Changhao Li
+  - Yuchen Zhuang
+  - Chenxiao Gao
+  - Haotian Sun
+  - Rushi Qiang
+  - Chao Zhang
+  - Bo Dai
+  categories:
+  - cs.LG
+  score: 10
+  matched_terms:
+  - post-training
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09826v1
+  title: 'EnactToM: An Evolving Benchmark for Functional Theory of Mind in Embodied
+    Agents'
+  url: https://arxiv.org/abs/2605.09826v1
+  pdf_url: https://arxiv.org/pdf/2605.09826v1
+  published: '2026-05-11T00:04:19Z'
+  updated: '2026-05-11T00:04:19Z'
+  authors:
+  - Gurusha Juneja
+  - Dylan Lu
+  - Saaket Agashe
+  - Parth Diwane
+  - Edward Gunn
+  - Jayanth Srinivasa
+  - Gaowen Liu
+  - William Yang Wang
+  categories:
+  - cs.AI
+  - cs.MA
+  score: 10
+  matched_terms:
+  - embodied agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09703v1
+  title: 'MOTOR-Bench: A Real-world Dataset and Multi-agent Framework for Zero-shot
+    Human Mental State Understanding'
+  url: https://arxiv.org/abs/2605.09703v1
+  pdf_url: https://arxiv.org/pdf/2605.09703v1
+  published: '2026-05-10T18:51:34Z'
+  updated: '2026-05-10T18:51:34Z'
+  authors:
+  - Xiaoyu Yuan
+  - Niklas Heikkala
+  - Tiina Törmänen
+  - Hanna Järvenoja
+  - Guoying Zhao
+  - Haoyu Chen
+  categories:
+  - cs.CV
+  score: 10
+  matched_terms:
+  - agent benchmark
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09497v1
+  title: 'Don''t Click That: Teaching Web Agents to Resist Deceptive Interfaces'
+  url: https://arxiv.org/abs/2605.09497v1
+  pdf_url: https://arxiv.org/pdf/2605.09497v1
+  published: '2026-05-10T12:11:52Z'
+  updated: '2026-05-10T12:11:52Z'
+  authors:
+  - Yilin Zhang
+  - Yingkai Hua
+  - Chunyu Wei
+  - Xin Wang
+  - Yueguo Chen
+  categories:
+  - cs.AI
+  - cs.CR
+  score: 10
+  matched_terms:
+  - web agent
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12460v1
+  title: 'Multi-Stream LLMs: Unblocking Language Models with Parallel Streams of Thoughts,
+    Inputs and Outputs'
+  url: https://arxiv.org/abs/2605.12460v1
+  pdf_url: https://arxiv.org/pdf/2605.12460v1
+  published: '2026-05-12T17:47:41Z'
+  updated: '2026-05-12T17:47:41Z'
+  authors:
+  - Guinan Su
+  - Yanwu Yang
+  - Xueyan Li
+  - Jonas Geiping
+  categories:
+  - cs.LG
+  - cs.CL
+  score: 9
+  matched_terms:
+  - computer use
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12294v1
+  title: Executable Agentic Memory for GUI Agent
+  url: https://arxiv.org/abs/2605.12294v1
+  pdf_url: https://arxiv.org/pdf/2605.12294v1
+  published: '2026-05-12T15:48:44Z'
+  updated: '2026-05-12T15:48:44Z'
+  authors:
+  - Zerui Qin
+  - Sheng Yue
+  - Xingyuan Hua
+  - Yongjian Fu
+  - Ju Ren
+  categories:
+  - cs.AI
+  score: 9
+  matched_terms:
+  - gui agent
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10754v1
+  title: 'The Agent Use of Agent Beings: Agent Cybernetics Is the Missing Science
+    of Foundation Agents'
+  url: https://arxiv.org/abs/2605.10754v1
+  pdf_url: https://arxiv.org/pdf/2605.10754v1
+  published: '2026-05-11T15:53:54Z'
+  updated: '2026-05-11T15:53:54Z'
+  authors:
+  - Xinrun Wang
+  - Chang Yang
+  - He Zhao
+  - Zhuoyi Lin
+  - Shuyue Hu
+  categories:
+  - cs.AI
+  score: 9
+  matched_terms:
+  - computer use
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11051v1
+  title: On Problems of Implicit Context Compression for Software Engineering Agents
+  url: https://arxiv.org/abs/2605.11051v1
+  pdf_url: https://arxiv.org/pdf/2605.11051v1
+  published: '2026-05-11T14:47:07Z'
+  updated: '2026-05-11T14:47:07Z'
+  authors:
+  - Kirill Gelvan
+  - Igor Slinko
+  - Felix Steinbauer
+  - Egor Bogomolov
+  - Florian Kofler
+  - Yaroslav Zharov
+  categories:
+  - cs.SE
+  - cs.AI
+  - cs.CL
+  - cs.LG
+  score: 9
+  matched_terms:
+  - software engineering agent
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10516v1
+  title: 'Consistency as a Testable Property: Statistical Methods to Evaluate AI Agent
+    Reliability'
+  url: https://arxiv.org/abs/2605.10516v1
+  pdf_url: https://arxiv.org/pdf/2605.10516v1
+  published: '2026-05-11T13:06:24Z'
+  updated: '2026-05-11T13:06:24Z'
+  authors:
+  - Harsh Raj
+  - Niranjan Orkat
+  - Suvrorup Mukherjee
+  - Aritra Guha
+  - Cheryl Flynn
+  - Subhabrata Majumdar
+  categories:
+  - cs.AI
+  score: 9
+  matched_terms:
+  - trajectory
+  - benchmark
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.03231v1
+  title: 'cotomi Act: Learning to Automate Work by Watching You'
+  url: https://arxiv.org/abs/2605.03231v1
+  pdf_url: https://arxiv.org/pdf/2605.03231v1
+  published: '2026-05-04T23:50:20Z'
+  updated: '2026-05-04T23:50:20Z'
+  authors:
+  - Masafumi Oyamada
+  - Kunihiro Takeoka
+  - Kosuke Akimoto
+  - Ryoma Obara
+  - Masafumi Enomoto
+  - Haochen Zhang
+  - Daichi Haraguchi
+  - Takuya Tamura
+  categories:
+  - cs.AI
+  score: 9
+  matched_terms:
+  - browser agent
+  - evaluation
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.15042v1
+  title: 'EverAnimate: Minute-Scale Human Animation via Latent Flow Restoration'
+  url: https://arxiv.org/abs/2605.15042v1
+  pdf_url: https://arxiv.org/pdf/2605.15042v1
+  published: '2026-05-14T16:36:34Z'
+  updated: '2026-05-14T16:36:34Z'
+  authors:
+  - Wuyang Li
+  - Yang Gao
+  - Mariam Hassan
+  - Lan Feng
+  - Wentao Pan
+  - Po-Chien Luan
+  - Alexandre Alahi
+  categories:
+  - cs.CV
+  - cs.AI
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14786v1
+  title: 'Known By Their Actions: Fingerprinting LLM Browser Agents via UI Traces'
+  url: https://arxiv.org/abs/2605.14786v1
+  pdf_url: https://arxiv.org/pdf/2605.14786v1
+  published: '2026-05-14T12:55:19Z'
+  updated: '2026-05-14T12:55:19Z'
+  authors:
+  - William Lugoloobi
+  - Samuelle Marro
+  - Jabez Magomere
+  - Joss Wright
+  - Chris Russell
+  categories:
+  - cs.CR
+  - cs.AI
+  - cs.HC
+  - cs.LG
+  score: 8
+  matched_terms:
+  - browser agent
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14556v1
+  title: 'TeachAnything: A Multimodal Crowdsourcing Platform for Training Embodied
+    AI Agents in Symmetrical Reality'
+  url: https://arxiv.org/abs/2605.14556v1
+  pdf_url: https://arxiv.org/pdf/2605.14556v1
+  published: '2026-05-14T08:32:46Z'
+  updated: '2026-05-14T08:32:46Z'
+  authors:
+  - Zidong Liu
+  - Rongkai Liu
+  - Yue Li
+  - Zhenliang Zhang
+  categories:
+  - cs.AI
+  score: 8
+  matched_terms:
+  - embodied agent
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14386v1
+  title: 'Darwin Family: MRI-Trust-Weighted Evolutionary Merging for Training-Free
+    Scaling of Language-Model Reasoning'
+  url: https://arxiv.org/abs/2605.14386v1
+  pdf_url: https://arxiv.org/pdf/2605.14386v1
+  published: '2026-05-14T05:09:12Z'
+  updated: '2026-05-14T05:09:12Z'
+  authors:
+  - Taebong Kim
+  - Youngsik Hong
+  - Minsik Kim
+  - Sunyoung Choi
+  - Jaewon Jang
+  - Junghoon Shin
+  - Minseo Kim
+  categories:
+  - cs.NE
+  - cs.AI
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14323v1
+  title: Dynamic Latent Routing
+  url: https://arxiv.org/abs/2605.14323v1
+  pdf_url: https://arxiv.org/pdf/2605.14323v1
+  published: '2026-05-14T03:35:46Z'
+  updated: '2026-05-14T03:35:46Z'
+  authors:
+  - Fangyuan Yu
+  - Xin Su
+  - Amir Abdullah
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CL
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14218v1
+  title: Fusion-fission forecasts when AI will shift to undesirable behavior
+  url: https://arxiv.org/abs/2605.14218v1
+  pdf_url: https://arxiv.org/pdf/2605.14218v1
+  published: '2026-05-14T00:26:32Z'
+  updated: '2026-05-14T00:26:32Z'
+  authors:
+  - Neil F. Johnson
+  - Frank Yingjie Huo
+  categories:
+  - cs.AI
+  - physics.soc-ph
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14205v1
+  title: 'SimPersona: Learning Discrete Buyer Personas from Raw Clickstreams for Grounded
+    E-Commerce Agents'
+  url: https://arxiv.org/abs/2605.14205v1
+  pdf_url: https://arxiv.org/pdf/2605.14205v1
+  published: '2026-05-14T00:01:11Z'
+  updated: '2026-05-14T00:01:11Z'
+  authors:
+  - Zahra Zanjani Foumani
+  - Alberto Castelo
+  - Shuang Xie
+  - Ted Chaiwachirasak
+  - Han Li
+  - Lingyun Wang
+  categories:
+  - cs.AI
+  score: 8
+  matched_terms:
+  - web agent
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14174v1
+  title: Safety-Constrained Reinforcement Learning with Post-Training Reachability
+    Verification for Robot Navigation
+  url: https://arxiv.org/abs/2605.14174v1
+  pdf_url: https://arxiv.org/pdf/2605.14174v1
+  published: '2026-05-13T22:53:47Z'
+  updated: '2026-05-13T22:53:47Z'
+  authors:
+  - Qisong He
+  - Xinmiao Huang
+  - Jinwei Hu
+  - Zhuoyun Li
+  - Yi Dong
+  - Changshun Wu
+  - Xiaowei Huang
+  categories:
+  - cs.RO
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.14047v1
+  title: Evolving Layer-Specific Scalar Functions for Hardware-Aware Transformer Adaptation
+  url: https://arxiv.org/abs/2605.14047v1
+  pdf_url: https://arxiv.org/pdf/2605.14047v1
+  published: '2026-05-13T19:08:55Z'
+  updated: '2026-05-13T19:08:55Z'
+  authors:
+  - Kieran Carrigg
+  - Sigur de Vries
+  - Amirhossein Sadough
+  - Marcel van Gerven
+  categories:
+  - cs.CV
+  - cs.AR
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.13768v1
+  title: High-Rate Quantized Matrix Multiplication II
+  url: https://arxiv.org/abs/2605.13768v1
+  pdf_url: https://arxiv.org/pdf/2605.13768v1
+  published: '2026-05-13T16:47:25Z'
+  updated: '2026-05-13T16:47:25Z'
+  authors:
+  - Or Ordentlich
+  - Yury Polyanskiy
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.IT
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.13411v1
+  title: Model-Agnostic Lifelong LLM Safety via Externalized Attack-Defense Co-Evolution
+  url: https://arxiv.org/abs/2605.13411v1
+  pdf_url: https://arxiv.org/pdf/2605.13411v1
+  published: '2026-05-13T12:07:05Z'
+  updated: '2026-05-13T12:07:05Z'
+  authors:
+  - Xiaozhe Zhang
+  - Chaozhuo Li
+  - Hui Liu
+  - Shaocheng Yan
+  - Bingyu Yan
+  - Qiwei Ye
+  - Haoliang Li
+  categories:
+  - cs.CR
+  - cs.CL
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.13339v1
+  title: Probing Persona-Dependent Preferences in Language Models
+  url: https://arxiv.org/abs/2605.13339v1
+  pdf_url: https://arxiv.org/pdf/2605.13339v1
+  published: '2026-05-13T10:57:37Z'
+  updated: '2026-05-13T10:57:37Z'
+  authors:
+  - Oscar Gilg
+  - Pierre Beckmann
+  - Daniel Paleka
+  - Patrick Butlin
+  categories:
+  - cs.CL
+  - cs.AI
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.13214v1
+  title: 'Backdoor Channels Hidden in Latent Space: Cryptographic Undetectability
+    in Modern Neural Networks'
+  url: https://arxiv.org/abs/2605.13214v1
+  pdf_url: https://arxiv.org/pdf/2605.13214v1
+  published: '2026-05-13T09:06:25Z'
+  updated: '2026-05-13T09:06:25Z'
+  authors:
+  - Marte Eggen
+  - Eirik Reiestad
+  - Kristian Gjøsteen
+  - Inga Strümke
+  categories:
+  - cs.CR
+  - cs.LG
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12748v1
+  title: Simulating Students or Sycophantic Problem Solving? On Misconception Faithfulness
+    of LLM Simulators
+  url: https://arxiv.org/abs/2605.12748v1
+  pdf_url: https://arxiv.org/pdf/2605.12748v1
+  published: '2026-05-12T20:55:23Z'
+  updated: '2026-05-12T20:55:23Z'
+  authors:
+  - Heejin Do
+  - Shashank Sonkar
+  - Mrinmaya Sachan
+  categories:
+  - cs.CL
+  - cs.AI
+  - cs.CY
+  - cs.LG
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12746v1
+  title: 'CoT-Guard: Small Models for Strong Monitoring'
+  url: https://arxiv.org/abs/2605.12746v1
+  pdf_url: https://arxiv.org/pdf/2605.12746v1
+  published: '2026-05-12T20:49:30Z'
+  updated: '2026-05-12T20:49:30Z'
+  authors:
+  - Nirav Diwan
+  - Han Wang
+  - Berkcan Kapusuzoglu
+  - Ramin Moradi
+  - Supriyo Chakraborty
+  - Giri Iyengar
+  - Sambit Sahu
+  - Huan Zhang
+  categories:
+  - cs.CR
+  - cs.AI
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12705v1
+  title: Early Data Exposure Improves Robustness to Subsequent Fine-Tuning
+  url: https://arxiv.org/abs/2605.12705v1
+  pdf_url: https://arxiv.org/pdf/2605.12705v1
+  published: '2026-05-12T20:08:00Z'
+  updated: '2026-05-12T20:08:00Z'
+  authors:
+  - Lawrence Feng
+  - Gaurav R. Ghosal
+  - Jacob Mitchell Springer
+  - Ziqian Zhong
+  - Aditi Raghunathan
+  categories:
+  - cs.LG
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12500v1
+  title: 'SenseNova-U1: Unifying Multimodal Understanding and Generation with NEO-unify
+    Architecture'
+  url: https://arxiv.org/abs/2605.12500v1
+  pdf_url: https://arxiv.org/pdf/2605.12500v1
+  published: '2026-05-12T17:59:58Z'
+  updated: '2026-05-12T17:59:58Z'
+  authors:
+  - Haiwen Diao
+  - Penghao Wu
+  - Hanming Deng
+  - Jiahao Wang
+  - Shihao Bai
+  - Silei Wu
+  - Weichen Fan
+  - Wenjie Ye
+  categories:
+  - cs.CV
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12327v1
+  title: 'Grid Games: The Power of Multiple Grids for Quantizing Large Language Models'
+  url: https://arxiv.org/abs/2605.12327v1
+  pdf_url: https://arxiv.org/pdf/2605.12327v1
+  published: '2026-05-12T16:09:02Z'
+  updated: '2026-05-12T16:09:02Z'
+  authors:
+  - Vage Egiazarian
+  - Erik Schultheis
+  - Andrei Panferov
+  - Earl Killian
+  - Torsten Hoefler
+  - Dan Alistarh
+  categories:
+  - cs.LG
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12245v1
+  title: 'SOAR: Scale Optimization for Accurate Reconstruction in NVFP4 Quantization'
+  url: https://arxiv.org/abs/2605.12245v1
+  pdf_url: https://arxiv.org/pdf/2605.12245v1
+  published: '2026-05-12T15:13:18Z'
+  updated: '2026-05-12T15:13:18Z'
+  authors:
+  - Chengzhu Bao
+  - Xianglong Yan
+  - Zhiteng Li
+  - Guangshuo Qin
+  - Guanghua Yu
+  - Yulun Zhang
+  categories:
+  - cs.LG
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12227v1
+  title: Combining On-Policy Optimization and Distillation for Long-Context Reasoning
+    in Large Language Models
+  url: https://arxiv.org/abs/2605.12227v1
+  pdf_url: https://arxiv.org/pdf/2605.12227v1
+  published: '2026-05-12T15:04:18Z'
+  updated: '2026-05-12T15:04:18Z'
+  authors:
+  - Miguel Moura Ramos
+  - Duarte M. Alves
+  - André F. T. Martins
+  categories:
+  - cs.CL
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.12128v1
+  title: Metaphor Is Not All Attention Needs
+  url: https://arxiv.org/abs/2605.12128v1
+  pdf_url: https://arxiv.org/pdf/2605.12128v1
+  published: '2026-05-12T13:50:26Z'
+  updated: '2026-05-12T13:50:26Z'
+  authors:
+  - Olga Sorokoletova
+  - Francesco Giarrusso
+  - Giacomo De Luca
+  - Piercosma Bisconti
+  - Matteo Prandi
+  - Federico Pierucci
+  - Marcello Galisai
+  - Vincenzo Suriani
+  categories:
+  - cs.CL
+  - cs.CY
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11931v1
+  title: 'Learn to Think: Improving Multimodal Reasoning through Vision-Aware Self-Improvement
+    Training'
+  url: https://arxiv.org/abs/2605.11931v1
+  pdf_url: https://arxiv.org/pdf/2605.11931v1
+  published: '2026-05-12T10:44:35Z'
+  updated: '2026-05-12T10:44:35Z'
+  authors:
+  - Qihuang Zhong
+  - Liang Ding
+  - Wenjie Xuan
+  - Juhua Liu
+  - Bo Du
+  - Dacheng Tao
+  categories:
+  - cs.CV
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11222v1
+  title: 'ADMM-Q: An Improved Hessian-based Weight Quantizer for Post-Training Quantization
+    of Large Language Models'
+  url: https://arxiv.org/abs/2605.11222v1
+  pdf_url: https://arxiv.org/pdf/2605.11222v1
+  published: '2026-05-11T20:33:41Z'
+  updated: '2026-05-11T20:33:41Z'
+  authors:
+  - Ryan Lucas
+  - Mehdi Makni
+  - Xiang Meng
+  - Adam Deng
+  - Rahul Mazumder
+  categories:
+  - cs.LG
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11217v1
+  title: Leveraging RAG for Training-Free Alignment of LLMs
+  url: https://arxiv.org/abs/2605.11217v1
+  pdf_url: https://arxiv.org/pdf/2605.11217v1
+  published: '2026-05-11T20:29:39Z'
+  updated: '2026-05-11T20:29:39Z'
+  authors:
+  - John T. Halloran
+  categories:
+  - cs.LG
+  - cs.AI
+  - cs.CR
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10655v1
+  title: 'BCJR-QAT: A Differentiable Relaxation of Trellis-Coded Weight Quantization'
+  url: https://arxiv.org/abs/2605.10655v1
+  pdf_url: https://arxiv.org/pdf/2605.10655v1
+  published: '2026-05-11T14:40:20Z'
+  updated: '2026-05-11T14:40:20Z'
+  authors:
+  - Venugopalan Iyengar
+  categories:
+  - cs.LG
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09995v1
+  title: Annotations Mitigate Post-Training Mode Collapse
+  url: https://arxiv.org/abs/2605.09995v1
+  pdf_url: https://arxiv.org/pdf/2605.09995v1
+  published: '2026-05-11T05:11:04Z'
+  updated: '2026-05-11T05:11:04Z'
+  authors:
+  - Jacob Mitchell Springer
+  - Madhu Advani
+  - Lukas Aichberger
+  - Arwen Bradley
+  - Eran Malach
+  - Omid Saremi
+  - Sinead Williamson
+  - Preetum Nakkiran
+  categories:
+  - cs.CL
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09622v1
+  title: 'Any2Any 3D Diffusion Models with Knowledge Transfer: A Radiotherapy Planning
+    Study'
+  url: https://arxiv.org/abs/2605.09622v1
+  pdf_url: https://arxiv.org/pdf/2605.09622v1
+  published: '2026-05-10T16:08:36Z'
+  updated: '2026-05-10T16:08:36Z'
+  authors:
+  - Yuhan Wang
+  - Zihan Li
+  - Han Liu
+  - Simon Arberet
+  - Martin Kraus
+  - Yuyin Zhou
+  - Florin-Cristian Ghesu
+  - Dorin Comaniciu
+  categories:
+  - cs.CV
+  - cs.AI
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09613v1
+  title: 'SABER: A Scalable Action-Based Embodied Dataset for Real-World VLA Adaptation'
+  url: https://arxiv.org/abs/2605.09613v1
+  pdf_url: https://arxiv.org/pdf/2605.09613v1
+  published: '2026-05-10T15:51:01Z'
+  updated: '2026-05-10T15:51:01Z'
+  authors:
+  - Narsimha Menga
+  - Parikshit Sakurikar
+  - Amirreza Rouhi
+  - Satya Sai Reddy
+  - Anirudh Govil
+  - Sri Harsha Chittajallu
+  - Rajat Aggarwal
+  - Anoop Namboodiri
+  categories:
+  - cs.RO
+  - cs.CV
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09608v1
+  title: 'Geometry Conflict: Explaining and Controlling Forgetting in LLM Continual
+    Post-Training'
+  url: https://arxiv.org/abs/2605.09608v1
+  pdf_url: https://arxiv.org/pdf/2605.09608v1
+  published: '2026-05-10T15:40:44Z'
+  updated: '2026-05-10T15:40:44Z'
+  authors:
+  - Yuanyi Wang
+  - Yifan Yang
+  - Su Lu
+  - Yanggan Gu
+  - Pengkai Wang
+  - Wenjun Wang
+  - Zhaoyi Yan
+  - Congkai Xie
+  categories:
+  - cs.LG
+  - cs.IT
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.09503v1
+  title: 'PermuQuant: Lowering Per-Group Quantization Error by Reordering Channels
+    for Diffusion Models'
+  url: https://arxiv.org/abs/2605.09503v1
+  pdf_url: https://arxiv.org/pdf/2605.09503v1
+  published: '2026-05-10T12:26:50Z'
+  updated: '2026-05-10T12:26:50Z'
+  authors:
+  - Yongsen Cheng
+  - Kai Liu
+  - Kaiwen Tao
+  - Junxian Li
+  - Zhixin Wang
+  - Zhikai Chen
+  - Renjing Pei
+  - Yulun Zhang
+  categories:
+  - cs.CV
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.11011v1
+  title: 'LoopUS: Recasting Pretrained LLMs into Looped Latent Refinement Models'
+  url: https://arxiv.org/abs/2605.11011v1
+  pdf_url: https://arxiv.org/pdf/2605.11011v1
+  published: '2026-05-10T11:05:20Z'
+  updated: '2026-05-10T11:05:20Z'
+  authors:
+  - Taekhyun Park
+  - Yongjae Lee
+  - Dohee Kim
+  - Hyerim Bae
+  categories:
+  - cs.LG
+  - cs.AI
+  score: 8
+  matched_terms:
+  - post-training
+  bucket: watch
+  reason: monitor
+  curated_match: false
+  watchlist_status: monitor
+  watchlist_candidate: false
+  watchlist_checklist: *1

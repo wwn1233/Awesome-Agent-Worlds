@@ -162,14 +162,14 @@ function init() {
 }
 
 function renderHotPapers() {
-  const papers = data.hot_papers.papers.slice(0, 6);
+  const papers = data.hot_papers.papers.slice(0, data.hot_papers.visible_candidates || 12);
   if (!papers.length) {
     refs.hotPapers.innerHTML = `<p class="empty">${escapeHtml(ui("emptyHot"))}</p>`;
     return;
   }
 
   refs.hotPapers.innerHTML = papers.map((paper) => {
-    const status = paper.watchlist_candidate ? ui("watchlistCandidate") : label("watchlist", paper.watchlist_status);
+    const status = label("watchlist", paper.watchlist_status);
     const signals = paper.matched_terms.slice(0, 4).join(", ");
     return `<a class="hotPaper" href="${escapeHtml(paper.url)}">
       <b>${escapeHtml(paper.title)}</b>
