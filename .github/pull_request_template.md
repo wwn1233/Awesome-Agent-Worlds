@@ -19,4 +19,4 @@
 - [ ] Source support tags use the controlled vocabulary in `others/data/resources.yaml`.
 - [ ] Public copy is final-facing and avoids working notes.
 - [ ] Generated artifacts were rebuilt when source data changed.
-- [ ] `ruby others/scripts/run_release_checks.rb` passes locally.
+- [ ] README, site data, and public docs are consistent.

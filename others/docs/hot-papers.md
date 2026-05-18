@@ -11,7 +11,6 @@ Curated resources are the entries in the Resource Index and main README.
 - Window: 90 days
 - Candidates: 180
 - Watchlist candidates: 85
-- Archive: [2026-05 full candidate archive](./hot-paper-archive-2026-05.md)
 
 ## Watchlist Criteria
 
@@ -56,6 +55,6 @@ require confirmed source confidence and complete metadata.
 | [Revisiting Reinforcement Learning with Verifiable Rewards from a Contrastive Perspective](https://arxiv.org/abs/2605.12969v1) | 2026-05-13 | 23 | verifiable reward, rlvr, rollout, evaluation, benchmark | watchlist |
 | [Revisiting DAgger in the Era of LLM-Agents](https://arxiv.org/abs/2605.12913v1) | 2026-05-13 | 23 | verifiable reward, trajectory, post-training, rollout | watchlist |
 
-The feed is refreshed weekly. Add a paper to `others/data/resources.yaml`
-only after confirming the world, verifier, trajectory, source, sandbox,
-and reproducibility fields from first-party evidence.
+The feed is refreshed weekly. Add a paper to `others/data/resources.yaml` only
+after confirming the world, verifier, trajectory, source, sandbox, and
+reproducibility fields from first-party evidence.
