@@ -6,8 +6,9 @@ labels: resource
 assignees: ""
 ---
 
-Read the [contribution criteria](../../others/CONTRIBUTING.md) before
-submitting a resource.
+Before submitting, make sure the resource contributes an executable
+environment, benchmark, verifier, trajectory, sandbox, protocol, product
+signal, or training-loop signal.
 
 ## Resource
 

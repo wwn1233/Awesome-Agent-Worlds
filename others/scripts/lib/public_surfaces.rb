@@ -17,7 +17,6 @@ module AgentWorlds
     site/styles.css
     utils/world-stack.svg
     utils/agent-world-loop.svg
-    others/CONTRIBUTING.md
     others/docs/resource-index.md
     others/docs/flagship-matrix.md
     others/docs/selection-guide.md

@@ -19,7 +19,6 @@ if File.exist?(TEMPLATE_PATH)
     "Reset or replay support:",
     "Trajectory access:",
     "Sandbox or safety boundary:",
-    "CONTRIBUTING.md",
     "controlled vocabulary",
     "others/data/resources.yaml",
     "ruby others/scripts/run_release_checks.rb"

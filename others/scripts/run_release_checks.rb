@@ -18,7 +18,6 @@ CHECKS = [
   ["changelog", "others/scripts/validate_changelog.rb"],
   ["license", "others/scripts/validate_license.rb"],
   ["citation", "others/scripts/validate_citation.rb"],
-  ["contributing", "others/scripts/validate_contributing.rb"],
   ["issue template", "others/scripts/validate_issue_template.rb"],
   ["pull request template", "others/scripts/validate_pr_template.rb"],
   ["release workflow", "others/scripts/validate_release_workflow.rb"],

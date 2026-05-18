@@ -8,7 +8,6 @@ CHECK_GLOBS = %w[
   README.md
   .github/**/*.md
   .github/workflows/*.yml
-  others/CONTRIBUTING.md
   others/docs/*.md
   others/scripts/**/*.rb
   site/*.md

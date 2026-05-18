@@ -71,7 +71,7 @@ The reusable asset is the verified trajectory, not just the final score.
 The bilingual [Static Explorer](./site/index.html) is a dependency-free webpage for browsing the curated resource set, filtering by evidence fields, switching between Chinese and English, and scanning the weekly hot-paper feed. Run it from the repository root with `ruby -run -e httpd site -p 8026`, then open `http://127.0.0.1:8026/index.html`.
 
 ## Structured Views
-[Explorer Guide](./site/README.md) · [Resource Index](./others/docs/resource-index.md) · [Selection Guide](./others/docs/selection-guide.md) · [Reading Order](./others/docs/reading-order.md) · [Hot Papers](./others/docs/hot-papers.md) · [Source Map](./others/docs/source-map.md) · [Flagship Matrix](./others/docs/flagship-matrix.md) · [Contribution Criteria](./others/CONTRIBUTING.md)
+[Explorer Guide](./site/README.md) · [Resource Index](./others/docs/resource-index.md) · [Selection Guide](./others/docs/selection-guide.md) · [Reading Order](./others/docs/reading-order.md) · [Hot Papers](./others/docs/hot-papers.md) · [Source Map](./others/docs/source-map.md) · [Flagship Matrix](./others/docs/flagship-matrix.md)
 
 ## Table of Contents
 

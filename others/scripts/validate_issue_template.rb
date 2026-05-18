@@ -12,9 +12,7 @@ errors << "missing add-resource issue template" unless File.exist?(TEMPLATE_PATH
 if File.exist?(TEMPLATE_PATH)
   template = File.read(TEMPLATE_PATH)
 
-  unless template.include?("[contribution criteria](../../others/CONTRIBUTING.md)")
-    errors << "issue template missing contribution criteria link"
-  end
+  errors << "issue template missing inclusion criteria" unless template.include?("Before submitting")
 
   %w[other hot_paper_candidate].each do |forbidden|
     errors << "issue template should not include #{forbidden}" if template.include?("- #{forbidden}")

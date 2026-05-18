@@ -35,7 +35,6 @@ errors << "README should expose a citation section" unless readme.include?("## C
 errors << "README should link the source map" unless readme.include?("source-map.md")
 errors << "README should link the flagship matrix" unless readme.include?("flagship-matrix.md")
 errors << "README should link the static explorer" unless readme.include?("./site/README.md")
-errors << "README should link contribution criteria" unless readme.include?("./others/CONTRIBUTING.md")
 
 structured_views = readme[/## Structured Views.*?## Citation/m].to_s
 view_order = [
