@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-05-22
+
+- Added ComplexMCP, MCPAgentBench, and MCPToolBench++ to the public Agent Worlds index.
+- Refreshed the weekly hot-paper feed and static explorer data.
+
 ## 2026-05-17
 
 - Refined the public thesis around verifiable worlds as reusable trajectory sources.

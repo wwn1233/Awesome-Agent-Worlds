@@ -2,7 +2,7 @@
 
 A compact decision matrix for the most important Agent World resources.
 
-_Generated from `others/data/resources.yaml` at source hash `cdcedfef6b60`._
+_Generated from `others/data/resources.yaml` at source hash `cd1853446473`._
 
 Selection prioritizes explicit `recommended_rank` metadata, then readiness
 score. Use this matrix to choose starter resources before reading the full

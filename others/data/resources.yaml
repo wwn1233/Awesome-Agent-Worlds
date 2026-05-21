@@ -10836,6 +10836,212 @@
   reader_paths:
   - build-evals
   - release-gates
+- name: ComplexMCP
+  category: api-world
+  year: 2026
+  modality:
+  - tools
+  - mcp
+  - api
+  - enterprise_workflow
+  action_space:
+  - tool_call
+  - mcp_server_interaction
+  - cross_tool_coordination
+  reward_type: stateful_task_success
+  verifier: sandbox_state_and_task_completion
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: false
+  sandbox: mcp_tool_sandbox
+  production_signal: dynamic_interdependent_mcp_tool_sandbox
+  url: https://arxiv.org/abs/2605.10787
+  repo:
+  notes: MCP-native benchmark for dynamic, interdependent commercial-software
+    automation with 300+ tested tools across 7 stateful sandboxes.
+  api_count: 300
+  environment_count: 7
+  id: complexmcp
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: mcp_tool_world
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.10787
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-05-22'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: seed_driven_sandbox_state
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: unknown
+  verifier_isolation: benchmark_sandbox
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_tool_sandbox
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: not_specified
+  telemetry_type: trajectory_analysis
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
+- name: MCPAgentBench
+  category: api-world
+  year: 2025
+  modality:
+  - tools
+  - mcp
+  - api
+  action_space:
+  - tool_call
+  - mcp_tool_selection
+  - multi_step_invocation
+  reward_type: task_completion_and_execution_efficiency
+  verifier: simulated_mcp_tool_task_metrics
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: false
+  sandbox: dynamic_mcp_tool_sandbox
+  production_signal: simulated_mcp_tool_selection_benchmark
+  url: https://arxiv.org/abs/2512.24565
+  repo:
+  notes: Real-world MCP-definition benchmark with authentic tasks, simulated MCP
+    tools, distractor tool lists, completion-rate metrics, and execution-efficiency
+    metrics.
+  id: mcpagentbench-real-world-mcp
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: mcp_tool_world
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2512.24565
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-05-22'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: dynamic_sandbox_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: unknown
+  verifier_isolation: benchmark_sandbox
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: dynamic_sandbox
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: not_specified
+  telemetry_type: benchmark_outputs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
+- name: MCPToolBench++
+  category: api-world
+  year: 2025
+  modality:
+  - tools
+  - mcp
+  - api
+  action_space:
+  - tool_call
+  - single_step_tool_call
+  - multi_step_tool_call
+  reward_type: tool_call_success
+  verifier: benchmark_task_success
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: false
+  sandbox: mcp_server_benchmark
+  production_signal: large_scale_mcp_tool_use_benchmark
+  url: https://arxiv.org/abs/2508.07575
+  repo:
+  notes: Large-scale MCP tool-use benchmark built from 4k+ MCP servers across
+    40+ categories, covering single-step and multi-step tool calls.
+  api_count: 4000
+  id: mcptoolbench-plus-plus
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: mcp_tool_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2508.07575
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-05-22'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: unknown
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_server_benchmark
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: not_specified
+  telemetry_type: benchmark_outputs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
 - name: Herculean
   category: api-world
   year: 2026

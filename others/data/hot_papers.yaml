@@ -1,14 +1,14 @@
 ---
-generated_at: '2026-05-17T11:59:18Z'
+generated_at: '2026-05-21T17:23:13Z'
 source: arxiv
-source_url: https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Acs.RO+OR+cat%3Acs.SE+OR+cat%3Acs.HC%29+AND+%28all%3A%22agent+world%22+OR+all%3A%22computer+use%22+OR+all%3A%22computer-use+agent%22+OR+all%3A%22computer-use+agents%22+OR+all%3A%22GUI+agent%22+OR+all%3A%22web+agent%22+OR+all%3A%22browser+agent%22+OR+all%3A%22mobile+agent%22+OR+all%3A%22phone-use+agent%22+OR+all%3A%22phone-use+agents%22+OR+all%3A%22phone+use+agents%22+OR+all%3A%22tool+agent%22+OR+all%3A%22software+engineering+agent%22+OR+all%3A%22embodied+agent%22+OR+all%3A%22interactive+environment%22+OR+all%3A%22agent+benchmark%22+OR+all%3A%22verifiable+reward%22+OR+all%3A%22agent+safety%22+OR+all%3A%22mobile+privacy%22+OR+all%3A%22privacy+compliance%22+OR+all%3A%22phone-use+safety%22+OR+all%3A%22phone+safety%22+OR+all%3A%22post-training%22+OR+all%3A%22environment+synthesis%22+OR+all%3A%22environment+generation%22+OR+all%3A%22real-world+environment%22+OR+all%3A%22tool+ecosystem%22+OR+all%3A%22mcp+benchmark%22+OR+all%3A%22mcp-gui%22+OR+all%3A%22skill+environment%22+OR+all%3A%22mcp+server%22+OR+all%3A%22mcp+servers%22+OR+all%3A%22mcp+tool%22+OR+all%3A%22mcp+tools%22+OR+all%3A%22tool+routing%22+OR+all%3A%22tool+composition%22+OR+all%3A%22large-scale+mcp%22+OR+all%3A%22tool+poisoning%22+OR+all%3A%22mcp+safety%22+OR+all%3A%22agentic+world+modeling%22+OR+all%3A%22generative+sketch+world+model%22+OR+all%3A%22self-evolving+agent%22+OR+all%3A%22agent+training+arena%22+OR+all%3A%22world+model%22+OR+all%3A%22synthetic+environment%22+OR+all%3A%22tool-use+environment%22+OR+all%3A%22stateful+tool%22+OR+all%3A%22language+world+model%22+OR+all%3A%22language+environment+simulation%22+OR+all%3A%22environment+simulation%22+OR+all%3A%22professional+task%22+OR+all%3A%22occupational+task%22+OR+all%3A%22hybrid+verifier%22+OR+all%3A%22process+reward%22+OR+all%3A%22gui+world+model%22+OR+all%3A%22mobile+world+model%22+OR+all%3A%22state+transition%22+OR+all%3A%22mcpworld%22+OR+all%3A%22mobileworld%22+OR+all%3A%22digiworld%22+OR+all%3A%22cuaharm%22+OR+all%3A%22riosworld%22+OR+all%3A%22phone-harm%22+OR+all%3A%22computer-use+safety%22+OR+all%3A%22mcp+security%22+OR+all%3A%22mcp-safetybench%22+OR+all%3A%22mcpsecbench%22+OR+all%3A%22agentgym-rl%22+OR+all%3A%22agent-rlvr%22+OR+all%3A%22agent+rlvr%22+OR+all%3A%22multi-turn+reinforcement+learning%22+OR+all%3A%22mobile+task+world%22+OR+all%3A%22mcp-cosmos%22+OR+all%3A%22byowm%22+OR+all%3A%22tool+decathlon%22+OR+all%3A%22toolathlon%22+OR+all%3A%22toucan%22+OR+all%3A%22mcp-agentbench%22+OR+all%3A%22mcp-mediated%22+OR+all%3A%22tool-agentic%22+OR+all%3A%22tool-agentic+data%22+OR+all%3A%22mcp+environments%22+OR+all%3A%22execution-based+evaluation%22+OR+all%3A%22long-horizon+task+execution%22%29&start=0&max_results=320&sortBy=submittedDate&sortOrder=descending
+source_url: https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Acs.RO+OR+cat%3Acs.SE+OR+cat%3Acs.HC%29+AND+%28all%3A%22agent+world%22+OR+all%3A%22computer+use%22+OR+all%3A%22computer-use+agent%22+OR+all%3A%22computer-use+agents%22+OR+all%3A%22GUI+agent%22+OR+all%3A%22web+agent%22+OR+all%3A%22browser+agent%22+OR+all%3A%22mobile+agent%22+OR+all%3A%22phone-use+agent%22+OR+all%3A%22phone-use+agents%22+OR+all%3A%22phone+use+agents%22+OR+all%3A%22tool+agent%22+OR+all%3A%22software+engineering+agent%22+OR+all%3A%22embodied+agent%22+OR+all%3A%22interactive+environment%22+OR+all%3A%22agent+benchmark%22+OR+all%3A%22verifiable+reward%22+OR+all%3A%22agent+safety%22+OR+all%3A%22mobile+privacy%22+OR+all%3A%22privacy+compliance%22+OR+all%3A%22phone-use+safety%22+OR+all%3A%22phone+safety%22+OR+all%3A%22post-training%22+OR+all%3A%22environment+synthesis%22+OR+all%3A%22environment+generation%22+OR+all%3A%22real-world+environment%22+OR+all%3A%22tool+ecosystem%22+OR+all%3A%22mcp+benchmark%22+OR+all%3A%22mcp-gui%22+OR+all%3A%22skill+environment%22+OR+all%3A%22mcp+server%22+OR+all%3A%22mcp+servers%22+OR+all%3A%22mcp+tool%22+OR+all%3A%22mcp+tools%22+OR+all%3A%22tool+routing%22+OR+all%3A%22tool+composition%22+OR+all%3A%22large-scale+mcp%22+OR+all%3A%22tool+poisoning%22+OR+all%3A%22mcp+safety%22+OR+all%3A%22agentic+world+modeling%22+OR+all%3A%22generative+sketch+world+model%22+OR+all%3A%22self-evolving+agent%22+OR+all%3A%22agent+training+arena%22+OR+all%3A%22world+model%22+OR+all%3A%22synthetic+environment%22+OR+all%3A%22tool-use+environment%22+OR+all%3A%22stateful+tool%22+OR+all%3A%22language+world+model%22+OR+all%3A%22language+environment+simulation%22+OR+all%3A%22environment+simulation%22+OR+all%3A%22professional+task%22+OR+all%3A%22occupational+task%22+OR+all%3A%22hybrid+verifier%22+OR+all%3A%22process+reward%22+OR+all%3A%22gui+world+model%22+OR+all%3A%22mobile+world+model%22+OR+all%3A%22state+transition%22+OR+all%3A%22mcpworld%22+OR+all%3A%22mobileworld%22+OR+all%3A%22digiworld%22+OR+all%3A%22cuaharm%22+OR+all%3A%22riosworld%22+OR+all%3A%22phone-harm%22+OR+all%3A%22computer-use+safety%22+OR+all%3A%22mcp+security%22+OR+all%3A%22mcp-safetybench%22+OR+all%3A%22mcpsecbench%22+OR+all%3A%22agentgym-rl%22+OR+all%3A%22agent-rlvr%22+OR+all%3A%22agent+rlvr%22+OR+all%3A%22multi-turn+reinforcement+learning%22+OR+all%3A%22mobile+task+world%22+OR+all%3A%22mcp-cosmos%22+OR+all%3A%22byowm%22+OR+all%3A%22tool+decathlon%22+OR+all%3A%22toolathlon%22+OR+all%3A%22toucan%22+OR+all%3A%22mcp-agentbench%22+OR+all%3A%22mcp-mediated%22+OR+all%3A%22tool-agentic%22+OR+all%3A%22tool-agentic+data%22+OR+all%3A%22mcp+environments%22+OR+all%3A%22execution-based+evaluation%22+OR+all%3A%22long-horizon+task+execution%22+OR+all%3A%22complexmcp%22+OR+all%3A%22mcpagentbench%22+OR+all%3A%22mcptoolbench%22+OR+all%3A%22large-scale+tool+sandbox%22+OR+all%3A%22dynamic+sandbox%22+OR+all%3A%22simulated+mcp+tools%22%29&start=0&max_results=320&sortBy=submittedDate&sortOrder=descending
 source_urls:
-- https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Acs.RO+OR+cat%3Acs.SE+OR+cat%3Acs.HC%29+AND+%28all%3A%22agent+world%22+OR+all%3A%22computer+use%22+OR+all%3A%22computer-use+agent%22+OR+all%3A%22computer-use+agents%22+OR+all%3A%22GUI+agent%22+OR+all%3A%22web+agent%22+OR+all%3A%22browser+agent%22+OR+all%3A%22mobile+agent%22+OR+all%3A%22phone-use+agent%22+OR+all%3A%22phone-use+agents%22+OR+all%3A%22phone+use+agents%22+OR+all%3A%22tool+agent%22+OR+all%3A%22software+engineering+agent%22+OR+all%3A%22embodied+agent%22+OR+all%3A%22interactive+environment%22+OR+all%3A%22agent+benchmark%22+OR+all%3A%22verifiable+reward%22+OR+all%3A%22agent+safety%22+OR+all%3A%22mobile+privacy%22+OR+all%3A%22privacy+compliance%22+OR+all%3A%22phone-use+safety%22+OR+all%3A%22phone+safety%22+OR+all%3A%22post-training%22+OR+all%3A%22environment+synthesis%22+OR+all%3A%22environment+generation%22+OR+all%3A%22real-world+environment%22+OR+all%3A%22tool+ecosystem%22+OR+all%3A%22mcp+benchmark%22+OR+all%3A%22mcp-gui%22+OR+all%3A%22skill+environment%22+OR+all%3A%22mcp+server%22+OR+all%3A%22mcp+servers%22+OR+all%3A%22mcp+tool%22+OR+all%3A%22mcp+tools%22+OR+all%3A%22tool+routing%22+OR+all%3A%22tool+composition%22+OR+all%3A%22large-scale+mcp%22+OR+all%3A%22tool+poisoning%22+OR+all%3A%22mcp+safety%22+OR+all%3A%22agentic+world+modeling%22+OR+all%3A%22generative+sketch+world+model%22+OR+all%3A%22self-evolving+agent%22+OR+all%3A%22agent+training+arena%22+OR+all%3A%22world+model%22+OR+all%3A%22synthetic+environment%22+OR+all%3A%22tool-use+environment%22+OR+all%3A%22stateful+tool%22+OR+all%3A%22language+world+model%22+OR+all%3A%22language+environment+simulation%22+OR+all%3A%22environment+simulation%22+OR+all%3A%22professional+task%22+OR+all%3A%22occupational+task%22+OR+all%3A%22hybrid+verifier%22+OR+all%3A%22process+reward%22+OR+all%3A%22gui+world+model%22+OR+all%3A%22mobile+world+model%22+OR+all%3A%22state+transition%22+OR+all%3A%22mcpworld%22+OR+all%3A%22mobileworld%22+OR+all%3A%22digiworld%22+OR+all%3A%22cuaharm%22+OR+all%3A%22riosworld%22+OR+all%3A%22phone-harm%22+OR+all%3A%22computer-use+safety%22+OR+all%3A%22mcp+security%22+OR+all%3A%22mcp-safetybench%22+OR+all%3A%22mcpsecbench%22+OR+all%3A%22agentgym-rl%22+OR+all%3A%22agent-rlvr%22+OR+all%3A%22agent+rlvr%22+OR+all%3A%22multi-turn+reinforcement+learning%22+OR+all%3A%22mobile+task+world%22+OR+all%3A%22mcp-cosmos%22+OR+all%3A%22byowm%22+OR+all%3A%22tool+decathlon%22+OR+all%3A%22toolathlon%22+OR+all%3A%22toucan%22+OR+all%3A%22mcp-agentbench%22+OR+all%3A%22mcp-mediated%22+OR+all%3A%22tool-agentic%22+OR+all%3A%22tool-agentic+data%22+OR+all%3A%22mcp+environments%22+OR+all%3A%22execution-based+evaluation%22+OR+all%3A%22long-horizon+task+execution%22%29&start=0&max_results=320&sortBy=submittedDate&sortOrder=descending
-- https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Acs.RO+OR+cat%3Acs.SE+OR+cat%3Acs.HC%29+AND+%28all%3A%22phone-use+agents%22+OR+all%3A%22phone-use+safety%22+OR+all%3A%22phone+safety%22+OR+all%3A%22safety-critical+moments%22+OR+all%3A%22safe+unsafe+incapable%22+OR+all%3A%22simply+incapable%22+OR+all%3A%22computer-use+agents%22+OR+all%3A%22agent+world%22+OR+all%3A%22environment+synthesis%22+OR+all%3A%22environment+generation%22+OR+all%3A%22self-evolving+training%22+OR+all%3A%22agent+training+arena%22+OR+all%3A%22mcp+benchmark%22+OR+all%3A%22skill+environment%22+OR+all%3A%22mcp+server%22+OR+all%3A%22mcp+tools%22+OR+all%3A%22multi-server+routing%22+OR+all%3A%22tool+composition%22+OR+all%3A%22mcp+atlas%22+OR+all%3A%22tool+poisoning%22+OR+all%3A%22tool-use+environment%22+OR+all%3A%22agent+world+model%22+OR+all%3A%22language+world+model%22+OR+all%3A%22environment+simulation%22+OR+all%3A%22hybrid+verifier%22+OR+all%3A%22mobile+world+model%22+OR+all%3A%22gui+world+model%22+OR+all%3A%22professional+task%22+OR+all%3A%22mcpworld%22+OR+all%3A%22mobileworld%22+OR+all%3A%22digiworld%22+OR+all%3A%22cuaharm%22+OR+all%3A%22riosworld%22+OR+all%3A%22phone-harm%22+OR+all%3A%22computer-use+safety%22+OR+all%3A%22mcp+security%22+OR+all%3A%22mcp-safetybench%22+OR+all%3A%22mcpsecbench%22+OR+all%3A%22agentgym-rl%22+OR+all%3A%22agent-rlvr%22+OR+all%3A%22agent+rlvr%22+OR+all%3A%22mcp-cosmos%22+OR+all%3A%22tool+decathlon%22+OR+all%3A%22toolathlon%22+OR+all%3A%22toucan%22+OR+all%3A%22mcp-agentbench%22+OR+all%3A%22tool-agentic%22+OR+all%3A%22mcp+environments%22%29&start=0&max_results=120&sortBy=submittedDate&sortOrder=descending
+- https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Acs.RO+OR+cat%3Acs.SE+OR+cat%3Acs.HC%29+AND+%28all%3A%22agent+world%22+OR+all%3A%22computer+use%22+OR+all%3A%22computer-use+agent%22+OR+all%3A%22computer-use+agents%22+OR+all%3A%22GUI+agent%22+OR+all%3A%22web+agent%22+OR+all%3A%22browser+agent%22+OR+all%3A%22mobile+agent%22+OR+all%3A%22phone-use+agent%22+OR+all%3A%22phone-use+agents%22+OR+all%3A%22phone+use+agents%22+OR+all%3A%22tool+agent%22+OR+all%3A%22software+engineering+agent%22+OR+all%3A%22embodied+agent%22+OR+all%3A%22interactive+environment%22+OR+all%3A%22agent+benchmark%22+OR+all%3A%22verifiable+reward%22+OR+all%3A%22agent+safety%22+OR+all%3A%22mobile+privacy%22+OR+all%3A%22privacy+compliance%22+OR+all%3A%22phone-use+safety%22+OR+all%3A%22phone+safety%22+OR+all%3A%22post-training%22+OR+all%3A%22environment+synthesis%22+OR+all%3A%22environment+generation%22+OR+all%3A%22real-world+environment%22+OR+all%3A%22tool+ecosystem%22+OR+all%3A%22mcp+benchmark%22+OR+all%3A%22mcp-gui%22+OR+all%3A%22skill+environment%22+OR+all%3A%22mcp+server%22+OR+all%3A%22mcp+servers%22+OR+all%3A%22mcp+tool%22+OR+all%3A%22mcp+tools%22+OR+all%3A%22tool+routing%22+OR+all%3A%22tool+composition%22+OR+all%3A%22large-scale+mcp%22+OR+all%3A%22tool+poisoning%22+OR+all%3A%22mcp+safety%22+OR+all%3A%22agentic+world+modeling%22+OR+all%3A%22generative+sketch+world+model%22+OR+all%3A%22self-evolving+agent%22+OR+all%3A%22agent+training+arena%22+OR+all%3A%22world+model%22+OR+all%3A%22synthetic+environment%22+OR+all%3A%22tool-use+environment%22+OR+all%3A%22stateful+tool%22+OR+all%3A%22language+world+model%22+OR+all%3A%22language+environment+simulation%22+OR+all%3A%22environment+simulation%22+OR+all%3A%22professional+task%22+OR+all%3A%22occupational+task%22+OR+all%3A%22hybrid+verifier%22+OR+all%3A%22process+reward%22+OR+all%3A%22gui+world+model%22+OR+all%3A%22mobile+world+model%22+OR+all%3A%22state+transition%22+OR+all%3A%22mcpworld%22+OR+all%3A%22mobileworld%22+OR+all%3A%22digiworld%22+OR+all%3A%22cuaharm%22+OR+all%3A%22riosworld%22+OR+all%3A%22phone-harm%22+OR+all%3A%22computer-use+safety%22+OR+all%3A%22mcp+security%22+OR+all%3A%22mcp-safetybench%22+OR+all%3A%22mcpsecbench%22+OR+all%3A%22agentgym-rl%22+OR+all%3A%22agent-rlvr%22+OR+all%3A%22agent+rlvr%22+OR+all%3A%22multi-turn+reinforcement+learning%22+OR+all%3A%22mobile+task+world%22+OR+all%3A%22mcp-cosmos%22+OR+all%3A%22byowm%22+OR+all%3A%22tool+decathlon%22+OR+all%3A%22toolathlon%22+OR+all%3A%22toucan%22+OR+all%3A%22mcp-agentbench%22+OR+all%3A%22mcp-mediated%22+OR+all%3A%22tool-agentic%22+OR+all%3A%22tool-agentic+data%22+OR+all%3A%22mcp+environments%22+OR+all%3A%22execution-based+evaluation%22+OR+all%3A%22long-horizon+task+execution%22+OR+all%3A%22complexmcp%22+OR+all%3A%22mcpagentbench%22+OR+all%3A%22mcptoolbench%22+OR+all%3A%22large-scale+tool+sandbox%22+OR+all%3A%22dynamic+sandbox%22+OR+all%3A%22simulated+mcp+tools%22%29&start=0&max_results=320&sortBy=submittedDate&sortOrder=descending
+- https://export.arxiv.org/api/query?search_query=%28cat%3Acs.AI+OR+cat%3Acs.CL+OR+cat%3Acs.CV+OR+cat%3Acs.LG+OR+cat%3Acs.RO+OR+cat%3Acs.SE+OR+cat%3Acs.HC%29+AND+%28all%3A%22phone-use+agents%22+OR+all%3A%22phone-use+safety%22+OR+all%3A%22phone+safety%22+OR+all%3A%22safety-critical+moments%22+OR+all%3A%22safe+unsafe+incapable%22+OR+all%3A%22simply+incapable%22+OR+all%3A%22computer-use+agents%22+OR+all%3A%22agent+world%22+OR+all%3A%22environment+synthesis%22+OR+all%3A%22environment+generation%22+OR+all%3A%22self-evolving+training%22+OR+all%3A%22agent+training+arena%22+OR+all%3A%22mcp+benchmark%22+OR+all%3A%22skill+environment%22+OR+all%3A%22mcp+server%22+OR+all%3A%22mcp+tools%22+OR+all%3A%22multi-server+routing%22+OR+all%3A%22tool+composition%22+OR+all%3A%22mcp+atlas%22+OR+all%3A%22tool+poisoning%22+OR+all%3A%22tool-use+environment%22+OR+all%3A%22agent+world+model%22+OR+all%3A%22language+world+model%22+OR+all%3A%22environment+simulation%22+OR+all%3A%22hybrid+verifier%22+OR+all%3A%22mobile+world+model%22+OR+all%3A%22gui+world+model%22+OR+all%3A%22professional+task%22+OR+all%3A%22mcpworld%22+OR+all%3A%22mobileworld%22+OR+all%3A%22digiworld%22+OR+all%3A%22cuaharm%22+OR+all%3A%22riosworld%22+OR+all%3A%22phone-harm%22+OR+all%3A%22computer-use+safety%22+OR+all%3A%22mcp+security%22+OR+all%3A%22mcp-safetybench%22+OR+all%3A%22mcpsecbench%22+OR+all%3A%22agentgym-rl%22+OR+all%3A%22agent-rlvr%22+OR+all%3A%22agent+rlvr%22+OR+all%3A%22mcp-cosmos%22+OR+all%3A%22tool+decathlon%22+OR+all%3A%22toolathlon%22+OR+all%3A%22toucan%22+OR+all%3A%22mcp-agentbench%22+OR+all%3A%22tool-agentic%22+OR+all%3A%22mcp+environments%22+OR+all%3A%22complexmcp%22+OR+all%3A%22mcpagentbench%22+OR+all%3A%22mcptoolbench%22+OR+all%3A%22large-scale+tool+sandbox%22%29&start=0&max_results=220&sortBy=submittedDate&sortOrder=descending
 query:
   days: 90
   max_results: 320
-  focused_max_results: 120
+  focused_max_results: 220
   categories:
   - cs.AI
   - cs.CL
@@ -102,6 +102,12 @@ query:
   - mcp environments
   - execution-based evaluation
   - long-horizon task execution
+  - complexmcp
+  - mcpagentbench
+  - mcptoolbench
+  - large-scale tool sandbox
+  - dynamic sandbox
+  - simulated mcp tools
   focused_terms:
   - phone-use agents
   - phone-use safety
@@ -151,6 +157,10 @@ query:
   - mcp-agentbench
   - tool-agentic
   - mcp environments
+  - complexmcp
+  - mcpagentbench
+  - mcptoolbench
+  - large-scale tool sandbox
   scoring_terms:
   - agent world
   - computer use
@@ -257,6 +267,12 @@ query:
   - mcp environments
   - execution-based evaluation
   - long-horizon task execution
+  - complexmcp
+  - mcpagentbench
+  - mcptoolbench
+  - large-scale tool sandbox
+  - dynamic sandbox
+  - simulated mcp tools
 papers:
 - id: 2604.18292v1
   title: 'Agent-World: Scaling Real-World Environment Synthesis for Evolving General
@@ -425,6 +441,38 @@ papers:
   - gui agent
   bucket: likely_agent_world
   reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2605.10787v1
+  title: 'ComplexMCP: Evaluation of LLM Agents in Dynamic, Interdependent, and Large-Scale
+    Tool Sandbox'
+  published: '2026-05-11T16:20:51Z'
+  updated: '2026-05-11T16:20:51Z'
+  authors:
+  - Yuanyang Li
+  - Xue Yang
+  - Longyue Wang
+  - Weihua Luo
+  - Hongyang Chen
+  categories:
+  - cs.AI
+  - cs.SE
+  score: 37
+  matched_terms:
+  - complexmcp
+  - mcp
+  - large-scale tool sandbox
+  - dynamic sandbox
+  - stateful tool
+  - tool-use environment
+  - benchmark
+  url: https://arxiv.org/abs/2605.10787v1
+  pdf_url: https://arxiv.org/pdf/2605.10787v1
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
   curated_match: true
   watchlist_status: indexed
   watchlist_candidate: false
@@ -776,6 +824,39 @@ papers:
   watchlist_status: indexed
   watchlist_candidate: false
   watchlist_checklist: *1
+- id: 2512.24565v3
+  title: 'MCPAgentBench: A Real-world Task Benchmark for Evaluating LLM Agent MCP
+    Tool Use'
+  published: '2025-12-31T02:09:48Z'
+  updated: '2026-01-21T06:58:52Z'
+  authors:
+  - Wenrui Liu
+  - Zixiang Liu
+  - Elsie Dai
+  - Wenhan Yu
+  - Lei Yu
+  - Tong Yang
+  - Jinjun Han
+  - Hong Gao
+  categories:
+  - cs.AI
+  score: 31
+  matched_terms:
+  - mcpagentbench
+  - mcp
+  - simulated mcp tools
+  - dynamic sandbox
+  - tool-use environment
+  - benchmark
+  url: https://arxiv.org/abs/2512.24565v3
+  pdf_url: https://arxiv.org/pdf/2512.24565v3
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
 - id: 2601.04035v1
   title: 'MobileDreamer: Generative Sketch World Model for GUI Agent'
   url: https://arxiv.org/abs/2601.04035v1
@@ -956,6 +1037,35 @@ papers:
   - benchmark
   bucket: likely_agent_world
   reason: indexed
+  curated_match: true
+  watchlist_status: indexed
+  watchlist_candidate: false
+  watchlist_checklist: *1
+- id: 2508.07575v1
+  title: 'MCPToolBench++: A Large Scale AI Agent Model Context Protocol MCP Tool Use
+    Benchmark'
+  published: '2025-08-11T03:16:02Z'
+  updated: '2025-08-11T03:16:02Z'
+  authors:
+  - Shiqing Fan
+  - Xichen Ding
+  - Liang Zhang
+  - Linjian Mo
+  categories:
+  - cs.AI
+  score: 29
+  matched_terms:
+  - mcptoolbench
+  - mcp
+  - mcp tools
+  - mcp server
+  - mcp servers
+  - benchmark
+  url: https://arxiv.org/abs/2508.07575v1
+  pdf_url: https://arxiv.org/pdf/2508.07575v1
+  bucket: frontier_pinned
+  reason: indexed
+  pinned: true
   curated_match: true
   watchlist_status: indexed
   watchlist_candidate: false

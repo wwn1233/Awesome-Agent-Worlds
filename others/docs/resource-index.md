@@ -4,11 +4,11 @@ A compact readiness index for comparing Agent Worlds by runtime,
 verifier, reset support, trajectory availability, trainability, sandboxing,
 and production signal.
 
-_Generated from `others/data/resources.yaml` at source hash `cdcedfef6b60`._
+_Generated from `others/data/resources.yaml` at source hash `cd1853446473`._
 
 ## Summary
 
-- Content resources: 162
+- Content resources: 165
 - Categories: 11
 - Average readiness score: 9.9/14
 - Resources with readiness score >=9: 112
@@ -73,12 +73,15 @@ metadata is available.
 | [MCP-Atlas](https://arxiv.org/abs/2602.00933) | world | 2026 | 8/14 | eval candidate | docker_or_container | judge | 1,000 tasks | none |  | partial | high | verifier:1, reset:1, trajectories:2, trainability:2 |
 | [MCP-Bench](https://github.com/Accenture/mcp-bench) | world | 2025 | 8/14 | eval candidate | unspecified | benchmark |  | none |  | none | high | verifier:1, reset:2, trajectories:2, trainability:1 |
 | [tau2-bench](https://arxiv.org/abs/2506.07982) | world | 2025 | 8/14 | eval candidate | unspecified | external |  | none |  | episode_reset | high | runtime:1, verifier:1, trajectories:2, trainability:1, sandbox:1 |
+| [ComplexMCP](https://arxiv.org/abs/2605.10787) | benchmark | 2026 | 7/14 | eval candidate | unspecified | benchmark | 300 APIs | none |  | partial | high | runtime:1, reset:1, trajectories:2, trainability:2, sandbox:1 |
 | [MCPTox](https://arxiv.org/abs/2508.14925) | benchmark | 2025 | 7/14 | eval candidate | unspecified | benchmark |  | none |  | dataset_replay | high | runtime:1, verifier:1, trajectories:2, trainability:2, sandbox:1 |
 | [ToolEmu](https://arxiv.org/abs/2309.15817) | benchmark | 2023 | 7/14 | eval candidate | unspecified | judge |  | none |  | dataset_replay | high | runtime:1, verifier:1, trajectories:2, trainability:2, sandbox:1 |
 | [LiveMCPBench](https://arxiv.org/abs/2508.01780) | world | 2025 | 6/14 | eval candidate | unspecified | benchmark |  | none |  | partial | high | runtime:1, verifier:1, reset:1, trajectories:2, trainability:2, sandbox:1 |
 | [MCP-AgentBench](https://arxiv.org/abs/2509.09734) | benchmark | 2025 | 6/14 | eval candidate | unspecified | benchmark | 600 tasks; 188 APIs | none |  | partial | high | runtime:1, verifier:1, reset:1, trajectories:2, trainability:2, sandbox:1 |
 | [MCP-SafetyBench](https://xjzzzzzzzz.github.io/mcpsafety.github.io/) | benchmark | 2026 | 6/14 | eval candidate | local_or_self_hosted | benchmark |  | none |  | partial | high | runtime:1, verifier:1, reset:1, trajectories:2, trainability:2, sandbox:1 |
 | [MCP-Universe](https://arxiv.org/abs/2508.14704) | world | 2025 | 6/14 | eval candidate | unspecified | benchmark |  | none |  | partial | high | runtime:1, verifier:1, reset:1, trajectories:2, trainability:2, sandbox:1 |
+| [MCPAgentBench](https://arxiv.org/abs/2512.24565) | benchmark | 2025 | 6/14 | eval candidate | unspecified | benchmark |  | none |  | partial | high | runtime:1, verifier:1, reset:1, trajectories:2, trainability:2, sandbox:1 |
+| [MCPToolBench++](https://arxiv.org/abs/2508.07575) | benchmark | 2025 | 6/14 | eval candidate | unspecified | benchmark | 4,000 APIs | none |  | partial | high | runtime:1, verifier:1, reset:1, trajectories:2, trainability:2, sandbox:1 |
 
 ## code-world
 

@@ -211,6 +211,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 
 ### 2026
 - 🌟 [Agent World Model](https://arxiv.org/abs/2602.10090) [[Code](https://github.com/Snowflake-Labs/agent-world-model)] — Training Candidate · Synthetic trajectories
+- [ComplexMCP](https://arxiv.org/abs/2605.10787) — Eval Candidate · Stateful MCP sandbox
 - 🌟 [EnterpriseOps-Gym](https://enterpriseops-gym.github.io/) [[Code](https://github.com/ServiceNow/EnterpriseOps-Gym)] — Production-grade · Public trajectories
 - [Herculean](https://arxiv.org/abs/2605.14355) — Eval Candidate · Sandbox
 - 🌟 [MCP-Atlas](https://arxiv.org/abs/2602.00933) [[Code](https://github.com/scaleapi/mcp-atlas)] — Eval Candidate · Runnable
@@ -222,6 +223,8 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [C3-Bench](https://github.com/Tencent-Hunyuan/C3-Benchmark) [[Code](https://github.com/Tencent-Hunyuan/C3-Benchmark)] — Training Candidate · Dataset
 - [LiveMCPBench](https://arxiv.org/abs/2508.01780) — Eval Candidate · Sandbox
 - [MCP-AgentBench](https://arxiv.org/abs/2509.09734) — Eval Candidate · MCP-mediated tools
+- [MCPAgentBench](https://arxiv.org/abs/2512.24565) — Eval Candidate · Simulated MCP tools
+- [MCPToolBench++](https://arxiv.org/abs/2508.07575) — Eval Candidate · Large-scale MCP tools
 - [MCP-Universe](https://arxiv.org/abs/2508.14704) — Eval Candidate · Sandbox
 - [MCPTox](https://arxiv.org/abs/2508.14925) — Eval Candidate · Sandbox
 - 🌟 [MCP-Bench](https://github.com/Accenture/mcp-bench) [[Code](https://github.com/Accenture/mcp-bench)] — Eval Candidate · Runnable
