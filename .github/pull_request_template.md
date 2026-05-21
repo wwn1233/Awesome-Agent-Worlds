@@ -18,5 +18,4 @@
 - [ ] New or changed resources are edited in `others/data/resources.yaml`.
 - [ ] Source support tags use the controlled vocabulary in `others/data/resources.yaml`.
 - [ ] Public copy is final-facing and avoids working notes.
-- [ ] Generated artifacts were rebuilt when source data changed.
 - [ ] README, site data, and public docs are consistent.
