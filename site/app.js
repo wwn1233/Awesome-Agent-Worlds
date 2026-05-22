@@ -280,7 +280,8 @@ function renderRows(items) {
     const labels = item.strictness_labels.slice(0, 5)
       .map((flag) => `<span class="flag">${escapeHtml(label("flag", flag))}</span>`)
       .join("");
-    const evidence = [item.scale, label("trajectory", item.trajectory_availability),
+    const trajectoryCount = item.trajectory_count ? `${Number(item.trajectory_count).toLocaleString()} ${ui("trajectoryCount")}` : "";
+    const evidence = [item.scale, trajectoryCount, label("trajectory", item.trajectory_availability),
       label("reset", item.reset_support), label("reproducibility", item.reproducibility)].filter(Boolean).join("<br>");
 
     return `<tr>

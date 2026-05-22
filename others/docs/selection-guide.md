@@ -22,13 +22,13 @@ What do you need the world to prove?
 ├── Tool/API and enterprise workflow ability
 │   ├── Need stateful apps? -> AppWorld
 │   ├── Need policy-following tool calls? -> tau-bench, tau2-bench
-│   └── Need MCP breadth, tool trajectories, or safety? -> Toolathlon, TOUCAN, MCP-AgentBench, MCP-SafetyBench
+│   └── Need MCP breadth, tool trajectories, or safety? -> Toolathlon, TOUCAN, MCP-Flow, MCP-AgentBench, MCP-SafetyBench
 ├── Research or ML engineering ability
 │   ├── Need paper replication? -> PaperBench
 │   ├── Need ML competition workflows? -> MLE-bench
 │   └── Need broad knowledge tasks? -> GAIA, AgentBoard
 └── Training from interaction
-    ├── Need multi-world rollouts? -> AgentGym, AgentGym-RL, Agent-World, TOUCAN, RAGEN, VAGEN
+    ├── Need multi-world rollouts? -> AgentGym, AgentGym-RL, Agent-World, TOUCAN, MCP-Flow, RAGEN, VAGEN
     ├── Need RL over arbitrary agents? -> Agent Lightning, rLLM
     └── Need open training stacks? -> Orchard, verl, OpenRLHF, TRL
 ```
@@ -56,8 +56,8 @@ What do you need the world to prove?
 | Reader | Start with | Caution |
 |---|---|---|
 | Researcher | WebArena, OSWorld, SWE-bench, AppWorld, PaperBench | Do not compare scores without checking verifier reliability and contamination risk. |
-| Evaluation builder | OSWorld-Verified, WebArena-Verified, BrowserGym, AndroidWorld, MCPWorld, MobileWorld, Toolathlon, MCP-AgentBench, tau-bench | Prefer resettable or replayable worlds; live websites and apps drift. |
-| Post-training engineer | AgentGym, AgentGym-RL, Agent-World, Agent-RLVR, TOUCAN, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
+| Evaluation builder | OSWorld-Verified, WebArena-Verified, BrowserGym, AndroidWorld, MCPWorld, MobileWorld, Toolathlon, MCP-AgentBench, MCP-Flow, tau-bench | Prefer resettable or replayable worlds; live websites and apps drift. |
+| Post-training engineer | AgentGym, AgentGym-RL, Agent-World, Agent-RLVR, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
 | Safety auditor | PhoneSafety, MyPhoneBench, SkillSafetyBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox | Separate unsafe action from simple agent incapability before drawing safety conclusions. |
 | Product lead | OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, OpenAI CUA, Project Mariner | Product signals show direction, not reproducible public training evidence. |
 

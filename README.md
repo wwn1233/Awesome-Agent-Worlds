@@ -50,13 +50,14 @@ The reusable asset is the verified trajectory, not just the final score.
 
 | Reader goal | Start with |
 |---|---|
-| Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified, OSWorld-MCP, WildClawBench, CHI-Bench, PhysicianBench, LinuxArena, BashArena, BioMedArena, BioXArena, SwingArena, DPAI Arena, ClawsBench, AutomationBench, ClawBench, AgencyBench, SkillCraft, SkillLearnBench, SkillGenBench, OASB Skills Security Benchmark, SkillRet, AgentSkillOS, CAR-bench, Analytic Agent, SkillsBench, HWE-Bench, ISO-Bench, SWE-CI, ZeroDayBench, SEC-bench, ML-Bench, MemGym, MemoryArena, Terminal-World, RoadmapBench, Terminal Wrench, Too Helpful to Be Safe, LongAct / HoloMind, General AgentBench, AgentLongBench, DORA, CalBench, LongMemEval-V2, CutVerse, RealWebAssist, DocOS, OmniGUI, GUI-Robust, SciVis Agent Interaction Study, World-Model Alignment Dialogue, Ego2World, BBBench / BBCritic, GUIDE, WorldGUI, AQuaUI, On the Reliability of Computer Use Agents, UI-Verse, MemGUI-Bench, AgentCE-Bench, Evidence-Supported Bounds, BenchJack, Odysseys, OS-Marathon, MCPWorld, MobileWorld, Toolathlon, MCP-AgentBench, MCP-Universe, LiveMCPBench. |
-| Audit agent safety | LinuxArena, BashArena, AgentTrust, AgentWall, AgentLAB, SoK Agentic Skills, CAR-bench, ClawsBench, ClawBench, ZeroDayBench, SEC-bench, MCP-DPT, Terminal Wrench, Too Helpful to Be Safe, Toward Securing AI Agents Like Operating Systems, AgenTRIM, Agent-C, Intent-to-Execution Integrity, Behavioral Integrity Verification for AI Agent Skills, Malicious Or Not: Adding Repository Context to Agent Skill Classification, Supply-Chain Poisoning Attacks Against LLM Coding Agent Skill Ecosystems, Exploiting LLM Agent Supply Chains via Payload-less Skills, Under the Hood of SKILL.md: Semantic Supply-chain Attacks on AI Agent Skill Registry, OASB Skills Security Benchmark, SkillSieve, SkillClone, PhoneSafety, MyPhoneBench, SkillSafetyBench, Human-Guided Harm Recovery / BackBench, GUI-Robust, AgentTrap, SeqWM, Rubric Reward Hacking, ATBench, Plan-Then-Execute for Web Agents, FATE, Faithful Mobile GUI Agents, Securing Computer-Use Agents, BenchJack, ADR / ADR-Bench, ShieldNet / SC-Inject-Bench, MCP Security Bench, MCP-SandboxScan, CUAHarm, RiOSWorld, CORA / Phone-Harm, MCP-SafetyBench, MCPSecBench, AgentDojo, ToolEmu, MCPTox. |
-| Train from rollouts | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis, Memento-Skills, LinuxArena, BashArena, BioMedArena, BioXArena, SwingArena, Trace2Skill, SkillCraft, HASP, SkillRL, SAGE Skill-Augmented GRPO, SkillLearnBench, SkillGenBench, SkillGen, SkillRet, SkillRouter, SkillWeaver, AgencyBench, ClawsBench, SWE-CI, SkillsBench, ML-Bench, Terminal-World, AgentStepper, EvoCUA, Agentic Harness Engineering, Formal Skill / FairyClaw, MemGym, MemoryArena, Auto-Dreamer, Mem-pi, Causal Memory Intervention, MobileGUI-RL, UI-Venus-1.5, GUI Agents with RL, UI-AGILE, SE-GUI, GUI-Libra, CHI-Bench, LongSeeker, Agent World Model, RAW-Dream, C-World / ToolGym, ToolCUA, Faithful Mobile GUI Agents, ActGuide-RL, CuSearch, DAgger for LLM-Agents, FHIR-RL, EmbodiSkill, Continual Harness, AEvo, MMSkills, VLAs-as-Tools, VeGAS, Step-level Optimization, ReVision, FATE, EigenData, EnterpriseLab, DIVE, Proxy State-Based Evaluation, TOUCAN, MCP-Cosmos, GUI-GENESIS, FlowAgent, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning. |
-| Track production direction | OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, DPAI Arena, AgentSkillOS, SkillRouter, SkillRet, SoK Agentic Skills, Agent-C, HASP, Trace2Skill, SkillRL, Memento-Skills, SkillGen, AutomationBench, AgencyBench, CAR-bench, ISO-Bench, SWE-CI, SkillWeaver, ClawsBench, SkillsBench, MCP-DPT, MPAC, Formal Skill / FairyClaw, AgentWall, AgentStepper, Toward Securing AI Agents Like Operating Systems, AgenTRIM, Intent-to-Execution Integrity, Analytic Agent, Plan-Then-Execute for Web Agents, Step-level Optimization, Securing Computer-Use Agents, LiteCUA / AIOS 1.0, World of Workflows. |
-| Study foundations | Agentic World Modeling, Deployment-Relevant Alignment Evaluation, SoK Agentic Skills, AgentSkillOS, SkillRet, SkillRouter, SkillCraft, Trace2Skill, SkillRL, HASP, SAGE Skill-Augmented GRPO, SkillLearnBench, SkillGenBench, SkillGen, Memento-Skills, BioMedArena, BioXArena, SwingArena, AgencyBench, SkillClone, CAR-bench, SkillWeaver, SkillsBench, MPAC, ML-Bench, MemGym, MemoryArena, Auto-Dreamer, Mem-pi, Causal Memory Intervention, Toward Securing AI Agents Like Operating Systems, Intent-to-Execution Integrity, WebArena, SWE-bench, RealWebAssist, LongSeeker, DocOS, RAW-Dream, World-Model Alignment Dialogue, Ego2World, On the Reliability of Computer Use Agents, Evidence-Supported Bounds, GUI Knowledge Bench, UI-Verse, MineDojo, AI2-THOR. |
+| Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified, OSWorld-MCP, WildClawBench, CHI-Bench, PhysicianBench, LinuxArena, BashArena, BioMedArena, BioXArena, SwingArena, DPAI Arena, ClawsBench, AutomationBench, Agent-Diff, ClawBench, ClawArena, AgencyBench, SkillCraft, SkillLearnBench, SkillGenBench, OASB Skills Security Benchmark, SkillRet, AgentSkillOS, CAR-bench, Analytic Agent, SkillsBench, HWE-Bench, ISO-Bench, SWE-CI, ZeroDayBench, SEC-bench, ML-Bench, MemGym, MemoryArena, Terminal-World, RoadmapBench, LITMUS, AgentPressureBench, SWE-WebDevBench, AutoMat, MLS-Bench, EnactToM, ST-WebAgentBench, Terminal Wrench, Too Helpful to Be Safe, LongAct / HoloMind, General AgentBench, AgentLongBench, DORA, CalBench, LongMemEval-V2, CutVerse, RealWebAssist, DocOS, OmniGUI, GUI-Robust, SciVis Agent Interaction Study, World-Model Alignment Dialogue, Ego2World, BBBench / BBCritic, GUIDE, WorldGUI, AQuaUI, On the Reliability of Computer Use Agents, UI-Verse, MemGUI-Bench, AgentCE-Bench, Evidence-Supported Bounds, BenchJack, Odysseys, OS-Marathon, MCPWorld, MobileWorld, Toolathlon, MCP-AgentBench, MCP-Universe, MCP-Flow, TOBench / MM-ToolBench, LiveMCPBench. |
+| Audit agent safety | LinuxArena, BashArena, AgentTrust, AgentWall, AgentLAB, AgentForesight, AgentRx, Who&When, SoK Agentic Skills, Agent Skills for Large Language Models, CAR-bench, ClawsBench, ClawBench, ZeroDayBench, SEC-bench, MCP-DPT, MCP Proxy Access Control, MCPSHIELD Formal Framework, MCPShield Security Cognition Layer, MCPShield Tool-Call Traffic, MCP-in-SoS, mcp-sec-audit, Remote MCP Authentication Security, VIPER-MCP, ASPI, Agent-BOM, LITMUS, AgentPressureBench, ST-WebAgentBench, Terminal Wrench, Too Helpful to Be Safe, Toward Securing AI Agents Like Operating Systems, AgenTRIM, Agent-C, Intent-to-Execution Integrity, Behavioral Integrity Verification for AI Agent Skills, Malicious Or Not: Adding Repository Context to Agent Skill Classification, Supply-Chain Poisoning Attacks Against LLM Coding Agent Skill Ecosystems, Exploiting LLM Agent Supply Chains via Payload-less Skills, Under the Hood of SKILL.md: Semantic Supply-chain Attacks on AI Agent Skill Registry, OASB Skills Security Benchmark, SkillSieve, SkillClone, PhoneSafety, MyPhoneBench, SkillSafetyBench, Human-Guided Harm Recovery / BackBench, GUI-Robust, AgentTrap, SeqWM, Rubric Reward Hacking, ATBench, Plan-Then-Execute for Web Agents, FATE, Faithful Mobile GUI Agents, Securing Computer-Use Agents, BenchJack, ADR / ADR-Bench, ShieldNet / SC-Inject-Bench, MCP Security Bench, MCP-SandboxScan, CUAHarm, RiOSWorld, CORA / Phone-Harm, MCP-SafetyBench, MCPSecBench, AgentDojo, ToolEmu, MCPTox. |
+| Debug agent failures | AgentForesight, AgentRx, Who&When, AgentStepper, Terminal Wrench, FATE, AgentLAB, BenchJack, AgentPressureBench, Human-Guided Harm Recovery / BackBench, Evidence-Supported Bounds for Interactive-Agent Evaluation. |
+| Train from rollouts | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis, EvoEnv, Memento-Skills, LinuxArena, BashArena, BioMedArena, BioXArena, SwingArena, Trace2Skill, SkillCraft, HASP, SkillRL, SAGE Skill-Augmented GRPO, SkillLearnBench, SkillGenBench, SkillGen, SkillRet, SkillRouter, SkillWeaver, AgencyBench, ClawsBench, SWE-CI, SkillsBench, ML-Bench, Terminal-World, AgentStepper, AgentForesight, AgentRx, Who&When, EvoCUA, Agentic Harness Engineering, Formal Skill / FairyClaw, MemGym, MemoryArena, ClawArena, Auto-Dreamer, Mem-pi, Causal Memory Intervention, MobileGUI-RL, UI-Venus-1.5, GUI Agents with RL, UI-AGILE, SE-GUI, GUI-Libra, CHI-Bench, LongSeeker, Agent World Model, Agent-Diff, 3D-Belief, RAW-Dream, C-World / ToolGym, ToolCUA, Faithful Mobile GUI Agents, ActGuide-RL, CuSearch, OpenSeeker-v2, MLS-Bench, SimPersona, SkillOS, D-VLA, DAgger for LLM-Agents, FHIR-RL, EmbodiSkill, Continual Harness, AEvo, MMSkills, VLAs-as-Tools, VeGAS, Step-level Optimization, ReVision, FATE, EigenData, EnterpriseLab, DIVE, Firefly Verified Tool-Call Data, Proxy State-Based Evaluation, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, FlowAgent, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning. |
+| Track production direction | OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, DPAI Arena, AgentSkillOS, SkillRouter, SkillRet, SoK Agentic Skills, Agent Skills for Large Language Models, Agent-First Tool API, HarnessAPI, Agent-C, HASP, Trace2Skill, SkillRL, Memento-Skills, SkillGen, EvoEnv, AutomationBench, Agent-Diff, AgencyBench, CAR-bench, ISO-Bench, SWE-CI, SkillWeaver, ClawsBench, SkillsBench, GUI Agent Autonomy Levels, Firefly Verified Tool-Call Data, MCP-Flow, MCP-DPT, MCP Proxy Access Control, MCPSHIELD Formal Framework, MCPShield Security Cognition Layer, MCPShield Tool-Call Traffic, MCP-in-SoS, mcp-sec-audit, Remote MCP Authentication Security, VIPER-MCP, ASPI, Agent-BOM, MPAC, Formal Skill / FairyClaw, AgentWall, AgentStepper, AgentForesight, AgentRx, Toward Securing AI Agents Like Operating Systems, AgenTRIM, Intent-to-Execution Integrity, Analytic Agent, Plan-Then-Execute for Web Agents, Step-level Optimization, Securing Computer-Use Agents, LiteCUA / AIOS 1.0, World of Workflows. |
+| Study foundations | Agentic World Modeling, Deployment-Relevant Alignment Evaluation, SoK Agentic Skills, Agent Skills for Large Language Models, Agent-First Tool API, HarnessAPI, AgentSkillOS, SkillRet, SkillRouter, SkillCraft, Trace2Skill, SkillRL, HASP, SAGE Skill-Augmented GRPO, SkillLearnBench, SkillGenBench, SkillGen, Memento-Skills, BioMedArena, BioXArena, SwingArena, AgencyBench, SkillClone, CAR-bench, SkillWeaver, SkillsBench, GUI Agent Autonomy Levels, MPAC, ML-Bench, MemGym, MemoryArena, ClawArena, Auto-Dreamer, Mem-pi, Causal Memory Intervention, Toward Securing AI Agents Like Operating Systems, Intent-to-Execution Integrity, AgentForesight, AgentRx, Who&When, Agent-Diff, OpenSeeker-v2, MLS-Bench, SkillOS, AutoMat, D-VLA, 3D-Belief, EnactToM, WebArena, SWE-bench, RealWebAssist, LongSeeker, DocOS, RAW-Dream, World-Model Alignment Dialogue, Ego2World, On the Reliability of Computer Use Agents, Evidence-Supported Bounds, GUI Knowledge Bench, UI-Verse, MineDojo, AI2-THOR. |
 
-Recent high-signal additions: OpenComputer, SaaS-Bench, AutoWebWorld, STT-Arena, Trust No Tool / TRUST-Bench, EnvFactory, SkillsVote, AgentKernelArena, and OverEager-Bench.
+Recent high-signal additions: OpenComputer, SaaS-Bench, AutoWebWorld, STT-Arena, Trust No Tool / TRUST-Bench, EnvFactory, Agentick, Agent^2 RL-Bench, AcademiClaw, MLS-Bench, Agent-Diff, ClawArena, AgentForesight, AgentRx, Who&When, MCPSHIELD Formal Framework, MCPShield Security Cognition Layer, MCPShield Tool-Call Traffic, MCP Proxy Access Control, Remote MCP Authentication Security, MCP-in-SoS, mcp-sec-audit, VIPER-MCP, EvoEnv, ASPI, Agent-BOM, GUI Agent Autonomy Levels, MCP-Flow, Firefly Verified Tool-Call Data, TOBench / MM-ToolBench, HarnessAPI, Agent-First Tool API, Agent Skills for Large Language Models, SkillsVote, AgentKernelArena, OverEager-Bench, LITMUS, AgentPressureBench, OpenSeeker-v2, SWE-WebDevBench, SkillOS, AutoMat, D-VLA, 3D-Belief, EnactToM, SimPersona, ST-WebAgentBench, Agent-ValueBench, AgentSearchBench, AgentSelect, PEEK, LRAT, WARD, DUDE / Real UI Clickboxes, Known By Their Actions, Executable Agentic Memory, Cattle Trade, PRISM, EgoMemReason, ABRA, LiveClawBench, and AgentWebBench.
 
 | Label | Meaning |
 |---|---|
@@ -66,14 +67,14 @@ Recent high-signal additions: OpenComputer, SaaS-Bench, AutoWebWorld, STT-Arena,
 | **Product signal** | Closed or vendor-managed agent capability; important directionally, not public training evidence. |
 | **Training infrastructure** | Rollout, reward, or RL infrastructure for improving agents from environment feedback. |
 | **Infrastructure / Protocol / Safety Control / Model Release** | Supporting systems that shape world composition, governance, or agent-control evidence. |
-| **Safety cluster** | Compact group of related safety benchmarks; inspect generated views for per-resource labels. |
+| **Safety cluster** | Compact group of related safety benchmarks; inspect structured views for per-resource labels. |
 
 ## Static Explorer
 
 The bilingual [Static Explorer](./site/index.html) is a dependency-free webpage for browsing the curated resource set, filtering by evidence fields, switching between Chinese and English, and scanning the weekly hot-paper feed. Run it from the repository root with `ruby -run -e httpd site -p 8026`, then open `http://127.0.0.1:8026/index.html`.
 
 ## Structured Views
-[Explorer Guide](./site/README.md) · [Resource Index](./others/docs/resource-index.md) · [Selection Guide](./others/docs/selection-guide.md) · [Reading Order](./others/docs/reading-order.md) · [Hot Papers](./others/docs/hot-papers.md) · [Source Map](./others/docs/source-map.md) · [Flagship Matrix](./others/docs/flagship-matrix.md)
+[Explorer Guide](./site/README.md) · [Resource Index](./others/docs/resource-index.md) · [Selection Guide](./others/docs/selection-guide.md) · [Reading Order](./others/docs/reading-order.md) · [Hot Papers](./others/docs/hot-papers.md) · [Flagship Matrix](./others/docs/flagship-matrix.md)
 
 ## Table of Contents
 
@@ -91,8 +92,15 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [ADR / ADR-Bench](https://arxiv.org/abs/2605.17380) — Eval Candidate · Partial trajectories
 - 🌟 [AgentSkillOS](https://arxiv.org/abs/2603.02176) [[Code](https://github.com/ynulihao/AgentSkillOS)] — Infrastructure · Skill retrieval and orchestration
 - [AgentTrust](https://arxiv.org/abs/2605.04785) — Safety Control · Runtime tool-call interception
+- 🌟 [Agent-ValueBench](https://valuebyte-ai.github.io/Agent-ValueBench.github.io/) [[Code](https://github.com/ValueByte-AI/Agent-ValueBench)] — Training Candidate · Value-conflict agent benchmark
+- 🌟 [AgentSearchBench](https://bingo-w.github.io/AgentSearchBench/) [[Code](https://github.com/Bingo-W/AgentSearchBench)] — Eval Candidate · Agent discovery and reranking
+- [AgentSelect](https://arxiv.org/abs/2603.03761) — Eval Candidate · Query-to-agent recommendation
+- [Agent-BOM](https://arxiv.org/abs/2605.06812) — Infrastructure · Security-auditable operation graph
 - 🌟 [AgentWall](https://arxiv.org/abs/2605.16265) [[Code](https://github.com/agentwall/Agentwall)] — Safety Control · Runtime firewall
 - [AgentLAB](https://arxiv.org/abs/2602.16901) — Training Candidate · Long-horizon attack benchmark
+- 🌟 [AgentForesight](https://zbox1005.github.io/agent-foresight/) [[Code](https://github.com/ZBox1005/AgentForesight)] — Production-grade · Online multi-agent failure audit
+- 🌟 [AgentRx](https://arxiv.org/abs/2602.02475) [[Code](https://github.com/microsoft/AgentRx)] — Training Candidate · Public failure-trajectory diagnosis
+- 🌟 [Who&When](https://ag2ai.github.io/Agents_Failure_Attribution/) [[Code](https://github.com/mingyin1/Agents_Failure_Attribution)] — Training Candidate · Multi-agent failure attribution
 - [AgenTRIM](https://arxiv.org/abs/2601.12449) — Safety Control · Tool risk mitigation
 - [Behavioral Integrity Verification for AI Agent Skills](https://arxiv.org/abs/2605.11770) — Safety Control · Skill behavior audit
 - [Malicious Or Not: Adding Repository Context to Agent Skill Classification](https://arxiv.org/abs/2603.16572) — Safety Control · Repository-context skill risk
@@ -103,6 +111,14 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [Claude Managed Agents](https://claude.com/blog/new-in-claude-managed-agents) — Product Signal · Closed product
 - [MCP Security Best Practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) — Safety Control · Policy spec
 - [MCP-DPT](https://arxiv.org/abs/2604.07551) — Safety Control · MCP defense-placement taxonomy
+- [MCP Proxy Access Control](https://arxiv.org/abs/2605.18414) — Safety Control · Architectural MCP tool access control
+- [MCPSHIELD Formal Framework](https://arxiv.org/abs/2604.05969) — Safety Control · MCP threat taxonomy and verification model
+- [MCPShield Security Cognition Layer](https://arxiv.org/abs/2602.14281) — Safety Control · MCP trust calibration
+- [MCPShield Tool-Call Traffic](https://arxiv.org/abs/2605.11053) — Safety Control · Graph-based MCP attack detection
+- [MCP-in-SoS](https://arxiv.org/abs/2603.10194) — Safety Control · Open-source MCP server risk assessment
+- [mcp-sec-audit](https://arxiv.org/abs/2603.21641) — Safety Control · Privileged capability auditing
+- [Remote MCP Authentication Security](https://arxiv.org/abs/2605.22333) — Safety Control · Remote server authentication measurement
+- [VIPER-MCP](https://arxiv.org/abs/2605.21392) — Safety Control · Confirmed taint-style MCP exploits
 - [MPAC](https://arxiv.org/abs/2604.09744) — Protocol
 - [MCP-SandboxScan](https://arxiv.org/abs/2601.01241) — Safety Control · WASM runtime analysis
 - 🌟 [OpenAI Agents SDK Sandbox](https://openai.com/index/the-next-evolution-of-the-agents-sdk/) [[Code](https://github.com/openai/openai-agents-python)] — Infrastructure
@@ -118,15 +134,20 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [AgentTrap](https://arxiv.org/abs/2605.13940) [[Code](https://github.com/zhmzm/AgentTrap)] — Eval Candidate · Skill runtime safety
 - [ATBench](https://arxiv.org/abs/2604.02022) — Training Candidate · Safety trajectories
 - [BenchJack](https://arxiv.org/abs/2605.12673) — Eval Candidate · Benchmark red-team audit
+- [Cattle Trade](https://arxiv.org/abs/2605.14537) — Eval Candidate · Multi-agent bargaining benchmark
 - [Deployment-Relevant Alignment Evaluation](https://arxiv.org/abs/2605.04454) — Infrastructure · System-level alignment evidence
 - [Evidence-Supported Bounds for Interactive-Agent Evaluation](https://arxiv.org/abs/2605.10448) — Infrastructure · Benchmark evidence bounds
 - [Formal Skill / FairyClaw](https://arxiv.org/abs/2605.19604) — Infrastructure · Executable skill runtime
+- 🌟 [HarnessAPI](https://arxiv.org/abs/2605.22733) [[Code](https://github.com/edwinjosechittilappilly/harnessapi)] — Infrastructure · Skill-first HTTP/OpenAPI/MCP runtime
 - [Human-Guided Harm Recovery / BackBench](https://arxiv.org/abs/2604.18847) — Safety Control · Post-execution recovery
 - [Intent-to-Execution Integrity](https://arxiv.org/abs/2605.16976) — Safety Control · Execution correctness property
+- [Agent-First Tool API](https://arxiv.org/abs/2605.10555) — Infrastructure · Semantic enterprise tool contracts
 - [ShieldNet / SC-Inject-Bench](https://arxiv.org/abs/2604.04426) — Eval Candidate · MCP supply-chain guardrail
 - [Securing Computer-Use Agents](https://arxiv.org/abs/2605.07110) — Safety Control · Deployment reliability
 - [SoK Agentic Skills](https://arxiv.org/abs/2602.20867) — Infrastructure · Skill lifecycle and governance
+- 🌟 [Agent Skills for Large Language Models](https://arxiv.org/abs/2602.12430) [[Code](https://github.com/scienceaix/agentskills)] — Infrastructure · Skill architecture and governance
 - [Overeager Coding Agents / OverEager-Bench](https://arxiv.org/abs/2605.18583) — Safety Control · Coding-agent scope control
+- 🌟 [PEEK](https://zhuohangu.github.io/blog-post-peek/) [[Code](https://github.com/zhuohangu/peek)] — Infrastructure · Long-context orientation cache
 - [Terminal Wrench](https://arxiv.org/abs/2604.17596) — Eval Candidate · Agent reward-hacking benchmark
 - [Too Helpful to Be Safe](https://arxiv.org/abs/2601.10758) — Eval Candidate · User-mediated attack benchmark
 - [Trust No Tool / TRUST-Bench](https://arxiv.org/abs/2605.17453) — Safety Control · Untrusted tool-feedback benchmark
@@ -151,8 +172,11 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [CutVerse](https://arxiv.org/abs/2605.19484) — Eval Candidate · Creative-app GUI trajectories
 - [DigiWorld](https://arxiv.org/abs/2605.08261) — Eval Candidate · Sandbox
 - [EE-MCP](https://arxiv.org/abs/2604.09815) — Training Infrastructure · Sandbox
+- [Executable Agentic Memory](https://arxiv.org/abs/2605.12294) — Infrastructure · GUI memory reuse
 - [GUI-GENESIS](https://arxiv.org/abs/2602.14093) — Training Infrastructure · Verifiable synthetic GUI worlds
+- [GUI Agent Autonomy Levels](https://arxiv.org/abs/2602.11514) — Infrastructure · GUI autonomy taxonomy
 - [GUIDE](https://arxiv.org/abs/2604.04399) — Eval Candidate · Hierarchical trajectory diagnosis
+- [LITMUS](https://arxiv.org/abs/2605.10779) — Training Candidate · Real OS behavior jailbreak benchmark
 - [OS-Marathon](https://arxiv.org/abs/2601.20650) — Eval Candidate · Sandbox
 - [On the Reliability of Computer Use Agents](https://arxiv.org/abs/2604.17849) — Eval Candidate · Repeated execution reliability
 - 🌟 [OpenComputer](https://echo0715.github.io/OpenComputer/) [[Code](https://github.com/echo0715/OpenComputer)] — Training Candidate · Verifier-grounded software worlds
@@ -193,15 +217,22 @@ The README and Static Explorer group the 11 canonical categories into broader re
 > Browser-based worlds with websites, DOM state, navigation, forms, and functional verifiers for realistic web tasks.
 
 ### 2026
+- [AgentWebBench](https://arxiv.org/abs/2604.10938) — Eval Candidate · Multi-agent web coordination
 - [AutoWebWorld](https://evanwu1125.github.io/AWW_homepage/) — Training Infrastructure · FSM-verified synthetic web worlds
 - 🌟 [LongMemEval-V2](https://arxiv.org/abs/2605.12493) [[Code](https://github.com/xiaowu0162/LongMemEval-V2)] — Training Candidate · Public memory trajectories
 - 🌟 [ClawBench](https://claw-bench.com/) [[Code](https://github.com/reacher-z/ClawBench)] — Eval Candidate · Live web trajectories
 - [DocOS](https://arxiv.org/abs/2605.18048) — Eval Candidate · Document-guided open web GUI tasks
+- 🌟 [ASPI](https://arxiv.org/abs/2605.17324) [[Code](https://github.com/scaleapi/aspi)] — Training Candidate · Agent prompt-injection benchmark
+- 🌟 [DUDE / Real UI Clickboxes](https://arxiv.org/abs/2605.09497) [[Code](https://github.com/Ink0722/DUDE)] — Safety Control · Deceptive UI resistance
+- 🌟 [Known By Their Actions](https://arxiv.org/abs/2605.14786) [[Code](https://github.com/wang2001yu/BrowserAgent-Fingerprinting)] — Safety Control · Browser-agent trace fingerprinting
+- 🌟 [LiveClawBench](https://arxiv.org/abs/2604.13072) [[Code](https://github.com/Mosi-AI/LiveClawBench)] — Eval Candidate · Real-world assistant tasks
 - [Odysseys](https://arxiv.org/abs/2604.24964) — Eval Candidate · Long-horizon live web
 - [Plan-Then-Execute for Web Agents](https://arxiv.org/abs/2605.14290) — Safety Control · Typed execution boundary
 - [RiskWebWorld](https://arxiv.org/abs/2604.13531) — Eval Candidate · Sandbox
 - 🌟 [SaaS-Bench](https://arxiv.org/abs/2605.15777) [[Code](https://github.com/UniPat-AI/SaaS-Bench)] — Training Candidate · Self-hosted SaaS workflows
+- [SimPersona](https://arxiv.org/abs/2605.14205) — Training Infrastructure · Clickstream-grounded buyer agents
 - [TimeWarp](https://huggingface.co/papers/2603.04949) — Training Candidate · Sandbox
+- 🌟 [WARD](https://arxiv.org/abs/2605.15030) [[Code](https://github.com/caothientri2001vn/WARD-WebAgent)] — Safety Control · Web prompt-injection defense
 ### 2025
 - [BrowseComp](https://openai.com/index/browsecomp/) — Eval Candidate · Sandbox
 - 🌟 [Mind2Web-2](https://github.com/OSU-NLP-Group/Mind2Web-2) [[Code](https://github.com/OSU-NLP-Group/Mind2Web-2)] — Training Candidate · Public trajectories
@@ -213,6 +244,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [AssistantBench](https://assistantbench.github.io/) [[Code](https://github.com/assistantbench/assistantbench)] — Eval Candidate · Runnable
 - 🌟 [BrowserGym](https://github.com/ServiceNow/BrowserGym) [[Code](https://github.com/ServiceNow/BrowserGym)] — Production-grade · Public trajectories
 - [Project Mariner](https://deepmind.google/technologies/project-mariner/) — Product Signal · Closed product
+- 🌟 [ST-WebAgentBench](https://sites.google.com/view/st-webagentbench/home) [[Code](https://github.com/segev-shlomov/ST-WebAgentBench)] — Eval Candidate · Web-agent safety and trust
 - 🌟 [VisualWebArena](https://github.com/web-arena-x/visualwebarena) [[Code](https://github.com/web-arena-x/visualwebarena)] — Training Candidate · Runnable
 - 🌟 [WebLINX](https://github.com/McGill-NLP/weblinx) [[Code](https://github.com/McGill-NLP/weblinx)] — Training Candidate · Public trajectories
 - 🌟 [WebVoyager](https://github.com/MinorJerry/WebVoyager) [[Code](https://github.com/MinorJerry/WebVoyager)] — Training Candidate · Public trajectories
@@ -254,6 +286,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 > Repository, terminal, and software-engineering worlds where patches, tests, commands, and artifacts define success.
 
 ### 2026
+- 🌟 [AgentPressureBench](https://ucsc-vlaa.github.io/AgentPressureBench/) [[Code](https://github.com/ucsc-vlaa/AgentPressureBench)] — Training Candidate · Public-score pressure audit
 - [AgentKernelArena](https://arxiv.org/abs/2605.16819) — Training Candidate · GPU kernel optimization agents
 - [AgentStepper](https://arxiv.org/abs/2602.06593) — Infrastructure · Software-agent execution debugger
 - [ClawForge](https://arxiv.org/abs/2605.14133) — Eval Candidate · Generated CLI workflows
@@ -262,6 +295,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [ISO-Bench](https://ayushnangia.github.io/iso-bench-website/) [[Code](https://github.com/Lossfunk/ISO-Bench)] — Training Candidate · Runnable
 - 🌟 [LinuxArena](https://www.linuxarena.ai/) [[Code](https://github.com/linuxarena/control-tower)] — Production-grade · Privileged production-software control
 - [RoadmapBench](https://arxiv.org/abs/2605.15846) — Eval Candidate · Long-horizon version upgrades
+- 🌟 [SWE-WebDevBench](https://webdevbench.com/) [[Code](https://github.com/snowmountainAi/webdevbench)] — Training Candidate · Virtual software agency workflows
 - 🌟 [SWE-CI](https://github.com/SKYLENAGE-AI/SWE-CI) [[Code](https://github.com/SKYLENAGE-AI/SWE-CI)] — Training Candidate · Public CI evolution data
 - [Terminal-World](https://arxiv.org/abs/2605.20876) — Training Infrastructure · Synthetic terminal environments
 - 🌟 [WildClawBench](https://arxiv.org/abs/2605.10912) [[Code](https://github.com/InternLM/WildClawBench)] — Eval Candidate · Native runtime
@@ -291,8 +325,10 @@ The README and Static Explorer group the 11 canonical categories into broader re
 > Structured tool-use and API environments that turn business processes into executable state transitions and policy checks.
 
 ### 2026
+- 🌟 [ABRA](https://luab.github.io/abra/) [[Code](https://github.com/Luab/ABRA)] — Training Candidate · Radiology viewer agent benchmark
 - 🌟 [AgentCE-Bench](https://arxiv.org/abs/2604.06111) [[Code](https://github.com/uservan/AgentCE_Bench)] — Training Candidate · Lightweight controllable environment
 - 🌟 [Agent World Model](https://arxiv.org/abs/2602.10090) [[Code](https://github.com/Snowflake-Labs/agent-world-model)] — Training Candidate · Synthetic trajectories
+- 🌟 [Agent-Diff](https://github.com/agent-diff-bench/agent-diff) [[Code](https://github.com/agent-diff-bench/agent-diff)] — Production-grade · Enterprise API state-diff contracts
 - [Analytic Agent](https://arxiv.org/abs/2605.21027) — Eval Candidate · Governed enterprise analytics APIs
 - [AutomationBench](https://arxiv.org/abs/2604.18934) — Eval Candidate · Cross-application API workflows
 - [CalBench](https://arxiv.org/abs/2605.09823) — Eval Candidate · Multi-agent calendar privacy
@@ -310,12 +346,14 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [OccuBench](https://arxiv.org/abs/2604.10866) [[Code](https://github.com/GregxmHu/OccuBench)] — Training Candidate · Partial trajectories
 - [PhysicianBench](https://healthrex.github.io/PhysicianBench/) — Training Candidate · FHIR EHR workflows
 - [STT-Arena](https://arxiv.org/abs/2605.18548) — Training Candidate · Spatio-temporal tool-use replanning
+- [TOBench / MM-ToolBench](https://arxiv.org/abs/2605.16909) — Eval Candidate · Omni-modal MCP tool workflows
 - [World of Workflows](https://arxiv.org/abs/2601.22130) — Training Candidate · Sandbox
 ### 2025
 - 🌟 [C3-Bench](https://github.com/Tencent-Hunyuan/C3-Benchmark) [[Code](https://github.com/Tencent-Hunyuan/C3-Benchmark)] — Training Candidate · Dataset
 - [LiveMCPBench](https://arxiv.org/abs/2508.01780) — Eval Candidate · Sandbox
 - [MCP-AgentBench](https://arxiv.org/abs/2509.09734) — Eval Candidate · MCP-mediated tools
 - [MCPAgentBench](https://arxiv.org/abs/2512.24565) — Eval Candidate · Simulated MCP tools
+- 🌟 [MCP-Flow](https://arxiv.org/abs/2510.24284) [[Code](https://github.com/wwh0411/MCP-Flow)] — Training Infrastructure · Public MCP tool trajectories
 - 🌟 [MCPEval](https://arxiv.org/abs/2507.12806) [[Code](https://github.com/SalesforceAIResearch/MCPEval)] — Eval Candidate · Automatic MCP evaluation
 - [MCPToolBench++](https://arxiv.org/abs/2508.07575) — Eval Candidate · Large-scale MCP tools
 - [MCP-Universe](https://arxiv.org/abs/2508.14704) — Eval Candidate · Sandbox
@@ -342,15 +380,20 @@ The README and Static Explorer group the 11 canonical categories into broader re
 > Long-horizon research, analysis, and knowledge-work tasks where execution trajectories, evidence, and rubrics matter as much as final answers.
 
 ### 2026
+- 🌟 [AcademiClaw](https://gair-nlp.github.io/AcademiClaw/) [[Code](https://github.com/GAIR-NLP/AcademiClaw)] — Training Candidate · Bilingual academic workflow tasks
 - 🌟 [AgencyBench](https://arxiv.org/abs/2601.11044) [[Code](https://github.com/GAIR-NLP/AgencyBench)] — Eval Candidate · 1M-token interactive agent tasks
 - 🌟 [Agentic World Modeling](https://arxiv.org/abs/2604.22748) [[Code](https://github.com/matrix-agent/awesome-agentic-world-modeling)] — Infrastructure · Foundation taxonomy
 - 🌟 [AgentLongBench](https://arxiv.org/abs/2601.20730) [[Code](https://github.com/euReKa025/AgentLongBench)] — Training Candidate · Environment rollouts
+- [AutoMat](https://arxiv.org/abs/2605.00803) — Eval Candidate · Scientific coding-agent reproducibility
 - 🌟 [BioMedArena](https://arxiv.org/abs/2605.06177) [[Code](https://github.com/AI-in-Health/BioMedArena)] — Training Candidate · Biomedical deep-research agent arena
 - [BioXArena](https://arxiv.org/abs/2605.15766) — Eval Candidate · Biomedical ML coding benchmark
+- 🌟 [ClawArena](https://www.clawarena.cc/) [[Code](https://github.com/aiming-lab/ClawArena)] — Training Candidate · Evolving information environments
 - [DORA](https://arxiv.org/abs/2605.11633) — Eval Candidate · Geospatial disaster-response agents
 - [GeoAgentBench](https://arxiv.org/abs/2604.13888) — Eval Candidate · GIS tool execution
 - 🌟 [General AgentBench](https://arxiv.org/abs/2602.18998) [[Code](https://github.com/cxcscmu/General-AgentBench)] — Eval Candidate · General-agent scaling
 - [LongSeeker](https://arxiv.org/abs/2605.05191) — Model Release · Synthetic trajectories
+- 🌟 [MLS-Bench](https://mls-bench.com/) [[Code](https://github.com/Imbernoulli/MLS-Bench)] — Training Candidate · ML-science method discovery
+- 🌟 [OpenSeeker-v2](https://arxiv.org/abs/2605.04036) [[Code](https://github.com/PolarSeeker/OpenSeeker)] — Training Infrastructure · Search-agent data and models
 - [Auto-Dreamer](https://arxiv.org/abs/2605.20616) — Training Infrastructure · Offline memory consolidation
 - [Mem-pi](https://arxiv.org/abs/2605.21463) — Training Infrastructure · Adaptive memory guidance
 - [MemGym](https://arxiv.org/abs/2605.20833) — Training Candidate · Long-horizon agent memory
@@ -372,8 +415,12 @@ The README and Static Explorer group the 11 canonical categories into broader re
 > Robotics, simulation, 3D, game, and generative environments that provide richer state spaces for embodied or multimodal agents.
 
 ### 2026
+- 🌟 [3D-Belief](https://3d-belief.github.io/) [[Code](https://github.com/3D-Belief/3d-belief)] — Training Candidate · 3D belief world model
 - [Ego2World](https://arxiv.org/abs/2605.13335) — Training Candidate · Video-compiled symbolic worlds
+- 🌟 [EgoMemReason](https://egomemreason.github.io/) [[Code](https://github.com/Ziyang412/EgoMemReason)] — Training Candidate · Egocentric memory benchmark
+- [EnactToM](https://arxiv.org/abs/2605.09826) — Eval Candidate · Embodied functional ToM benchmark
 - [LongAct / HoloMind](https://arxiv.org/abs/2605.14504) — Eval Candidate · Long-horizon household planning
+- [PRISM](https://sj-li.com/PROJ/PRISM/) — Eval Candidate · Embodied intent diagnostics
 - [VeGAS](https://arxiv.org/abs/2605.12620) — Training Infrastructure · Verifier-guided action selection
 - [VLAs-as-Tools](https://arxiv.org/abs/2605.13119) — Training Infrastructure · VLA tool-family orchestration
 - [World-Model Alignment Dialogue](https://arxiv.org/abs/2605.12920) — Eval Candidate · Multi-agent belief alignment
@@ -417,25 +464,31 @@ The README and Static Explorer group the 11 canonical categories into broader re
 ### 2026
 - [ActGuide-RL](https://arxiv.org/abs/2605.12004) — Training Infrastructure · Action-guided agentic RL
 - [AEvo](https://arxiv.org/abs/2605.13821) — Training Infrastructure · Agentic evolution loop
+- 🌟 [Agentick](https://roger-creus.github.io/agentick/) [[Code](https://github.com/roger-creus/agentick)] — Training Candidate · Unified sequential-decision benchmark
 - [Agentic Harness Engineering](https://arxiv.org/abs/2604.25850) — Training Infrastructure · Harness self-evolution
 - [Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence](https://agent-tars-world.github.io/-/) — Training Infrastructure · Synthetic trajectories
+- 🌟 [Agent^2 RL-Bench](https://arxiv.org/abs/2604.10547) [[Code](https://github.com/microsoft/RD-Agent/tree/main/rdagent/scenarios/rl/autorl_bench)] — Training Candidate · Agentic RL post-training benchmark
 - 🌟 [Causal Memory Intervention](https://arxiv.org/abs/2605.17641) [[Code](https://github.com/Saksham4796/causal-memory-intervention)] — Training Infrastructure · Causal memory selection
 - 🌟 [Continual Harness](https://arxiv.org/abs/2605.09998) [[Code](https://github.com/SethKarten/continual-harness)] — Training Infrastructure · Reset-free online adaptation
 - 🌟 [CuSearch](https://arxiv.org/abs/2605.11611) [[Code](https://github.com/MrToser/CuSearch)] — Training Infrastructure · Agentic RAG rollout curriculum
 - [DAgger for LLM-Agents](https://arxiv.org/abs/2605.12913) — Training Infrastructure · Expert-corrected agent rollouts
+- [D-VLA](https://arxiv.org/abs/2605.13276) — Training Infrastructure · Distributed VLA reinforcement learning
 - 🌟 [DIVE](https://arxiv.org/abs/2603.11076) [[Code](https://github.com/sheep333c/DIVE)] — Training Infrastructure · Evidence-first task synthesis
 - [EmbodiSkill](https://arxiv.org/abs/2605.10332) — Training Infrastructure · Skill-aware embodied reflection
 - [EigenData](https://arxiv.org/abs/2601.22607) — Training Infrastructure · Verifier-based tool-agent post-training
 - [EnvFactory](https://arxiv.org/abs/2605.18703) — Training Infrastructure · Executable environment synthesis for RL
+- [EvoEnv](https://arxiv.org/abs/2605.14392) — Training Infrastructure · Verifiable environment synthesis
 - 🌟 [EvoCUA](https://arxiv.org/abs/2601.15876) [[Code](https://github.com/meituan/EvoCUA)] — Training Infrastructure · Synthetic computer-use experience
 - 🌟 [EnvSimBench](https://arxiv.org/abs/2605.07247) [[Code](https://github.com/cookieApril/EnvSimBench)] — Training Infrastructure · Public trajectories
 - 🌟 [FATE](https://arxiv.org/abs/2605.11882) [[Code](https://github.com/YinBo0927/FATE)] — Training Infrastructure · Failure-trajectory safety alignment
 - [FHIR-RL](https://arxiv.org/abs/2605.14126) — Training Infrastructure · Clinical FHIR tool-agent RL
+- [Firefly Verified Tool-Call Data](https://arxiv.org/abs/2605.17558) — Training Infrastructure · Verified real-API tool-call data
 - [FlowAgent](https://arxiv.org/abs/2605.07339) — Training Infrastructure · Tool-flow reasoning
 - [GUI Agents with Reinforcement Learning](https://arxiv.org/abs/2604.27955) — Infrastructure · GUI-agent RL taxonomy
 - 🌟 [GUI-Libra](https://arxiv.org/abs/2602.22190) [[Code](https://github.com/GUI-Libra/GUI-Libra)] — Training Infrastructure · Public GUI reasoning data
 - [HASP](https://arxiv.org/abs/2605.17734) — Training Infrastructure · Executable skill programs
 - [Kintsugi](https://arxiv.org/abs/2605.09487) — Training Infrastructure · Verifier-gated policy repair
+- 🌟 [LRAT](https://arxiv.org/abs/2604.04949) [[Code](https://github.com/Yuqi-Zhou/LRAT)] — Training Infrastructure · Trajectory retrieval for agent memory
 - 🌟 [Memento-Skills](https://arxiv.org/abs/2603.18743) [[Code](https://github.com/Memento-Teams/Memento-Skills)] — Training Infrastructure · External skill memory
 - 🌟 [MMSkills](https://arxiv.org/abs/2605.13527) [[Code](https://github.com/DeepExperience/MMSkills)] — Training Infrastructure · Multimodal skill library
 - [Orchard](https://arxiv.org/abs/2605.15040) — Training Infrastructure · Public SWE/GUI trajectories
@@ -445,6 +498,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [Trace2Skill](https://arxiv.org/abs/2603.25158) — Training Infrastructure · Trajectory-to-skill distillation
 - [SkillGen](https://arxiv.org/abs/2605.10999) — Training Infrastructure · Verified skill synthesis
 - [SkillGenBench](https://arxiv.org/abs/2605.18693) — Training Candidate · Skill-generation benchmark
+- [SkillOS](https://arxiv.org/abs/2605.06614) — Training Infrastructure · Skill curation for self-evolving agents
 - 🌟 [SkillsVote](https://arxiv.org/abs/2605.18401) [[Code](https://github.com/MemTensor/skills-vote)] — Training Infrastructure · Skill lifecycle governance
 - 🌟 [SkillCraft](https://arxiv.org/abs/2603.00718) [[Code](https://github.com/shiqichen17/SkillCraft)] — Training Candidate · Tool-composition skill benchmark
 - 🌟 [SkillLearnBench](https://arxiv.org/abs/2604.20087) [[Code](https://github.com/cxcscmu/SkillLearnBench)] — Training Candidate · Continual skill learning
@@ -474,8 +528,8 @@ The README and Static Explorer group the 11 canonical categories into broader re
 
 ## Project Note
 
-Red Queen is the autonomous curation agent for this repository. The human owner
-defined the Agent Worlds scope and rationale; Red Queen conducts ongoing
+Red Queen is the autonomous curation agent for this repository. The project
+owner defined the Agent Worlds scope and rationale; Red Queen conducts ongoing
 literature discovery, source checks, resource organization, and weekly
 hot-paper tracking for future updates.
 

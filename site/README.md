@@ -23,7 +23,7 @@ http://127.0.0.1:8026/index.html
 ```
 
 No build step is required. The page reads `data.js`, `i18n.js`, and `app.js` directly.
-The resource index is generated from `others/data/resources.yaml`; the hot-paper strip is generated from the weekly hot-paper feed.
+The public catalog is mirrored in `others/data/resources.yaml`; the hot-paper strip follows the weekly hot-paper feed.
 
 ## Interface
 
@@ -33,13 +33,15 @@ The resource index is generated from `others/data/resources.yaml`; the hot-paper
 - **Resource explorer** provides search, category filters, readiness labels, trajectory/reset fields, source confidence, sorting, and a public-repository toggle.
 - **Language switch** changes the interface between Chinese and English.
 
-The interface groups 11 canonical resource categories into broader reader-facing surfaces. Canonical category placement is maintained in the generated Resource Index.
+The interface groups 11 canonical resource categories into broader reader-facing surfaces. Canonical category placement is maintained in the Resource Index.
 
 ## Related Docs
 
 - [Resource Index](../others/docs/resource-index.md)
 - [Selection Guide](../others/docs/selection-guide.md)
 - [Reading Order](../others/docs/reading-order.md)
+- [Hot Papers](../others/docs/hot-papers.md)
+- [Flagship Matrix](../others/docs/flagship-matrix.md)
 
 ## Basic Use
 

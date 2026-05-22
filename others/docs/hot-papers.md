@@ -9,9 +9,8 @@ Curated resources are the entries in the Resource Index and main README.
 - Update cadence: weekly
 - Source: arXiv API
 - Window: 90 days
-- Candidates: 283
-- Watchlist candidates: 1
-- Archive: [2026-05 full candidate archive](./hot-paper-archive-2026-05.md)
+- Candidates: 322
+- Watchlist candidates: 0
 
 ## Watchlist Criteria
 
@@ -27,34 +26,34 @@ require confirmed source confidence and complete metadata.
 | --- | --- | ---: | --- | --- |
 | [Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence](https://arxiv.org/abs/2604.18292v1) | 2026-04-20 | 46 | agent world, environment synthesis, real-world environment, tool ecosystem, mcp, self-evolving training, agent training arena, verifiable reward | indexed |
 | [OpenComputer: Verifiable Software Worlds for Computer-Use Agents](https://arxiv.org/abs/2605.19769v1) | 2026-05-19 | 43 | opencomputer, verifiable software worlds, computer-use agents, state verifiers, partial-credit rewards | indexed |
+| [LITMUS: Benchmarking Behavioral Jailbreaks of LLM Agents in Operating Systems](https://arxiv.org/abs/2605.10779v1) | 2026-05-11 | 42 | litmus, llm agents, operating systems, behavioral jailbreaks, state rollback | indexed |
 | [Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning](https://arxiv.org/abs/2602.10090v2) | 2026-02-11 | 42 | world model, synthetic environment, tool-use environment, mcp, verifiable reward, reinforcement learning agent | indexed |
 | [SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows?](https://arxiv.org/abs/2605.15777v1) | 2026-05-15 | 41 | saas-bench, computer-use agents, self-hosted saas, professional workflows, verification checkpoints | indexed |
+| [Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows](https://arxiv.org/abs/2604.20200v1) | 2026-04-23 | 41 | agentpressurebench, coding agents, public score exploitation, hidden private evaluation, agent safety | indexed |
 | [EnvFactory: Scaling Tool-Use Agents via Executable Environments Synthesis and Robust RL](https://arxiv.org/abs/2605.18703v1) | 2026-05-18 | 40 | envfactory, executable environment synthesis, agentic rl, tool-use agents, synthetic trajectories | indexed |
 | [STT-Arena: A More Realistic Environment for Tool-Using with Spatio-Temporal Dynamics](https://arxiv.org/abs/2605.18548v1) | 2026-05-18 | 40 | stt-arena, spatio-temporal tool-use, dynamic environment, adaptive replanning, failure trajectories | indexed |
 | [Trust No Tool: Evaluating and Defending LLM Agents under Untrusted Tool Feedback](https://arxiv.org/abs/2605.17453v1) | 2026-05-17 | 40 | trust-bench, untrusted tool feedback, cognitive poisoning, trajectory-conditioned risk, agent security | indexed |
+| [Learning to Build the Environment: Self-Evolving Reasoning RL via Verifiable Environment Synthesis](https://arxiv.org/abs/2605.14392v1) | 2026-05-14 | 40 | evoenv, verifiable environment synthesis, self-evolving reasoning rl, environment-construction loop, rlvr | indexed |
+| [MLS-Bench: A Holistic and Rigorous Assessment of AI Systems on Building Better AI](https://arxiv.org/abs/2605.08678v1) | 2026-05-09 | 40 | mls-bench, ml method discovery, research agents, agent logs, machine learning benchmarks | indexed |
+| [OpenSeeker-v2: Pushing the Limits of Search Agents with Informative and High-Difficulty Trajectories](https://arxiv.org/abs/2605.04036v1) | 2026-05-05 | 40 | openseeker-v2, search agents, high-difficulty trajectories, sft, deep research agents | indexed |
+| [Agent^2: Evaluate and Improve Agents via Reinforcement Learning](https://arxiv.org/abs/2604.10547v1) | 2026-04-12 | 40 | agent^2 rl-bench, rl post-training, grading api, isolated workspaces, agentic rl pipelines | indexed |
 | [Terminal-World: Scaling Terminal-Agent Environments via Agent Skills](https://arxiv.org/abs/2605.20876v1) | 2026-05-20 | 39 | terminal-world, terminal-agent environments, agent skills, teacher trajectories | indexed |
 | [CHI-Bench: Can AI Agents Automate End-to-End, Long-Horizon, Policy-Rich Healthcare Workflows?](https://arxiv.org/abs/2605.16679v2) | 2026-05-15 | 39 | chi-bench, healthcare workflow, mcp tools, long-horizon agent | indexed |
 | [Overeager Coding Agents: Measuring Out-of-Scope Actions on Benign Tasks](https://arxiv.org/abs/2605.18583v1) | 2026-05-18 | 39 | overeager coding agents, overeager-bench, out-of-scope actions, permission gating, tool-call audit | indexed |
 | [SkillsVote: Lifecycle Governance of Agent Skills from Collection, Recommendation to Evolution](https://arxiv.org/abs/2605.18401v1) | 2026-05-18 | 39 | skillsvote, agent skills, lifecycle governance, skill attribution, skill evolution | indexed |
+| [Firefly: Illuminating Large-Scale Verified Tool-Call Data Generation from Real APIs](https://arxiv.org/abs/2605.17558v1) | 2026-05-17 | 39 | firefly, verified tool-call data, real mcp servers, real api, tool-call trajectories | indexed |
+| [AgentForesight: Online Auditing for Early Failure Prediction in Multi-Agent Systems](https://arxiv.org/abs/2605.08715v2) | 2026-05-09 | 39 | agentforesight, online auditing, multi-agent failures, afttraj-2k, trajectory intervention | indexed |
 | [WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation](https://arxiv.org/abs/2605.10912v1) | 2026-05-11 | 39 | wildclawbench, long-horizon agent evaluation, native-runtime benchmark, docker, tool-use environment, benchmark | indexed |
+| [Agent-ValueBench: A Comprehensive Benchmark for Evaluating Value Orientations and Understanding Value Shifts in LLM Agents](https://arxiv.org/abs/2605.10365v1) | 2026-05-11 | 39 | agent-valuebench, agent values, value-conflict tasks, executable sandbox environments, trajectory-level rubrics | indexed |
+| [Agentick: A Benchmark for Human-like Agentic Reasoning](https://arxiv.org/abs/2605.06869v1) | 2026-05-07 | 39 | Agentick, gymnasium-compatible, sequential decision, rl agents, llm agents | indexed |
+| [SWE-WebDevBench: Evaluating Coding Agent Application Platforms as Virtual Software Agencies](https://arxiv.org/abs/2605.04637v1) | 2026-05-06 | 39 | swe-webdevbench, coding agents, virtual software agencies, production readiness, web development | indexed |
 | [MCP-Atlas: A Large-Scale Benchmark for Tool-Use Competency with Real MCP Servers](https://arxiv.org/abs/2602.00933v2) | 2026-01-31 | 39 | mcp atlas, mcp servers, tool routing, tool composition, mcp benchmark, benchmark | indexed |
+| [AcademiClaw: Benchmarking and Auditing LLM Agents on Real-World University-Level Computer Science Tasks](https://arxiv.org/abs/2605.02661v1) | 2026-05-04 | 39 | AcademiClaw, academic workflows, llm agents, docker sandbox, safety audit | indexed |
 | [AutoWebWorld: Synthesizing Infinite Verifiable Web Environments via Finite State Machines](https://arxiv.org/abs/2602.14296v1) | 2026-02-15 | 39 | autowebworld, verifiable web environments, finite state machines, synthetic trajectories, web gui agents | indexed |
+| [VIPER-MCP: Detecting and Exploiting Taint-Style Vulnerabilities in Model Context Protocol Servers](https://arxiv.org/abs/2605.21392v1) | 2026-05-20 | 38 | viper-mcp, mcp servers, taint-style vulnerabilities, exploit traces, zero-day vulnerabilities | indexed |
 | [MemGym: a Long-Horizon Memory Environment for LLM Agents](https://arxiv.org/abs/2605.20833v1) | 2026-05-20 | 38 | memgym, long-horizon memory environment, webarena-infinity, swe-gym | indexed |
+| [Prompts Don't Protect: Architectural Enforcement via MCP Proxy for LLM Tool Access Control](https://arxiv.org/abs/2605.18414v1) | 2026-05-18 | 38 | mcp proxy, tool access control, tool discovery, unauthorized invocation, agent security | indexed |
 | [AgentKernelArena: Generalization-Aware Benchmarking of GPU Kernel Optimization Agents](https://arxiv.org/abs/2605.16819v1) | 2026-05-16 | 38 | agentkernelarena, gpu kernel optimization, coding agents, correctness, performance checks | indexed |
-| [AgentTrap: Measuring Runtime Trust Failures in Third-Party Agent Skills](https://arxiv.org/abs/2605.13940v1) | 2026-05-13 | 38 | agenttrap, third-party skills, runtime trust failures, agent safety, skill environment, benchmark | indexed |
-| [EnvSimBench: A Benchmark for Evaluating and Improving LLM-Based Environment Simulation](https://arxiv.org/abs/2605.07247v1) | 2026-05-08 | 38 | environment simulation, language world model, state transition, verifier, benchmark | indexed |
-| [C-World: A Computer Use Agent Environment Creator](https://arxiv.org/abs/2601.06328v2) | 2026-01-09 | 38 | c-world, toolgym, open-world tool-using environment, state controller, tool-use environment, trajectory | indexed |
-| [EE-MCP: Self-Evolving MCP-GUI Agents via Automated Environment Generation and Experience Learning](https://arxiv.org/abs/2604.09815v1) | 2026-04-10 | 38 | mcp-gui, environment generation, self-evolving agent, trajectory, tool-use environment, gui agent | indexed |
-| [ComplexMCP: Evaluation of LLM Agents in Dynamic, Interdependent, and Large-Scale Tool Sandbox](https://arxiv.org/abs/2605.10787v1) | 2026-05-11 | 37 | complexmcp, mcp, large-scale tool sandbox, dynamic sandbox, stateful tool, tool-use environment, benchmark | indexed |
-| [OSWorld-MCP: Benchmarking MCP Tool Invocation In Computer-Use Agents](https://arxiv.org/abs/2510.24563v2) | 2025-10-28 | 37 | osworld-mcp, mcp, tool invocation, computer-use agents, gui-tool, benchmark | indexed |
-| [RoadmapBench: Evaluating Long-Horizon Agentic Software Development Across Version Upgrades](https://arxiv.org/abs/2605.15846v2) | 2026-05-15 | 36 | roadmapbench, coding agent, long-horizon software development, version upgrade | indexed |
-| [SkillGenBench: Benchmarking Skill Generation Pipelines for LLM Agents](https://arxiv.org/abs/2605.18693v1) | 2026-05-18 | 36 | skillgenbench, skill generation, fixed harness, repository-grounded skills, deterministic checks | indexed |
-| [Harnessing LLM Agents with Skill Programs](https://arxiv.org/abs/2605.17734v1) | 2026-05-18 | 36 | hasp, skill programs, program functions, agent-loop intervention, post-training | indexed |
-| [BioXArena: Benchmarking LLM Agents on Multi-Modal Biomedical Machine Learning Tasks](https://arxiv.org/abs/2605.15766v1) | 2026-05-15 | 36 | bioxarena, biomedical machine learning, multimodal biomedical datasets, hidden graders, agent trajectories | indexed |
-| [Exploiting LLM Agent Supply Chains via Payload-less Skills](https://arxiv.org/abs/2605.14460v1) | 2026-05-14 | 36 | payload-less skills, semantic compliance hijacking, agent supply chain, skill security, scanner evasion | indexed |
-| [Toward Scalable Verifiable Reward: Proxy State-Based Evaluation for Multi-turn Tool-Calling LLM Agents](https://arxiv.org/abs/2602.16246v3) | 2026-02-18 | 36 | proxy state-based evaluation, verifiable reward, tool-use environment, trajectory, benchmark | indexed |
-| [ToolCUA: Towards Optimal GUI-Tool Path Orchestration for Computer Use Agents](https://arxiv.org/abs/2605.12481v1) | 2026-05-12 | 36 | toolcua, gui-tool, tool-efficient path reward, osworld-mcp, online agentic rl, trajectory | indexed |
-| [BioMedArena: An Open-source Toolkit for Building and Evaluating Biomedical Deep Research Agents](https://arxiv.org/abs/2605.06177v1) | 2026-05-07 | 36 | biomedarena, biomedical deep research agents, agent harnesses, tools, per-task traces | indexed |
 
 The feed is refreshed weekly. Add a paper to `others/data/resources.yaml`
 only after confirming the world, verifier, trajectory, source, sandbox,
