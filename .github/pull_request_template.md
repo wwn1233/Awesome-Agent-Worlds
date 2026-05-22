@@ -16,6 +16,6 @@
 ## Checklist
 
 - [ ] New or changed resources are edited in `others/data/resources.yaml`.
-- [ ] Source support tags use the controlled vocabulary in `others/data/resources.yaml`.
+- [ ] Source support tags use the vocabulary already present in existing entries.
 - [ ] Public copy is final-facing and avoids working notes.
-- [ ] README, site data, and public docs are consistent.
+- [ ] README, Resource Index, Hot Papers, Source Map, and Static Explorer data stay consistent when source data changes.

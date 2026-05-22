@@ -6,9 +6,9 @@ labels: resource
 assignees: ""
 ---
 
-Before submitting, make sure the resource contributes an executable
-environment, benchmark, verifier, trajectory, sandbox, protocol, product
-signal, or training-loop signal.
+Check the README scope before submitting a resource. A good entry should expose
+an environment, benchmark, verifier, trajectory, sandbox, protocol, safety
+control, or training-loop contribution.
 
 ## Resource
 
