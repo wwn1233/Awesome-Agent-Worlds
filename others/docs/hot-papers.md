@@ -1,6 +1,6 @@
 # Hot Papers
 
-Weekly arXiv discovery feed matching the Agent Worlds watch profile.
+Weekly arXiv watchlist for recent Agent Worlds papers.
 
 Curated resources are the entries in the Resource Index and main README.
 
@@ -9,8 +9,8 @@ Curated resources are the entries in the Resource Index and main README.
 - Update cadence: weekly
 - Source: arXiv API
 - Window: 90 days
-- Candidates: 322
-- Watchlist candidates: 0
+- Papers screened: 322
+- New watchlist candidates: 0
 
 ## Watchlist Criteria
 

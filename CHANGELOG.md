@@ -18,7 +18,7 @@
 - Added product-signal source dates and a concise weekly hot-paper view.
 - Added `CITATION.cff` and surfaced repository citation from the README.
 - Added a flagship matrix for high-priority Agent World resources.
-- Aligned the resource issue template with the metadata schema.
+- Aligned the resource proposal template with the metadata schema.
 - Added hot-paper promotion criteria and last-scanned metadata.
 - Added a pull request template for evidence-backed resource updates.
 - Added field grammar to the public taxonomy.

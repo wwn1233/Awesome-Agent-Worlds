@@ -21,7 +21,7 @@ worlds, then training infrastructure.
 |---|---|---|
 | 15 minutes | README thesis, Flagship Matrix, Selection Guide starter packs | Know what an Agent World is and which resources fit your goal. |
 | 1 hour | Resource Index, Reading Order, Hot Papers | Understand the field axes, verifier risks, and evidence sources. |
-| Building this week | Resource Index, Selection Guide, Static Explorer, resource issue template | Pick resources, verify metadata, and avoid overclaiming readiness. |
+| Building this week | Resource Index, Selection Guide, Static Explorer, resource proposal template | Pick resources, verify metadata, and avoid overclaiming readiness. |
 
 ## By Reader Goal
 
