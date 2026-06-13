@@ -126,7 +126,7 @@ function init() {
   refs.runnable.textContent = data.summary.public_runnable;
   refs.trajectories.textContent = data.summary.trajectory_assets;
   refs.sourceCheck.textContent = data.summary.source_check;
-  refs.hot.textContent = data.hot_papers.candidates || data.hot_papers.papers.length;
+  refs.hot.textContent = data.hot_papers.visible || data.hot_papers.papers.length;
   refs.homeWorlds.textContent = data.kinds.world || 0;
   refs.homeBenchmarks.textContent = data.kinds.benchmark || 0;
   refs.homeProduction.textContent = data.labels["production-grade"] || 0;
@@ -162,18 +162,18 @@ function init() {
 }
 
 function renderHotPapers() {
-  const papers = data.hot_papers.papers.slice(0, data.hot_papers.visible_candidates || 12);
+  const papers = data.hot_papers.papers.slice(0, data.hot_papers.visible || 12);
   if (!papers.length) {
     refs.hotPapers.innerHTML = `<p class="empty">${escapeHtml(ui("emptyHot"))}</p>`;
     return;
   }
 
   refs.hotPapers.innerHTML = papers.map((paper) => {
-    const status = label("watchlist", paper.watchlist_status);
-    const signals = paper.matched_terms.slice(0, 4).join(", ");
+    const status = label("reviewStatus", paper.review_status);
+    const signals = paper.evidence_terms.slice(0, 4).join(", ");
     return `<a class="hotPaper" href="${escapeHtml(paper.url)}">
       <b>${escapeHtml(paper.title)}</b>
-      <span>${escapeHtml(paper.published.slice(0, 10))} · ${escapeHtml(ui("score"))} ${paper.score} · ${escapeHtml(status)}</span>
+      <span>${escapeHtml(paper.published.slice(0, 10))} · ${escapeHtml(status)}</span>
       <small>${escapeHtml(signals)}</small>
     </a>`;
   }).join("");

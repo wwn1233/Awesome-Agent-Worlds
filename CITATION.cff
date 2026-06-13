@@ -3,8 +3,8 @@ message: "If you find this repository useful, please cite it."
 title: "Awesome Agent Worlds"
 authors:
   - name: "Awesome Agent Worlds Project"
-date-released: "2026-05-17"
-version: "0.1.0"
+date-released: "2026-06-13"
+version: "0.2.0"
 license: MIT
 url: "https://github.com/wwn1233/Awesome-Agent-Worlds"
 repository-code: "https://github.com/wwn1233/Awesome-Agent-Worlds"
@@ -21,7 +21,7 @@ preferred-citation:
   title: "Awesome Agent Worlds"
   authors:
     - name: "Awesome Agent Worlds Project"
-  date-released: "2026-05-17"
+  date-released: "2026-06-13"
   url: "https://github.com/wwn1233/Awesome-Agent-Worlds"
   repository-code: "https://github.com/wwn1233/Awesome-Agent-Worlds"
   abstract: "A curated evidence map for resettable environments, verifiable rewards, trajectories, sandboxes, and post-training loops for LLM/VLM agents."

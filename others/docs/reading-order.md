@@ -21,17 +21,17 @@ worlds, then training infrastructure.
 |---|---|---|
 | 15 minutes | README thesis, Flagship Matrix, Selection Guide starter packs | Know what an Agent World is and which resources fit your goal. |
 | 1 hour | Resource Index, Reading Order, Hot Papers | Understand the field axes, verifier risks, and evidence sources. |
-| Building this week | Resource Index, Selection Guide, Static Explorer, resource proposal template | Pick resources, verify metadata, and avoid overclaiming readiness. |
+| Using the index | Resource Index, Selection Guide, Static Explorer, [resource proposal template](../../.github/ISSUE_TEMPLATE/add-resource.md) | Pick resources, compare evidence fields, and avoid overclaiming readiness. |
 
 ## By Reader Goal
 
 | Goal | Start here | Then read |
 | --- | --- | --- |
-| Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified | AndroidWorld, MCPWorld, MobileWorld, DigiWorld, Toolathlon, MCP-AgentBench, MCP-Flow, tau-bench, AppWorld, Terminal-Bench |
-| Train from rollouts | SWE-Gym, AgentGym, AgentGym-RL, Agent-World | Agent-RLVR, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning |
-| Audit agent safety | PhoneSafety, MyPhoneBench, SkillSafetyBench | CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox |
-| Study GUI/VLM agents | OSWorld, AndroidWorld, MCPWorld, OmniACT | OpenCUA, UI-TARS, InfiGUI-R1, ScreenSpot |
-| Study web agents | MiniWoB++, WebShop, WebArena | VisualWebArena, BrowserGym, WorkArena, Mind2Web, BrowseComp |
+| Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified | AndroidWorld, MobileGym, MacArena, Workflow-GYM, WeaveBench, LivingScreen, DynamicGUIBench, Multi-Agent Computer Use, Ego2Web, MCPWorld, MobileWorld, DigiWorld, Toolathlon, MCP-AgentBench, MCP-Flow, MCP-Persona, MedCTA, tau-bench, AppWorld, Terminal-Bench |
+| Train from rollouts | SWE-Gym, AgentGym, AgentGym-RL, Agent-World | AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, MobileGym, Agent-RLVR, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning |
+| Audit agent safety | PhoneSafety, MyPhoneBench, SkillSafetyBench | BraveGuard, StakeBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox |
+| Study GUI/VLM agents | OSWorld, AndroidWorld, MobileGym, MCPWorld, OmniACT | OpenCUA, UI-TARS, InfiGUI-R1, ScreenSpot, SimuWoB, iOSWorld, Workflow-GYM, LivingScreen, DynamicGUIBench |
+| Study web agents | MiniWoB++, WebShop, WebArena | VisualWebArena, BrowserGym, WorkArena, Mind2Web, BrowseComp, StakeBench |
 | Study research agents | MLE-bench, PaperBench, GAIA | MLAgentBench, AgentBoard |
 | Study world generation | MineDojo, AI2-THOR, BEHAVIOR-1K | Genie 2, Genie 3, NVIDIA Cosmos, HY-World 2.0 |
 
@@ -52,9 +52,14 @@ question-answer datasets.
 Read these to understand state, reset, verifier design, and reproducibility.
 
 - WebArena and VisualWebArena.
-- AndroidWorld.
-- OSWorld and OSWorld-Verified.
-- MCPWorld, MobileWorld, and DigiWorld.
+- AndroidWorld, MobileGym, MobileWorld, MemGUI-Bench, and STAMP / Memory-World.
+- OSWorld, OSWorld-Verified, macOSWorld, and MacArena.
+- MCPWorld, DigiWorld, PhoneWorld, SimuWoB, and iOSWorld.
+- Workflow-GYM, WeaveBench, and Multi-Agent Computer Use for professional, hybrid-interface, and parallel computer-use coverage.
+- LivingScreen for continuous-time short-video GUI screens where observation is an action.
+- DynamicGUIBench for high-dynamic GUI interfaces where one screenshot can miss important state changes.
+- Ego2Web for web tasks grounded in egocentric physical-world video evidence.
+- MCP-Persona and MedCTA for personalized and clinical tool-agent tasks.
 - BrowserGym and WorkArena.
 - AppWorld and tau-bench.
 
@@ -68,7 +73,8 @@ reliability.
 - MLE-bench and PaperBench.
 - TheAgentCompany.
 - BrowseComp.
-- PhoneSafety, CUAHarm, RiOSWorld, CORA / Phone-Harm, and MCP-SafetyBench.
+- StakeBench, BraveGuard, PhoneSafety, CUAHarm, RiOSWorld,
+  CORA / Phone-Harm, and MCP-SafetyBench.
 
 ### Level 4: Training Flywheels
 
@@ -77,7 +83,7 @@ the task produce reusable model-improvement data?"
 
 - AgentGym.
 - AgentGym-RL and Agent-RLVR.
-- Agent-World and Agent World Model.
+- Agent-World, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, and Agent World Model.
 - TOUCAN, MCP-Flow, and MCP-Cosmos.
 - GUI-GENESIS and Orchard.
 - rLLM.
@@ -98,4 +104,4 @@ For each world, record:
 - sandbox boundary,
 - whether it is suitable for evaluation, training, or product release gating.
 
-This is the same evidence model used in `others/data/resources.yaml`.
+Use the same evidence fields when comparing entries in the Resource Index.

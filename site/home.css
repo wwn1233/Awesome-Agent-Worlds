@@ -64,15 +64,11 @@ html[lang="zh-CN"] h2 {
 }
 
 .home {
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
-  gap: 18px;
-  align-items: stretch;
+  display: block;
   margin-bottom: 18px;
 }
 
-.homeCopy,
-.homeRail {
+.homeCopy {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.92);
@@ -149,50 +145,6 @@ html[lang="zh-CN"] h2 {
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
-}
-
-.homeRail {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  gap: 12px;
-  padding: 16px;
-}
-
-.thesisBox {
-  padding: 14px;
-  border-left: 4px solid var(--blue);
-  background: #f8fbff;
-}
-
-.thesisBox p:last-child {
-  margin: 0;
-  color: #2d2c29;
-  font-size: 17px;
-  line-height: 1.42;
-}
-
-.homeCards {
-  display: grid;
-  gap: 10px;
-}
-
-.homeCard {
-  padding: 14px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-}
-
-.homeCard h3 {
-  margin: 3px 0 7px;
-  font-size: 16px;
-}
-
-.homeCard p:last-child {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.45;
 }
 
 .worldMap {

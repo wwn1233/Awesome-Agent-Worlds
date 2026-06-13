@@ -13,9 +13,9 @@
   reward_type: execution_state
   verifier: programmatic
   trainable: partial
-  resettable: true
+  resettable: partial
   trajectories: false
-  sandbox: vm
+  sandbox: macos_virtualization
   production_signal: cited_by_openai_cua_and_osworld_verified_participants
   url: https://os-world.github.io/
   repo: https://github.com/xlang-ai/OSWorld
@@ -8164,6 +8164,80 @@
   - build-evals
   - train-rollouts
   - release-gates
+- name: STAMP / Memory-World
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - memory
+  - virtual_environment
+  - rl
+  action_space:
+  - tap
+  - type
+  - mobile_action
+  - explicit_memory_write
+  - memory_retrieval
+  reward_type: task_success_and_memory_accuracy
+  verifier: environment_success_and_memory_judge
+  trainable: true
+  resettable: partial
+  trajectories: synthetic
+  sandbox: virtual_mobile_environment
+  production_signal: controllable_mobile_memory_worlds_for_gui_agent_training
+  url: https://arxiv.org/abs/2605.29324
+  repo:
+  notes: Mobile GUI-agent training framework that injects deterministic memory
+    variables into controllable virtual environments, produces verifiable
+    explicit-memory supervision, and evaluates on Memory-World.
+  instance_count: 356
+  trajectory_count: 4194
+  id: stamp-memory-world
+  resource_kind: training_framework
+  canonical_category: mobile-world
+  subtype: mobile_gui_memory_training_world
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.29324
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: synthesized_mobile_memory_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: virtual_environment_reset
+  trainability_status: framework_ready
+  sft_fit: strong
+  rlvr_fit: candidate
+  online_rl_fit: strong
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: task_dependent
+  verifier_recomputable: partial
+  verifier_isolation: virtual_environment
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: virtual_mobile_environment
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: task_and_memory_accuracy_reports
+  telemetry_type: mobile_gui_memory_rollouts
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - train-rollouts
 - name: Agentic World Modeling
   category: research-world
   year: 2026
@@ -10089,7 +10163,7 @@
   repo:
   notes: Deployment-grounded reliability framework for computer-use agents that
     maps perception, decision, execution, creation, deployment, operation, and
-    maintenance surfaces to control and assurance interventions.
+    operational lifecycle surfaces to control and assurance interventions.
   id: securing-computer-use-agents
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -12351,6 +12425,312 @@
   - build-evals
   - safety-audit
   - release-gates
+- name: PhoneWorld
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - android
+  - gui
+  - synthetic_world
+  action_space:
+  - tap
+  - type
+  - swipe
+  - app_control
+  reward_type: rule_based_task_success
+  verifier: automatic_rule_based_verifiers
+  trainable: true
+  resettable: partial
+  trajectories: synthetic
+  sandbox: mock_android_apps
+  production_signal: scalable_phone_use_environment_synthesis
+  url: https://arxiv.org/abs/2605.29486
+  repo:
+  notes: Phone-use environment pipeline that converts real GUI trajectories and
+    screenshots into controllable mock Android apps, executable tasks,
+    automatic verifiers, and training rollouts across 34 apps and 16 domains.
+  app_count: 34
+  domain_count: 16
+  id: phoneworld
+  resource_kind: training_framework
+  canonical_category: mobile-world
+  subtype: phone_environment_synthesis_pipeline
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.29486
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: synthetic_phone_use_training_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: mutable_mock_app_state
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: task_dependent
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: mock_app_runtime
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mock_mobile_runtime
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: synthetic_or_mock_credentials
+  approval_policy: not_specified
+  audit_log: rollout_metadata
+  telemetry_type: gui_trajectories_and_screenshots
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - foundations
+- name: MobileGym
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - browser
+  - rl
+  action_space:
+  - tap
+  - type
+  - swipe
+  - app_control
+  reward_type: deterministic_state_judge
+  verifier: structured_json_state_judges
+  trainable: true
+  resettable: true
+  trajectories: true
+  sandbox: browser_environment
+  production_signal: parallel_mobile_gui_rl_environment
+  url: https://mobilegym.dev/
+  repo: https://github.com/Purewhiter/mobilegym
+  notes: Browser-hosted mobile simulation platform with programmable structured
+    state, deterministic judges, parallel rollouts, and MobileGym-Bench across
+    28 apps and 416 parameterized task templates.
+  task_count: 416
+  app_count: 28
+  id: mobilegym
+  resource_kind: world
+  canonical_category: mobile-world
+  subtype: browser_hosted_mobile_gui_world
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://mobilegym.dev/
+    type: project_page
+    supports:
+    - overview
+    - benchmark_design
+    - status
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://arxiv.org/abs/2605.26114
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://github.com/Purewhiter/mobilegym
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: benchmark_rollouts_and_state_diffs
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: structured_json_snapshot_restore
+  trainability_status: public_training_ready
+  sft_fit: candidate
+  rlvr_fit: strong
+  online_rl_fit: strong
+  opd_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: 'yes'
+  verifier_isolation: structured_state_runtime
+  negative_side_effect_checks: explicit
+  reproducibility: public_runnable
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: browser_sandbox
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_controlled
+  credential_boundary: synthetic_or_mock_credentials
+  approval_policy: not_specified
+  audit_log: benchmark_metrics_and_state_diffs
+  telemetry_type: action_traces_and_state_snapshots
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - release-gates
+- name: SimuWoB
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - web
+  - synthetic_world
+  action_space:
+  - tap
+  - type
+  - swipe
+  - browser_action
+  reward_type: synthetic_task_reward
+  verifier: automatically_generated_valid_rewards
+  trainable: partial
+  resettable: true
+  trajectories: synthetic
+  sandbox: backend_free_webpage
+  production_signal: synthetic_mobile_gui_benchmarking
+  url: https://arxiv.org/abs/2605.25160
+  repo:
+  notes: Fully synthetic mobile GUI benchmark with 120 tasks and backend-free
+    webpage environments designed for fast, reproducible evaluation of complex
+    mobile interactions.
+  task_count: 120
+  id: simuwob
+  resource_kind: benchmark
+  canonical_category: mobile-world
+  subtype: synthetic_mobile_gui_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.25160
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: synthetic_mobile_gui_task_rollouts
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: backend_free_webpage_environment_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: browser_environment
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: backend_free_web_environment
+  runtime_host: unspecified
+  network_policy: benchmark_controlled
+  credential_boundary: synthetic_or_mock_credentials
+  approval_policy: not_specified
+  audit_log: benchmark_metrics
+  telemetry_type: mobile_gui_actions
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - train-rollouts
+- name: iOSWorld
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - ios
+  - gui
+  - personalization
+  action_space:
+  - tap
+  - type
+  - swipe
+  - app_control
+  reward_type: task_rubric_success
+  verifier: task_rubrics_and_evaluation_code
+  trainable: partial
+  resettable: true
+  trajectories: false
+  sandbox: ios_simulator
+  production_signal: personalized_phone_agent_benchmark
+  url: https://arxiv.org/abs/2606.09764
+  repo:
+  notes: Native iOS simulator benchmark centered on persistent user identity,
+    covering 133 tasks over 26 newly built iOS apps with seeded personal data,
+    rubrics, and evaluation code described in the paper.
+  task_count: 133
+  app_count: 26
+  id: iosworld
+  resource_kind: benchmark
+  canonical_category: mobile-world
+  subtype: personalized_ios_phone_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.09764
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: seeded_ios_simulator_state
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: candidate
+  reward_family: rubric
+  verifier_family: task_dependent
+  verifier_recomputable: partial
+  verifier_isolation: simulator_runtime
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: ios_simulator
+  runtime_host: unspecified
+  network_policy: benchmark_controlled
+  credential_boundary: seeded_personal_data
+  approval_policy: not_specified
+  audit_log: benchmark_results
+  telemetry_type: simulator_task_runs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - foundations
 - name: MyPhoneBench
   category: mobile-world
   year: 2026
@@ -22692,6 +23072,236 @@
   - train-rollouts
   - build-evals
   - foundations
+- name: ClawGUI
+  category: training-framework
+  year: 2026
+  modality:
+  - gui
+  - mobile
+  - desktop
+  - vlm
+  - rl
+  action_space:
+  - mouse
+  - keyboard
+  - tap
+  - swipe
+  - device_control
+  reward_type: process_reward_and_benchmark_success
+  verifier: standardized_gui_eval_pipeline_and_process_reward_model
+  trainable: true
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: parallel_virtual_and_physical_device_environment
+  production_signal: open_gui_agent_training_evaluation_deployment_harness
+  url: https://arxiv.org/abs/2604.11784
+  repo:
+  notes: Unified GUI-agent harness covering RL training, standardized evaluation
+    across multiple benchmarks, and deployment-oriented agent packaging across
+    desktop and mobile interaction surfaces.
+  id: clawgui
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: gui_agent_rl_eval_deployment_harness
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.11784
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: gui_agent_rl_and_eval_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_environment_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: unknown
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: gui_runtime
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: benchmark_outputs
+  telemetry_type: gui_agent_rollout_logs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - release-gates
+- name: HomeFlow
+  category: training-framework
+  year: 2026
+  modality:
+  - smart_home
+  - simulation
+  - physical_world
+  - rlve
+  - multi_turn
+  action_space:
+  - natural_language_response
+  - device_api_call
+  - python_script
+  - environment_query
+  reward_type: state_based_verifiable_success
+  verifier: executable_state_conditions_and_runtime_auditor
+  trainable: true
+  resettable: true
+  trajectories: synthetic
+  sandbox: smart_home_simulation_engine
+  production_signal: smart_home_agent_verifiable_training_flywheel
+  url: https://arxiv.org/abs/2606.01230
+  repo:
+  notes: Smart-home agent training flywheel built around HomeEnv simulation,
+    executable state-based goals, MCTS-Flow trajectory synthesis, SmartHome-Bench
+    evaluation, and step-wise reinforcement learning from verifiable execution.
+  id: homeflow
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: smart_home_verifiable_training_flywheel
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.01230
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: mcts_verified_smart_home_trajectories
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: simulated_home_state_reinitialization
+  trainability_status: framework_ready
+  sft_fit: strong
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: homeenv_sandbox
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: smart_home_simulation_sandbox
+  runtime_host: unspecified
+  network_policy: benchmark_controlled
+  credential_boundary: synthetic_or_mock_credentials
+  approval_policy: not_specified
+  audit_log: execution_feedback_and_runtime_action_audits
+  telemetry_type: smart_home_dialogue_and_execution_traces
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - foundations
+- name: AliyunConsoleAgent
+  category: training-framework
+  year: 2026
+  modality:
+  - web
+  - cloud_console
+  - gui
+  - vlm
+  - rl
+  - enterprise
+  action_space:
+  - browser_action
+  - gui_interaction
+  - som_element_selection
+  - terraform_provisioning
+  - task_complete_signal
+  reward_type: actiontrail_audit_log_and_outcome_reward
+  verifier: programmatic_actiontrail_audit_logs_and_dual_channel_orm
+  trainable: true
+  resettable: true
+  trajectories: partial
+  sandbox: cloud_sandbox
+  production_signal: production_cloud_console_documentation_verification
+  url: https://arxiv.org/abs/2606.09447
+  repo: https://github.com/AlibabaResearch/aliyun-console-agent
+  notes: Real-world cloud-console web-agent training framework with distilled
+    trajectories, GRPO training, Terraform-backed rollout stabilization, and
+    audit-log-grounded reward checks for documentation verification tasks.
+  task_count: 278
+  id: aliyun-console-agent
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: cloud_console_web_agent_rl_framework
+  status: public_framework
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.09447
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://github.com/AlibabaResearch/aliyun-console-agent
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    - dataset
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: distilled_and_self_explored_cloud_console_traces
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: terraform_preprovisioning_and_resource_cleanup
+  trainability_status: framework_ready
+  sft_fit: strong
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  opd_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: backend_audit_log
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: cloud_account_sandbox
+  runtime_host: local_or_cloud_sandbox
+  network_policy: cloud_console_credentials_required
+  credential_boundary: isolated_cloud_test_accounts
+  approval_policy: not_specified
+  audit_log: actiontrail_reward_events
+  telemetry_type: cloud_console_rollout_logs
+  destructive_action_scope: benchmark_cloud_accounts
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - production-direction
 - name: OpenComputer
   category: computer-world
   year: 2026
@@ -24891,6 +25501,77 @@
   - build-evals
   - safety-audit
   - release-gates
+- name: MacArena
+  category: computer-world
+  year: 2026
+  modality:
+  - desktop
+  - gui
+  - macos
+  - apple_silicon
+  action_space:
+  - mouse
+  - keyboard
+  - native_app_control
+  reward_type: manually_verified_task_success
+  verifier: benchmark_task_verification
+  trainable: partial
+  resettable: partial
+  trajectories: false
+  sandbox: macos_virtualization
+  production_signal: online_macos_cua_evaluation
+  url: https://arxiv.org/abs/2606.06560
+  repo:
+  notes: Online macOS benchmark with 421 manually verified tasks across 50
+    applications, running on Apple's native Virtualization framework for Apple
+    Silicon and stressing cross-platform GUI competence.
+  task_count: 421
+  app_count: 50
+  id: macarena
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: online_macos_cua_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.06560
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_macos_virtualization_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: human_verified
+  verifier_recomputable: partial
+  verifier_isolation: isolated_runtime
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: macos_virtualization_runtime
+  runtime_host: unspecified
+  network_policy: benchmark_controlled
+  credential_boundary: benchmark_dependent
+  approval_policy: not_specified
+  audit_log: benchmark_results
+  telemetry_type: gui_task_runs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
 - name: RiskWebWorld
   category: web-world
   year: 2026
@@ -25393,6 +26074,98 @@
   reader_paths:
   - build-evals
   - release-gates
+- name: Ego2Web
+  category: web-world
+  year: 2026
+  modality:
+  - egocentric_video
+  - web
+  - browser
+  - multimodal
+  - vision_language
+  action_space:
+  - video_grounding
+  - web_search
+  - browser_action
+  - navigation
+  - evidence_selection
+  reward_type: visually_grounded_web_task_success
+  verifier: ego2webjudge_llm_as_judge_with_visual_evidence
+  trainable: partial
+  resettable: live_web
+  trajectories: partial
+  sandbox: live_web
+  production_signal: physical_to_digital_web_agent_evaluation
+  url: https://ego2web.github.io/
+  repo: https://github.com/Yui010206/Ego2Web
+  notes: Web-agent benchmark that pairs egocentric first-person videos with
+    downstream live-web tasks, testing whether agents can ground physical-world
+    visual evidence before acting online.
+  id: ego2web
+  resource_kind: benchmark
+  canonical_category: web-world
+  subtype: egocentric_video_grounded_web_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://ego2web.github.io/
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://arxiv.org/abs/2603.22529
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://github.com/Yui010206/Ego2Web
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://huggingface.co/datasets/Shoubin/Ego2Web
+    type: dataset
+    supports:
+    - dataset
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: public
+  trajectory_type: video_task_pairs_and_evaluation_traces
+  trajectory_public: false
+  reset_support: none
+  reset_mechanism: live_web_state
+  trainability_status: evaluation_only
+  sft_fit: candidate
+  rlvr_fit: limited
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: candidate
+  reward_family: judge
+  verifier_family: llm_judge
+  verifier_recomputable: partial
+  verifier_isolation: live_web_and_video_evidence_review
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: live_web
+  runtime_host: local_or_self_hosted
+  network_policy: live_web
+  credential_boundary: public_web_or_throwaway_accounts
+  approval_policy: not_specified
+  audit_log: evaluation_traces
+  telemetry_type: video_evidence_and_web_screenshots
+  destructive_action_scope: live_web_read_or_low_risk_tasks
+  reader_paths:
+  - build-evals
+  - foundations
 - name: OS-Marathon
   category: computer-world
   year: 2026
@@ -26535,6 +27308,166 @@
   app_count_min: 1500
   reader_paths:
   - train-rollouts
+- name: LivingScreen
+  category: gui-world
+  year: 2026
+  modality:
+  - gui
+  - browser
+  - video
+  - short_video
+  - vlm
+  - continuous_time
+  action_space:
+  - click
+  - swipe
+  - seek
+  - watch
+  - comment
+  - report
+  - screen_record
+  reward_type: task_success_and_information_efficiency
+  verifier: environment_backend_and_answer_key
+  trainable: partial
+  resettable: true
+  trajectories: false
+  sandbox: browser_environment
+  production_signal: living_screen_native_dynamic_gui_benchmark
+  url: https://arxiv.org/abs/2606.04701
+  repo: https://github.com/BITHLP/LivingScreen
+  notes: Browser-based short-video GUI benchmark where agents act on an
+    autonomously evolving screen and decide how much visual evidence to watch,
+    with environment-graded actions and information-efficiency metrics.
+  task_count: 499
+  video_count: 1528
+  id: livingscreen
+  resource_kind: world
+  canonical_category: gui-world
+  subtype: living_screen_native_gui_world
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.04701
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://github.com/BITHLP/LivingScreen
+    type: repository
+    supports:
+    - code
+    - dataset
+    - reproducibility
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: browser_environment_reset
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: browser_environment
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: browser_environment
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: benchmark_outputs
+  telemetry_type: gui_observation_and_action_logs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - release-gates
+- name: DynamicGUIBench / DynamicUI
+  category: gui-world
+  year: 2026
+  modality:
+  - gui
+  - video
+  - screen_recording
+  - vlm
+  - dynamic_interface
+  action_space:
+  - click
+  - type
+  - gui_action
+  - screen_recording_observation
+  - dynamic_context_selection
+  reward_type: dynamic_gui_task_success
+  verifier: dynamicguibench_benchmark_eval
+  trainable: partial
+  resettable: partial
+  trajectories: false
+  sandbox: benchmark_dependent
+  production_signal: high_dynamic_gui_evaluation_for_vlm_agents
+  url: https://arxiv.org/abs/2604.25380
+  repo: 
+  notes: Online GUI benchmark for high-dynamic environments where important
+    interface state can change between actions, paired with DynamicUI, which
+    uses screen-recording context selection and reflection.
+  app_count: 10
+  id: dynamicguibench-dynamicui
+  resource_kind: world
+  canonical_category: gui-world
+  subtype: high_dynamic_gui_world
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.25380
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: weak
+  online_rl_fit: limited
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: unknown
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: unknown
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_dependent
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: benchmark_outputs
+  telemetry_type: screen_recording_context
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - foundations
+  - release-gates
 - name: MobileDreamer
   category: mobile-world
   year: 2026
@@ -27187,3 +28120,639 @@
   reader_paths:
   - train-rollouts
   - foundations
+- name: MCP-Persona
+  category: api-world
+  year: 2026
+  modality:
+  - mcp
+  - personal_applications
+  - social_media
+  - collaboration_tools
+  action_space:
+  - mcp_tool_call
+  - stateful_tool_simulation
+  - cross_server_tool_chain
+  reward_type: tool_chain_success_and_execution_accuracy
+  verifier: human_verified_tool_chain_and_execution_score
+  trainable: partial
+  resettable: true
+  trajectories: partial
+  sandbox: simulated_apis
+  production_signal: personalized_mcp_environment_simulation
+  url: https://github.com/wwh0411/MCP-Persona
+  repo: https://github.com/wwh0411/MCP-Persona
+  notes: Personalized MCP benchmark with stateful simulated tools for social,
+    collaboration, email, and content-management scenarios, covering 173 human-verified
+    tasks and 24 MCP servers.
+  task_count: 173
+  api_count: 24
+  id: mcp-persona
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: personalized_mcp_tool_simulation_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://github.com/wwh0411/MCP-Persona
+    type: repository
+    supports:
+    - overview
+    - code
+    - reproducibility
+    - dataset
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://arxiv.org/abs/2606.02470
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: public
+  trajectory_type: human_verified_tool_chains_and_simulated_contexts
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: simulated_context_state_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: human_verified
+  verifier_recomputable: partial
+  verifier_isolation: simulated_mcp_environment
+  negative_side_effect_checks: explicit
+  reproducibility: public_runnable
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: simulated_personal_mcp_servers
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_controlled
+  credential_boundary: synthetic_or_test_accounts
+  approval_policy: benchmark_dependent
+  audit_log: tool_chain_execution_records
+  telemetry_type: tool_calls_context_updates_and_scores
+  destructive_action_scope: simulated_personal_app_state
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+- name: MedCTA
+  category: api-world
+  year: 2026
+  modality:
+  - medical
+  - multimodal
+  - clinical_tools
+  - evidence_retrieval
+  action_space:
+  - tool_call
+  - image_inspection
+  - evidence_retrieval
+  - calculation
+  reward_type: process_aware_tool_and_outcome_metrics
+  verifier: clinician_verified_reference_trajectories_and_metric_suite
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: true
+  sandbox: service_environment
+  production_signal: clinical_tool_agent_process_evaluation
+  url: https://ivul-kaust.github.io/MedCTA/
+  repo: https://github.com/IVUL-KAUST/MedCTA
+  notes: Clinical tool-agent benchmark with 107 clinician-validated multimodal
+    tasks, five executable tools, public evaluation code, and trajectory-aware
+    diagnostics for tool routing, argument validity, evidence use, and final outcome.
+  task_count: 107
+  instance_count: 1926
+  id: medcta
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: clinical_tool_agent_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://ivul-kaust.github.io/MedCTA/
+    type: project_page
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://github.com/IVUL-KAUST/MedCTA
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://arxiv.org/abs/2606.11702
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://huggingface.co/datasets/IVUL-KAUST/MedCTA
+    type: dataset
+    supports:
+    - dataset
+    - trajectories
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: public
+  trajectory_access: public
+  trajectory_type: clinician_verified_reference_tool_trajectories
+  trajectory_public: true
+  reset_support: dataset_replay
+  reset_mechanism: benchmark_dataset_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: strong
+  release_gate_fit: strong
+  reward_family: task_dependent
+  verifier_family: human_verified
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dataset_and_tool_pipeline
+  negative_side_effect_checks: explicit
+  reproducibility: public_runnable
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: clinical_benchmark_dataset
+  runtime_host: local_or_self_hosted
+  network_policy: tool_api_keys_required_for_full_replay
+  credential_boundary: user_supplied_api_keys
+  approval_policy: not_specified
+  audit_log: trajectory_metric_reports
+  telemetry_type: tool_calls_arguments_evidence_and_scores
+  destructive_action_scope: benchmark_dataset_only
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+- name: StakeBench
+  category: web-world
+  year: 2026
+  modality:
+  - browser
+  - web
+  - security
+  - ecommerce
+  action_space:
+  - browser_navigation
+  - web_agent_action
+  - prompt_injection_payload
+  reward_type: stakeholder_harm_and_task_integrity_metrics
+  verifier: llm_judge_and_attack_outcome_metrics
+  trainable: partial
+  resettable: true
+  trajectories: true
+  sandbox: self_hosted_web
+  production_signal: stakeholder_centric_web_agent_prompt_injection_benchmark
+  url: https://github.com/StakeBench/SBC
+  repo: https://github.com/StakeBench/SBC
+  notes: Stakeholder-centric prompt-injection benchmark for web agents in a functional
+    e-commerce environment, with 22 attack templates, 264 adversarial cases, public
+    benchmark scripts, and experiment trajectories.
+  scenario_count: 264
+  instance_count: 3168
+  id: stakebench
+  resource_kind: safety_control
+  canonical_category: web-world
+  subtype: stakeholder_prompt_injection_web_agent_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://github.com/StakeBench/SBC
+    type: repository
+    supports:
+    - overview
+    - code
+    - reproducibility
+    - trajectories
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://arxiv.org/abs/2606.13385
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: public
+  trajectory_access: public
+  trajectory_type: web_agent_attack_execution_logs
+  trajectory_public: true
+  reset_support: episode_reset
+  reset_mechanism: injected_payload_cleanup_and_environment_reset
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: llm_judge
+  verifier_recomputable: partial
+  verifier_isolation: self_hosted_web_environment
+  negative_side_effect_checks: explicit
+  reproducibility: public_runnable
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: self_hosted_ecommerce_environment
+  runtime_host: local_or_self_hosted
+  network_policy: local_environment_with_model_api_keys
+  credential_boundary: test_account_and_model_api_keys
+  approval_policy: benchmark_dependent
+  audit_log: jsonl_agent_trajectories_and_judge_outputs
+  telemetry_type: browser_actions_attack_outcomes_and_judgments
+  destructive_action_scope: self_hosted_benchmark_state
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - build-evals
+- name: Workflow-GYM
+  category: computer-world
+  year: 2026
+  modality:
+  - desktop
+  - gui
+  - professional_software
+  - long_horizon
+  action_space:
+  - mouse
+  - keyboard
+  - gui_action
+  - workflow_execution
+  reward_type: professional_workflow_task_success
+  verifier: benchmark_task_eval
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: false
+  sandbox: professional_gui_environments
+  production_signal: long_horizon_professional_gui_workflow_benchmark
+  url: https://arxiv.org/abs/2606.11042
+  repo:
+  notes: Long-horizon computer-use benchmark for professional GUI workflows across
+    specialized software environments, highlighting stage omission, error propagation,
+    objective drift, and limited domain understanding in current agents.
+  id: workflow-gym
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: professional_gui_workflow_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.11042
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_professional_software_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: unknown
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_dependent_professional_software
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: not_specified
+  audit_log: benchmark_results
+  telemetry_type: gui_task_runs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+- name: WeaveBench
+  category: computer-world
+  year: 2026
+  modality:
+  - desktop
+  - gui
+  - cli
+  - code
+  - browser
+  - hybrid_interface
+  - long_horizon
+  action_space:
+  - mouse
+  - keyboard
+  - gui_action
+  - command_line
+  - code_edit
+  - browser_action
+  - tool_call
+  reward_type: trajectory_aware_artifact_judgment
+  verifier: trajectory_aware_judge_and_public_artifact_checks
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: ubuntu_desktop_runtime
+  production_signal: hybrid_gui_cli_code_cua_evaluation
+  url: https://arxiv.org/abs/2606.09426
+  repo:
+  notes: Long-horizon hybrid-interface CUA benchmark with 114 tasks across 8
+    real-world work domains, requiring GUI, CLI, code, browser, and tool
+    operations in a single trajectory with artifact-aware judging.
+  task_count: 114
+  domain_count: 8
+  id: weavebench
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: hybrid_interface_cua_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.09426
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: hybrid_gui_cli_code_action_traces
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_ubuntu_desktop_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: candidate
+  release_gate_fit: strong
+  reward_family: benchmark_label
+  verifier_family: llm_judge
+  verifier_recomputable: partial
+  verifier_isolation: trajectory_aware_artifact_review
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: ubuntu_desktop_runtime
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: not_specified
+  audit_log: deliverables_files_screenshots_logs_and_action_traces
+  telemetry_type: gui_cli_code_browser_action_traces
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
+- name: PRO-CUA
+  category: training-framework
+  year: 2026
+  modality:
+  - computer_use
+  - gui
+  - web
+  - reinforcement_learning
+  action_space:
+  - live_rollout
+  - candidate_action_sampling
+  - process_reward_feedback
+  - policy_optimization
+  reward_type: step_level_process_reward
+  verifier: process_reward_model_and_live_web_benchmark_eval
+  trainable: true
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: live_web_benchmarks
+  production_signal: process_reward_optimization_for_computer_use_agents
+  url: https://arxiv.org/abs/2605.29119
+  repo:
+  notes: Process-reward optimization framework for computer-use agents that trains
+    from the agent's own live rollout states using dense step-level PRM feedback
+    and group-relative advantages.
+  id: pro-cua
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: computer_use_process_reward_optimization
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.29119
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: live_web_rollout_states
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: live_web_benchmark_reset
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: strong
+  online_rl_fit: strong
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: process_reward
+  verifier_family: llm_judge
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: live_web_benchmark_environment
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: not_specified
+  audit_log: rollout_states_and_prm_scores
+  telemetry_type: states_candidate_actions_rewards_and_policy_updates
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+- name: BraveGuard
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - computer_use
+  - safety
+  - trajectory
+  - guard_model
+  action_space:
+  - threat_mining
+  - executable_task_generation
+  - rollout_collection
+  - trajectory_guard_scoring
+  reward_type: trajectory_level_safety_detection
+  verifier: guard_model_trajectory_eval
+  trainable: true
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: computer_use_threat_tasks
+  production_signal: adaptive_open_world_cua_safety_guard_training
+  url: https://arxiv.org/abs/2606.01166
+  repo:
+  notes: Adaptive defense framework for computer-use agents that mines emerging
+    open-world threats, instantiates executable tasks, collects rollouts, and trains
+    guard models with trajectory-level supervision.
+  id: braveguard
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: adaptive_cua_trajectory_guard_training
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.01166
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: safety_rollouts_and_guard_supervision
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: executable_threat_task_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: strong
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: executable_computer_use_threat_tasks
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: safety_guard_gate
+  audit_log: trajectory_level_guard_labels
+  telemetry_type: computer_use_rollouts_and_guard_scores
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - train-rollouts
+- name: Multi-Agent Computer Use
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - computer_use
+  - web
+  - desktop
+  - multi_agent
+  - orchestration
+  action_space:
+  - dag_decomposition
+  - subagent_dispatch
+  - replanning
+  - browser_action
+  - desktop_action
+  reward_type: benchmark_success_and_rubric_success
+  verifier: benchmark_specific_success_and_rubric_judges
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: multi_agent_orchestration_for_computer_use_worlds
+  url: https://jykoh.com/multi-agent-computer-use/
+  repo: https://github.com/kohjingyu/multi-agent-computer-use
+  notes: Multi-agent computer-use orchestration framework that decomposes tasks
+    into DAGs, dispatches parallel CUA subagents, replans during execution, and
+    evaluates on existing OSWorld, Online-Mind2Web, WebTailBench, and Odysseys
+    worlds.
+  id: multi-agent-computer-use
+  resource_kind: agent_infrastructure
+  canonical_category: agent-infrastructure
+  subtype: multi_agent_computer_use_orchestration
+  status: public_framework
+  content_evidence: true
+  sources:
+  - url: https://jykoh.com/multi-agent-computer-use/
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://arxiv.org/abs/2606.01533
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-13'
+    confidence: high
+  - url: https://github.com/kohjingyu/multi-agent-computer-use
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: public
+  trajectory_type: multi_agent_computer_use_run_logs
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: underlying_benchmark_reset
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: benchmark_runtime
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: not_specified
+  audit_log: dag_and_subagent_execution_logs
+  telemetry_type: graph_snapshots_replan_logs_and_subagent_traces
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - production-direction
+  - train-rollouts

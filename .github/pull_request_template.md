@@ -17,5 +17,5 @@
 
 - [ ] New or changed resources are edited in `others/data/resources.yaml`.
 - [ ] Source support tags use the vocabulary already present in existing entries.
-- [ ] Public copy is final-facing and avoids working notes.
-- [ ] README, Resource Index, Hot Papers, Source Map, and Static Explorer data stay consistent when source data changes.
+- [ ] Public copy is reader-facing and source-backed.
+- [ ] README, Resource Index, Hot Papers, public docs, and Static Explorer data stay consistent when source data changes.
