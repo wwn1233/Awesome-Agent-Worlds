@@ -54,10 +54,10 @@ coverage and evidence fields.
 | Reader goal | Start with |
 |---|---|
 | Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified, AndroidWorld, MobileGym, MacArena, Workflow-GYM, WeaveBench, LivingScreen, DynamicGUIBench, Multi-Agent Computer Use, Ego2Web, MCPWorld, MCP-Persona, MedCTA, StakeBench. |
-| Audit agent safety | PhoneSafety, MyPhoneBench, SkillSafetyBench, AgentTrust, AgentWall, MCP-SafetyBench, ASPI, WARD, BraveGuard, StakeBench. |
+| Audit agent safety | PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench, AgentTrust, AgentWall, MCP-SafetyBench, ASPI, WARD, BraveGuard / Open-World CUA Guard, StakeBench. |
 | Debug agent failures | AgentForesight, AgentRx, Who&When, AgentStepper, Terminal Wrench, FATE, AgentLAB, BenchJack, AgentPressureBench, Human-Guided Harm Recovery / BackBench, Evidence-Supported Bounds for Interactive-Agent Evaluation. |
 | Train from rollouts | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, STAMP / Memory-World, TOUCAN, MCP-Flow, GUI-GENESIS, RAGEN, VAGEN, rLLM, Agent Lightning. |
-| Track production direction | OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, Multi-Agent Computer Use, Agent-First Tool API, HarnessAPI, MCP-Flow, Agent-Diff, Firefly Verified Tool-Call Data, BraveGuard. |
+| Track production direction | OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, Multi-Agent Computer Use, Agent-First Tool API, HarnessAPI, MCP-Flow, Agent-Diff, Firefly Verified Tool-Call Data, BraveGuard / Open-World CUA Guard. |
 | Study foundations | WebShop, WebArena, OSWorld, SWE-bench, AppWorld, tau-bench, AgentGym, MineDojo, AI2-THOR, Agentic World Modeling. |
 
 Recent coverage focus:
@@ -82,7 +82,7 @@ Recent coverage focus:
 
 ## Static Explorer
 
-The bilingual [Static Explorer](./site/index.html) is a dependency-free webpage for browsing the curated resource set, filtering by evidence fields, switching between Chinese and English, and reading the weekly Hot Papers view. Run it from the repository root with `ruby -run -e httpd site -p 8026`, then open `http://127.0.0.1:8026/index.html`.
+The bilingual [Static Explorer](./site/index.html) is a dependency-free webpage for browsing the curated resource set, filtering by surface and evidence fields, switching between Chinese and English, and reading an indexed Hot Papers strip from the weekly view. Run it from the repository root with `ruby -run -e httpd site -p 8026`, then open `http://127.0.0.1:8026/index.html`.
 
 ## Structured Views
 [Explorer Guide](./site/README.md) · [Resource Index](./others/docs/resource-index.md) · [Selection Guide](./others/docs/selection-guide.md) · [Reading Order](./others/docs/reading-order.md) · [Hot Papers](./others/docs/hot-papers.md) · [Flagship Matrix](./others/docs/flagship-matrix.md)
@@ -145,7 +145,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [SkillSafetyBench](https://github.com/AI45Lab/skill-safety-bench) [[Code](https://github.com/AI45Lab/skill-safety-bench)] — Training Candidate · Runnable
 - 🌟 [AgentTrap](https://arxiv.org/abs/2605.13940) [[Code](https://github.com/zhmzm/AgentTrap)] — Eval Candidate · Skill runtime safety
 - [ATBench](https://arxiv.org/abs/2604.02022) — Training Candidate · Safety trajectories
-- [BraveGuard](https://arxiv.org/abs/2606.01166) — Safety Control · Adaptive CUA trajectory guard
+- [BraveGuard / Open-World CUA Guard](https://arxiv.org/abs/2606.01166) — Safety Control · Adaptive CUA trajectory guard
 - [BenchJack](https://arxiv.org/abs/2605.12673) — Eval Candidate · Benchmark red-team audit
 - [Cattle Trade](https://arxiv.org/abs/2605.14537) — Eval Candidate · Multi-agent bargaining benchmark
 - [Deployment-Relevant Alignment Evaluation](https://arxiv.org/abs/2605.04454) — Infrastructure · System-level alignment evidence
@@ -168,7 +168,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 ### 2025
 - 🌟 [Agent2Agent Protocol](https://cloud.google.com/blog/products/ai-machine-learning/agent2agent-protocol-is-getting-an-upgrade) [[Code](https://github.com/a2aproject)] — Protocol
 - 🌟 [Agent-C](https://arxiv.org/abs/2512.23738) [[Code](https://github.com/structuredllm/agent-c)] — Safety Control · Temporal tool constraints
-- [Anthropic Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) — Infrastructure
+- 🌟 [Anthropic Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) [[Code](https://github.com/agentskills/agentskills)] — Infrastructure
 - [ChatGPT agent](https://openai.com/index/chatgpt-agent-system-card/) — Product Signal · Closed product
 - 🌟 [MCP Security Bench](https://arxiv.org/abs/2510.15994) [[Code](https://github.com/dongsenzhang/MSB)] — Eval Candidate · MCP attack benchmark
 - 🌟 [MCPSecBench](https://arxiv.org/abs/2508.13220) [[Code](https://github.com/ais2lab/mcpsecbench)] — Eval Candidate · Runnable
@@ -251,10 +251,10 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [SaaS-Bench](https://arxiv.org/abs/2605.15777) [[Code](https://github.com/UniPat-AI/SaaS-Bench)] — Training Candidate · Self-hosted SaaS workflows
 - [SimPersona](https://arxiv.org/abs/2605.14205) — Training Infrastructure · Clickstream-grounded buyer agents
 - 🌟 [StakeBench](https://github.com/StakeBench/SBC) [[Code](https://github.com/StakeBench/SBC)] — Safety Control · Stakeholder-centric prompt injection
-- [TimeWarp](https://huggingface.co/papers/2603.04949) — Training Candidate · Sandbox
+- [TimeWarp](https://arxiv.org/abs/2603.04949) — Training Candidate · Sandbox
 - 🌟 [WARD](https://arxiv.org/abs/2605.15030) [[Code](https://github.com/caothientri2001vn/WARD-WebAgent)] — Safety Control · Web prompt-injection defense
 ### 2025
-- [BrowseComp](https://openai.com/index/browsecomp/) — Eval Candidate · Sandbox
+- 🌟 [BrowseComp](https://openai.com/index/browsecomp/) [[Code](https://github.com/openai/simple-evals)] — Eval Candidate · Sandbox
 - 🌟 [Mind2Web-2](https://github.com/OSU-NLP-Group/Mind2Web-2) [[Code](https://github.com/OSU-NLP-Group/Mind2Web-2)] — Training Candidate · Public trajectories
 - 🌟 [Online-Mind2Web](https://github.com/OSU-NLP-Group/Online-Mind2Web) [[Code](https://github.com/OSU-NLP-Group/Online-Mind2Web)] — Training Candidate · Public trajectories
 - 🌟 [RealWebAssist](https://arxiv.org/abs/2504.10445) [[Code](https://github.com/SCAI-JHU/RealWebAssist)] — Training Candidate · Public trajectories
@@ -284,7 +284,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [CORA / Phone-Harm](https://cora-agent.github.io/) — Eval Candidate · Partial trajectories
 - [Faithful Mobile GUI Agents](https://arxiv.org/abs/2605.01208) — Training Infrastructure · Guided advantage faithfulness
 - [How Mobile World Model Guides GUI Agents?](https://arxiv.org/abs/2605.10347) — Eval Candidate · Synthetic trajectories
-- [GUI-CEval](https://huggingface.co/papers/2603.15039) — Eval Candidate · Sandbox
+- [GUI-CEval](https://arxiv.org/abs/2603.15039) — Eval Candidate · Sandbox
 - [iOSWorld](https://arxiv.org/abs/2606.09764) — Eval Candidate · Personalized iOS simulator
 - 🌟 [MemGUI-Bench](https://arxiv.org/abs/2602.06075) [[Code](https://github.com/lgy0404/MemGUI-Bench)] — Training Candidate · Public memory trajectories
 - [MobileDreamer](https://arxiv.org/abs/2601.04035) — Eval Candidate · Synthetic rollouts
@@ -292,18 +292,18 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [MobileWorld](https://github.com/Tongyi-MAI/MobileWorld) [[Code](https://github.com/Tongyi-MAI/MobileWorld)] — Training Candidate · Partial trajectories
 - 🌟 [MyPhoneBench](https://github.com/FreedomIntelligence/MyPhoneBench) [[Code](https://github.com/FreedomIntelligence/MyPhoneBench)] — Production-grade · Public trajectories
 - [OmniGUI](https://arxiv.org/abs/2605.18758) — Eval Candidate · Public omni-modal trajectories
-- [PhoneSafety](https://arxiv.org/abs/2605.07630) — Eval Candidate · Private telemetry
+- [PhoneSafety / Safe, or Simply Incapable?](https://arxiv.org/abs/2605.07630) — Eval Candidate · Private telemetry
 - [PhoneWorld](https://arxiv.org/abs/2605.29486) — Training Infrastructure · Phone-use environment synthesis
 - [SimuWoB](https://arxiv.org/abs/2605.25160) — Eval Candidate · Synthetic mobile GUI worlds
 - [STAMP / Memory-World](https://arxiv.org/abs/2605.29324) — Training Infrastructure · Verifiable mobile memory worlds
 ### 2025
 - [Mobile-Bench-v2](https://arxiv.org/abs/2505.11891) — Eval Candidate · Sandbox
-- [ScreenSpot-Pro](https://huggingface.co/papers/2504.07981) — Training Candidate · Partial trajectories
+- [ScreenSpot-Pro](https://gui-agent.github.io/grounding-leaderboard/) — Training Candidate · Partial trajectories
 ### 2024
-- [AndroidControl](https://huggingface.co/datasets/leosltl/Android-Control) — Training Candidate · Public trajectories
+- 🌟 [AndroidControl](https://arxiv.org/abs/2406.03679) [[Code](https://github.com/google-research/google-research/tree/master/android_control)] — Training Candidate · Public trajectories
 - 🌟 [AndroidWorld](https://github.com/google-research/android_world) [[Code](https://github.com/google-research/android_world)] — Training Candidate · Runnable
 - 🌟 [MobileAgentBench](https://mobileagentbench.github.io/) [[Code](https://github.com/MobileAgentBench/mobile-agent-bench)] — Training Candidate · Runnable
-- [ScreenSpot](https://huggingface.co/datasets/rootsautomation/ScreenSpot) — Training Candidate · Partial trajectories
+- 🌟 [ScreenSpot](https://arxiv.org/abs/2401.10935) [[Code](https://github.com/njucckevin/SeeClick)] — Training Candidate · Partial trajectories
 ### 2023
 - 🌟 [Android in the Wild](https://github.com/google-research/google-research/tree/master/android_in_the_wild) [[Code](https://github.com/google-research/google-research/tree/master/android_in_the_wild)] — Training Candidate · Public trajectories
 ## Code, Terminal, and Software Worlds
@@ -429,7 +429,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 ### 2025
 - [Gemini Deep Research](https://blog.google/innovation-and-ai/models-and-research/gemini-models/next-generation-gemini-deep-research/) — Product Signal · Closed product
 - [OpenAI Deep Research](https://openai.com/index/introducing-deep-research/) — Product Signal · Closed product
-- [PaperBench](https://openai.com/index/paperbench/) — Eval Candidate · Sandbox
+- 🌟 [PaperBench](https://openai.com/index/paperbench/) [[Code](https://github.com/openai/frontier-evals/tree/main/project/paperbench)] — Eval Candidate · Sandbox
 ### 2024
 - 🌟 [AgentBoard](https://hkust-nlp.github.io/agentboard/) [[Code](https://github.com/hkust-nlp/AgentBoard)] — Eval Candidate · Runnable
 - 🌟 [MLE-bench](https://openai.com/index/mle-bench/) [[Code](https://github.com/openai/mle-bench)] — Training Candidate · Runnable
@@ -575,8 +575,7 @@ If you find this repository useful, please cite:
   title        = {Awesome Agent Worlds: A Curated Evidence Map for Verifiable LLM/VLM Agent Environments},
   author       = {{Awesome Agent Worlds Project}},
   year         = {2026},
-  url          = {https://github.com/wwn1233/Awesome-Agent-Worlds},
-  note         = {A curated survey repository for resettable environments, verifiable rewards, trajectories, sandboxes, and post-training loops for LLM/VLM agents.}
+  url          = {https://github.com/wwn1233/Awesome-Agent-Worlds}
 }
 ```
 For machine-readable repository metadata, see [CITATION.cff](./CITATION.cff).

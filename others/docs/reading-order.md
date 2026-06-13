@@ -19,9 +19,9 @@ worlds, then training infrastructure.
 
 | Time budget | Read | Outcome |
 |---|---|---|
-| 15 minutes | README thesis, Flagship Matrix, Selection Guide starter packs | Know what an Agent World is and which resources fit your goal. |
-| 1 hour | Resource Index, Reading Order, Hot Papers | Understand the field axes, verifier risks, and evidence sources. |
-| Using the index | Resource Index, Selection Guide, Static Explorer, [resource proposal template](../../.github/ISSUE_TEMPLATE/add-resource.md) | Pick resources, compare evidence fields, and avoid overclaiming readiness. |
+| 15 minutes | [README thesis](../../README.md#why-agent-worlds-matter-now), [Flagship Matrix](flagship-matrix.md), [Selection Guide starter packs](selection-guide.md#reader-starter-packs) | Know what an Agent World is and which resources fit your goal. |
+| 1 hour | [Resource Index](resource-index.md), [Reading Order](reading-order.md), [Hot Papers](hot-papers.md) | Understand the field axes, verifier risks, and evidence sources. |
+| Using the index | [Resource Index](resource-index.md), [Selection Guide](selection-guide.md), [Static Explorer](../../site/index.html), [resource proposal template](../../.github/ISSUE_TEMPLATE/add-resource.md) | Pick resources, compare evidence fields, and avoid overclaiming readiness. |
 
 ## By Reader Goal
 
@@ -29,7 +29,8 @@ worlds, then training infrastructure.
 | --- | --- | --- |
 | Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified | AndroidWorld, MobileGym, MacArena, Workflow-GYM, WeaveBench, LivingScreen, DynamicGUIBench, Multi-Agent Computer Use, Ego2Web, MCPWorld, MobileWorld, DigiWorld, Toolathlon, MCP-AgentBench, MCP-Flow, MCP-Persona, MedCTA, tau-bench, AppWorld, Terminal-Bench |
 | Train from rollouts | SWE-Gym, AgentGym, AgentGym-RL, Agent-World | AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, MobileGym, Agent-RLVR, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning |
-| Audit agent safety | PhoneSafety, MyPhoneBench, SkillSafetyBench | BraveGuard, StakeBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox |
+| Study infrastructure and protocols | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox | HarnessAPI, Agent-First Tool API, MCP-Flow, Agent-BOM, AgentSkillOS, Anthropic Agent Skills |
+| Audit agent safety | PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench | BraveGuard / Open-World CUA Guard, StakeBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox |
 | Study GUI/VLM agents | OSWorld, AndroidWorld, MobileGym, MCPWorld, OmniACT | OpenCUA, UI-TARS, InfiGUI-R1, ScreenSpot, SimuWoB, iOSWorld, Workflow-GYM, LivingScreen, DynamicGUIBench |
 | Study web agents | MiniWoB++, WebShop, WebArena | VisualWebArena, BrowserGym, WorkArena, Mind2Web, BrowseComp, StakeBench |
 | Study research agents | MLE-bench, PaperBench, GAIA | MLAgentBench, AgentBoard |
@@ -73,7 +74,7 @@ reliability.
 - MLE-bench and PaperBench.
 - TheAgentCompany.
 - BrowseComp.
-- StakeBench, BraveGuard, PhoneSafety, CUAHarm, RiOSWorld,
+- StakeBench, BraveGuard / Open-World CUA Guard, PhoneSafety / Safe, or Simply Incapable?, CUAHarm, RiOSWorld,
   CORA / Phone-Harm, and MCP-SafetyBench.
 
 ### Level 4: Training Flywheels

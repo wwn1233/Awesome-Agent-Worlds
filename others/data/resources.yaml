@@ -12352,7 +12352,7 @@
   recommended_rank: 4
   why_it_matters: Mobile GUI benchmark with emulator-based execution, useful for connecting
     VLM policy work to reproducible action spaces.
-- name: PhoneSafety
+- name: PhoneSafety / Safe, or Simply Incapable?
   category: mobile-world
   year: 2026
   modality:
@@ -12375,8 +12375,9 @@
   production_signal: phone_use_safety_evaluation
   url: https://arxiv.org/abs/2605.07630
   repo: 
-  notes: Phone-use safety benchmark with 700 safety-critical moments across more
-    than 130 apps; separates safe choices, unsafe choices, and inability to act.
+  notes: Phone-use safety benchmark from "Safe, or Simply Incapable?" with
+    700 safety-critical moments across more than 130 apps; separates safe
+    choices, unsafe choices, and inability to act.
   safety_moment_count: 700
   app_count_min: 130
   id: phonesafety
@@ -12391,7 +12392,7 @@
     supports:
     - overview
     - benchmark_design
-    checked_at: '2026-05-15'
+    checked_at: '2026-06-14'
     confidence: high
   trajectory_availability: private_telemetry
   trajectory_access: paper_only
@@ -13606,7 +13607,7 @@
   sandbox: code_runtime
   production_signal: openai_benchmark
   url: https://openai.com/index/paperbench/
-  repo: 
+  repo: https://github.com/openai/frontier-evals/tree/main/project/paperbench
   notes: 20 ICML paper replications decomposed into 8316 gradable tasks.
   task_count: 8316
   paper_count: 20
@@ -13614,7 +13615,7 @@
   resource_kind: world
   canonical_category: research-world
   subtype: research_world
-  status: documented
+  status: public_artifact
   content_evidence: true
   sources:
   - url: https://openai.com/index/paperbench/
@@ -13622,8 +13623,22 @@
     supports:
     - overview
     - status
-    checked_at: '2026-05-13'
-    confidence: medium
+    checked_at: '2026-06-14'
+    confidence: official
+  - url: https://arxiv.org/abs/2504.01848
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  - url: https://github.com/openai/frontier-evals/tree/main/project/paperbench
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-14'
+    confidence: high
   trajectory_availability: none
   trajectory_access: limited
   trajectory_type: none
@@ -13641,9 +13656,9 @@
   verifier_recomputable: partial
   verifier_isolation: isolated_runtime
   negative_side_effect_checks: unknown
-  reproducibility: paper_or_api
-  access: public_page
-  evidence_type: documentation
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
   isolation_boundary: runtime_or_environment
   runtime_host: unspecified
   network_policy: not_specified
@@ -13748,14 +13763,14 @@
   sandbox: live_web
   production_signal: openai_benchmark
   url: https://openai.com/index/browsecomp/
-  repo: 
+  repo: https://github.com/openai/simple-evals
   notes: 1266 hard-to-find information tasks for browsing agents.
   task_count: 1266
   id: browsecomp
   resource_kind: world
   canonical_category: web-world
   subtype: web_world
-  status: documented
+  status: public_artifact
   content_evidence: true
   sources:
   - url: https://openai.com/index/browsecomp/
@@ -13763,8 +13778,22 @@
     supports:
     - overview
     - status
-    checked_at: '2026-05-13'
-    confidence: medium
+    checked_at: '2026-06-14'
+    confidence: official
+  - url: https://arxiv.org/abs/2504.12516
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  - url: https://github.com/openai/simple-evals
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-14'
+    confidence: high
   trajectory_availability: none
   trajectory_access: limited
   trajectory_type: none
@@ -13782,9 +13811,9 @@
   verifier_recomputable: unknown
   verifier_isolation: isolated_runtime
   negative_side_effect_checks: unknown
-  reproducibility: paper_or_api
-  access: public_page
-  evidence_type: documentation
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
   isolation_boundary: runtime_or_environment
   runtime_host: unspecified
   network_policy: not_specified
@@ -17786,8 +17815,8 @@
   trajectories: true
   sandbox: offline_mobile_traces
   production_signal: android_control_training_data
-  url: https://huggingface.co/datasets/leosltl/Android-Control
-  repo: 
+  url: https://arxiv.org/abs/2406.03679
+  repo: https://github.com/google-research/google-research/tree/master/android_control
   notes: Android control dataset with demonstrations across apps for grounding mobile
     GUI actions.
   id: androidcontrol
@@ -17797,12 +17826,26 @@
   status: documented
   content_evidence: true
   sources:
-  - url: https://huggingface.co/datasets/leosltl/Android-Control
-    type: paper_or_dataset
+  - url: https://arxiv.org/abs/2406.03679
+    type: paper
     supports:
     - overview
-    - status
-    checked_at: '2026-05-13'
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  - url: https://github.com/google-research/google-research/tree/master/android_control
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    - dataset
+    checked_at: '2026-06-14'
+    confidence: high
+  - url: https://huggingface.co/datasets/leosltl/Android-Control
+    type: dataset
+    supports:
+    - dataset
+    checked_at: '2026-06-14'
     confidence: medium
   trajectory_availability: public
   trajectory_access: public
@@ -17823,7 +17866,7 @@
   negative_side_effect_checks: unknown
   reproducibility: public_dataset
   access: public_dataset
-  evidence_type: documentation
+  evidence_type: artifact
   isolation_boundary: unspecified
   runtime_host: unspecified
   network_policy: not_specified
@@ -17852,8 +17895,8 @@
   trajectories: false
   sandbox: dataset
   production_signal: gui_grounding_eval
-  url: https://huggingface.co/datasets/rootsautomation/ScreenSpot
-  repo: 
+  url: https://arxiv.org/abs/2401.10935
+  repo: https://github.com/njucckevin/SeeClick
   notes: GUI grounding benchmark for evaluating whether VLMs can localize screen elements.
   id: screenspot
   resource_kind: dataset
@@ -17862,12 +17905,26 @@
   status: documented
   content_evidence: true
   sources:
-  - url: https://huggingface.co/datasets/rootsautomation/ScreenSpot
-    type: paper_or_dataset
+  - url: https://arxiv.org/abs/2401.10935
+    type: paper
     supports:
     - overview
-    - status
-    checked_at: '2026-05-13'
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  - url: https://github.com/njucckevin/SeeClick
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    - dataset
+    checked_at: '2026-06-14'
+    confidence: high
+  - url: https://huggingface.co/datasets/rootsautomation/ScreenSpot
+    type: dataset
+    supports:
+    - dataset
+    checked_at: '2026-06-14'
     confidence: medium
   trajectory_availability: partial
   trajectory_access: limited
@@ -17888,7 +17945,7 @@
   negative_side_effect_checks: unknown
   reproducibility: public_dataset
   access: public_dataset
-  evidence_type: documentation
+  evidence_type: artifact
   isolation_boundary: unspecified
   runtime_host: unspecified
   network_policy: not_specified
@@ -17917,7 +17974,7 @@
   trajectories: false
   sandbox: dataset
   production_signal: harder_gui_grounding_eval
-  url: https://huggingface.co/papers/2504.07981
+  url: https://gui-agent.github.io/grounding-leaderboard/
   repo: 
   notes: Harder GUI grounding benchmark often used to stress-test UI-agent perception.
   id: screenspot-pro
@@ -17927,13 +17984,20 @@
   status: documented
   content_evidence: true
   sources:
-  - url: https://huggingface.co/papers/2504.07981
-    type: paper_or_dataset
+  - url: https://gui-agent.github.io/grounding-leaderboard/
+    type: project_page
     supports:
     - overview
     - status
-    checked_at: '2026-05-13'
-    confidence: medium
+    checked_at: '2026-06-14'
+    confidence: high
+  - url: https://arxiv.org/abs/2504.07981
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
   trajectory_availability: partial
   trajectory_access: limited
   trajectory_type: logged_interactions
@@ -17953,7 +18017,7 @@
   negative_side_effect_checks: unknown
   reproducibility: public_dataset
   access: public_dataset
-  evidence_type: documentation
+  evidence_type: artifact
   isolation_boundary: unspecified
   runtime_host: unspecified
   network_policy: not_specified
@@ -18191,7 +18255,7 @@
   trajectories: false
   sandbox: mobile_environment
   production_signal: chinese_mobile_agent_eval_surface
-  url: https://huggingface.co/papers/2603.15039
+  url: https://arxiv.org/abs/2603.15039
   repo: 
   notes: Chinese mobile GUI evaluation suite spanning many local apps and workflows.
   id: gui-ceval
@@ -18201,13 +18265,13 @@
   status: documented
   content_evidence: true
   sources:
-  - url: https://huggingface.co/papers/2603.15039
-    type: paper_or_dataset
+  - url: https://arxiv.org/abs/2603.15039
+    type: paper
     supports:
     - overview
-    - status
-    checked_at: '2026-05-13'
-    confidence: medium
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
   trajectory_availability: none
   trajectory_access: limited
   trajectory_type: none
@@ -18227,7 +18291,7 @@
   negative_side_effect_checks: unknown
   reproducibility: paper_or_api
   access: public_page
-  evidence_type: documentation
+  evidence_type: paper
   isolation_boundary: unspecified
   runtime_host: unspecified
   network_policy: not_specified
@@ -18257,7 +18321,7 @@
   trajectories: false
   sandbox: containerized_web
   production_signal: temporal_web_agent_eval
-  url: https://huggingface.co/papers/2603.04949
+  url: https://arxiv.org/abs/2603.04949
   repo: 
   notes: Containerized multi-version web environments for evaluating agents under
     changing web states.
@@ -18268,13 +18332,13 @@
   status: documented
   content_evidence: true
   sources:
-  - url: https://huggingface.co/papers/2603.04949
-    type: paper_or_dataset
+  - url: https://arxiv.org/abs/2603.04949
+    type: paper
     supports:
     - overview
-    - status
-    checked_at: '2026-05-13'
-    confidence: medium
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
   trajectory_availability: none
   trajectory_access: limited
   trajectory_type: none
@@ -18294,7 +18358,7 @@
   negative_side_effect_checks: unknown
   reproducibility: paper_or_api
   access: public_page
-  evidence_type: documentation
+  evidence_type: paper
   isolation_boundary: runtime_or_environment
   runtime_host: local_or_self_hosted
   network_policy: not_specified
@@ -19880,7 +19944,7 @@
   sandbox: agent_runtime
   production_signal: anthropic_agent_packaging_primitive
   url: https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills
-  repo: 
+  repo: https://github.com/agentskills/agentskills
   notes: Skill packaging mechanism that turns reusable procedures and assets into
     agent-operable modules.
   id: anthropic-agent-skills
@@ -19895,8 +19959,22 @@
     supports:
     - overview
     - status
-    checked_at: '2026-05-13'
-    confidence: medium
+    checked_at: '2026-06-14'
+    confidence: official
+  - url: https://agentskills.io/
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-14'
+    confidence: official
+  - url: https://github.com/agentskills/agentskills
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-14'
+    confidence: high
   trajectory_availability: private_telemetry
   trajectory_access: private
   trajectory_type: logged_interactions
@@ -19914,9 +19992,9 @@
   verifier_recomputable: unknown
   verifier_isolation: isolated_runtime
   negative_side_effect_checks: partial
-  reproducibility: paper_or_api
-  access: public_page
-  evidence_type: documentation
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
   isolation_boundary: runtime_or_environment
   runtime_host: unspecified
   network_policy: not_specified
@@ -22087,13 +22165,20 @@
   status: documented
   content_evidence: true
   sources:
+  - url: https://arxiv.org/abs/2311.12983
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
   - url: https://huggingface.co/gaia-benchmark
     type: paper_or_dataset
     supports:
     - overview
     - status
-    checked_at: '2026-05-13'
-    confidence: medium
+    checked_at: '2026-06-14'
+    confidence: high
   trajectory_availability: none
   trajectory_access: limited
   trajectory_type: dataset_examples
@@ -22113,7 +22198,7 @@
   negative_side_effect_checks: unknown
   reproducibility: public_dataset
   access: public_dataset
-  evidence_type: documentation
+  evidence_type: artifact
   isolation_boundary: unspecified
   runtime_host: unspecified
   network_policy: not_specified
@@ -28597,7 +28682,7 @@
   reader_paths:
   - train-rollouts
   - foundations
-- name: BraveGuard
+- name: BraveGuard / Open-World CUA Guard
   category: agent-infrastructure
   year: 2026
   modality:
@@ -28619,7 +28704,7 @@
   production_signal: adaptive_open_world_cua_safety_guard_training
   url: https://arxiv.org/abs/2606.01166
   repo:
-  notes: Adaptive defense framework for computer-use agents that mines emerging
+  notes: Adaptive defense framework for safer computer-use agents that mines emerging
     open-world threats, instantiates executable tasks, collects rollouts, and trains
     guard models with trajectory-level supervision.
   id: braveguard
@@ -28634,7 +28719,7 @@
     supports:
     - overview
     - benchmark_design
-    checked_at: '2026-06-13'
+    checked_at: '2026-06-14'
     confidence: high
   trajectory_availability: partial
   trajectory_access: limited

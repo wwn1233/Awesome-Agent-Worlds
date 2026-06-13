@@ -12,7 +12,7 @@
       secondaryAction: "Hot papers",
       mapEyebrow: "World surface map",
       mapTitle: "Enter agent worlds by interaction surface",
-      mapText: "Start with the surface an agent acts in, then filter by verifier, trajectory, sandbox, and training value.",
+      mapText: "Start with the system layer or interaction surface, then filter by verifier, trajectory, sandbox, and training value.",
       homeWorlds: "world artifacts",
       homeBenchmarks: "benchmarks",
       homeProduction: "production-grade",
@@ -21,10 +21,11 @@
       metricRunnable: "public runnable",
       metricTrajectories: "trajectory assets",
       trajectoryCount: "trajectories",
-      metricSourceCheck: "source check",
+      metricAverage: "average readiness",
       metricHot: "hot papers",
       hotEyebrow: "Weekly arXiv view",
       hotTitle: "Weekly Hot Papers view",
+      hotNote: "The homepage shows indexed hot papers; the full weekly table is in the Hot Papers document.",
       explorerLabel: "Resource explorer",
       filterSearch: "Search",
       filterPath: "Reader path",
@@ -60,7 +61,7 @@
       allResetModes: "All reset modes",
       sortBy: "Sort by",
       score: "score",
-      reviewStatus: { indexed: "indexed", monitor: "monitor", under_review: "under review" }
+      catalogStatus: { indexed: "indexed", monitor: "watchlist", watchlist: "watchlist" }
     },
     zh: {
       documentTitle: "Awesome Agent Worlds｜智能体世界索引",
@@ -74,7 +75,7 @@
       secondaryAction: "热点论文",
       mapEyebrow: "世界表面地图",
       mapTitle: "从交互表面进入智能体世界",
-      mapText: "先按 agent 进入的世界表面定位，再用验证器、轨迹、沙箱和训练价值做筛选。",
+      mapText: "先按系统层或交互表面定位，再用验证器、轨迹、沙箱和训练价值做筛选。",
       homeWorlds: "世界型资源",
       homeBenchmarks: "评测基准",
       homeProduction: "生产级资源",
@@ -83,10 +84,11 @@
       metricRunnable: "公开可运行",
       metricTrajectories: "轨迹资产",
       trajectoryCount: "条轨迹",
-      metricSourceCheck: "来源待确认",
+      metricAverage: "平均成熟度",
       metricHot: "热点论文",
       hotEyebrow: "每周 arXiv 视图",
       hotTitle: "每周热点论文视图",
+      hotNote: "首页展示已入库热点论文，完整每周表格见 Hot Papers 文档。",
       explorerLabel: "资源浏览器",
       filterSearch: "搜索",
       filterPath: "阅读路径",
@@ -122,7 +124,7 @@
       allResetModes: "全部重置方式",
       sortBy: "排序方式",
       score: "评分",
-      reviewStatus: { indexed: "已入库", monitor: "监测", under_review: "待审阅" }
+      catalogStatus: { indexed: "已入库", monitor: "观察清单", watchlist: "观察清单" }
     }
   };
 
@@ -171,6 +173,7 @@
       "safety-audit": "安全审计"
     },
     source: { high: "高可信", medium: "中等可信", official: "官方", reference: "参考" },
+    catalogStatus: { indexed: "已入库", monitor: "观察清单", watchlist: "观察清单" },
     trajectory: {
       none: "无公开轨迹",
       partial: "部分轨迹",
@@ -222,7 +225,6 @@
       "public-trajectories": "公开轨迹",
       "reset-unclear": "重置不明",
       "safety-control": "安全控制",
-      "source-check": "来源待确认",
       "synthetic-trajectories": "合成轨迹",
       "training-framework": "训练框架",
       "training-ready": "训练就绪",

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Awesome Agent Worlds</title>
+    <title>Awesome Agent Worlds｜智能体世界索引</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="home.css">
@@ -47,17 +47,18 @@
         <div class="worldMapHead">
           <p class="eyebrow" data-i18n="mapEyebrow">世界表面地图</p>
           <h2 data-i18n="mapTitle">从交互表面进入智能体世界</h2>
-          <p data-i18n="mapText">先按 agent 进入的世界表面定位，再用验证器、轨迹、沙箱和训练价值做筛选。</p>
+          <p data-i18n="mapText">先按系统层或交互表面定位，再用验证器、轨迹、沙箱和训练价值做筛选。</p>
         </div>
         <div class="worldMapGrid">
-          <a href="#explorer" class="surface web"><b>Web</b><span>browser / DOM / sites</span></a>
-          <a href="#explorer" class="surface gui"><b>GUI</b><span>desktop / screen / apps</span></a>
-          <a href="#explorer" class="surface mobile"><b>Mobile</b><span>phone / apps / privacy</span></a>
-          <a href="#explorer" class="surface code"><b>Code</b><span>repos / tests / terminals</span></a>
-          <a href="#explorer" class="surface api"><b>API</b><span>tools / business state</span></a>
-          <a href="#explorer" class="surface research"><b>Research</b><span>papers / analysis / rubrics</span></a>
-          <a href="#explorer" class="surface embodied"><b>Embodied</b><span>robots / games / 3D</span></a>
-          <a href="#explorer" class="surface training"><b>Training</b><span>rollouts / rewards / RL</span></a>
+          <a href="#explorer" class="surface infra" data-surface="infra"><b>Infra</b><span>protocols / tools / runtime</span></a>
+          <a href="#explorer" class="surface web" data-surface="web"><b>Web</b><span>browser / DOM / sites</span></a>
+          <a href="#explorer" class="surface gui" data-surface="gui"><b>GUI</b><span>desktop / screen / apps</span></a>
+          <a href="#explorer" class="surface mobile" data-surface="mobile"><b>Mobile</b><span>phone / apps / privacy</span></a>
+          <a href="#explorer" class="surface code" data-surface="code"><b>Code</b><span>repos / tests / terminals</span></a>
+          <a href="#explorer" class="surface api" data-surface="api"><b>API</b><span>tools / business state</span></a>
+          <a href="#explorer" class="surface research" data-surface="research"><b>Research</b><span>papers / analysis / rubrics</span></a>
+          <a href="#explorer" class="surface embodied" data-surface="embodied"><b>Embodied</b><span>robots / games / 3D</span></a>
+          <a href="#explorer" class="surface training" data-surface="training"><b>Training</b><span>rollouts / rewards / RL</span></a>
         </div>
       </section>
 
@@ -65,15 +66,16 @@
         <div><b id="metricResources">0</b><span data-i18n="metricResources">内容资源</span></div>
         <div><b id="metricRunnable">0</b><span data-i18n="metricRunnable">公开可运行</span></div>
         <div><b id="metricTrajectories">0</b><span data-i18n="metricTrajectories">轨迹资产</span></div>
-        <div><b id="metricSourceCheck">0</b><span data-i18n="metricSourceCheck">来源待确认</span></div>
+        <div><b id="metricAverage">0</b><span data-i18n="metricAverage">平均成熟度</span></div>
         <div><b id="metricHot">0</b><span data-i18n="metricHot">热点论文</span></div>
       </section>
 
       <section id="hot-papers" class="hotline" aria-label="Hot papers">
         <div class="hotHead">
           <div>
-            <p class="eyebrow" data-i18n="hotEyebrow">每周 arXiv 监控</p>
-            <h2 data-i18n="hotTitle">每周热点论文候选</h2>
+            <p class="eyebrow" data-i18n="hotEyebrow">每周 arXiv 视图</p>
+            <h2 data-i18n="hotTitle">每周热点论文视图</h2>
+            <p class="hotNote" data-i18n="hotNote">首页展示已入库热点论文，完整每周表格见 Hot Papers 文档。</p>
           </div>
         </div>
         <div id="hotPapers" class="hotGrid"></div>
@@ -155,8 +157,9 @@
         </section>
       </section>
     </main>
-    <script src="data.js?v=20260613"></script>
-    <script src="i18n.js?v=20260613"></script>
-    <script src="app.js?v=20260613"></script>
+    <script src="data.js?v=20260614"></script>
+    <script src="i18n.js?v=20260614"></script>
+    <script src="app.js?v=20260614"></script>
+    <script src="surfaces.js?v=20260614"></script>
   </body>
 </html>

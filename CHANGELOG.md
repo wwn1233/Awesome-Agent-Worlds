@@ -12,7 +12,15 @@
 - Added STAMP / Memory-World to cover controllable mobile GUI memory environments, verifiable memory rewards, and online RL training signals.
 - Added LivingScreen to cover continuous-time, video-bearing GUI environments where agents control both actions and observation cost.
 - Added DynamicGUIBench / DynamicUI to cover high-dynamic GUI environments where screen-recording context can matter more than a single screenshot.
+- Clarified the PhoneSafety entry as "Safe, or Simply Incapable?" so mobile safety readers can recognize the phone-use safety evaluation directly.
+- Clarified the BraveGuard entry as an open-world CUA guard so safety readers can identify its trajectory-level defense role.
+- Upgraded PaperBench, BrowseComp, and Anthropic Agent Skills with first-party paper, specification, and code links; improved source-confidence metadata in the Static Explorer.
+- Upgraded TimeWarp, GUI-CEval, ScreenSpot-Pro, GAIA, AndroidControl, and ScreenSpot with first-party paper, project, or code links; all Static Explorer entries now use high or official source confidence.
+- Updated Static Explorer homepage metrics to show average readiness alongside resource, runnable, trajectory, and Hot Papers counts.
+- Added surface-card filtering to the Static Explorer so infrastructure, web, GUI, mobile, code, API, research, embodied, and training entries can be opened directly from the homepage map.
 - Refined the Hot Papers wording around evidence standards for main-index inclusion.
+- Clarified that the Static Explorer shows a compact Hot Papers strip while the Hot Papers document keeps the full weekly table.
+- Clarified Hot Papers catalog status labels for indexed and watchlist items.
 
 ## 2026-05-22
 

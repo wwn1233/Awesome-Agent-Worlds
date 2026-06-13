@@ -40,7 +40,7 @@ What do you need the world to prove?
 │   └── Need broad knowledge tasks? -> GAIA, AgentBoard
 └── Training from interaction
     ├── Need multi-world, cloud-console, or simulated physical-world rollouts? -> AgentGym, AgentGym-RL, Agent-World, AliyunConsoleAgent, HomeFlow, TOUCAN, MCP-Flow, RAGEN, VAGEN
-    ├── Need CUA process-reward training? -> CUA-Gym, PRO-CUA, BraveGuard
+    ├── Need CUA process-reward training? -> CUA-Gym, PRO-CUA, BraveGuard / Open-World CUA Guard
     ├── Need RL over arbitrary agents? -> Agent Lightning, rLLM
     └── Need open training stacks? -> Orchard, verl, OpenRLHF, TRL
 ```
@@ -55,7 +55,7 @@ What do you need the world to prove?
 | Dynamic GUI/video screens | LivingScreen | Task success and information efficiency | Observation cost must be interpreted alongside task success. |
 | High-dynamic GUI environments | DynamicGUIBench | Benchmark task success | Paper-only evidence should not be treated as public runtime readiness. |
 | Mobile GUI | AndroidWorld / MobileGym | System or structured app state | Simulator and app-distribution gaps. |
-| Mobile safety | PhoneSafety | Safety-critical action audit | Inability can masquerade as safety. |
+| Mobile safety | PhoneSafety / Safe, or Simply Incapable? | Safety-critical action audit | Inability can masquerade as safety. |
 | Phone environment synthesis | PhoneWorld / SimuWoB | Rule or synthetic task verifier | Paper-only evidence should not be over-read as public code. |
 | Personalized phone agents | iOSWorld | Task rubrics and simulator tasks | Personal data realism is hard to compare across benchmarks. |
 | Mobile memory training | STAMP / Memory-World | Task success and memory accuracy | Paper-only evidence should be kept separate from public runtime readiness. |
@@ -74,10 +74,10 @@ What do you need the world to prove?
 | Embodied agents | MineDojo / AI2-THOR | Simulator state | Sim-to-real transfer. |
 | Generated worlds | HY-World 2.0 / Cosmos / Genie 3 | Generated asset or world quality | Evaluation standard still immature. |
 | Smart-home agent training | HomeFlow | State-based simulated home goals | Paper-only evidence should not be treated as a public runtime release. |
-| Cloud-console web-agent training | AliyunConsoleAgent | Backend audit logs and outcome rewards | Cloud credentials and account isolation must be reviewed before reuse. |
+| Cloud-console web-agent training | AliyunConsoleAgent | Backend audit logs and outcome rewards | Cloud credentials and account isolation must be checked before reuse. |
 | GUI RL/eval harness | ClawGUI | Benchmark pipeline and process reward | Public code and device coverage should be checked before treating it as reusable infrastructure. |
 | CUA process rewards | PRO-CUA | Process reward model | Reward shaping must be checked against actual trajectory evidence. |
-| CUA safety guard | BraveGuard | Trajectory-level risk detection | Guard evaluation depends on attack and benign-task coverage. |
+| CUA safety guard | BraveGuard / Open-World CUA Guard | Trajectory-level risk detection | Guard evaluation depends on attack and benign-task coverage. |
 
 ## Reader Starter Packs
 
@@ -86,7 +86,8 @@ What do you need the world to prove?
 | Researcher | WebArena, OSWorld, SWE-bench, AppWorld, PaperBench | Do not compare scores without checking verifier reliability and contamination risk. |
 | Evaluation builder | OSWorld-Verified, WebArena-Verified, BrowserGym, AndroidWorld, MobileGym, MacArena, Workflow-GYM, WeaveBench, LivingScreen, DynamicGUIBench, Multi-Agent Computer Use, Ego2Web, MCPWorld, MobileWorld, Toolathlon, MCP-AgentBench, MCP-Flow, MCP-Persona, MedCTA, tau-bench | Prefer resettable or replayable worlds; live websites and apps drift. |
 | Post-training engineer | AgentGym, AgentGym-RL, Agent-World, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, MobileGym, Agent-RLVR, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
-| Safety auditor | BraveGuard, StakeBench, PhoneSafety, MyPhoneBench, SkillSafetyBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox | Separate unsafe action from simple agent incapability before drawing safety conclusions. |
+| Infrastructure builder | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox, HarnessAPI, Agent-First Tool API, MCP-Flow, Agent-BOM, AgentSkillOS, Anthropic Agent Skills | Separate protocol or runtime direction from runnable world evidence and public trajectory availability. |
+| Safety auditor | BraveGuard / Open-World CUA Guard, StakeBench, PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox | Separate unsafe action from simple agent incapability before drawing safety conclusions. |
 | Product lead | OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, OpenAI CUA, Project Mariner | Product signals show direction, not reproducible public training evidence. |
 
 ## Inclusion Criteria
@@ -101,8 +102,8 @@ A resource should enter the main index only when first-party evidence supports:
 - sandbox or safety boundary,
 - source confidence and current public access.
 
-If these fields are still unclear, treat the resource as an under-review item rather
-than a main-index signal.
+If these fields are still unclear, treat the resource as not yet catalog-ready
+rather than a main-index signal.
 
 ## When Not To Use an Agent World
 

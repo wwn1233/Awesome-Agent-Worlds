@@ -10,6 +10,7 @@ const state = {
   source: "all",
   trajectory: "all",
   reset: "all",
+  surface: "all",
   sort: "recommended",
   repoOnly: false
 };
@@ -19,7 +20,7 @@ const refs = {
   resources: document.querySelector("#metricResources"),
   runnable: document.querySelector("#metricRunnable"),
   trajectories: document.querySelector("#metricTrajectories"),
-  sourceCheck: document.querySelector("#metricSourceCheck"),
+  average: document.querySelector("#metricAverage"),
   hot: document.querySelector("#metricHot"),
   homeWorlds: document.querySelector("#homeWorlds"),
   homeBenchmarks: document.querySelector("#homeBenchmarks"),
@@ -44,17 +45,14 @@ const refs = {
 };
 
 const contentResources = data.resources;
-
 function text(value) {
   if (value === true) return "yes";
   if (value === false || value === null || value === undefined) return "no";
   return String(value);
 }
-
 function ui(key) {
   return i18n.t(state.lang, key);
 }
-
 function label(group, value) {
   return i18n.format(state.lang, group, value);
 }
@@ -125,7 +123,7 @@ function init() {
   refs.resources.textContent = data.summary.resources;
   refs.runnable.textContent = data.summary.public_runnable;
   refs.trajectories.textContent = data.summary.trajectory_assets;
-  refs.sourceCheck.textContent = data.summary.source_check;
+  refs.average.textContent = `${data.summary.average_score}/14`;
   refs.hot.textContent = data.hot_papers.visible || data.hot_papers.papers.length;
   refs.homeWorlds.textContent = data.kinds.world || 0;
   refs.homeBenchmarks.textContent = data.kinds.benchmark || 0;
@@ -169,7 +167,7 @@ function renderHotPapers() {
   }
 
   refs.hotPapers.innerHTML = papers.map((paper) => {
-    const status = label("reviewStatus", paper.review_status);
+    const status = label("catalogStatus", paper.catalog_status);
     const signals = paper.evidence_terms.slice(0, 4).join(", ");
     return `<a class="hotPaper" href="${escapeHtml(paper.url)}">
       <b>${escapeHtml(paper.title)}</b>
@@ -189,6 +187,7 @@ function resetFilters() {
     source: "all",
     trajectory: "all",
     reset: "all",
+    surface: "all",
     sort: "recommended",
     repoOnly: false
   });
@@ -219,6 +218,7 @@ function matches(item) {
   if (state.source !== "all" && item.source_confidence !== state.source) return false;
   if (state.trajectory !== "all" && item.trajectory_availability !== state.trajectory) return false;
   if (state.reset !== "all" && item.reset_support !== state.reset) return false;
+  if (state.surface !== "all" && !(window.AGENT_WORLDS_SURFACES[state.surface] || []).includes(item.canonical_category)) return false;
   if (state.repoOnly && !item.repo) return false;
   return true;
 }
@@ -263,6 +263,7 @@ function renderBars(items) {
 
   refs.bars.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
+      state.surface = "all";
       state.category = button.dataset.category;
       refs.category.value = state.category;
       render();
@@ -295,4 +296,5 @@ function renderRows(items) {
   }).join("");
 }
 
+window.AGENT_WORLDS_APP = { state, refs, render, syncControls };
 init();

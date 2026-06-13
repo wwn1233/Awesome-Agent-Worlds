@@ -105,6 +105,9 @@ h2 { font-size: 30px; }
   margin-bottom: 12px;
 }
 
+.hotNote { max-width: 680px; margin: 6px 0 0; }
+.hotNote { color: var(--muted); font-size: 13px; line-height: 1.45; }
+
 .hotGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -199,6 +199,12 @@ html[lang="zh-CN"] h2 {
   line-height: 1.35;
 }
 
+.surface.active {
+  background: #f7f3df;
+  box-shadow: inset 0 0 0 1px var(--ink);
+}
+
+.surface.infra { border-left-color: var(--ink); }
 .surface.web { border-left-color: var(--blue); }
 .surface.gui { border-left-color: var(--green); }
 .surface.mobile { border-left-color: var(--red); }
