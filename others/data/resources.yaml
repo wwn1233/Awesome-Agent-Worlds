@@ -22617,6 +22617,81 @@
   destructive_action_scope: environment_limited_or_unknown
   reader_paths:
   - train-rollouts
+- name: CUA-Gym
+  category: training-framework
+  year: 2026
+  modality:
+  - desktop
+  - web
+  - gui
+  - vlm
+  - rlvr
+  action_space:
+  - mouse
+  - keyboard
+  - browser_action
+  - environment_state_edit
+  reward_type: verifiable_rlvr_task_success
+  verifier: generated_programmatic_reward_functions
+  trainable: true
+  resettable: partial
+  trajectories: synthetic
+  sandbox: generated_interactive_world
+  production_signal: large_scale_verifiable_cua_training_environment_synthesis
+  url: https://arxiv.org/abs/2605.25624
+  repo:
+  notes: Scalable CUA RLVR pipeline that co-generates task instructions,
+    initial and golden environment states, and reward functions; the paper
+    reports 32,112 verified training tuples grounded in 110 environments.
+  task_count: 32112
+  app_count: 110
+  id: cua-gym
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: verifiable_cua_rlvr_environment_synthesis
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.25624
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - dataset
+    checked_at: '2026-06-13'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: verified_cua_rlvr_training_tuples
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: generated_environment_state_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: separated_generator_discriminator_roles
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: generated_web_and_desktop_environment
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: rollout_and_filter_metadata
+  telemetry_type: synthetic_environment_state_and_reward_logs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - foundations
 - name: OpenComputer
   category: computer-world
   year: 2026

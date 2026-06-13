@@ -4,13 +4,13 @@ Weekly arXiv watchlist for recent Agent Worlds papers.
 
 Curated resources are the entries in the Resource Index and main README.
 
-- Last updated: 2026-05-21T17:23:13Z
-- Last scanned: 2026-05-21T17:23:13Z
+- Last updated: 2026-06-13T08:31:31Z
+- Last scanned: 2026-06-13T08:31:31Z
 - Update cadence: weekly
 - Source: arXiv API
 - Window: 90 days
-- Papers screened: 322
-- New watchlist candidates: 0
+- Papers screened: 251
+- New watchlist candidates: 62
 
 ## Watchlist Criteria
 
@@ -27,7 +27,6 @@ require confirmed source confidence and complete metadata.
 | [Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence](https://arxiv.org/abs/2604.18292v1) | 2026-04-20 | 46 | agent world, environment synthesis, real-world environment, tool ecosystem, mcp, self-evolving training, agent training arena, verifiable reward | indexed |
 | [OpenComputer: Verifiable Software Worlds for Computer-Use Agents](https://arxiv.org/abs/2605.19769v1) | 2026-05-19 | 43 | opencomputer, verifiable software worlds, computer-use agents, state verifiers, partial-credit rewards | indexed |
 | [LITMUS: Benchmarking Behavioral Jailbreaks of LLM Agents in Operating Systems](https://arxiv.org/abs/2605.10779v1) | 2026-05-11 | 42 | litmus, llm agents, operating systems, behavioral jailbreaks, state rollback | indexed |
-| [Agent World Model: Infinity Synthetic Environments for Agentic Reinforcement Learning](https://arxiv.org/abs/2602.10090v2) | 2026-02-11 | 42 | world model, synthetic environment, tool-use environment, mcp, verifiable reward, reinforcement learning agent | indexed |
 | [SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows?](https://arxiv.org/abs/2605.15777v1) | 2026-05-15 | 41 | saas-bench, computer-use agents, self-hosted saas, professional workflows, verification checkpoints | indexed |
 | [Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows](https://arxiv.org/abs/2604.20200v1) | 2026-04-23 | 41 | agentpressurebench, coding agents, public score exploitation, hidden private evaluation, agent safety | indexed |
 | [EnvFactory: Scaling Tool-Use Agents via Executable Environments Synthesis and Robust RL](https://arxiv.org/abs/2605.18703v1) | 2026-05-18 | 40 | envfactory, executable environment synthesis, agentic rl, tool-use agents, synthetic trajectories | indexed |
@@ -50,6 +49,7 @@ require confirmed source confidence and complete metadata.
 | [MCP-Atlas: A Large-Scale Benchmark for Tool-Use Competency with Real MCP Servers](https://arxiv.org/abs/2602.00933v2) | 2026-01-31 | 39 | mcp atlas, mcp servers, tool routing, tool composition, mcp benchmark, benchmark | indexed |
 | [AcademiClaw: Benchmarking and Auditing LLM Agents on Real-World University-Level Computer Science Tasks](https://arxiv.org/abs/2605.02661v1) | 2026-05-04 | 39 | AcademiClaw, academic workflows, llm agents, docker sandbox, safety audit | indexed |
 | [AutoWebWorld: Synthesizing Infinite Verifiable Web Environments via Finite State Machines](https://arxiv.org/abs/2602.14296v1) | 2026-02-15 | 39 | autowebworld, verifiable web environments, finite state machines, synthetic trajectories, web gui agents | indexed |
+| [CUA-Gym: Scaling Verifiable Training Environments and Tasks for Computer-Use Agents](https://arxiv.org/abs/2605.25624v2) | 2026-05-25 | 38 | verifiable reward, rlvr, rollout, benchmark, computer-use agent, computer-use agents, dive | indexed |
 | [VIPER-MCP: Detecting and Exploiting Taint-Style Vulnerabilities in Model Context Protocol Servers](https://arxiv.org/abs/2605.21392v1) | 2026-05-20 | 38 | viper-mcp, mcp servers, taint-style vulnerabilities, exploit traces, zero-day vulnerabilities | indexed |
 | [MemGym: a Long-Horizon Memory Environment for LLM Agents](https://arxiv.org/abs/2605.20833v1) | 2026-05-20 | 38 | memgym, long-horizon memory environment, webarena-infinity, swe-gym | indexed |
 | [Prompts Don't Protect: Architectural Enforcement via MCP Proxy for LLM Tool Access Control](https://arxiv.org/abs/2605.18414v1) | 2026-05-18 | 38 | mcp proxy, tool access control, tool discovery, unauthorized invocation, agent security | indexed |
