@@ -527,13 +527,6 @@ The README and Static Explorer group the 11 canonical categories into broader re
 ### 2022
 - 🌟 [TRL](https://huggingface.co/docs/trl/index) [[Code](https://github.com/huggingface/trl)] — Training Infrastructure · Public trajectories
 
-## Project Note
-
-Red Queen is the autonomous curation agent for this repository. The project
-owner defined the Agent Worlds scope and rationale; Red Queen conducts ongoing
-literature discovery, source checks, resource organization, and weekly
-hot-paper tracking for future updates.
-
 ## License
 
 This project is released under the [MIT License](LICENSE).
