@@ -1675,6 +1675,98 @@
   - train-rollouts
   - build-evals
   - foundations
+- name: CLI-Anything
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - cli
+  - computer_use
+  - agent_native_interfaces
+  - software_harnesses
+  - tool_use
+  action_space:
+  - cli_command
+  - structured_output
+  - harness_installation
+  - harness_generation
+  reward_type: deterministic_command_feedback_and_harness_tests
+  verifier: cli_harness_tests_and_command_outputs
+  trainable: false
+  resettable: partial
+  trajectories: partial
+  sandbox: command_line_harness
+  production_signal: agent_native_cli_interface_registry_for_existing_software
+  url: https://clianything.cc/
+  repo: https://github.com/HKUDS/CLI-Anything
+  notes: Public platform and registry for turning existing software into
+    agent-native command-line harnesses with structured commands, machine-readable
+    feedback, installable CLI-Hub packages, app-specific tests, and agent-facing
+    skill documentation.
+  id: cli-anything
+  resource_kind: agent_infrastructure
+  canonical_category: agent-infrastructure
+  subtype: agent_native_cli_harness_registry
+  status: public_framework
+  content_evidence: true
+  sources:
+  - url: https://github.com/HKUDS/CLI-Anything
+    type: repository
+    supports:
+    - overview
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://clianything.cc/
+    type: project_page
+    supports:
+    - overview
+    - status
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://arxiv.org/abs/2606.03854
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: demo_trajectory_loops_and_harness_logs
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: harness_or_application_session_reset
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: app_specific_cli_harness
+  negative_side_effect_checks: partial
+  reproducibility: public_runnable
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: local_application_harness
+  runtime_host: local_or_self_hosted
+  network_policy: application_dependent
+  credential_boundary: application_dependent
+  approval_policy: command_scope_policy
+  audit_log: command_history_and_test_results
+  telemetry_type: cli_commands_outputs_and_artifact_paths
+  destructive_action_scope: application_dependent
+  why_it_matters: Reframes computer use around agent-native command interfaces
+    instead of pixel-level GUI emulation, making existing software easier to
+    expose as verifiable harnesses.
+  reader_paths:
+  - production-direction
+  - build-evals
+  - foundations
 - name: DragOn
   category: gui-world
   year: 2026
@@ -5634,67 +5726,91 @@
   - reward_hacking
   - benchmark
   - trajectory
+  - verifier_hardening
   action_space:
   - task_execution
   - vulnerability_exploitation
   - reward_hack_attempt
   - exploit_trajectory_analysis
   reward_type: reward_hacking_success_and_task_completion
-  verifier: reward_hacking_benchmark_eval
+  verifier: programmatic_reward_hacking_verifier_and_hacker_fixer_audit
   trainable: partial
-  resettable: benchmark_dependent
-  trajectories: partial
+  resettable: dataset_replay
+  trajectories: true
   sandbox: reward_hacking_benchmark_environment
-  production_signal: reward_hacking_regression_suite_for_agentic_systems
-  url: https://arxiv.org/abs/2604.17596
-  repo:
-  notes: Benchmark for reward hacking in agentic AI systems, with 331
-    environments, 10 task categories, and 3632 exploit trajectories for
-    auditing hidden vulnerabilities in otherwise useful task environments.
+  production_signal: reward_hacking_regression_suite_and_verifier_hardening_loop
+  url: https://github.com/few-sh/terminal-wrench
+  repo: https://github.com/few-sh/terminal-wrench
+  notes: Public dataset and verifier-hardening benchmark for reward hacking in
+    terminal-agent tasks, with 331 unique tasks, 3,632 hack trajectories, 2,352
+    baseline trajectories, and a follow-up hacker-fixer loop for patching brittle
+    outcome verifiers.
   instance_count: 331
   trajectory_count: 3632
   id: terminal-wrench
   resource_kind: benchmark
   canonical_category: agent-infrastructure
   subtype: agent_reward_hacking_benchmark
-  status: documented
+  status: public_artifact
   content_evidence: true
   sources:
+  - url: https://github.com/few-sh/terminal-wrench
+    type: repository
+    supports:
+    - code
+    - dataset
+    - reproducibility
+    - trajectories
+    checked_at: '2026-06-15'
+    confidence: high
   - url: https://arxiv.org/abs/2604.17596
     type: paper
     supports:
     - overview
     - benchmark_design
+    - dataset
+    - trajectories
     checked_at: '2026-05-22'
     confidence: high
-  trajectory_availability: partial
-  trajectory_access: limited
+  - url: https://arxiv.org/abs/2606.08960
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: public
+  trajectory_access: public
   trajectory_type: reward_hacking_exploit_trajectories
-  trajectory_public: false
-  reset_support: partial
-  reset_mechanism: benchmark_dependent_reset
-  trainability_status: evaluation_only
+  trajectory_public: true
+  reset_support: dataset_replay
+  reset_mechanism: task_dataset_replay
+  trainability_status: framework_ready
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
   distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
-  verifier_family: benchmark
+  verifier_family: programmatic
   verifier_recomputable: partial
   verifier_isolation: benchmark_dependent
   negative_side_effect_checks: explicit
-  reproducibility: paper_or_api
-  access: public_page
-  evidence_type: paper
+  reproducibility: public_dataset
+  access: public_code
+  evidence_type: artifact
   isolation_boundary: benchmark_environment
-  runtime_host: unspecified
+  runtime_host: local_or_self_hosted
   network_policy: benchmark_dependent
   credential_boundary: not_specified
   approval_policy: not_specified
   audit_log: exploit_trajectory_reports
   telemetry_type: reward_hacking_traces
   destructive_action_scope: benchmark_sandbox
+  why_it_matters: Terminal Wrench exposes concrete reward-hacking trajectories
+    and verifier failure modes that can be reused for agent release gates and
+    benchmark-hardening regression tests.
   reader_paths:
   - build-evals
   - safety-audit
@@ -23970,6 +24086,76 @@
   destructive_action_scope: environment_limited_or_unknown
   reader_paths:
   - train-rollouts
+- name: RACES / Verifiable Environment Composition
+  category: training-framework
+  year: 2026
+  modality:
+  - verifiable_environments
+  - reasoning
+  - rlvr
+  - environment_composition
+  action_space:
+  - environment_composition
+  - task_generation
+  - rollout_training
+  reward_type: composed_environment_task_success
+  verifier: programmatic_environment_composition_verifier
+  trainable: true
+  resettable: generated_world
+  trajectories: synthetic
+  sandbox: generated_interactive_world
+  production_signal: recursive_verifiable_environment_scaling_for_agent_rl
+  url: https://arxiv.org/abs/2606.12373
+  repo:
+  notes: RACES composes 300 verifiable environments with sequential, parallel,
+    sort, and select operators, using generated composite environments as RL
+    training substrates for reasoning generalization.
+  environment_count: 300
+  id: races-verifiable-environment-composition
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: verifiable_environment_composition_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12373
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: composite_verifiable_environment_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: generated_environment_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: generated_environment_runtime
+  negative_side_effect_checks: unknown
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: generated_environment
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: environment_composition_and_reward_logs
+  telemetry_type: composite_environment_rollout_metrics
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
 - name: CUA-Gym
   category: training-framework
   year: 2026
@@ -29945,6 +30131,86 @@
   - build-evals
   - safety-audit
   - release-gates
+- name: tau-Rec
+  category: api-world
+  year: 2026
+  modality:
+  - recommender_system
+  - tools
+  - conversational_agent
+  - policy
+  action_space:
+  - tool_call
+  - dialogue
+  - catalog_search
+  - recommendation
+  reward_type: catalog_predicate_and_policy_success
+  verifier: programmatic_catalog_predicate_and_policy_checker
+  trainable: partial
+  resettable: true
+  trajectories: false
+  sandbox: simulated_backend
+  production_signal: verifiable_conversational_recommender_agent_benchmark
+  url: https://github.com/nbharaths/tau-rec
+  repo: https://github.com/nbharaths/tau-rec
+  notes: Verifiable benchmark for conversational recommender agents with
+    reveal-tagged user constraints, catalog tools, policy checks, and
+    programmatic scoring against public task and catalog data.
+  task_count: 60
+  id: tau-rec
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: verifiable_recommender_agent_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.10156
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - dataset
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/nbharaths/tau-rec
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    - dataset
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: seeded_conversation_and_catalog_task_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: 'yes'
+  verifier_isolation: evaluator_runtime
+  negative_side_effect_checks: explicit
+  reproducibility: public_runnable
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: simulated_recommender_environment
+  runtime_host: local_or_cloud_sandbox
+  network_policy: model_api_required
+  credential_boundary: model_provider_api_keys
+  approval_policy: not_specified
+  audit_log: conversation_traces_and_trial_results
+  telemetry_type: messages_tool_calls_and_policy_scores
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - train-rollouts
 - name: PROVE / Synthesize and Reward
   category: training-framework
   year: 2026
@@ -30629,3 +30895,104 @@
   - safety-audit
   - release-gates
   - production-direction
+- name: ShoppingBench Trajectory Primitive
+  category: training-framework
+  year: 2026
+  modality:
+  - shopping
+  - tool_use
+  - agent_arena
+  - trajectory_data
+  - post_training
+  action_space:
+  - shopping_tool_call
+  - agentic_commerce_task
+  - trajectory_filtering
+  - sft_training
+  - rl_training
+  reward_type: shoppingbench_success_and_teacher_grounded_step_reward
+  verifier: shoppingbench_harness_state_checks_and_reasoning_judge
+  trainable: true
+  resettable: dataset_replay
+  trajectories: true
+  sandbox: service_environment
+  production_signal: incentive_aligned_agent_arena_trajectory_substrate
+  url: https://github.com/ORO-AI/shoppingbench-trajectory-primitive
+  repo: https://github.com/ORO-AI/shoppingbench-trajectory-primitive
+  notes: Public code and data companion for distilling a shopping agent from ORO
+    Subnet 15 ShoppingBench traces, including an 18K raw trace set, a 15K
+    filtered SFT corpus with evaluation holdout, trajectory-quality filters, SFT,
+    rejection, KTO, Dr. GRPO, and vLLM evaluation pipelines.
+  trajectory_count: 18000
+  id: shoppingbench-trajectory-primitive
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: agent_arena_trajectory_primitive
+  status: public_framework
+  content_evidence: true
+  sources:
+  - url: https://github.com/ORO-AI/shoppingbench-trajectory-primitive
+    type: repository
+    supports:
+    - overview
+    - code
+    - reproducibility
+    - trajectories
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://arxiv.org/abs/2606.10064
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://huggingface.co/datasets/oro-ai/sn15-shoppingbench-traces-18k
+    type: dataset
+    supports:
+    - dataset
+    - trajectories
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://huggingface.co/datasets/oro-ai/sn15-shoppingbench-sft-15k
+    type: dataset
+    supports:
+    - dataset
+    - trajectories
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: public
+  trajectory_access: public
+  trajectory_type: shoppingbench_subnet_traces_and_sft_corpus
+  trajectory_public: true
+  reset_support: dataset_replay
+  reset_mechanism: leak_cluster_guarded_train_eval_split
+  trainability_status: public_training_ready
+  sft_fit: strong
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: hybrid
+  verifier_recomputable: partial
+  verifier_isolation: shoppingbench_harness
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: shoppingbench_tool_harness
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: modal_and_service_secrets_for_training_runs
+  approval_policy: offline_training_and_eval
+  audit_log: trajectory_filter_and_eval_records
+  telemetry_type: tool_call_trajectories_and_success_scores
+  destructive_action_scope: benchmark_harness
+  why_it_matters: Shows how an incentive-aligned agent arena can become a reusable
+    trajectory substrate for small-model tool-agent distillation and RL.
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - foundations

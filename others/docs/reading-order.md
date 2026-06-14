@@ -28,8 +28,8 @@ worlds, then training infrastructure.
 | Goal | Start here | Then read |
 | --- | --- | --- |
 | Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified | AndroidWorld, AndroidDaily, MobileGym, MacArena, Workflow-GYM, WeaveBench, EntWorld, LivingScreen, DynamicGUIBench, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, Alem, Ego2Web, MCPWorld, MobileWorld, DigiWorld, Toolathlon, MCP-AgentBench, MCP-Flow, MCP-Persona, MedCTA, AgentBeats, tau-bench, AppWorld, Terminal-Bench |
-| Train from rollouts | SWE-Gym, AgentGym, AgentGym-RL, Agent-World | Role-Agent, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, SimWorld Studio, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, MobileGym, Agent-RLVR, TOUCAN, MCP-Flow, EurekAgent, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning |
-| Study infrastructure and protocols | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox | HyperTool, AgentBeats, HarnessAPI, Agent-First Tool API, MCP-Flow, Agent-BOM, AgentSkillOS, Anthropic Agent Skills |
+| Train from rollouts | SWE-Gym, AgentGym, AgentGym-RL, Agent-World | Role-Agent, ShoppingBench Trajectory Primitive, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, SimWorld Studio, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, MobileGym, Agent-RLVR, TOUCAN, MCP-Flow, EurekAgent, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning |
+| Study infrastructure and protocols | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox | CLI-Anything, HyperTool, AgentBeats, HarnessAPI, Agent-First Tool API, MCP-Flow, Agent-BOM, AgentSkillOS, Anthropic Agent Skills |
 | Audit agent safety | PhoneSafety / Safe, or Simply Incapable?, CAPED, MyPhoneBench, SkillSafetyBench | BraveGuard / Open-World CUA Guard, StakeBench, MIRAGE, Context-Fractured Decomposition Attacks, SafeMCP, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox |
 | Study GUI/VLM agents | OSWorld, AndroidWorld, MobileGym, MCPWorld, OmniACT | OpenCUA, UI-TARS, InfiGUI-R1, ScreenSpot, AndroidDaily, SimuWoB, iOSWorld, Workflow-GYM, WeaveBench, EntWorld, LivingScreen, DynamicGUIBench, DragOn, ComAct / ComCADBench, MedCUA-Bench, Teach-and-Repeat |
 | Study web agents | MiniWoB++, WebShop, WebArena | VisualWebArena, BrowserGym, WorkArena, Mind2Web, BrowseComp, StakeBench |
@@ -73,6 +73,7 @@ reliability.
 
 - SWE-bench, SWE-bench Verified, SWE-Gym.
 - Terminal-Bench.
+- CLI-Anything for agent-native command-line harnesses around existing software.
 - MLE-bench and PaperBench.
 - TheAgentCompany.
 - BrowseComp.
@@ -86,7 +87,7 @@ the task produce reusable model-improvement data?"
 
 - AgentGym.
 - AgentGym-RL and Agent-RLVR.
-- Agent-World, Role-Agent, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, SimWorld Studio, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, EurekAgent, and Agent World Model.
+- Agent-World, Role-Agent, ShoppingBench Trajectory Primitive, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, SimWorld Studio, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, EurekAgent, and Agent World Model.
 - TOUCAN, MCP-Flow, HyperTool, and MCP-Cosmos.
 - Agentic Environment Engineering Survey and Agentic World Modeling for environment-engineering taxonomy and lifecycle framing.
 - GUI-GENESIS and Orchard.

@@ -55,11 +55,11 @@ coverage and evidence fields.
 
 | Reader goal | Start with |
 |---|---|
-| Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified, AndroidWorld, AndroidDaily, MobileGym, MacArena, Workflow-GYM, WeaveBench, EntWorld, LivingScreen, DynamicGUIBench, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, Alem, Ego2Web, MCPWorld, MCP-Persona, MedCTA, AgentBeats, StakeBench. |
-| Audit agent safety | PhoneSafety / Safe, or Simply Incapable?, CAPED, MIRAGE, MyPhoneBench, SkillSafetyBench, AgentTrust, AgentWall, SafeMCP, MCP-SafetyBench, ASPI, WARD, BraveGuard / Open-World CUA Guard, Context-Fractured Decomposition Attacks, StakeBench. |
+| Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified, AndroidWorld, AndroidDaily, MobileGym, MacArena, Workflow-GYM, WeaveBench, EntWorld, LivingScreen, DynamicGUIBench, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, Alem, Ego2Web, MCPWorld, MCP-Persona, MedCTA, tau-Rec, AgentBeats, StakeBench. |
+| Audit agent safety | PhoneSafety / Safe, or Simply Incapable?, CAPED, MIRAGE, MyPhoneBench, SkillSafetyBench, AgentTrust, AgentWall, SafeMCP, MCP-SafetyBench, ASPI, WARD, BraveGuard / Open-World CUA Guard, Terminal Wrench, BenchJack, Context-Fractured Decomposition Attacks, StakeBench. |
 | Debug agent failures | AgentForesight, AgentRx, Who&When, AgentStepper, Terminal Wrench, FATE, AgentLAB, BenchJack, AgentPressureBench, Human-Guided Harm Recovery / BackBench, Evidence-Supported Bounds for Interactive-Agent Evaluation. |
-| Train from rollouts | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis, Role-Agent, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, SimWorld Studio, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, STAMP / Memory-World, TOUCAN, MCP-Flow, HyperTool, EurekAgent, GUI-GENESIS, RAGEN, VAGEN, rLLM, Agent Lightning. |
-| Track production direction | OpenAI Computer-Using Agent, OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, Multi-Agent Computer Use, Agent-First Tool API, HarnessAPI, AgentBeats, SafeMCP, MCP-Flow, Agent-Diff, Firefly Verified Tool-Call Data, BraveGuard / Open-World CUA Guard. |
+| Train from rollouts | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis, RACES / Verifiable Environment Composition, Role-Agent, OpenSkill, CoEvolve, ProPlay, ADWM, ShoppingBench Trajectory Primitive, Game Code World Model Generation, SimWorld Studio, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, STAMP / Memory-World, TOUCAN, MCP-Flow, HyperTool, EurekAgent, GUI-GENESIS, RAGEN, VAGEN, rLLM, Agent Lightning. |
+| Track production direction | OpenAI Computer-Using Agent, OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, Multi-Agent Computer Use, CLI-Anything, Agent-First Tool API, HarnessAPI, AgentBeats, SafeMCP, MCP-Flow, Agent-Diff, Firefly Verified Tool-Call Data, BraveGuard / Open-World CUA Guard. |
 | Study foundations | WebShop, WebArena, OSWorld, SWE-bench, AppWorld, tau-bench, AgentGym, MineDojo, AI2-THOR, Agentic World Modeling, Agentic Environment Engineering Survey. |
 
 Recent coverage focus:
@@ -69,8 +69,9 @@ Recent coverage focus:
 | Personalized and clinical tool worlds | MCP-Persona, MedCTA, CHI-Bench, PhysicianBench |
 | Professional GUI and computer-use workflows | MacArena, Workflow-GYM, WeaveBench, EntWorld, LivingScreen, DynamicGUIBench, AndroidDaily, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, OpenComputer, CUA-Gym, ClawGUI |
 | Web, mobile, MCP, and tool-agent safety | StakeBench, CAPED, MIRAGE, ASPI, WARD, Trust No Tool / TRUST-Bench, SafeMCP, Context-Fractured Decomposition Attacks |
-| Rollout and reward infrastructure | Role-Agent, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, AliyunConsoleAgent, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, STAMP / Memory-World, HomeFlow, Agent-World, EnvFactory, EvoEnv, Firefly Verified Tool-Call Data |
-| MCP and agent infrastructure | MCP-Flow, HyperTool, AgentBeats, HarnessAPI, Agent-First Tool API, MCP Proxy Access Control, VIPER-MCP |
+| Benchmark hardening and reward-hacking audits | Terminal Wrench, BenchJack, Rubric Reward Hacking, Evidence-Supported Bounds for Interactive-Agent Evaluation |
+| Rollout and reward infrastructure | Role-Agent, OpenSkill, CoEvolve, ProPlay, ADWM, ShoppingBench Trajectory Primitive, Game Code World Model Generation, AliyunConsoleAgent, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, STAMP / Memory-World, HomeFlow, Agent-World, RACES, EnvFactory, EvoEnv, Firefly Verified Tool-Call Data |
+| MCP and agent infrastructure | CLI-Anything, MCP-Flow, HyperTool, AgentBeats, HarnessAPI, Agent-First Tool API, MCP Proxy Access Control, VIPER-MCP |
 | Research environments and environment engineering | Emergence World, Alem, SimWorld Studio, EurekAgent, Agentic Environment Engineering Survey, Agentic World Modeling |
 
 | Label | Meaning |
@@ -169,7 +170,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [Agent Skills for Large Language Models](https://arxiv.org/abs/2602.12430) [[Code](https://github.com/scienceaix/agentskills)] — Infrastructure · Skill architecture and governance
 - [Overeager Coding Agents / OverEager-Bench](https://arxiv.org/abs/2605.18583) — Safety Control · Coding-agent scope control
 - 🌟 [PEEK](https://zhuohangu.github.io/blog-post-peek/) [[Code](https://github.com/zhuohangu/peek)] — Infrastructure · Long-context orientation cache
-- [Terminal Wrench](https://arxiv.org/abs/2604.17596) — Eval Candidate · Agent reward-hacking benchmark
+- 🌟 [Terminal Wrench](https://github.com/few-sh/terminal-wrench) [[Code](https://github.com/few-sh/terminal-wrench)] — Training Candidate · Public reward-hacking trajectories
 - [Too Helpful to Be Safe](https://arxiv.org/abs/2601.10758) — Eval Candidate · User-mediated attack benchmark
 - [Trust No Tool / TRUST-Bench](https://arxiv.org/abs/2605.17453) — Safety Control · Untrusted tool-feedback benchmark
 - [Toward Securing AI Agents Like Operating Systems](https://arxiv.org/abs/2605.14932) — Safety Control · OS-style agent security architecture
@@ -178,6 +179,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [Agent-C](https://arxiv.org/abs/2512.23738) [[Code](https://github.com/structuredllm/agent-c)] — Safety Control · Temporal tool constraints
 - 🌟 [Anthropic Agent Skills](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills) [[Code](https://github.com/agentskills/agentskills)] — Infrastructure
 - [ChatGPT agent](https://openai.com/index/chatgpt-agent-system-card/) — Product Signal · Closed product
+- 🌟 [CLI-Anything](https://clianything.cc/) [[Code](https://github.com/HKUDS/CLI-Anything)] — Infrastructure · Agent-native software CLI registry
 - 🌟 [MCP Security Bench](https://arxiv.org/abs/2510.15994) [[Code](https://github.com/dongsenzhang/MSB)] — Eval Candidate · MCP attack benchmark
 - 🌟 [MCPSecBench](https://arxiv.org/abs/2508.13220) [[Code](https://github.com/ais2lab/mcpsecbench)] — Eval Candidate · Runnable
 - [OpenAI Responses API](https://openai.com/index/new-tools-for-building-agents/) — Product Signal · Closed product
@@ -389,6 +391,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [OccuBench](https://arxiv.org/abs/2604.10866) [[Code](https://github.com/GregxmHu/OccuBench)] — Training Candidate · Partial trajectories
 - [PhysicianBench](https://healthrex.github.io/PhysicianBench/) — Training Candidate · FHIR EHR workflows
 - [STT-Arena](https://arxiv.org/abs/2605.18548) — Training Candidate · Spatio-temporal tool-use replanning
+- 🌟 [tau-Rec](https://github.com/nbharaths/tau-rec) [[Code](https://github.com/nbharaths/tau-rec)] — Training Candidate · Verifiable recommender-agent benchmark
 - [TOBench / MM-ToolBench](https://arxiv.org/abs/2605.16909) — Eval Candidate · Omni-modal MCP tool workflows
 - [World of Workflows](https://arxiv.org/abs/2601.22130) — Training Candidate · Sandbox
 ### 2025
@@ -518,6 +521,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [Agent^2 RL-Bench](https://arxiv.org/abs/2604.10547) [[Code](https://github.com/microsoft/RD-Agent/tree/main/rdagent/scenarios/rl/autorl_bench)] — Training Candidate · Agentic RL post-training benchmark
 - 🌟 [AliyunConsoleAgent](https://arxiv.org/abs/2606.09447) [[Code](https://github.com/AlibabaResearch/aliyun-console-agent)] — Training Infrastructure · Cloud-console RL rollouts
 - [CUA-Gym](https://arxiv.org/abs/2605.25624) — Training Infrastructure · Verifiable CUA RLVR environments
+- [RACES / Verifiable Environment Composition](https://arxiv.org/abs/2606.12373) — Training Infrastructure · Recursive verifiable environment scaling
 - [PRO-CUA](https://arxiv.org/abs/2605.29119) — Training Infrastructure · Process-reward CUA optimization
 - [ClawGUI](https://arxiv.org/abs/2604.11784) — Training Infrastructure · GUI RL/eval/deployment harness
 - [CoEvolve](https://arxiv.org/abs/2604.15840) — Training Infrastructure · Agent-data mutual evolution
@@ -551,6 +555,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [ProPlay](https://arxiv.org/abs/2606.12780) [[Code](https://github.com/antman9914/proplay)] — Training Infrastructure · Procedural world model preplay
 - [Proxy State-Based Evaluation](https://arxiv.org/abs/2602.16246) — Training Infrastructure · Verifiable proxy state
 - 🌟 [Role-Agent](https://arxiv.org/abs/2606.10917) [[Code](https://github.com/AMAP-ML/roleagent)] — Training Infrastructure · Dual-role agent-environment evolution
+- 🌟 [ShoppingBench Trajectory Primitive](https://github.com/ORO-AI/shoppingbench-trajectory-primitive) [[Code](https://github.com/ORO-AI/shoppingbench-trajectory-primitive)] — Training Infrastructure · Public shopping-agent trajectory corpus
 - [PROVE / Synthesize and Reward](https://arxiv.org/abs/2606.03892) — Training Infrastructure · Live MCP tool-use RL
 - [RAW-Dream](https://arxiv.org/abs/2605.12334) — Training Infrastructure · Task-agnostic world-model RL
 - [ReVision](https://arxiv.org/abs/2605.11212) — Training Infrastructure · Efficient visual history

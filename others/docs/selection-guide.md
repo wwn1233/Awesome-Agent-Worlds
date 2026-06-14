@@ -35,6 +35,7 @@ What do you need the world to prove?
 ├── Tool/API and enterprise workflow ability
 │   ├── Need stateful apps? -> AppWorld
 │   ├── Need policy-following tool calls? -> tau-bench, tau2-bench
+│   ├── Need agent-native CLI harnesses for existing software? -> CLI-Anything
 │   ├── Need MCP breadth, tool trajectories, or safety? -> Toolathlon, TOUCAN, MCP-Flow, MCP-AgentBench, SafeMCP, MCP-SafetyBench
 │   └── Need personalized or clinical tool agents? -> MCP-Persona, MedCTA, MedCUA-Bench, CHI-Bench
 ├── Research or ML engineering ability
@@ -46,6 +47,7 @@ What do you need the world to prove?
 │   └── Need broad knowledge tasks? -> GAIA, AgentBoard
 └── Training from interaction
     ├── Need multi-world, cloud-console, mobile-demonstration, scientific-discovery, or live tool-use rollouts? -> AgentGym, AgentGym-RL, Agent-World, Role-Agent, CoEvolve, AliyunConsoleAgent, HomeFlow, Teach-and-Repeat, EurekAgent, PROVE / Synthesize and Reward, TOUCAN, MCP-Flow, RAGEN, VAGEN
+    ├── Need agent-arena trajectory distillation? -> ShoppingBench Trajectory Primitive
     ├── Need self-evolution or procedural world-model training? -> OpenSkill, ProPlay, ADWM, Game Code World Model Generation, SimWorld Studio
     ├── Need CUA process-reward training? -> CUA-Gym, PRO-CUA, BraveGuard / Open-World CUA Guard
     ├── Need RL over arbitrary agents? -> Agent Lightning, rLLM
@@ -79,6 +81,7 @@ What do you need the world to prove?
 | Tool-agent artifact provenance | Context-Fractured Decomposition Attacks | Reproducible trigger and attack-success analysis | Attack evidence should be separated from general benchmark coverage. |
 | Enterprise workflow | WorkArena | Task state and policy checks | Domain coverage. |
 | API agents | AppWorld | Simulated database state | Gap from real APIs. |
+| Agent-native software interfaces | CLI-Anything | CLI command outputs and harness tests | App-specific CLIs need capability boundaries, credential scoping, and side-effect controls. |
 | Personalized MCP agents | MCP-Persona | Simulated API task success | Persona realism and API diversity need source-level inspection. |
 | MCP power regulation | SafeMCP | Environment-grounded tool-acquisition risk evaluation | Defense claims depend on threat coverage and MCP server boundaries. |
 | Agent assessment protocols | AgentBeats | Judge-agent assessment records | Agentified evaluation should be checked against reproducibility and judge variance. |
@@ -102,6 +105,7 @@ What do you need the world to prove?
 | Live MCP tool-use RL | PROVE / Synthesize and Reward | Programmatic rewards on stateful MCP servers | Live-server rewards need careful reset and side-effect boundaries. |
 | CUA safety guard | BraveGuard / Open-World CUA Guard | Trajectory-level risk detection | Guard evaluation depends on attack and benign-task coverage. |
 | Dual-role agent training | Role-Agent | Prediction-observation alignment and benchmark return | Process rewards should be checked against real rollout quality, not just final score. |
+| Agent-arena trajectory distillation | ShoppingBench Trajectory Primitive | ShoppingBench harness checks and trajectory-quality filtering | Arena traces need leak-cluster, reward-quality, and benchmark-contamination checks before reuse. |
 | Open-world skill self-evolution | OpenSkill | Self-built virtual verifier and final target evaluation | Code is not yet a public runnable artifact; treat as paper/project evidence. |
 | Agent-data mutual evolution | CoEvolve | Environment-validated task synthesis | Synthetic task gains depend on benchmark coverage and validation boundary. |
 | Procedural world-model preplay | ProPlay | Benchmark task success and procedure-graph ablation | Procedure graphs can overfit to benchmark-specific task structure. |
@@ -114,8 +118,8 @@ What do you need the world to prove?
 |---|---|---|
 | Researcher | WebArena, OSWorld, SWE-bench, AppWorld, PaperBench, Emergence World, EurekAgent | Do not compare scores without checking verifier reliability and contamination risk. |
 | Evaluation builder | OSWorld-Verified, WebArena-Verified, BrowserGym, AndroidWorld, AndroidDaily, MobileGym, MacArena, Workflow-GYM, WeaveBench, EntWorld, LivingScreen, DynamicGUIBench, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, Alem, SimWorld Studio, Ego2Web, MCPWorld, MobileWorld, Toolathlon, MCP-AgentBench, MCP-Flow, MCP-Persona, MedCTA, AgentBeats, tau-bench | Prefer resettable or replayable worlds; live websites and apps drift. |
-| Post-training engineer | AgentGym, AgentGym-RL, Agent-World, Role-Agent, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, SimWorld Studio, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, MobileGym, Agent-RLVR, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
-| Infrastructure builder | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox, HyperTool, AgentBeats, HarnessAPI, Agent-First Tool API, MCP-Flow, Agent-BOM, AgentSkillOS, Anthropic Agent Skills | Separate protocol or runtime direction from runnable world evidence and public trajectory availability. |
+| Post-training engineer | AgentGym, AgentGym-RL, Agent-World, Role-Agent, ShoppingBench Trajectory Primitive, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, SimWorld Studio, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, MobileGym, Agent-RLVR, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
+| Infrastructure builder | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox, CLI-Anything, HyperTool, AgentBeats, HarnessAPI, Agent-First Tool API, MCP-Flow, Agent-BOM, AgentSkillOS, Anthropic Agent Skills | Separate protocol or runtime direction from runnable world evidence and public trajectory availability. |
 | Safety auditor | BraveGuard / Open-World CUA Guard, StakeBench, CAPED, MIRAGE, Context-Fractured Decomposition Attacks, PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench, SafeMCP, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox | Separate unsafe action from simple agent incapability before drawing safety conclusions. |
 | Product lead | OpenAI Computer-Using Agent, OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, Project Mariner | Product signals show direction, not reproducible public training evidence. |
 
