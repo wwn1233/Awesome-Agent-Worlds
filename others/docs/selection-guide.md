@@ -10,13 +10,14 @@ What do you need the world to prove?
 ├── GUI or computer-control ability
 │   ├── Need public reproducibility? -> OSWorld, OSWorld-Verified, OpenCUA
 │   ├── Need macOS coverage? -> macOSWorld, MacArena
-│   ├── Need professional desktop workflows? -> Workflow-GYM, SaaS-Bench
+│   ├── Need professional desktop workflows? -> Workflow-GYM, SaaS-Bench, ComAct / ComCADBench
+│   ├── Need fine-grained drag interactions? -> DragOn
 │   ├── Need hybrid GUI, CLI, code, browser, and tool orchestration? -> WeaveBench
 │   ├── Need parallel CUA orchestration? -> Multi-Agent Computer Use
 │   ├── Need dynamic video-bearing GUI screens? -> LivingScreen, DynamicGUIBench
 │   ├── Need mobile interaction? -> AndroidWorld, MobileWorld, MobileGym, MyPhoneBench
 │   ├── Need phone-world synthesis? -> PhoneWorld, SimuWoB, MobileGym
-│   ├── Need personalization or memory on phones? -> iOSWorld, MemGUI-Bench, STAMP / Memory-World
+│   ├── Need personalization, memory, or demonstrations on phones? -> iOSWorld, MemGUI-Bench, STAMP / Memory-World, Teach-and-Repeat
 │   ├── Need GUI RL, evaluation, and deployment harnessing? -> ClawGUI, CUA-Gym, PRO-CUA
 │   └── Need model-centered GUI grounding or synthetic GUI rollouts? -> UI-TARS, MCPWorld, DigiWorld, GUI-GENESIS, Video2GUI, OmniACT
 ├── Browser and web workflow ability
@@ -32,14 +33,16 @@ What do you need the world to prove?
 ├── Tool/API and enterprise workflow ability
 │   ├── Need stateful apps? -> AppWorld
 │   ├── Need policy-following tool calls? -> tau-bench, tau2-bench
-│   ├── Need MCP breadth, tool trajectories, or safety? -> Toolathlon, TOUCAN, MCP-Flow, MCP-AgentBench, MCP-SafetyBench
-│   └── Need personalized or clinical tool agents? -> MCP-Persona, MedCTA, CHI-Bench
+│   ├── Need MCP breadth, tool trajectories, or safety? -> Toolathlon, TOUCAN, MCP-Flow, MCP-AgentBench, SafeMCP, MCP-SafetyBench
+│   └── Need personalized or clinical tool agents? -> MCP-Persona, MedCTA, MedCUA-Bench, CHI-Bench
 ├── Research or ML engineering ability
 │   ├── Need paper replication? -> PaperBench
 │   ├── Need ML competition workflows? -> MLE-bench
+│   ├── Need scientific-discovery environments? -> EurekAgent
+│   ├── Need long-horizon multi-agent autonomy? -> Emergence World
 │   └── Need broad knowledge tasks? -> GAIA, AgentBoard
 └── Training from interaction
-    ├── Need multi-world, cloud-console, or simulated physical-world rollouts? -> AgentGym, AgentGym-RL, Agent-World, AliyunConsoleAgent, HomeFlow, TOUCAN, MCP-Flow, RAGEN, VAGEN
+    ├── Need multi-world, cloud-console, mobile-demonstration, scientific-discovery, or live tool-use rollouts? -> AgentGym, AgentGym-RL, Agent-World, AliyunConsoleAgent, HomeFlow, Teach-and-Repeat, EurekAgent, PROVE / Synthesize and Reward, TOUCAN, MCP-Flow, RAGEN, VAGEN
     ├── Need CUA process-reward training? -> CUA-Gym, PRO-CUA, BraveGuard / Open-World CUA Guard
     ├── Need RL over arbitrary agents? -> Agent Lightning, rLLM
     └── Need open training stacks? -> Orchard, verl, OpenRLHF, TRL
@@ -51,6 +54,8 @@ What do you need the world to prove?
 | --- | --- | --- | --- |
 | GUI evaluation | OSWorld-Verified | Execution state | Expensive and brittle UI state. |
 | Hybrid computer-use evaluation | WeaveBench | Trajectory-aware artifact judge | Artifact-aware judging is useful, but paper-only evidence limits runtime reproducibility. |
+| Professional CAD software manipulation | ComAct / ComCADBench | Geometric accuracy and task success | Paper-only evidence should not be treated as public runtime readiness. |
+| Drag-based GUI interaction | DragOn | Drag grounding accuracy | Paper-only evidence should not be treated as public dataset or runtime availability. |
 | Parallel computer-use orchestration | Multi-Agent Computer Use | Benchmark-specific success and rubric judges | Gains depend on task decomposability and the underlying benchmark reset boundary. |
 | Dynamic GUI/video screens | LivingScreen | Task success and information efficiency | Observation cost must be interpreted alongside task success. |
 | High-dynamic GUI environments | DynamicGUIBench | Benchmark task success | Paper-only evidence should not be treated as public runtime readiness. |
@@ -59,17 +64,23 @@ What do you need the world to prove?
 | Phone environment synthesis | PhoneWorld / SimuWoB | Rule or synthetic task verifier | Paper-only evidence should not be over-read as public code. |
 | Personalized phone agents | iOSWorld | Task rubrics and simulator tasks | Personal data realism is hard to compare across benchmarks. |
 | Mobile memory training | STAMP / Memory-World | Task success and memory accuracy | Paper-only evidence should be kept separate from public runtime readiness. |
+| Mobile demonstration training | Teach-and-Repeat | Operational knowledge extraction and downstream task success | Demonstration-derived knowledge should be separated from general mobile runtime readiness. |
 | Browser agents | BrowserGym | Benchmark-dependent | Website state and contamination. |
 | Physical-to-web grounding | Ego2Web | Ego2WebJudge with visual evidence | Live websites and judge variance require careful replay notes. |
 | Web-agent safety | StakeBench / ASPI | Scenario or stakeholder judge | Prompt-injection success can be confused with task failure. |
 | Enterprise workflow | WorkArena | Task state and policy checks | Domain coverage. |
 | API agents | AppWorld | Simulated database state | Gap from real APIs. |
 | Personalized MCP agents | MCP-Persona | Simulated API task success | Persona realism and API diversity need source-level inspection. |
+| MCP power regulation | SafeMCP | Environment-grounded tool-acquisition risk evaluation | Defense claims depend on threat coverage and MCP server boundaries. |
+| Agent assessment protocols | AgentBeats | Judge-agent assessment records | Agentified evaluation should be checked against reproducibility and judge variance. |
 | Clinical tool agents | MedCTA | Human and tool-agent trajectories | Clinical coverage should not be treated as deployment readiness. |
+| Clinical computer-use agents | MedCUA-Bench | Deterministic task and clinical safety checks | Clinical GUI coverage is benchmark evidence, not deployment readiness. |
 | Policy-following tools | tau-bench | User/tool/domain policy | Narrow domains. |
 | Coding agents | SWE-bench Verified | Unit tests and issue acceptance | Test leakage and issue ambiguity. |
 | Trainable coding | SWE-Gym | Runtime tests and rollouts | Limited repository distribution. |
 | Research agents | PaperBench | Rubric judge and subtask scores | High cost and judge variance. |
+| Scientific-discovery agents | EurekAgent | Metric-driven execution environment | Environment constraints and reward-hacking defenses need source-level inspection. |
+| Long-horizon multi-agent autonomy | Emergence World | Continuous simulation logs and governance metrics | Live external data and long-running dynamics complicate reset and reproducibility. |
 | Terminal agents | Terminal-Bench | Command-line task success | Environment maintenance. |
 | Embodied agents | MineDojo / AI2-THOR | Simulator state | Sim-to-real transfer. |
 | Generated worlds | HY-World 2.0 / Cosmos / Genie 3 | Generated asset or world quality | Evaluation standard still immature. |
@@ -77,18 +88,19 @@ What do you need the world to prove?
 | Cloud-console web-agent training | AliyunConsoleAgent | Backend audit logs and outcome rewards | Cloud credentials and account isolation must be checked before reuse. |
 | GUI RL/eval harness | ClawGUI | Benchmark pipeline and process reward | Public code and device coverage should be checked before treating it as reusable infrastructure. |
 | CUA process rewards | PRO-CUA | Process reward model | Reward shaping must be checked against actual trajectory evidence. |
+| Live MCP tool-use RL | PROVE / Synthesize and Reward | Programmatic rewards on stateful MCP servers | Live-server rewards need careful reset and side-effect boundaries. |
 | CUA safety guard | BraveGuard / Open-World CUA Guard | Trajectory-level risk detection | Guard evaluation depends on attack and benign-task coverage. |
 
 ## Reader Starter Packs
 
 | Reader | Start with | Caution |
 |---|---|---|
-| Researcher | WebArena, OSWorld, SWE-bench, AppWorld, PaperBench | Do not compare scores without checking verifier reliability and contamination risk. |
-| Evaluation builder | OSWorld-Verified, WebArena-Verified, BrowserGym, AndroidWorld, MobileGym, MacArena, Workflow-GYM, WeaveBench, LivingScreen, DynamicGUIBench, Multi-Agent Computer Use, Ego2Web, MCPWorld, MobileWorld, Toolathlon, MCP-AgentBench, MCP-Flow, MCP-Persona, MedCTA, tau-bench | Prefer resettable or replayable worlds; live websites and apps drift. |
-| Post-training engineer | AgentGym, AgentGym-RL, Agent-World, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, MobileGym, Agent-RLVR, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
-| Infrastructure builder | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox, HarnessAPI, Agent-First Tool API, MCP-Flow, Agent-BOM, AgentSkillOS, Anthropic Agent Skills | Separate protocol or runtime direction from runnable world evidence and public trajectory availability. |
-| Safety auditor | BraveGuard / Open-World CUA Guard, StakeBench, PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox | Separate unsafe action from simple agent incapability before drawing safety conclusions. |
-| Product lead | OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, OpenAI CUA, Project Mariner | Product signals show direction, not reproducible public training evidence. |
+| Researcher | WebArena, OSWorld, SWE-bench, AppWorld, PaperBench, Emergence World, EurekAgent | Do not compare scores without checking verifier reliability and contamination risk. |
+| Evaluation builder | OSWorld-Verified, WebArena-Verified, BrowserGym, AndroidWorld, MobileGym, MacArena, Workflow-GYM, WeaveBench, LivingScreen, DynamicGUIBench, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, Ego2Web, MCPWorld, MobileWorld, Toolathlon, MCP-AgentBench, MCP-Flow, MCP-Persona, MedCTA, AgentBeats, tau-bench | Prefer resettable or replayable worlds; live websites and apps drift. |
+| Post-training engineer | AgentGym, AgentGym-RL, Agent-World, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, Multi-Agent Computer Use, STAMP / Memory-World, PhoneWorld, MobileGym, Agent-RLVR, TOUCAN, MCP-Flow, MCP-Cosmos, GUI-GENESIS, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
+| Infrastructure builder | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox, HyperTool, AgentBeats, HarnessAPI, Agent-First Tool API, MCP-Flow, Agent-BOM, AgentSkillOS, Anthropic Agent Skills | Separate protocol or runtime direction from runnable world evidence and public trajectory availability. |
+| Safety auditor | BraveGuard / Open-World CUA Guard, StakeBench, PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench, SafeMCP, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox | Separate unsafe action from simple agent incapability before drawing safety conclusions. |
+| Product lead | OpenAI Computer-Using Agent, OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, Project Mariner | Product signals show direction, not reproducible public training evidence. |
 
 ## Inclusion Criteria
 

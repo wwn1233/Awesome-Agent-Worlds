@@ -63,7 +63,7 @@ resource contributes.
 - Production signal:
 - Primary source:
 - Source support tags:
-- Source checked at:
+- Evidence date:
 - Source confidence:
 
 Allowed support tags: `overview`, `status`, `reproducibility`, `code`,

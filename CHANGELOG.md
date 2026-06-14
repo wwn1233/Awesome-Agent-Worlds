@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-14
+
+- Added AgentBeats, SafeMCP, DragOn, and Teach-and-Repeat to strengthen agentified assessment protocols, MCP safety controls, drag-based GUI interaction, and mobile demonstration-trajectory training coverage.
+- Added HyperTool, ComAct / ComCADBench, MedCUA-Bench, and PROVE / Synthesize and Reward to the public index for MCP-style tool execution, professional software manipulation, clinical computer-use evaluation, and live MCP tool-use RL.
+- Refreshed the weekly Hot Papers view with new tracking candidates for MCP-style tool execution, agentified assessment, professional software manipulation, clinical computer-use agents, live tool-use RL, MCP safety, drag-based GUI interaction, and mobile demonstration trajectories.
+- Aligned production-signal routing with the indexed OpenAI Computer-Using Agent entry.
+- Added Agentic Environment Engineering Survey, Emergence World, and EurekAgent to strengthen environment-engineering, long-horizon multi-agent autonomy, and scientific-discovery environment coverage.
+
 ## 2026-06-13
 
 - Added MacArena, MobileGym, PhoneWorld, SimuWoB, iOSWorld, and CUA-Gym to the public index, Resource Index, and Static Explorer; refreshed weekly Hot Papers indexing for matching recent papers.
@@ -20,7 +28,7 @@
 - Added surface-card filtering to the Static Explorer so infrastructure, web, GUI, mobile, code, API, research, embodied, and training entries can be opened directly from the homepage map.
 - Refined the Hot Papers wording around evidence standards for main-index inclusion.
 - Clarified that the Static Explorer shows a compact Hot Papers strip while the Hot Papers document keeps the full weekly table.
-- Clarified Hot Papers catalog status labels for indexed and watchlist items.
+- Clarified Hot Papers catalog status labels for indexed and tracking items.
 
 ## 2026-05-22
 

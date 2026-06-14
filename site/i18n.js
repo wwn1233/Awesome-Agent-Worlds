@@ -61,7 +61,7 @@
       allResetModes: "All reset modes",
       sortBy: "Sort by",
       score: "score",
-      catalogStatus: { indexed: "indexed", monitor: "watchlist", watchlist: "watchlist" }
+      catalogStatus: { indexed: "indexed", monitor: "tracking", tracking: "tracking" }
     },
     zh: {
       documentTitle: "Awesome Agent Worlds｜智能体世界索引",
@@ -124,7 +124,7 @@
       allResetModes: "全部重置方式",
       sortBy: "排序方式",
       score: "评分",
-      catalogStatus: { indexed: "已入库", monitor: "观察清单", watchlist: "观察清单" }
+      catalogStatus: { indexed: "已入库", monitor: "追踪中", tracking: "追踪中" }
     }
   };
 
@@ -173,7 +173,7 @@
       "safety-audit": "安全审计"
     },
     source: { high: "高可信", medium: "中等可信", official: "官方", reference: "参考" },
-    catalogStatus: { indexed: "已入库", monitor: "观察清单", watchlist: "观察清单" },
+    catalogStatus: { indexed: "已入库", monitor: "追踪中", tracking: "追踪中" },
     trajectory: {
       none: "无公开轨迹",
       partial: "部分轨迹",

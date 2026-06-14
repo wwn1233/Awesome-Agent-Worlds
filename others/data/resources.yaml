@@ -1295,6 +1295,295 @@
   - train-rollouts
   - build-evals
   - release-gates
+- name: AgentBeats
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - agent_assessment
+  - a2a
+  - mcp
+  - judge_agents
+  - benchmarking
+  action_space:
+  - judge_agent_task_management
+  - mcp_tool_access
+  - agent_assessment_protocol
+  reward_type: agentified_assessment_fidelity
+  verifier: judge_agent_assessment_and_public_record_fidelity
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: standardized_agent_assessment_with_a2a_and_mcp
+  url: https://arxiv.org/abs/2606.13608
+  repo:
+  notes: Agentified Agent Assessment framework that uses judge agents, A2A-style
+    task management, and MCP tool access to make agent assessment more open,
+    standardized, and reproducible across heterogeneous agent submissions.
+  competition_count: 1
+  id: agentbeats
+  resource_kind: agent_infrastructure
+  canonical_category: agent-infrastructure
+  subtype: agentified_assessment_protocol
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.13608
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: judge_agent_assessment_records
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_task_replay
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  opd_fit: candidate
+  release_gate_fit: strong
+  reward_family: benchmark
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: assessment_protocol
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: judge_agent_assessment_records
+  telemetry_type: judge_agent_reports_and_submission_metadata
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+- name: SafeMCP
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - mcp
+  - tool_acquisition
+  - agent_safety
+  - look_ahead_reasoning
+  action_space:
+  - tool_acquisition_filtering
+  - server_side_defense
+  - look_ahead_safety_reasoning
+  reward_type: mcp_power_and_safety_risk_reduction
+  verifier: environment_grounded_safety_risk_evaluation
+  trainable: false
+  resettable: benchmark_dependent
+  trajectories: false
+  sandbox: mcp_server
+  production_signal: proactive_power_regulation_for_mcp_tool_agents
+  url: https://arxiv.org/abs/2606.01991
+  repo:
+  notes: MCP safety-control framework that regulates an agent's tool-acquisition
+    power through environment-grounded look-ahead reasoning before potentially
+    risky MCP capabilities are granted.
+  id: safemcp
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: mcp_power_regulation_defense
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.01991
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: mcp_tool_acquisition_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: weak
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: mcp_server_boundary
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_server
+  runtime_host: unspecified
+  network_policy: policy_controlled
+  credential_boundary: policy_defined
+  approval_policy: safety_policy
+  audit_log: tool_acquisition_decisions
+  telemetry_type: mcp_capability_requests_and_risk_predictions
+  destructive_action_scope: policy_blocked_tools
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
+- name: DragOn
+  category: gui-world
+  year: 2026
+  modality:
+  - desktop
+  - web
+  - mobile
+  - gui
+  - drag_interaction
+  action_space:
+  - drag
+  - drag_and_drop
+  - text_highlighting
+  - cell_selection
+  - element_resizing
+  - slider_manipulation
+  reward_type: drag_grounding_accuracy
+  verifier: coordinate_match_drag_grounding
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: drag_based_gui_grounding_for_desktop_web_and_mobile_agents
+  url: https://arxiv.org/abs/2606.06322
+  repo:
+  notes: Benchmark and dataset for drag-based GUI interactions, covering common
+    drag operations such as text highlighting, cell selection, element resizing,
+    and slider manipulation across desktop, web, and mobile-style interfaces.
+  id: dragon
+  resource_kind: benchmark
+  canonical_category: gui-world
+  subtype: drag_based_gui_interaction_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.06322
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - dataset
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: drag_grounding_demonstrations
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: gui_drag_task_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: coordinate_match
+  verifier_family: coordinate_match
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: gui_task_replay
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: drag_start_end_and_target_reports
+  telemetry_type: pointer_paths_and_drag_outcomes
+  destructive_action_scope: benchmark_gui_state
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - release-gates
+- name: Teach-and-Repeat
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - video
+  - trajectory
+  - vlm
+  action_space:
+  - mobile_screen_operation
+  - demonstration_video_parsing
+  - operational_knowledge_guidance
+  reward_type: operation_semantics_prediction_and_downstream_task_success
+  verifier: mobile_screen_teach_benchmark_and_androidworld_task_success
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: mobile_demonstration_trajectory_knowledge_for_gui_agents
+  url: https://arxiv.org/abs/2606.12817
+  repo:
+  notes: Mobile GUI-agent training framework that extracts reusable operational
+    knowledge from screen-demonstration videos and uses it to improve downstream
+    GUI agents on AndroidWorld-style tasks.
+  id: teach-and-repeat
+  resource_kind: training_framework
+  canonical_category: mobile-world
+  subtype: mobile_screen_demonstration_knowledge_extraction
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12817
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: mobile_screen_demonstration_videos
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: demonstration_task_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: mobile_gui_benchmark
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mobile_gui_task_replay
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: extracted_operation_knowledge_and_task_success_reports
+  telemetry_type: screen_video_segments_and_action_predictions
+  destructive_action_scope: benchmark_mobile_state
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - release-gates
 - name: AcademiClaw
   category: research-world
   year: 2026
@@ -8323,6 +8612,220 @@
   reader_paths:
   - foundations
   - build-evals
+- name: Agentic Environment Engineering Survey
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - environment_engineering
+  - taxonomy
+  - synthesis
+  - evaluation
+  action_space:
+  - environment_modeling
+  - environment_synthesis
+  - environment_evaluation
+  - application_mapping
+  reward_type: environment_engineering_taxonomy
+  verifier: lifecycle_survey_and_evaluation_taxonomy
+  trainable: false
+  resettable: not_applicable
+  trajectories: false
+  sandbox: taxonomy_and_survey
+  production_signal: environment_engineering_lifecycle_for_llm_agents
+  url: https://arxiv.org/abs/2606.12191
+  repo:
+  notes: Survey of agentic environment engineering for LLM agents, covering
+    environment modeling, synthesis, evaluation, and applications through a
+    lifecycle view that directly frames environments as the substrate for
+    agent capability development.
+  id: agentic-environment-engineering-survey
+  resource_kind: agent_infrastructure
+  canonical_category: agent-infrastructure
+  subtype: agent_environment_engineering_survey
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12191
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: not_applicable
+  trajectory_access: not_applicable
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: not_applicable
+  reset_mechanism: not_applicable
+  trainability_status: not_applicable
+  sft_fit: weak
+  rlvr_fit: weak
+  online_rl_fit: limited
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: evaluation_principles
+  verifier_family: taxonomy
+  verifier_recomputable: partial
+  verifier_isolation: not_applicable
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: not_applicable
+  runtime_host: not_applicable
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: not_specified
+  telemetry_type: not_specified
+  destructive_action_scope: not_applicable
+  reader_paths:
+  - foundations
+  - build-evals
+- name: Emergence World
+  category: research-world
+  year: 2026
+  modality:
+  - multi_agent
+  - simulation
+  - live_data
+  - long_horizon
+  action_space:
+  - tool_use
+  - governance_action
+  - spatial_world_action
+  - memory_update
+  reward_type: long_horizon_multi_agent_autonomy_metrics
+  verifier: continuous_simulation_logs_and_governance_metrics
+  trainable: partial
+  resettable: partial
+  trajectories: partial
+  sandbox: multi_agent_simulation
+  production_signal: weeks_to_months_multi_agent_autonomy_evaluation
+  url: https://arxiv.org/abs/2606.08367
+  repo:
+  notes: Continuously running multi-agent simulation platform for long-horizon
+    autonomy, grounding agents in a shared spatial world with live external
+    data, specialized tools, persistent memory systems, and governance dynamics.
+  id: emergence-world
+  resource_kind: world
+  canonical_category: research-world
+  subtype: long_horizon_multi_agent_simulation_world
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.08367
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: long_horizon_multi_agent_logs
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: simulation_configuration_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  opd_fit: strong
+  release_gate_fit: candidate
+  reward_family: task_dependent
+  verifier_family: task_dependent
+  verifier_recomputable: partial
+  verifier_isolation: simulation_platform
+  negative_side_effect_checks: governance_metrics
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: simulated_multi_agent_world
+  runtime_host: unspecified
+  network_policy: live_external_data
+  credential_boundary: api_key_dependent
+  approval_policy: governance_defined
+  audit_log: continuous_agent_logs
+  telemetry_type: tool_use_memory_governance_and_spatial_state_logs
+  destructive_action_scope: simulated_world
+  reader_paths:
+  - build-evals
+  - release-gates
+  - foundations
+- name: EurekAgent
+  category: research-world
+  year: 2026
+  modality:
+  - scientific_discovery
+  - environment_engineering
+  - artifact_management
+  - multi_agent
+  action_space:
+  - hypothesis_proposal
+  - experiment_execution
+  - artifact_management
+  - inter_agent_collaboration
+  reward_type: metric_driven_scientific_discovery_score
+  verifier: executable_environment_metric_validation
+  trainable: partial
+  resettable: partial
+  trajectories: partial
+  sandbox: scientific_execution_environment
+  production_signal: environment_engineering_for_autonomous_scientific_discovery
+  url: https://arxiv.org/abs/2606.13662
+  repo:
+  notes: Environment-engineered agent system for metric-driven autonomous
+    scientific discovery, emphasizing execution environments, resources,
+    constraints, artifact management, collaboration, and reward-hacking
+    suppression over fixed workflow prescription.
+  id: eurekagent
+  resource_kind: agent_infrastructure
+  canonical_category: research-world
+  subtype: scientific_discovery_environment_engineering_system
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.13662
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: scientific_discovery_experiment_traces
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: execution_environment_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: scientific_execution_environment
+  negative_side_effect_checks: reward_hacking_suppression
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: scientific_execution_environment
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: task_dependent
+  approval_policy: environment_constraints
+  audit_log: artifacts_experiments_and_metric_reports
+  telemetry_type: proposals_executions_artifacts_and_collaboration_logs
+  destructive_action_scope: experiment_workspace
+  reader_paths:
+  - train-rollouts
+  - foundations
+  - production-direction
 - name: ReVision
   category: training-framework
   year: 2026
@@ -28841,3 +29344,291 @@
   - build-evals
   - production-direction
   - train-rollouts
+- name: HyperTool
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - mcp
+  - tools
+  - tool_execution
+  - training_trajectories
+  action_space:
+  - hypertool_code_block
+  - mcp_tool_call
+  - cross_tool_dataflow
+  - local_value_manipulation
+  reward_type: verified_mcp_environment_execution
+  verifier: real_mcp_environment_execution_checks
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: synthetic
+  sandbox: mcp_tool_runtime
+  production_signal: mcp_style_tool_execution_abstraction_for_agent_training
+  url: https://arxiv.org/abs/2606.13663
+  repo:
+  notes: MCP-style tool interface that lets tool-augmented agents invoke a code
+    block over existing tool schemas, synthesize HyperTool-format trajectories,
+    and verify multi-step tool use in real MCP environments.
+  id: hypertool
+  resource_kind: agent_infrastructure
+  canonical_category: agent-infrastructure
+  subtype: mcp_tool_execution_interface
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.13663
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: synthesized_hypertool_format_tool_use_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: underlying_mcp_environment_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: real_mcp_environment
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_tool_environment
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: tool_execution_accuracy_reports
+  telemetry_type: tool_calls_values_and_execution_results
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - production-direction
+  - build-evals
+- name: ComAct / ComCADBench
+  category: computer-world
+  year: 2026
+  modality:
+  - desktop
+  - cad
+  - professional_software
+  - computer_use
+  action_space:
+  - com_api_call
+  - program_synthesis
+  - cad_state_edit
+  - self_correction
+  reward_type: geometric_accuracy_and_task_success
+  verifier: comcadbench_geometric_accuracy_and_task_success
+  trainable: partial
+  resettable: partial
+  trajectories: synthetic
+  sandbox: docker
+  production_signal: deterministic_programmatic_control_for_professional_software_agents
+  url: https://arxiv.org/abs/2606.13239
+  repo:
+  notes: Professional software manipulation benchmark and training paradigm that
+    reframes CAD interaction as COM-based executable action, introduces
+    ComCADBench, and describes ComForge for large-scale Windows-container
+    training.
+  id: comact-comcadbench
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: professional_software_computer_use_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.13239
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: progressive_com_action_training_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: windows_container_task_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: cad_software_runtime
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: windows_container
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: commercial_software_boundary
+  approval_policy: not_specified
+  audit_log: geometry_and_task_success_reports
+  telemetry_type: com_calls_cad_state_and_self_correction_logs
+  destructive_action_scope: benchmark_cad_workspace
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - production-direction
+- name: MedCUA-Bench
+  category: gui-world
+  year: 2026
+  modality:
+  - clinical_gui
+  - screenshots
+  - computer_use
+  - medical_workflow
+  action_space:
+  - screenshot_grounded_action
+  - clinical_ui_navigation
+  - task_completion
+  reward_type: clinical_task_success_and_safety_dimensions
+  verifier: programmatic_deterministic_checker_with_clinical_safety_dimensions
+  trainable: partial
+  resettable: partial
+  trajectories: false
+  sandbox: service_environment
+  production_signal: reproducible_clinical_computer_use_agent_testbed
+  url: https://arxiv.org/abs/2606.03203
+  repo:
+  notes: Screenshot-only benchmark for clinical computer-use agents covering 18
+    clinical scenarios across 10 medical domains, including paired intent and
+    step-level goals plus deterministic checking over task completion and
+    clinical safety dimensions.
+  scenario_count: 18
+  id: medcua-bench
+  resource_kind: benchmark
+  canonical_category: gui-world
+  subtype: clinical_computer_use_gui_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.03203
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: reconstructed_clinical_ui_task_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  opd_fit: weak
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: reconstructed_clinical_gui_environment
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: reconstructed_clinical_software_world
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: no_patient_data
+  approval_policy: clinical_safety_required
+  audit_log: task_success_and_safety_dimension_reports
+  telemetry_type: ui_action_and_safety_outcome_metrics
+  destructive_action_scope: benchmark_only
+  reader_paths:
+  - build-evals
+  - safety-audit
+  - release-gates
+- name: PROVE / Synthesize and Reward
+  category: training-framework
+  year: 2026
+  modality:
+  - mcp
+  - tools
+  - rl
+  - live_environment
+  action_space:
+  - mcp_tool_call
+  - multi_step_tool_orchestration
+  - stateful_server_interaction
+  reward_type: programmatic_rewards_on_verified_environments
+  verifier: programmatic_reward_on_live_stateful_mcp_servers
+  trainable: true
+  resettable: partial
+  trajectories: synthetic
+  sandbox: service_environment
+  production_signal: live_execution_rl_for_multi_step_tool_use
+  url: https://arxiv.org/abs/2606.03892
+  repo:
+  notes: PROVE framework for multi-step tool-use RL over live stateful MCP
+    servers, using query synthesis grounded in server state and programmatic
+    rewards on verified environments.
+  api_count: 343
+  environment_count: 20
+  id: prove-synthesize-and-reward
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: live_mcp_tool_use_rl_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.03892
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-14'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: synthesized_state_grounded_tool_use_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: session_scoped_stateful_server_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: strong
+  online_rl_fit: strong
+  opd_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: live_stateful_mcp_servers
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_server_session
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: tool_execution_and_reward_logs
+  telemetry_type: stateful_mcp_tool_calls_and_programmatic_rewards
+  destructive_action_scope: benchmark_server_state
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - release-gates
