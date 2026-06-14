@@ -43,6 +43,7 @@ The interface groups 11 canonical resource categories into broader reader-facing
 - [Hot Papers](../others/docs/hot-papers.md)
 - [Flagship Matrix](../others/docs/flagship-matrix.md)
 - [Resource proposal template](../.github/ISSUE_TEMPLATE/add-resource.md)
+- [Pull request evidence checklist](../.github/pull_request_template.md)
 
 ## Basic Use
 

@@ -41,8 +41,10 @@ Frontier labs are converging on the same bottleneck: production agents must act 
 
 ```text
 Task Demand -> World Runtime -> Agent Rollout -> Verifier / Reward
--> Trajectory Store -> SFT / OPD / RLVR -> Regression Gate -> Production Agent
+-> Trajectory Store -> SFT / distillation / RLVR -> Regression Gate -> Production Agent
 ```
+
+Here, SFT means supervised fine-tuning, and RLVR means reinforcement learning with verifiable rewards.
 
 The reusable asset is the verified trajectory, not just the final score.
 
@@ -53,10 +55,10 @@ coverage and evidence fields.
 
 | Reader goal | Start with |
 |---|---|
-| Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified, AndroidWorld, MobileGym, MacArena, Workflow-GYM, WeaveBench, LivingScreen, DynamicGUIBench, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, Ego2Web, MCPWorld, MCP-Persona, MedCTA, AgentBeats, StakeBench. |
-| Audit agent safety | PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench, AgentTrust, AgentWall, SafeMCP, MCP-SafetyBench, ASPI, WARD, BraveGuard / Open-World CUA Guard, StakeBench. |
+| Build agent evaluations | OSWorld-Verified, BrowserGym, WebArena-Verified, AndroidWorld, AndroidDaily, MobileGym, MacArena, Workflow-GYM, WeaveBench, EntWorld, LivingScreen, DynamicGUIBench, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, Alem, Ego2Web, MCPWorld, MCP-Persona, MedCTA, AgentBeats, StakeBench. |
+| Audit agent safety | PhoneSafety / Safe, or Simply Incapable?, CAPED, MIRAGE, MyPhoneBench, SkillSafetyBench, AgentTrust, AgentWall, SafeMCP, MCP-SafetyBench, ASPI, WARD, BraveGuard / Open-World CUA Guard, Context-Fractured Decomposition Attacks, StakeBench. |
 | Debug agent failures | AgentForesight, AgentRx, Who&When, AgentStepper, Terminal Wrench, FATE, AgentLAB, BenchJack, AgentPressureBench, Human-Guided Harm Recovery / BackBench, Evidence-Supported Bounds for Interactive-Agent Evaluation. |
-| Train from rollouts | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, STAMP / Memory-World, TOUCAN, MCP-Flow, HyperTool, EurekAgent, GUI-GENESIS, RAGEN, VAGEN, rLLM, Agent Lightning. |
+| Train from rollouts | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis, Role-Agent, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, SimWorld Studio, AliyunConsoleAgent, HomeFlow, CUA-Gym, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, STAMP / Memory-World, TOUCAN, MCP-Flow, HyperTool, EurekAgent, GUI-GENESIS, RAGEN, VAGEN, rLLM, Agent Lightning. |
 | Track production direction | OpenAI Computer-Using Agent, OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, Multi-Agent Computer Use, Agent-First Tool API, HarnessAPI, AgentBeats, SafeMCP, MCP-Flow, Agent-Diff, Firefly Verified Tool-Call Data, BraveGuard / Open-World CUA Guard. |
 | Study foundations | WebShop, WebArena, OSWorld, SWE-bench, AppWorld, tau-bench, AgentGym, MineDojo, AI2-THOR, Agentic World Modeling, Agentic Environment Engineering Survey. |
 
@@ -65,11 +67,11 @@ Recent coverage focus:
 | Direction | New or high-signal entries |
 |---|---|
 | Personalized and clinical tool worlds | MCP-Persona, MedCTA, CHI-Bench, PhysicianBench |
-| Professional GUI and computer-use workflows | MacArena, Workflow-GYM, WeaveBench, LivingScreen, DynamicGUIBench, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, OpenComputer, CUA-Gym, ClawGUI |
-| Web, MCP, and tool-agent safety | StakeBench, ASPI, WARD, Trust No Tool / TRUST-Bench, SafeMCP |
-| Rollout and reward infrastructure | AliyunConsoleAgent, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, STAMP / Memory-World, HomeFlow, Agent-World, EnvFactory, EvoEnv, Firefly Verified Tool-Call Data |
+| Professional GUI and computer-use workflows | MacArena, Workflow-GYM, WeaveBench, EntWorld, LivingScreen, DynamicGUIBench, AndroidDaily, DragOn, ComAct / ComCADBench, MedCUA-Bench, Multi-Agent Computer Use, OpenComputer, CUA-Gym, ClawGUI |
+| Web, mobile, MCP, and tool-agent safety | StakeBench, CAPED, MIRAGE, ASPI, WARD, Trust No Tool / TRUST-Bench, SafeMCP, Context-Fractured Decomposition Attacks |
+| Rollout and reward infrastructure | Role-Agent, OpenSkill, CoEvolve, ProPlay, ADWM, Game Code World Model Generation, AliyunConsoleAgent, PRO-CUA, PROVE / Synthesize and Reward, Teach-and-Repeat, ClawGUI, STAMP / Memory-World, HomeFlow, Agent-World, EnvFactory, EvoEnv, Firefly Verified Tool-Call Data |
 | MCP and agent infrastructure | MCP-Flow, HyperTool, AgentBeats, HarnessAPI, Agent-First Tool API, MCP Proxy Access Control, VIPER-MCP |
-| Research environments and environment engineering | Emergence World, EurekAgent, Agentic Environment Engineering Survey, Agentic World Modeling |
+| Research environments and environment engineering | Emergence World, Alem, SimWorld Studio, EurekAgent, Agentic Environment Engineering Survey, Agentic World Modeling |
 
 | Label | Meaning |
 |---|---|
@@ -117,6 +119,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [Who&When](https://ag2ai.github.io/Agents_Failure_Attribution/) [[Code](https://github.com/mingyin1/Agents_Failure_Attribution)] — Training Candidate · Multi-agent failure attribution
 - [AgenTRIM](https://arxiv.org/abs/2601.12449) — Safety Control · Tool risk mitigation
 - [Behavioral Integrity Verification for AI Agent Skills](https://arxiv.org/abs/2605.11770) — Safety Control · Skill behavior audit
+- [Context-Fractured Decomposition Attacks](https://arxiv.org/abs/2606.09084) — Safety Control · Artifact provenance gap
 - [Malicious Or Not: Adding Repository Context to Agent Skill Classification](https://arxiv.org/abs/2603.16572) — Safety Control · Repository-context skill risk
 - [Supply-Chain Poisoning Attacks Against LLM Coding Agent Skill Ecosystems](https://arxiv.org/abs/2604.03081) — Safety Control · DDIPE skill poisoning
 - [Exploiting LLM Agent Supply Chains via Payload-less Skills](https://arxiv.org/abs/2605.14460) — Safety Control · Semantic compliance hijacking
@@ -193,6 +196,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [DragOn](https://arxiv.org/abs/2606.06322) — Training Candidate · Drag-based GUI interaction benchmark
 - [DynamicGUIBench / DynamicUI](https://arxiv.org/abs/2604.25380) — Eval Candidate · High-dynamic GUI benchmark
 - [EE-MCP](https://arxiv.org/abs/2604.09815) — Training Infrastructure · Sandbox
+- [EntWorld](https://arxiv.org/abs/2601.17722) — Eval Candidate · Enterprise GUI workflows
 - [Executable Agentic Memory](https://arxiv.org/abs/2605.12294) — Infrastructure · GUI memory reuse
 - [GUI-GENESIS](https://arxiv.org/abs/2602.14093) — Training Infrastructure · Verifiable synthetic GUI worlds
 - [GUI Agent Autonomy Levels](https://arxiv.org/abs/2602.11514) — Infrastructure · GUI autonomy taxonomy
@@ -289,12 +293,15 @@ The README and Static Explorer group the 11 canonical categories into broader re
 > Phone and app environments where agents interact through taps, typing, app state, and emulator-backed reset loops.
 
 ### 2026
+- [AndroidDaily](https://arxiv.org/abs/2605.27761) — Eval Candidate · Closed-source mobile workflows
+- [CAPED](https://arxiv.org/abs/2606.12666) — Safety Control · Mobile GUI privacy exposure
 - [CORA / Phone-Harm](https://cora-agent.github.io/) — Eval Candidate · Partial trajectories
 - [Faithful Mobile GUI Agents](https://arxiv.org/abs/2605.01208) — Training Infrastructure · Guided advantage faithfulness
 - [How Mobile World Model Guides GUI Agents?](https://arxiv.org/abs/2605.10347) — Eval Candidate · Synthetic trajectories
 - [GUI-CEval](https://arxiv.org/abs/2603.15039) — Eval Candidate · Sandbox
 - [iOSWorld](https://arxiv.org/abs/2606.09764) — Eval Candidate · Personalized iOS simulator
 - 🌟 [MemGUI-Bench](https://arxiv.org/abs/2602.06075) [[Code](https://github.com/lgy0404/MemGUI-Bench)] — Training Candidate · Public memory trajectories
+- [MIRAGE](https://arxiv.org/abs/2605.28116) — Eval Candidate · Mobile UGC prompt injection
 - [MobileDreamer](https://arxiv.org/abs/2601.04035) — Eval Candidate · Synthetic rollouts
 - 🌟 [MobileGym](https://mobilegym.dev/) [[Code](https://github.com/Purewhiter/mobilegym)] — Production-grade · Parallel mobile GUI RL
 - 🌟 [MobileWorld](https://github.com/Tongyi-MAI/MobileWorld) [[Code](https://github.com/Tongyi-MAI/MobileWorld)] — Training Candidate · Partial trajectories
@@ -454,11 +461,13 @@ The README and Static Explorer group the 11 canonical categories into broader re
 
 ### 2026
 - 🌟 [3D-Belief](https://3d-belief.github.io/) [[Code](https://github.com/3D-Belief/3d-belief)] — Training Candidate · 3D belief world model
+- [Alem](https://arxiv.org/abs/2606.08340) — Eval Candidate · Open-ended multi-agent coordination
 - [Ego2World](https://arxiv.org/abs/2605.13335) — Training Candidate · Video-compiled symbolic worlds
 - 🌟 [EgoMemReason](https://egomemreason.github.io/) [[Code](https://github.com/Ziyang412/EgoMemReason)] — Training Candidate · Egocentric memory benchmark
 - [EnactToM](https://arxiv.org/abs/2605.09826) — Eval Candidate · Embodied functional ToM benchmark
 - [LongAct / HoloMind](https://arxiv.org/abs/2605.14504) — Eval Candidate · Long-horizon household planning
 - [PRISM](https://sj-li.com/PROJ/PRISM/) — Eval Candidate · Embodied intent diagnostics
+- 🌟 [SimWorld Studio](https://simworld.org/simworld-studio/) [[Code](https://github.com/SimWorld-AI/SimWorld-Studio)] — Training Candidate · Self-evolving 3D environment generation
 - [VeGAS](https://arxiv.org/abs/2605.12620) — Training Infrastructure · Verifier-guided action selection
 - [VLAs-as-Tools](https://arxiv.org/abs/2605.13119) — Training Infrastructure · VLA tool-family orchestration
 - [World-Model Alignment Dialogue](https://arxiv.org/abs/2605.12920) — Eval Candidate · Multi-agent belief alignment
@@ -501,6 +510,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 
 ### 2026
 - [ActGuide-RL](https://arxiv.org/abs/2605.12004) — Training Infrastructure · Action-guided agentic RL
+- [ADWM](https://arxiv.org/abs/2606.05558) — Training Infrastructure · Offline agent world model evaluation
 - [AEvo](https://arxiv.org/abs/2605.13821) — Training Infrastructure · Agentic evolution loop
 - 🌟 [Agentick](https://roger-creus.github.io/agentick/) [[Code](https://github.com/roger-creus/agentick)] — Training Candidate · Unified sequential-decision benchmark
 - [Agentic Harness Engineering](https://arxiv.org/abs/2604.25850) — Training Infrastructure · Harness self-evolution
@@ -510,11 +520,13 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [CUA-Gym](https://arxiv.org/abs/2605.25624) — Training Infrastructure · Verifiable CUA RLVR environments
 - [PRO-CUA](https://arxiv.org/abs/2605.29119) — Training Infrastructure · Process-reward CUA optimization
 - [ClawGUI](https://arxiv.org/abs/2604.11784) — Training Infrastructure · GUI RL/eval/deployment harness
+- [CoEvolve](https://arxiv.org/abs/2604.15840) — Training Infrastructure · Agent-data mutual evolution
 - 🌟 [Causal Memory Intervention](https://arxiv.org/abs/2605.17641) [[Code](https://github.com/Saksham4796/causal-memory-intervention)] — Training Infrastructure · Causal memory selection
 - 🌟 [Continual Harness](https://arxiv.org/abs/2605.09998) [[Code](https://github.com/SethKarten/continual-harness)] — Training Infrastructure · Reset-free online adaptation
 - 🌟 [CuSearch](https://arxiv.org/abs/2605.11611) [[Code](https://github.com/MrToser/CuSearch)] — Training Infrastructure · Agentic RAG rollout curriculum
 - [DAgger for LLM-Agents](https://arxiv.org/abs/2605.12913) — Training Infrastructure · Expert-corrected agent rollouts
 - [D-VLA](https://arxiv.org/abs/2605.13276) — Training Infrastructure · Distributed VLA reinforcement learning
+- 🌟 [Game Code World Model Generation](https://arxiv.org/abs/2605.24375) [[Code](https://github.com/tktserapio/internalizing-cwm-sft-grpo)] — Training Infrastructure · Executable game world-model distillation
 - 🌟 [DIVE](https://arxiv.org/abs/2603.11076) [[Code](https://github.com/sheep333c/DIVE)] — Training Infrastructure · Evidence-first task synthesis
 - [EmbodiSkill](https://arxiv.org/abs/2605.10332) — Training Infrastructure · Skill-aware embodied reflection
 - [EigenData](https://arxiv.org/abs/2601.22607) — Training Infrastructure · Verifier-based tool-agent post-training
@@ -535,7 +547,10 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [Memento-Skills](https://arxiv.org/abs/2603.18743) [[Code](https://github.com/Memento-Teams/Memento-Skills)] — Training Infrastructure · External skill memory
 - 🌟 [MMSkills](https://arxiv.org/abs/2605.13527) [[Code](https://github.com/DeepExperience/MMSkills)] — Training Infrastructure · Multimodal skill library
 - [Orchard](https://arxiv.org/abs/2605.15040) — Training Infrastructure · Public SWE/GUI trajectories
+- [OpenSkill](https://arxiv.org/abs/2606.06741) — Training Infrastructure · Open-world skill self-evolution
+- 🌟 [ProPlay](https://arxiv.org/abs/2606.12780) [[Code](https://github.com/antman9914/proplay)] — Training Infrastructure · Procedural world model preplay
 - [Proxy State-Based Evaluation](https://arxiv.org/abs/2602.16246) — Training Infrastructure · Verifiable proxy state
+- 🌟 [Role-Agent](https://arxiv.org/abs/2606.10917) [[Code](https://github.com/AMAP-ML/roleagent)] — Training Infrastructure · Dual-role agent-environment evolution
 - [PROVE / Synthesize and Reward](https://arxiv.org/abs/2606.03892) — Training Infrastructure · Live MCP tool-use RL
 - [RAW-Dream](https://arxiv.org/abs/2605.12334) — Training Infrastructure · Task-agnostic world-model RL
 - [ReVision](https://arxiv.org/abs/2605.11212) — Training Infrastructure · Efficient visual history
@@ -573,6 +588,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 ## Contributing
 
 Suggest a resource with the [resource issue template](./.github/ISSUE_TEMPLATE/add-resource.md) or submit a pull request with the [evidence checklist](./.github/pull_request_template.md). Useful additions should include a primary source and clear evidence for the world role, observation/action surface, verifier or reward, reset or replay support, trajectory access, and sandbox or safety boundary.
+Use the template vocabularies for reader paths, source support tags, and source confidence (`official`, `high`, or `medium`).
 
 ## License
 

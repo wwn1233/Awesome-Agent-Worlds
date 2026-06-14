@@ -63,8 +63,17 @@ resource contributes.
 - Production signal:
 - Primary source:
 - Source support tags:
+- Reader path:
 - Evidence date:
 - Source confidence:
 
+Primary sources are preferred: project page, paper, code repository,
+documentation, dataset card, or official announcement.
+
 Allowed support tags: `overview`, `status`, `reproducibility`, `code`,
 `benchmark_design`, `dataset`, `trajectories`.
+
+Allowed reader paths: `build-evals`, `train-rollouts`, `foundations`,
+`production-direction`, `release-gates`, `safety-audit`.
+
+Allowed source confidence values: `official`, `high`, `medium`.

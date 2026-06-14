@@ -266,7 +266,7 @@ function renderBars(items) {
       state.surface = "all";
       state.category = button.dataset.category;
       refs.category.value = state.category;
-      render();
+      render(); window.AGENT_WORLDS_UPDATE_SURFACE?.();
     });
   });
 }
@@ -283,7 +283,7 @@ function renderRows(items) {
       .join("");
     const trajectoryCount = item.trajectory_count ? `${Number(item.trajectory_count).toLocaleString()} ${ui("trajectoryCount")}` : "";
     const evidence = [item.scale, trajectoryCount, label("trajectory", item.trajectory_availability),
-      label("reset", item.reset_support), label("reproducibility", item.reproducibility)].filter(Boolean).join("<br>");
+      label("reset", item.reset_support), label("reproducibility", item.reproducibility)].filter(Boolean).map(escapeHtml).join("<br>");
 
     return `<tr>
       <td><a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a><br>${escapeHtml(item.notes)}</td>

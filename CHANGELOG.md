@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-15
+
+- Added EntWorld and Alem to strengthen enterprise GUI workflow evaluation and open-ended multi-agent coordination coverage.
+- Added Role-Agent, OpenSkill, CoEvolve, ProPlay, and ADWM to cover self-evolving agent training, procedural world models, and offline world-model evaluation.
+- Added Context-Fractured Decomposition Attacks to cover artifact-provenance security risks in tool-using agent workflows.
+- Added CAPED and SimWorld Studio to cover mobile GUI privacy exposure control and self-evolving 3D embodied environment generation.
+- Added Game Code World Model Generation to cover executable game world-model distillation with SFT and GRPO/RLVR.
+- Refreshed README reader routes, Selection Guide, Reading Order, Resource Index, Hot Papers, and Static Explorer data for the expanded 409-resource catalog.
+
 ## 2026-06-14
 
 - Added AgentBeats, SafeMCP, DragOn, and Teach-and-Repeat to strengthen agentified assessment protocols, MCP safety controls, drag-based GUI interaction, and mobile demonstration-trajectory training coverage.

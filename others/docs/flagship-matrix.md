@@ -29,7 +29,7 @@ resource index.
 | [Habitat](https://aihabitat.org/) | embodied world | 14/14 | programmatic | public | episode_reset | simulator | public_training_ready | Embodied AI simulator and benchmark suite for navigation and interactive tasks. |
 | [MiniWoB++](https://miniwob.farama.org/) | web world | 14/14 | programmatic | public | episode_reset | browser_environment | public_training_ready | Classic synthetic browser-control environment for scalable web-agent training. |
 
-## Reading Notes
+## Interpretation
 
 1. High score means stronger world readiness, not broader scientific impact.
 2. Product signals are included when they show frontier direction, even if

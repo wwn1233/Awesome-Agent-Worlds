@@ -21,6 +21,7 @@
       button.setAttribute("aria-current", active ? "true" : "false");
     });
   }
+  window.AGENT_WORLDS_UPDATE_SURFACE = updateActiveSurface;
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {

@@ -51,7 +51,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -121,7 +121,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: programmatic_checker
   verifier_family: programmatic
@@ -192,7 +192,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -284,7 +284,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -379,7 +379,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -482,7 +482,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -556,7 +556,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -627,7 +627,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: evaluation_principles
   verifier_family: evidence_audit
@@ -697,7 +697,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: efficiency_metric
   verifier_family: benchmark
@@ -767,7 +767,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -849,7 +849,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -929,7 +929,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: programmatic
@@ -1011,7 +1011,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -1104,7 +1104,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -1194,7 +1194,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: programmatic
@@ -1273,7 +1273,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -1345,7 +1345,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark
   verifier_family: benchmark
@@ -1415,7 +1415,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -1437,6 +1437,244 @@
   - safety-audit
   - release-gates
   - production-direction
+- name: Game Code World Model Generation
+  category: training-framework
+  year: 2026
+  modality:
+  - code_world_model
+  - game_environment
+  - executable_code
+  - rlvr
+  - post_training
+  action_space:
+  - game_code_generation
+  - rule_implementation
+  - state_transition_modeling
+  - reward_function_generation
+  reward_type: hierarchical_verification_reward_for_executable_game_worlds
+  verifier: syntax_mechanics_and_playability_checks
+  trainable: true
+  resettable: dataset_replay
+  trajectories: synthetic
+  sandbox: code_execution_sandbox
+  production_signal: lightweight_model_distillation_for_executable_world_generation
+  url: https://arxiv.org/abs/2605.24375
+  repo: https://github.com/tktserapio/internalizing-cwm-sft-grpo
+  notes: Distills executable game code world model generation into lightweight
+    LLMs using SFT and GRPO/RLVR over a 30-game dataset, with generated code
+    specifying rules, legal actions, state transitions, observations, and
+    rewards under hierarchical verification.
+  id: game-code-world-model-generation
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: executable_game_world_model_generation_training
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.24375
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/tktserapio/internalizing-cwm-sft-grpo
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: generated_game_world_verification_and_training_rollouts
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: generated_game_state_replay_and_execution_reset
+  trainability_status: framework_ready
+  sft_fit: strong
+  rlvr_fit: strong
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: programmatic
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: code_execution_sandbox
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: generated_game_code_sandbox
+  runtime_host: local_or_self_hosted
+  network_policy: not_specified
+  credential_boundary: not_applicable
+  approval_policy: generated_code_sandbox_required
+  audit_log: generated_code_verification_and_training_metrics
+  telemetry_type: game_code_generation_verification_and_rlvr_metrics
+  destructive_action_scope: generated_game_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+- name: CAPED
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - privacy
+  - screenshot
+  - vlm
+  action_space:
+  - screenshot_redaction
+  - selective_exposure
+  - ui_element_parsing
+  - privacy_masking
+  reward_type: success_conditioned_seeded_privacy_leakage_and_task_utility
+  verifier: androidworld_task_utility_and_seeded_privacy_leakage_eval
+  trainable: false
+  resettable: partial
+  trajectories: partial
+  sandbox: phone_side_privacy_boundary
+  production_signal: phone_side_pre_upload_privacy_boundary_for_mobile_gui_agents
+  url: https://arxiv.org/abs/2606.12666
+  repo:
+  notes: Context-aware pre-upload exposure control layer for mobile GUI agents,
+    selectively releasing task-needed screenshot content while masking incidental
+    private context before a remote multimodal agent receives the observation.
+  id: caped-mobile-gui-privacy
+  resource_kind: safety_control
+  canonical_category: mobile-world
+  subtype: mobile_gui_privacy_exposure_defense
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12666
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: seeded_privacy_exposure_eval_and_androidworld_runs
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: androidworld_and_seeded_eval_replay
+  trainability_status: not_applicable
+  sft_fit: weak
+  rlvr_fit: weak
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: phone_side_pre_upload_boundary
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: device_cloud_screenshot_boundary
+  runtime_host: mobile_device_or_emulator
+  network_policy: redacted_observation_only
+  credential_boundary: local_sensitive_screen_content
+  approval_policy: selective_exposure_required
+  audit_log: exposure_decisions_and_seeded_leakage_scores
+  telemetry_type: sanitized_screenshots_task_utility_and_leakage_metrics
+  destructive_action_scope: not_applicable
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
+- name: SimWorld Studio
+  category: embodied-world
+  year: 2026
+  modality:
+  - embodied
+  - unreal_engine
+  - 3d
+  - environment_generation
+  - simulator
+  action_space:
+  - engine_code_generation
+  - environment_reset
+  - embodied_navigation_action
+  - skill_augmented_generation
+  reward_type: embodied_navigation_success_and_verifier_feedback
+  verifier: compilation_physics_vlm_critique_and_navigation_task_success
+  trainable: true
+  resettable: true
+  trajectories: partial
+  sandbox: ue5_simulator
+  production_signal: self_evolving_embodied_environment_generation_with_gym_interfaces
+  url: https://simworld.org/simworld-studio/
+  repo: https://github.com/SimWorld-AI/SimWorld-Studio
+  notes: Open-source Unreal Engine 5 platform where SimCoder generates
+    physically grounded 3D environments, uses verifier feedback to revise them,
+    exports Gym-style embodied learning environments, and co-evolves curricula
+    from agent performance.
+  id: simworld-studio
+  resource_kind: world
+  canonical_category: embodied-world
+  subtype: self_evolving_3d_environment_generation_world
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://simworld.org/simworld-studio/
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://arxiv.org/abs/2605.09423
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/SimWorld-AI/SimWorld-Studio
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: generated_environment_rollouts_and_navigation_traces
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: generated_gym_environment_episode_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: ue5_simulation
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: ue5_generated_simulation
+  runtime_host: local_or_self_hosted
+  network_policy: not_specified
+  credential_boundary: not_applicable
+  approval_policy: simulator_task_boundary
+  audit_log: generation_verifier_feedback_and_navigation_results
+  telemetry_type: generated_world_rollouts_and_task_success
+  destructive_action_scope: simulated_3d_world
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - foundations
 - name: DragOn
   category: gui-world
   year: 2026
@@ -1490,7 +1728,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: coordinate_match
   verifier_family: coordinate_match
@@ -1562,7 +1800,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -1649,7 +1887,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: rubric
   verifier_family: benchmark
@@ -1737,7 +1975,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -1827,7 +2065,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -1913,7 +2151,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: environment_state
@@ -2005,7 +2243,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: programmatic
@@ -2078,7 +2316,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -2148,7 +2386,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: governance_framework
@@ -2219,7 +2457,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -2297,7 +2535,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -2368,7 +2606,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: governance_framework
@@ -2439,7 +2677,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: governance_framework
   verifier_family: governance_framework
@@ -2511,7 +2749,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: benchmark
@@ -2582,7 +2820,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: static_analysis
@@ -2653,7 +2891,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: programmatic
@@ -2725,7 +2963,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: programmatic
@@ -2810,7 +3048,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -2882,7 +3120,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -2956,7 +3194,7 @@
   sft_fit: candidate
   rlvr_fit: weak
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: weak
   reward_family: behavioral_signal
   verifier_family: benchmark
@@ -3028,7 +3266,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: environment_state
@@ -3122,7 +3360,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -3207,7 +3445,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -3291,7 +3529,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -3362,7 +3600,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -3439,7 +3677,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -3510,7 +3748,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -3578,7 +3816,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: simulator_state
@@ -3657,7 +3895,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -3737,7 +3975,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -3809,7 +4047,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -3880,7 +4118,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -3952,7 +4190,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4038,7 +4276,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4110,7 +4348,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4190,7 +4428,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4261,7 +4499,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4340,7 +4578,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4411,7 +4649,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: evaluation_principles
   verifier_family: taxonomy
@@ -4489,7 +4727,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4566,7 +4804,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4638,7 +4876,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: benchmark
@@ -4710,7 +4948,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: benchmark
@@ -4782,7 +5020,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: benchmark
@@ -4853,7 +5091,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4924,7 +5162,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -4996,7 +5234,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -5067,7 +5305,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: benchmark
@@ -5144,7 +5382,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -5216,7 +5454,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -5287,7 +5525,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: governance_framework
@@ -5366,7 +5604,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: programmatic
@@ -5439,7 +5677,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -5512,7 +5750,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -5583,7 +5821,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: governance_framework
@@ -5655,7 +5893,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -5734,7 +5972,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: programmatic
@@ -5806,7 +6044,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: benchmark
@@ -5881,7 +6119,7 @@
   sft_fit: candidate
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -5955,7 +6193,7 @@
   sft_fit: candidate
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -6037,7 +6275,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: llm_judge
   verifier_family: llm_judge
@@ -6110,7 +6348,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: governance_framework
   verifier_family: governance_framework
@@ -6188,7 +6426,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: governance_framework
   verifier_family: governance_framework
@@ -6275,7 +6513,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: programmatic
@@ -6346,7 +6584,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: governance_framework
@@ -6417,7 +6655,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: external_signal
   verifier_family: benchmark
@@ -6498,7 +6736,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -6585,7 +6823,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: programmatic
@@ -6682,7 +6920,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -6755,7 +6993,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -6844,7 +7082,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -6925,7 +7163,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: programmatic
@@ -7005,7 +7243,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: programmatic
@@ -7077,7 +7315,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -7148,7 +7386,7 @@
   sft_fit: candidate
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: benchmark
@@ -7221,7 +7459,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: programmatic
@@ -7306,7 +7544,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -7392,7 +7630,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: programmatic
@@ -7486,7 +7724,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -7573,7 +7811,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: programmatic
@@ -7645,7 +7883,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -7717,7 +7955,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -7786,7 +8024,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -7864,7 +8102,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -7950,7 +8188,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: benchmark
@@ -8037,7 +8275,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: benchmark
@@ -8124,7 +8362,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -8200,7 +8438,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -8269,7 +8507,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -8337,7 +8575,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -8431,7 +8669,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: rubric
   verifier_family: llm_judge
@@ -8506,7 +8744,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -8591,7 +8829,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: evaluation_principles
   verifier_family: taxonomy
@@ -8662,7 +8900,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: evaluation_principles
   verifier_family: taxonomy
@@ -8732,7 +8970,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -8804,7 +9042,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -8874,7 +9112,7 @@
   sft_fit: candidate
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_success_and_efficiency
   verifier_family: benchmark
@@ -8945,7 +9183,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: hybrid_verifier
@@ -9017,7 +9255,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: empirical_analysis
@@ -9091,7 +9329,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -9163,7 +9401,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -9234,7 +9472,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -9315,7 +9553,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -9406,7 +9644,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: coordinate_match
   verifier_family: programmatic
@@ -9501,7 +9739,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: llm_judge
@@ -9573,7 +9811,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: hybrid_verifier
@@ -9650,7 +9888,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -9726,7 +9964,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: benchmark
@@ -9795,7 +10033,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -9865,7 +10103,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: human_preference
   verifier_family: human_and_benchmark
@@ -9933,7 +10171,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: judge_report
   verifier_family: llm_judge
@@ -10002,7 +10240,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: process_reward
   verifier_family: benchmark
@@ -10074,7 +10312,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -10144,7 +10382,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: benchmark
@@ -10221,7 +10459,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -10300,7 +10538,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -10388,7 +10626,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -10466,7 +10704,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: process_reward
   verifier_family: benchmark
@@ -10551,7 +10789,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_utility_pareto
   verifier_family: benchmark
@@ -10621,7 +10859,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_success
   verifier_family: benchmark
@@ -10691,7 +10929,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: governance_framework
@@ -10762,7 +11000,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_success_and_efficiency
   verifier_family: benchmark
@@ -10834,7 +11072,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -10903,7 +11141,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_uncertainty
   verifier_family: evidence_audit
@@ -10998,7 +11236,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -11092,7 +11330,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -11170,7 +11408,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -11240,7 +11478,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_success
   verifier_family: task_dependent
@@ -11310,7 +11548,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -11380,7 +11618,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_success
   verifier_family: task_dependent
@@ -11449,7 +11687,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: rubric
   verifier_family: benchmark
@@ -11534,7 +11772,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: strong
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -11604,7 +11842,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -11679,7 +11917,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: human_verified
@@ -11748,7 +11986,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: statistical_detector
@@ -11820,7 +12058,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: llm_judge
   verifier_family: llm_judge
@@ -11894,7 +12132,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: rubric
   verifier_family: benchmark
@@ -11964,7 +12202,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -12041,7 +12279,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -12112,7 +12350,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -12182,7 +12420,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -12252,7 +12490,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -12323,7 +12561,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -12393,7 +12631,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: llm_judge
   verifier_family: world_model
@@ -12462,7 +12700,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: rubric
   verifier_family: llm_judge
@@ -12538,7 +12776,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: safety_gate
   verifier_family: human_verified_judge
@@ -12607,7 +12845,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: safety_gate
   verifier_family: human_verified
@@ -12684,7 +12922,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: safety_gate
   verifier_family: human_verified
@@ -12761,7 +12999,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: safety_gate
   verifier_family: llm_judge
@@ -12830,7 +13068,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -12855,6 +13093,153 @@
   recommended_rank: 4
   why_it_matters: Mobile GUI benchmark with emulator-based execution, useful for connecting
     VLM policy work to reproducible action spaces.
+- name: AndroidDaily
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - android
+  - gui
+  - closed_source_apps
+  action_space:
+  - tap
+  - type
+  - swipe
+  - app_control
+  reward_type: guideline_grounded_process_evaluation
+  verifier: grade_process_aware_visual_trajectory_judge
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: private_telemetry
+  sandbox: mobile_environment
+  production_signal: closed_source_daily_mobile_gui_evaluation
+  url: https://arxiv.org/abs/2605.27761
+  repo:
+  notes: Verifiable benchmark for mobile GUI agents on real-world closed-source
+    Android apps, using GRADE to judge visual trajectories against external
+    task guidelines without hidden app-state access.
+  task_count: 350
+  app_count: 94
+  id: androiddaily
+  resource_kind: benchmark
+  canonical_category: mobile-world
+  subtype: closed_source_mobile_gui_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.27761
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: private_telemetry
+  trajectory_access: paper_only
+  trajectory_type: visual_agent_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: real_app_state_dependent_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: weak
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: judge
+  verifier_recomputable: partial
+  verifier_isolation: closed_source_mobile_apps
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: real_mobile_app_session
+  runtime_host: unspecified
+  network_policy: real_app_dependent
+  credential_boundary: real_app_account_boundary
+  approval_policy: human_or_policy_required_for_real_world_actions
+  audit_log: grade_step_level_diagnostic_judgments
+  telemetry_type: visual_trajectory_and_guideline_matches
+  destructive_action_scope: real_app_task_dependent
+  reader_paths:
+  - build-evals
+  - safety-audit
+  - release-gates
+- name: MIRAGE
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - safety
+  - prompt_injection
+  - user_generated_content
+  action_space:
+  - screenshot_injection
+  - payload_generation
+  - mobile_gui_action
+  reward_type: attack_success_and_realism
+  verifier: attack_success_rate_and_human_realism_rating
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: false
+  sandbox: benchmark_dataset
+  production_signal: mobile_gui_user_generated_content_injection_risk
+  url: https://arxiv.org/abs/2605.28116
+  repo:
+  notes: Context-aware screenshot-injection benchmark for mobile GUI agents,
+    placing attacker-controlled text inside ordinary user-generated content
+    regions to test whether VLM agents follow untrusted app content.
+  instance_count: 1111
+  app_count: 10
+  scenario_count: 11
+  id: mirage-mobile-gui-injection
+  resource_kind: benchmark
+  canonical_category: mobile-world
+  subtype: mobile_gui_prompt_injection_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.28116
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: screenshot_benchmark_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: weak
+  online_rl_fit: limited
+  distillation_fit: weak
+  release_gate_fit: candidate
+  reward_family: safety_gate
+  verifier_family: human_verified_judge
+  verifier_recomputable: partial
+  verifier_isolation: screenshot_benchmark_dataset
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_dataset
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: no_real_user_credentials
+  approval_policy: benchmark_only
+  audit_log: attack_success_and_realism_reports
+  telemetry_type: screenshot_samples_and_attack_outcomes
+  destructive_action_scope: benchmark_only
+  reader_paths:
+  - build-evals
+  - safety-audit
+  - release-gates
 - name: PhoneSafety / Safe, or Simply Incapable?
   category: mobile-world
   year: 2026
@@ -12907,7 +13292,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: safety_gate
   verifier_family: human_verified
@@ -12981,7 +13366,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -13070,7 +13455,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -13142,7 +13527,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -13214,7 +13599,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: rubric
   verifier_family: task_dependent
@@ -13293,7 +13678,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: safety_gate
   verifier_family: programmatic
@@ -13308,7 +13693,7 @@
   network_policy: not_specified
   credential_boundary: explicit_privacy_contract
   approval_policy: permissioned_access
-  audit_log: form_drafts_and_access_log
+  audit_log: form_state_and_access_log
   telemetry_type: agent_trajectories
   destructive_action_scope: mock_apps_only
   reader_paths:
@@ -13369,7 +13754,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -13437,7 +13822,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -13502,7 +13887,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -13569,7 +13954,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -13635,7 +14020,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: external_signal
   verifier_family: task_dependent
@@ -13704,7 +14089,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -13776,7 +14161,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -13848,7 +14233,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: unit_tests
   verifier_family: programmatic
@@ -13921,7 +14306,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: external
@@ -13996,7 +14381,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: unit_tests
   verifier_family: task_dependent
@@ -14070,7 +14455,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: unit_tests
   verifier_family: programmatic
@@ -14152,7 +14537,7 @@
   sft_fit: candidate
   rlvr_fit: judge_dependent
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: judge_or_rubric
   verifier_family: judge
@@ -14226,7 +14611,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: task_dependent
@@ -14307,7 +14692,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -14370,7 +14755,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -14449,7 +14834,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: hybrid
@@ -14527,7 +14912,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: candidate
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -14605,7 +14990,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -14683,7 +15068,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -14769,7 +15154,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -14847,7 +15232,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: security_signal
   verifier_family: statistical_detector
@@ -14917,7 +15302,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: judge
@@ -15002,7 +15387,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: programmatic
@@ -15080,7 +15465,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: human_verified
@@ -15149,7 +15534,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: programmatic
@@ -15230,7 +15615,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -15308,7 +15693,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -15384,7 +15769,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -15453,7 +15838,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: weak
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -15524,7 +15909,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: hybrid
@@ -15600,7 +15985,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -15679,7 +16064,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -15747,7 +16132,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -15827,7 +16212,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: weak
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -15913,7 +16298,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: rubric
   verifier_family: task_dependent
@@ -15990,7 +16375,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: weak
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: human_verified
   verifier_family: human_verified
@@ -16075,7 +16460,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -16142,7 +16527,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -16223,7 +16608,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: weak
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: benchmark
@@ -16297,7 +16682,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: weak
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: programmatic
@@ -16364,7 +16749,7 @@
   sft_fit: not_applicable
   rlvr_fit: not_applicable
   online_rl_fit: not_applicable
-  opd_fit: not_applicable
+  distillation_fit: not_applicable
   release_gate_fit: strong
   reward_family: external_signal
   verifier_family: external
@@ -16430,7 +16815,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: private_only
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: external
@@ -16505,7 +16890,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -16567,7 +16952,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -16634,7 +17019,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -16709,7 +17094,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: external_signal
   verifier_family: external
@@ -17248,7 +17633,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: external_signal
   verifier_family: external
@@ -17313,7 +17698,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -17379,7 +17764,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: benchmark
@@ -17453,7 +17838,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -17524,7 +17909,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -17593,7 +17978,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -17664,7 +18049,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -17736,7 +18121,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: judge
@@ -17803,7 +18188,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -17871,7 +18256,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: judge
@@ -17939,7 +18324,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -18007,7 +18392,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -18073,7 +18458,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -18140,7 +18525,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -18213,7 +18598,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -18279,7 +18664,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -18360,7 +18745,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -18439,7 +18824,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -18511,7 +18896,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -18579,7 +18964,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -18644,7 +19029,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -18718,7 +19103,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -18785,7 +19170,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -18852,7 +19237,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -18919,7 +19304,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -18990,7 +19375,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -19064,7 +19449,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -19140,7 +19525,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -19212,7 +19597,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: unit_tests
   verifier_family: judge
@@ -19287,7 +19672,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: unit_tests
   verifier_family: programmatic
@@ -19360,7 +19745,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: unit_tests
   verifier_family: task_dependent
@@ -19427,7 +19812,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: unit_tests
   verifier_family: programmatic
@@ -19493,7 +19878,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -19568,7 +19953,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -19635,7 +20020,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: benchmark
@@ -19705,7 +20090,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -19771,7 +20156,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -19847,7 +20232,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -19919,7 +20304,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -19992,7 +20377,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -20072,7 +20457,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -20141,7 +20526,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: external_signal
   verifier_family: external
@@ -20207,7 +20592,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -20275,7 +20660,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -20342,7 +20727,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: judge
@@ -20408,7 +20793,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -20488,7 +20873,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: external_signal
   verifier_family: task_dependent
@@ -20556,7 +20941,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: judge
@@ -20623,7 +21008,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: external
@@ -20695,7 +21080,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: judge
@@ -20761,7 +21146,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: judge
@@ -20836,7 +21221,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -20912,7 +21297,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -20986,7 +21371,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -21059,7 +21444,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -21133,7 +21518,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -21200,7 +21585,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -21266,7 +21651,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -21339,7 +21724,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: programmatic
@@ -21414,7 +21799,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -21494,7 +21879,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -21568,7 +21953,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -21641,7 +22026,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -21723,7 +22108,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: judge_or_rubric
   verifier_family: judge
@@ -21812,7 +22197,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -21880,7 +22265,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -21953,7 +22338,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -22029,7 +22414,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -22105,7 +22490,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -22178,7 +22563,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -22255,7 +22640,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -22331,7 +22716,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -22404,7 +22789,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -22477,7 +22862,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -22550,7 +22935,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: task_dependent
@@ -22616,7 +23001,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: task_dependent
@@ -22692,7 +23077,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: judge
@@ -22767,7 +23152,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -22842,7 +23227,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -22910,7 +23295,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -22978,7 +23363,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: task_dependent
@@ -23054,7 +23439,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -23130,7 +23515,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -23203,7 +23588,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: judge
@@ -23271,7 +23656,7 @@
   sft_fit: weak
   rlvr_fit: judge_dependent
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: judge_or_rubric
   verifier_family: task_dependent
@@ -23349,7 +23734,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -23418,7 +23803,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -23486,7 +23871,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -23565,7 +23950,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -23638,7 +24023,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -23711,7 +24096,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -23784,7 +24169,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -23868,7 +24253,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -23955,7 +24340,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -24034,7 +24419,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -24113,7 +24498,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -24182,7 +24567,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -24252,7 +24637,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -24324,7 +24709,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -24400,7 +24785,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: benchmark
@@ -24471,7 +24856,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: unit_tests
   verifier_family: programmatic
@@ -24543,7 +24928,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -24637,7 +25022,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: rubric
   verifier_family: llm_judge
@@ -24734,7 +25119,7 @@
   sft_fit: candidate
   rlvr_fit: limited
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: human_validated
@@ -24807,7 +25192,7 @@
   sft_fit: candidate
   rlvr_fit: limited
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -24892,7 +25277,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -24970,7 +25355,7 @@
   sft_fit: candidate
   rlvr_fit: limited
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -25041,7 +25426,7 @@
   sft_fit: weak
   rlvr_fit: limited
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -25112,7 +25497,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: game_rule
@@ -25193,7 +25578,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: simulator_state
@@ -25287,7 +25672,7 @@
   sft_fit: candidate
   rlvr_fit: limited
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: human_validated
@@ -25375,7 +25760,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: programmatic
@@ -25453,7 +25838,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -25536,7 +25921,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -25612,7 +25997,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -25688,7 +26073,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: benchmark
@@ -25765,7 +26150,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: unit_tests
   verifier_family: task_dependent
@@ -25833,7 +26218,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -25910,7 +26295,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -25985,7 +26370,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: human_verified
@@ -26067,7 +26452,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -26139,7 +26524,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: human_verified
@@ -26206,7 +26591,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: task_dependent
@@ -26289,7 +26674,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -26369,7 +26754,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -26443,7 +26828,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: task_dependent
@@ -26509,7 +26894,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: safety_gate
   verifier_family: judge
@@ -26574,7 +26959,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: safety_gate
   verifier_family: benchmark
@@ -26641,7 +27026,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: rubric
   verifier_family: human_verified
@@ -26733,7 +27118,7 @@
   sft_fit: candidate
   rlvr_fit: limited
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: judge
   verifier_family: llm_judge
@@ -26800,7 +27185,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -26866,7 +27251,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -26931,7 +27316,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -26996,7 +27381,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -27065,7 +27450,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: benchmark
@@ -27150,7 +27535,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -27235,7 +27620,7 @@
   sft_fit: strong
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: weak
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -27304,7 +27689,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -27374,7 +27759,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -27442,7 +27827,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -27510,7 +27895,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -27578,7 +27963,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: task_dependent
   verifier_family: task_dependent
@@ -27652,7 +28037,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -27723,7 +28108,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -27804,7 +28189,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -27874,7 +28259,7 @@
   sft_fit: candidate
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: weak
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -27960,7 +28345,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -28034,7 +28419,7 @@
   sft_fit: weak
   rlvr_fit: weak
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -28104,7 +28489,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -28171,7 +28556,7 @@
   sft_fit: weak
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -28240,7 +28625,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -28318,7 +28703,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: programmatic
@@ -28397,7 +28782,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -28481,7 +28866,7 @@
   sft_fit: strong
   rlvr_fit: strong
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -28551,7 +28936,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -28619,7 +29004,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -28687,7 +29072,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: programmatic
@@ -28767,7 +29152,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: environment_state
   verifier_family: human_verified
@@ -28863,7 +29248,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: task_dependent
   verifier_family: human_verified
@@ -28944,7 +29329,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: llm_judge
@@ -29015,7 +29400,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -29094,7 +29479,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: strong
   reward_family: benchmark_label
   verifier_family: llm_judge
@@ -29164,7 +29549,7 @@
   sft_fit: weak
   rlvr_fit: strong
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: process_reward
   verifier_family: llm_judge
@@ -29234,7 +29619,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: strong
+  distillation_fit: strong
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: benchmark
@@ -29322,7 +29707,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: benchmark_label
   verifier_family: benchmark
@@ -29394,7 +29779,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -29466,7 +29851,7 @@
   sft_fit: candidate
   rlvr_fit: candidate
   online_rl_fit: candidate
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: benchmark
@@ -29538,7 +29923,7 @@
   sft_fit: weak
   rlvr_fit: candidate
   online_rl_fit: limited
-  opd_fit: weak
+  distillation_fit: weak
   release_gate_fit: strong
   reward_family: safety_gate
   verifier_family: programmatic
@@ -29610,7 +29995,7 @@
   sft_fit: candidate
   rlvr_fit: strong
   online_rl_fit: strong
-  opd_fit: candidate
+  distillation_fit: candidate
   release_gate_fit: candidate
   reward_family: environment_state
   verifier_family: programmatic
@@ -29632,3 +30017,615 @@
   - train-rollouts
   - build-evals
   - release-gates
+- name: EntWorld
+  category: gui-world
+  year: 2026
+  modality:
+  - enterprise
+  - gui
+  - business_workflow
+  - database_schema
+  action_space:
+  - gui_action
+  - information_retrieval
+  - workflow_execution
+  - state_transition
+  reward_type: sql_verified_enterprise_task_success
+  verifier: sql_based_deterministic_state_transition_validation
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: false
+  sandbox: enterprise_gui_environment
+  production_signal: verifiable_enterprise_gui_agent_benchmark
+  url: https://arxiv.org/abs/2601.17722
+  repo:
+  notes: Enterprise GUI-agent benchmark with 1,756 tasks across six domains,
+    including CRM, ITIL, and ERP workflows, using schema-grounded task
+    generation and SQL-based deterministic verification instead of visual
+    matching.
+  task_count: 1756
+  domain_count: 6
+  id: entworld
+  resource_kind: benchmark
+  canonical_category: gui-world
+  subtype: enterprise_gui_agent_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2601.17722
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: schema_grounded_enterprise_task_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: weak
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: enterprise_database_state
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_dependent_enterprise_gui
+  runtime_host: unspecified
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: enterprise_policy_dependent
+  audit_log: sql_state_transition_results
+  telemetry_type: enterprise_gui_task_runs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+- name: Alem
+  category: embodied-world
+  year: 2026
+  modality:
+  - multi_agent
+  - game
+  - survival_world
+  - coordination
+  action_space:
+  - exploration
+  - crafting
+  - trading
+  - combat
+  - communication
+  reward_type: multi_agent_survival_and_coordination_return
+  verifier: programmatic_return_and_coordination_reward
+  trainable: partial
+  resettable: partial
+  trajectories: false
+  sandbox: simulated_game
+  production_signal: open_ended_multi_agent_coordination_world
+  url: https://arxiv.org/abs/2606.08340
+  repo:
+  notes: JAX-based Craftax-like benchmark for open-ended multi-agent
+    coordination, adding procedurally generated tasks, communication, soft
+    specialization, exploration, crafting, trading, and combat to a long-horizon
+    survival world.
+  id: alem
+  resource_kind: world
+  canonical_category: embodied-world
+  subtype: multi_agent_coordination_world
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.08340
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/alem-world/alem-env
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-15'
+    confidence: medium
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_game_episode_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: game_rule
+  verifier_recomputable: partial
+  verifier_isolation: simulated_game_world
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: simulated_survival_world
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: not_applicable
+  approval_policy: game_rule_boundary
+  audit_log: return_and_coordination_metrics
+  telemetry_type: multi_agent_game_rollouts
+  destructive_action_scope: game_sandbox
+  reader_paths:
+  - build-evals
+  - foundations
+  - production-direction
+- name: OpenSkill
+  category: training-framework
+  year: 2026
+  modality:
+  - skills
+  - open_world
+  - self_evolution
+  - verifier_synthesis
+  action_space:
+  - knowledge_retrieval
+  - skill_authoring
+  - virtual_task_practice
+  - verifier_construction
+  reward_type: self_built_virtual_task_verification
+  verifier: self_built_virtual_task_verifier_and_final_target_evaluation
+  trainable: partial
+  resettable: partial
+  trajectories: synthetic
+  sandbox: skill_evolution_sandbox
+  production_signal: open_world_self_evolution_without_target_task_supervision
+  url: https://arxiv.org/abs/2606.06741
+  repo:
+  notes: Open-world self-evolution framework where an agent starts from a task
+    prompt, retrieves grounding and verification anchors from public resources,
+    builds skills, refines them against virtual tasks, and reserves target
+    supervision for final evaluation.
+  id: openskill
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: open_world_skill_self_evolution_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.06741
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/OpenLAIR/OpenSkill
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-15'
+    confidence: medium
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: self_built_virtual_task_practice_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: virtual_task_refinement_loop
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: hybrid_verifier
+  verifier_recomputable: partial
+  verifier_isolation: leakage_free_virtual_task_verifier
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: skill_construction_and_final_evaluation_split
+  runtime_host: unspecified
+  network_policy: open_world_resource_access
+  credential_boundary: not_specified
+  approval_policy: virtual_task_verifier_boundary
+  audit_log: skill_revision_and_verifier_alignment_records
+  telemetry_type: skill_evolution_rollouts_and_virtual_test_results
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+  - production-direction
+- name: CoEvolve
+  category: training-framework
+  year: 2026
+  modality:
+  - rl
+  - task_synthesis
+  - rollout_feedback
+  - data_distribution
+  action_space:
+  - environment_interaction
+  - rollout_analysis
+  - task_synthesis
+  - policy_update
+  reward_type: environment_validated_synthesized_task_feedback
+  verifier: environment_interaction_validated_task_synthesis
+  trainable: true
+  resettable: partial
+  trajectories: synthetic
+  sandbox: benchmark_dependent
+  production_signal: closed_loop_agent_data_mutual_evolution
+  url: https://arxiv.org/abs/2604.15840
+  repo:
+  notes: Agent-data mutual evolution framework that extracts forgetting and
+    uncertainty signals from rollouts, synthesizes failure-targeted tasks,
+    validates them through environment interaction, and folds them back into RL
+    training on AppWorld and BFCL-style settings.
+  id: coevolve-agent-data
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: closed_loop_agent_data_evolution_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.15840
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/AMAP-ML/CoEvolve
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-15'
+    confidence: medium
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: synthesized_failure_targeted_agent_tasks
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_environment_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: environment_validated_synthetic_task_loop
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_dependent_environment_loop
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: environment_validation_required
+  audit_log: rollout_failure_signals_and_synthesized_task_validation
+  telemetry_type: rollout_feedback_and_task_synthesis_records
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+- name: Role-Agent
+  category: training-framework
+  year: 2026
+  modality:
+  - rl
+  - world_model
+  - self_evolution
+  - trajectory_feedback
+  action_space:
+  - next_state_prediction
+  - rollout
+  - failure_pattern_retrieval
+  - task_resampling
+  reward_type: prediction_observation_alignment_process_reward
+  verifier: prediction_observation_similarity_and_benchmark_return
+  trainable: true
+  resettable: true
+  trajectories: partial
+  sandbox: gym_like
+  production_signal: dual_role_agent_environment_co_evolution
+  url: https://arxiv.org/abs/2606.10917
+  repo: https://github.com/AMAP-ML/roleagent
+  notes: Dual-role evolution framework where one LLM acts both as an agent and
+    as an internal environment model, using World-In-Agent next-state prediction
+    as a process reward and Agent-In-World failure fingerprints for targeted
+    curriculum resampling.
+  id: role-agent
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: dual_role_agent_environment_training_framework
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.10917
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/AMAP-ML/roleagent
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: multi_turn_rollouts_and_failure_fingerprints
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: benchmark_environment_episode_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: process_reward
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: benchmark_environment_and_training_stack
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: benchmark_policy_dependent
+  audit_log: rollout_prediction_and_failure_pattern_records
+  telemetry_type: next_state_predictions_rollouts_and_task_resampling
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+  - production-direction
+- name: ProPlay
+  category: training-framework
+  year: 2026
+  modality:
+  - world_model
+  - memory
+  - planning
+  - self_evolution
+  action_space:
+  - procedure_induction
+  - preplay
+  - environment_action
+  - graph_refinement
+  reward_type: benchmark_task_success_with_procedural_world_model_feedback
+  verifier: benchmark_task_success_and_procedure_graph_ablation
+  trainable: true
+  resettable: true
+  trajectories: partial
+  sandbox: gym_like
+  production_signal: procedural_world_model_for_self_evolving_agents
+  url: https://arxiv.org/abs/2606.12780
+  repo: https://github.com/antman9914/proplay
+  notes: Procedural pre-play framework that abstracts successful trajectories
+    into procedure graphs, rehearses likely future procedural paths before
+    action, and refines the graph from environment feedback across ScienceWorld,
+    PlanCraft, and tau-bench-style settings.
+  id: proplay
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: procedural_world_model_agent_training_framework
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12780
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/antman9914/proplay
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: successful_task_trajectories_and_procedure_graph_updates
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: benchmark_environment_episode_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: benchmark_environment_wrappers
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: benchmark_policy_dependent
+  audit_log: procedure_graph_and_episode_results
+  telemetry_type: procedure_graph_preplay_and_environment_feedback
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+  - production-direction
+- name: ADWM
+  category: training-framework
+  year: 2026
+  modality:
+  - world_model
+  - offline_evaluation
+  - trajectories
+  - policy_evaluation
+  action_space:
+  - policy_conditioned_simulation
+  - latent_transition_generation
+  - offline_value_estimation
+  reward_type: off_policy_value_estimate_from_simulated_agent_trajectories
+  verifier: offline_policy_value_estimation_against_multi_turn_agent_tasks
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: world_model
+  production_signal: offline_world_model_evaluation_for_llm_agents
+  url: https://arxiv.org/abs/2606.05558
+  repo:
+  notes: Autoregressive Diffusion World Model for estimating new LLM-agent
+    policy performance from pre-collected trajectories, alternating policy
+    actions with learned transition simulation to reduce risky online
+    evaluation.
+  id: adwm-off-policy-evaluation
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: offline_agent_world_model_evaluation_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.05558
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: pre_collected_multi_turn_agent_trajectories
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: offline_trajectory_replay_and_world_model_rollout
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: offline_world_model_estimator
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: offline_trajectory_dataset
+  runtime_host: not_applicable
+  network_policy: not_applicable
+  credential_boundary: not_applicable
+  approval_policy: offline_evaluation_only
+  audit_log: simulated_trajectory_value_estimates
+  telemetry_type: pre_collected_and_simulated_agent_trajectories
+  destructive_action_scope: not_applicable
+  reader_paths:
+  - train-rollouts
+  - release-gates
+  - foundations
+- name: Context-Fractured Decomposition Attacks
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - tool_agent
+  - security
+  - artifact_provenance
+  - multi_step_attack
+  action_space:
+  - tool_call
+  - file_write
+  - artifact_reuse
+  - delayed_execution
+  reward_type: attack_success_and_provenance_gap_trigger_analysis
+  verifier: reproducible_trigger_and_attack_success_analysis
+  trainable: false
+  resettable: partial
+  trajectories: partial
+  sandbox: tool_agent_workspace
+  production_signal: artifact_provenance_gap_for_tool_using_agent_security
+  url: https://arxiv.org/abs/2606.09084
+  repo:
+  notes: Safety study of context-fractured decomposition attacks where benign
+    intermediate artifacts created by tool-using agents become harmful when
+    reused later across workflow stages or agent instances without provenance
+    tracking.
+  id: context-fractured-decomposition-attacks
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: tool_agent_artifact_provenance_attack
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.09084
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: multi_step_tool_agent_attack_traces
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: workspace_state_reset
+  trainability_status: not_applicable
+  sft_fit: weak
+  rlvr_fit: weak
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: tool_agent_workspace
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: workspace_artifact_boundary
+  runtime_host: benchmark_dependent
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: artifact_provenance_required
+  audit_log: artifact_creation_and_reuse_trace
+  telemetry_type: tool_calls_workspace_artifacts_and_delayed_attack_steps
+  destructive_action_scope: benchmark_workspace
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
