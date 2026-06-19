@@ -76,4 +76,4 @@ Allowed support tags: `overview`, `status`, `reproducibility`, `code`,
 Allowed reader paths: `build-evals`, `train-rollouts`, `foundations`,
 `production-direction`, `release-gates`, `safety-audit`.
 
-Allowed source confidence values: `official`, `high`, `medium`.
+Allowed source confidence values: `official`, `high`.

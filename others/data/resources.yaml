@@ -1675,6 +1675,806 @@
   - train-rollouts
   - build-evals
   - foundations
+- name: SENTINEL
+  category: training-framework
+  year: 2026
+  modality:
+  - tools
+  - rl
+  - failure_driven_training
+  - task_synthesis
+  action_space:
+  - failed_trajectory_analysis
+  - executable_task_generation
+  - tool_call_rollout
+  - policy_update
+  reward_type: tool_task_success_and_passk_improvement
+  verifier: tau2_bench_task_success_and_passk_metrics
+  trainable: true
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: simulated_tool_environment
+  production_signal: failure_targeted_agentic_rl_for_tool_using_agents
+  url: https://arxiv.org/abs/2606.12908
+  repo:
+  notes: Failure-driven RL framework for tool-using language-model agents where
+    a controller summarizes recurring rollout failures, a proposer generates
+    executable stress-test tasks, and the solver trains on targeted tasks.
+  id: sentinel-failure-driven-rl
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: failure_driven_tool_agent_rl_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12908
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: failed_tool_agent_rollouts_and_targeted_training_tasks
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_task_replay
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: strong
+  online_rl_fit: strong
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: tool_agent_benchmark_environment
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: simulated_tool_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: benchmark_policy_dependent
+  audit_log: failed_trajectory_summaries_and_training_task_records
+  telemetry_type: tool_rollouts_failures_rewards_and_passk_metrics
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+- name: HarnessBridge
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - harness
+  - terminal
+  - software_engineering
+  - trajectory_compression
+  action_space:
+  - observation_projection
+  - action_projection
+  - trajectory_grounded_rejection
+  - executable_transition_mapping
+  reward_type: benchmark_success_and_token_efficiency
+  verifier: terminal_bench_and_swe_bench_verified_eval
+  trainable: true
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: learnable_agent_environment_interface_controller
+  url: https://arxiv.org/abs/2606.12882
+  repo:
+  notes: Learnable bidirectional controller for LLM-agent harnesses that
+    projects raw trajectories into decision-relevant observations and converts
+    proposed actions into executable transitions or trajectory-grounded
+    rejections.
+  id: harnessbridge
+  resource_kind: agent_infrastructure
+  canonical_category: agent-infrastructure
+  subtype: learnable_agent_harness_controller
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12882
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: harness_supervision_and_agent_benchmark_trajectories
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: benchmark_trajectory_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: task_success_and_efficiency
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_harness
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: harness_boundary
+  audit_log: trajectory_projection_and_rejection_records
+  telemetry_type: benchmark_trajectories_token_usage_and_success_metrics
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - production-direction
+- name: SkillCAT
+  category: training-framework
+  year: 2026
+  modality:
+  - skills
+  - self_evolution
+  - trajectories
+  - document_tasks
+  action_space:
+  - contrastive_trajectory_analysis
+  - skill_patch_generation
+  - source_task_replay
+  - topology_aware_skill_routing
+  reward_type: source_task_outcome_preservation_and_improvement
+  verifier: replay_based_skill_patch_assessment
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: skill_evolution_sandbox
+  production_signal: trajectory_grounded_agent_skill_self_evolution
+  url: https://arxiv.org/abs/2606.13317
+  repo:
+  notes: Training-free skill self-evolution framework that compares same-task
+    success and failure trajectories, replays candidate skill patches on source
+    task clones, and routes only relevant sub-skills at inference time.
+  id: skillcat
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: trajectory_grounded_skill_self_evolution
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.13317
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: success_failure_agent_task_trajectories
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: source_task_clone_replay
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: task_dependent
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: source_task_replay
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: skill_evolution_sandbox
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: source_task_assessment_gate
+  audit_log: skill_patch_assessment_records
+  telemetry_type: skill_patches_source_replays_and_task_scores
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+- name: EvoArena
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - dynamic_environment
+  - memory
+  - terminal
+  - software
+  - social_preference
+  action_space:
+  - task_execution
+  - memory_update
+  - environment_change_tracking
+  - chain_level_reasoning
+  reward_type: evolving_environment_task_accuracy
+  verifier: benchmark_accuracy_and_chain_level_success
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: dynamic_environment_memory_evolution_benchmark
+  url: https://arxiv.org/abs/2606.13681
+  repo:
+  notes: Benchmark suite for robust agents in changing environments, modeling
+    progressive updates across terminal, software, and social domains and
+    evaluating whether memory evolution improves task and chain-level success.
+  id: evoarena
+  resource_kind: benchmark
+  canonical_category: agent-infrastructure
+  subtype: dynamic_environment_memory_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.13681
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: progressive_environment_update_sequences
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: environment_update_sequence_replay
+  trainability_status: evaluation_only
+  sft_fit: candidate
+  rlvr_fit: limited
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: memory_update_and_task_success_records
+  telemetry_type: environment_updates_memory_patches_and_task_scores
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - foundations
+  - release-gates
+- name: LoHoSearch
+  category: research-world
+  year: 2026
+  modality:
+  - search
+  - long_horizon
+  - knowledge_graph
+  - web_research
+  action_space:
+  - search
+  - evidence_gathering
+  - context_management
+  - answer_synthesis
+  reward_type: kg_verified_unique_answer_accuracy
+  verifier: human_verified_kg_grounded_answer
+  trainable: false
+  resettable: dataset_replay
+  trajectories: false
+  sandbox: search_benchmark
+  production_signal: harder_long_horizon_search_agent_evaluation
+  url: https://arxiv.org/abs/2606.12837
+  repo:
+  notes: Long-horizon search-agent benchmark with 544 human-verified questions
+    across 11 domains, constructed from a large Wikipedia knowledge graph to
+    stress search space size, relation structure, and context management.
+  task_count: 544
+  id: lohosearch
+  resource_kind: benchmark
+  canonical_category: research-world
+  subtype: long_horizon_search_agent_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12837
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: question_answer_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: benchmark_label
+  verifier_family: human_verified
+  verifier_recomputable: partial
+  verifier_isolation: dataset_replay
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: search_benchmark
+  runtime_host: benchmark_dependent
+  network_policy: open_web_access_required
+  credential_boundary: public_web_only
+  approval_policy: not_specified
+  audit_log: benchmark_scores
+  telemetry_type: search_agent_answers_and_context_management_metrics
+  destructive_action_scope: public_web_navigation
+  reader_paths:
+  - build-evals
+  - foundations
+  - release-gates
+- name: DailyReport
+  category: research-world
+  year: 2026
+  modality:
+  - search
+  - open_ended
+  - daily_information_need
+  - rubrics
+  action_space:
+  - web_exploration
+  - subtask_decomposition
+  - evidence_synthesis
+  - report_generation
+  reward_type: cascade_rubric_and_user_preference_score
+  verifier: disentangled_cascade_rubric_evaluation
+  trainable: false
+  resettable: dataset_replay
+  trajectories: false
+  sandbox: search_benchmark
+  production_signal: user_centered_daily_search_agent_evaluation
+  url: https://arxiv.org/abs/2606.12871
+  repo:
+  notes: Open-ended benchmark for daily search-agent tasks, with 150 timely
+    user-facing tasks and 3,546 associated rubrics for interpretable cascade
+    performance attribution and user-centric aggregation.
+  task_count: 150
+  scenario_count: 3546
+  id: dailyreport
+  resource_kind: benchmark
+  canonical_category: research-world
+  subtype: open_ended_daily_search_agent_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12871
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: task_and_rubric_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: judge_dependent
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: rubric
+  verifier_family: llm_judge
+  verifier_recomputable: partial
+  verifier_isolation: rubric_benchmark
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: search_benchmark
+  runtime_host: benchmark_dependent
+  network_policy: open_web_access_required
+  credential_boundary: public_web_only
+  approval_policy: rubric_gate
+  audit_log: cascade_rubric_scores
+  telemetry_type: search_reports_subtask_scores_and_user_preference_scores
+  destructive_action_scope: public_web_navigation
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+- name: TerraBench
+  category: research-world
+  year: 2026
+  modality:
+  - earth_science
+  - geospatial
+  - scientific_tools
+  - simulation
+  action_space:
+  - tool_call
+  - geospatial_processing
+  - simulator_query
+  - artifact_backed_reasoning
+  reward_type: grounded_earth_science_reasoning_success
+  verifier: process_level_and_outcome_benchmark_eval
+  trainable: partial
+  resettable: partial
+  trajectories: partial
+  sandbox: scientific_tool_environment
+  production_signal: executable_earth_science_agent_workflows
+  url: https://arxiv.org/abs/2606.13148
+  repo:
+  notes: Grounded Earth-science agent benchmark built on TerraAgent, an
+    executable ReAct-style framework that interleaves reasoning, tool calls,
+    observations, geospatial processing, simulation, and artifact-backed
+    computation.
+  id: terrabench
+  resource_kind: benchmark
+  canonical_category: research-world
+  subtype: earth_science_tool_agent_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.13148
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: terraagent_reasoning_tool_observation_traces
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_case_replay
+  trainability_status: evaluation_only
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: scientific_tool_environment
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: scientific_tool_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: scientific_tool_boundary
+  audit_log: tool_calls_observations_and_artifact_outputs
+  telemetry_type: reasoning_traces_tool_calls_and_geospatial_artifacts
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - foundations
+  - release-gates
+- name: EpiBench
+  category: research-world
+  year: 2026
+  modality:
+  - epigenomics
+  - scientific_workflow
+  - code
+  - deterministic_grading
+  action_space:
+  - file_inspection
+  - workflow_state_reasoning
+  - assay_specific_analysis
+  - answer_generation
+  reward_type: deterministic_epigenomics_answer_correctness
+  verifier: deterministically_gradable_workflow_state_checks
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: scientific_workflow_benchmark
+  production_signal: verifiable_biomedical_analysis_agent_evaluation
+  url: https://arxiv.org/abs/2606.13602
+  repo:
+  notes: Verifiable benchmark for short-horizon epigenomics analysis with 106
+    evaluations across CUT&Tag/CUT&RUN, ATAC-seq, ChIP-seq, and DNA methylation
+    workflows, reporting 5,088 valid model-harness trajectories.
+  task_count: 106
+  trajectory_count: 5088
+  id: epibench
+  resource_kind: benchmark
+  canonical_category: research-world
+  subtype: epigenomics_agent_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.13602
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: model_harness_epigenomics_analysis_trajectories
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: workflow_state_replay
+  trainability_status: evaluation_only
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: scientific_workflow_dataset
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: scientific_workflow_benchmark
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: biomedical_workflow_boundary
+  audit_log: deterministic_answer_checks_and_trajectory_records
+  telemetry_type: model_harness_runs_intermediate_results_and_final_answers
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
+  - foundations
+- name: GeoNatureAgent Benchmark
+  category: api-world
+  year: 2026
+  modality:
+  - geospatial
+  - environmental_science
+  - api
+  - structured_tool_calling
+  action_space:
+  - tool_call
+  - geospatial_query
+  - indicator_analysis
+  - multilingual_reasoning
+  reward_type: geospatial_task_success_and_cost_accuracy
+  verifier: benchmark_case_checks_over_self_hostable_api
+  trainable: partial
+  resettable: true
+  trajectories: partial
+  sandbox: simulated_apis
+  production_signal: production_style_geospatial_tool_agent_benchmark
+  url: https://github.com/gabrielireland/GeoNatureAgent_Benchmark
+  repo: https://github.com/gabrielireland/GeoNatureAgent_Benchmark
+  notes: Environmental geospatial-analysis benchmark with 93 tasks across 18
+    categories and 16 tools, evaluating structured tool-calling agents against
+    a self-hostable API for Spain and Portugal indicator analysis.
+  task_count: 93
+  api_count: 16
+  id: geonatureagent-benchmark
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: environmental_geospatial_tool_agent_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://github.com/gabrielireland/GeoNatureAgent_Benchmark
+    type: repository
+    supports:
+    - overview
+    - code
+    - reproducibility
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://arxiv.org/abs/2606.12821
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: benchmark_model_runs_and_tool_call_results
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: self_hosted_api_case_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: self_hostable_geospatial_api
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: self_hostable_geospatial_api
+  runtime_host: local_or_self_hosted
+  network_policy: local_api_or_configured_model_access
+  credential_boundary: model_api_key_boundary
+  approval_policy: benchmark_case_policy
+  audit_log: benchmark_results_and_cost_accuracy_records
+  telemetry_type: tool_calls_api_outputs_scores_and_costs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+- name: AgentBuild / Rietveld Refinement
+  category: research-world
+  year: 2026
+  modality:
+  - scientific_workflow
+  - mcp
+  - a2a
+  - rubric
+  action_space:
+  - contract_authoring
+  - curriculum_progression
+  - coding_agent_edit
+  - trajectory_scope_scoring
+  reward_type: rubric_driven_scientific_agent_build_score
+  verifier: rubric_judge_and_frontier_case_contract_check
+  trainable: partial
+  resettable: partial
+  trajectories: partial
+  sandbox: scientific_execution_environment
+  production_signal: contract_based_scientific_agent_construction
+  url: https://arxiv.org/abs/2606.12834
+  repo:
+  notes: Scientific-agent construction framework for Rietveld refinement where
+    a scientist-authored contract combines rubric, difficulty curriculum, and
+    knowledge base, gating a meta-optimizer coding agent over GSAS-II behind
+    MCP and A2A.
+  id: agentbuild-rietveld-refinement
+  resource_kind: agent_infrastructure
+  canonical_category: research-world
+  subtype: contract_based_scientific_agent_builder
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12834
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: scientific_agent_build_and_refinement_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: contract_and_curriculum_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: rubric
+  verifier_family: llm_judge
+  verifier_recomputable: partial
+  verifier_isolation: scientific_execution_environment
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: declared_agent_edit_boundary
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: scientific_tool_boundary
+  approval_policy: scientist_authored_contract
+  audit_log: rubric_scores_curriculum_steps_and_trajectory_scope
+  telemetry_type: agent_build_edits_refinement_outputs_and_contract_scores
+  destructive_action_scope: scientific_workspace
+  reader_paths:
+  - foundations
+  - train-rollouts
+  - production-direction
+- name: MDForge
+  category: research-world
+  year: 2026
+  modality:
+  - molecular_dynamics
+  - scientific_workflow
+  - simulator_feedback
+  - code_generation
+  action_space:
+  - pipeline_design
+  - code_generation
+  - simulator_execution
+  - expert_debate_feedback
+  reward_type: sparse_simulator_feedback_and_binding_free_energy_success
+  verifier: sampl_benchmark_and_wet_lab_confirmation
+  trainable: partial
+  resettable: partial
+  trajectories: partial
+  sandbox: scientific_execution_environment
+  production_signal: sparse_feedback_scientific_pipeline_design_agent
+  url: https://arxiv.org/abs/2606.12916
+  repo:
+  notes: Agentic molecular-dynamics pipeline-design system that uses verbal
+    rewards from multi-agent physics-expert debate to densify sparse simulator
+    feedback, then evaluates generated pipelines on SAMPL host-guest benchmarks.
+  id: mdforge
+  resource_kind: agent_infrastructure
+  canonical_category: research-world
+  subtype: molecular_dynamics_pipeline_design_agent
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12916
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: molecular_dynamics_pipeline_design_runs
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_molecule_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: scientific_simulator
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: scientific_execution_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: scientific_compute_boundary
+  approval_policy: scientific_validation_gate
+  audit_log: simulator_feedback_and_pipeline_design_records
+  telemetry_type: code_generation_simulator_outputs_and_expert_feedback
+  destructive_action_scope: scientific_workspace
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - foundations
 - name: CLI-Anything
   category: agent-infrastructure
   year: 2026
@@ -2647,6 +3447,383 @@
   destructive_action_scope: benchmark_sandbox
   reader_paths:
   - safety-audit
+  - release-gates
+  - build-evals
+- name: WebDecept
+  category: web-world
+  year: 2026
+  modality:
+  - browser
+  - web
+  - ecommerce
+  - deceptive_interfaces
+  - safety
+  action_space:
+  - browser_navigation
+  - web_agent_action
+  - deceptive_interface_injection
+  reward_type: safety_violation_and_task_success_metrics
+  verifier: controlled_ecommerce_deception_evaluation
+  trainable: false
+  resettable: benchmark_dependent
+  trajectories: false
+  sandbox: self_hosted_web
+  production_signal: deceptive_interface_safety_eval_for_ecommerce_web_agents
+  url: https://arxiv.org/abs/2606.13686
+  repo:
+  notes: Lightweight configurable framework for injecting deceptive e-commerce interface
+    patterns into existing web environments and evaluating multimodal web-agent safety
+    under controlled frontend manipulations.
+  id: webdecept
+  resource_kind: safety_control
+  canonical_category: web-world
+  subtype: ecommerce_deceptive_interface_web_agent_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.13686
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: frontend_deception_pattern_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: weak
+  online_rl_fit: limited
+  distillation_fit: weak
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: ecommerce_frontend_injection_layer
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: controlled_ecommerce_web_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: test_account_boundary
+  approval_policy: safety_evaluation_protocol
+  audit_log: deceptive_pattern_outcomes_and_agent_actions
+  telemetry_type: web_agent_actions_deception_patterns_and_safety_outcomes
+  destructive_action_scope: ecommerce_benchmark_state
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - build-evals
+- name: Prisma-World
+  category: generative-3d-world
+  year: 2026
+  modality:
+  - video
+  - world_model
+  - multi_agent
+  - camera_control
+  - generative_world
+  action_space:
+  - camera_control
+  - multi_agent_view_generation
+  - trajectory_conditioning
+  reward_type: cross_view_consistency_and_generation_quality
+  verifier: video_world_model_evaluation
+  trainable: partial
+  resettable: generated_world
+  trajectories: synthetic
+  sandbox: world_model
+  production_signal: camera_controllable_multi_agent_video_world_model
+  url: https://huiqiang-sun.github.io/prisma-world/
+  repo:
+  notes: Camera-controllable multi-agent video world model that couples multiple
+    generated viewpoints through geometry-aware denoising for cross-view consistency.
+  id: prisma-world
+  resource_kind: model_release
+  canonical_category: generative-3d-world
+  subtype: multi_agent_video_world_model
+  status: model_or_system_release
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.09507
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://huiqiang-sun.github.io/prisma-world/
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: generated_multi_agent_video_rollouts
+  trajectory_public: false
+  reset_support: none
+  reset_mechanism: generated_scene_initialization
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: video_world_model_eval
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: generated_video_world_model
+  runtime_host: model_release_dependent
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: model_license_and_use_policy
+  audit_log: generation_quality_and_consistency_metrics
+  telemetry_type: multi_agent_video_generation_metrics
+  destructive_action_scope: generated_world_assets
+  reader_paths:
+  - foundations
+  - train-rollouts
+  - production-direction
+- name: ADK Arena
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - agent_development_kits
+  - coding_agent
+  - docker
+  - benchmark_adapters
+  action_space:
+  - framework_api_learning
+  - agent_code_generation
+  - iterative_repair
+  - benchmark_adapter_execution
+  reward_type: validation_pipeline_pass_rate
+  verifier: docker_isolated_tests_and_benchmark_adapters
+  trainable: false
+  resettable: partial
+  trajectories: partial
+  sandbox: docker
+  production_signal: empirical_adk_usability_and_framework_effectiveness_eval
+  url: https://arxiv.org/abs/2606.05548
+  repo:
+  notes: LLM-as-a-developer methodology and ADK evaluation arena that compares
+    agent development kits through documentation-grounded code generation, Docker
+    isolation, validation feedback, and benchmark adapters.
+  id: adk-arena
+  resource_kind: benchmark
+  canonical_category: agent-infrastructure
+  subtype: agent_development_kit_evaluation_arena
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.05548
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: generated_agent_code_and_validation_feedback
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: per_framework_docker_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: docker_validation_pipeline
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: per_framework_docker_environment
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: benchmark_dependent
+  audit_log: code_generation_validation_and_repair_records
+  telemetry_type: framework_api_usage_tests_and_adapter_results
+  destructive_action_scope: docker_sandbox
+  reader_paths:
+  - build-evals
+  - production-direction
+  - release-gates
+- name: Sleeper Attack
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - llm_agents
+  - memory
+  - tools
+  - webpages
+  - mcp_context
+  action_space:
+  - adversarial_content_injection
+  - persistent_agent_state_trigger
+  - cross_interaction_attack
+  reward_type: sleeper_attack_success_and_safety_violation
+  verifier: benchmark_attack_success_measurement
+  trainable: false
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: persistent_external_observation_attack_benchmark_for_agents
+  url: https://arxiv.org/abs/2605.28201
+  repo: https://anonymous.4open.science/r/skdvnfu23ihr9wdscnksf1asdffsaef
+  notes: Benchmark for persistent adversarial content that can remain dormant in
+    agent state across interactions and later trigger harmful behavior from benign
+    user requests.
+  scenario_count: 1896
+  id: sleeper-attack
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: persistent_agent_state_attack_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.28201
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://anonymous.4open.science/r/skdvnfu23ihr9wdscnksf1asdffsaef
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: cross_interaction_attack_scenarios
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: scenario_replay_with_persistent_state
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: weak
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_scenario_replay
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: benchmark_agent_state_and_tool_context
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: safety_evaluation_protocol
+  audit_log: injected_content_persistence_and_trigger_outcomes
+  telemetry_type: agent_state_tool_context_and_attack_success_records
+  destructive_action_scope: benchmark_scenarios
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - build-evals
+- name: Tool Forge
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - tools
+  - enterprise_systems
+  - governance
+  - sandbox
+  - routing
+  action_space:
+  - tool_generation
+  - runtime_validation
+  - intent_scoped_routing
+  - credential_binding
+  reward_type: validation_carrying_tool_success
+  verifier: sandbox_tests_runtime_validation_and_tool_contracts
+  trainable: partial
+  resettable: partial
+  trajectories: partial
+  sandbox: toolchain_sandbox
+  production_signal: governed_tool_artifacts_for_agentic_execution
+  url: https://arxiv.org/abs/2605.28000
+  repo: https://github.com/nextmoca/tool-forge
+  notes: Validation-carrying toolchain for converting capability intent into governed,
+    sandbox-verified, cataloged tool artifacts exposed to agents through token-efficient
+    intent-scoped routing.
+  id: tool-forge
+  resource_kind: agent_infrastructure
+  canonical_category: agent-infrastructure
+  subtype: validation_carrying_agent_toolchain
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.28000
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/nextmoca/tool-forge
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: validation_and_tool_execution_records
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: sandbox_tool_validation_replay
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: sandbox_validation_and_tool_contract_layer
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: sandbox_verified_tool_capsule
+  runtime_host: local_or_self_hosted
+  network_policy: credential_scoped
+  credential_boundary: tool_capsule_credential_binding
+  approval_policy: governed_tool_lifecycle_policy
+  audit_log: validation_runtime_and_routing_records
+  telemetry_type: tool_capsule_tests_runtime_validation_and_router_decisions
+  destructive_action_scope: governed_tool_contracts
+  reader_paths:
+  - production-direction
   - release-gates
   - build-evals
 - name: Agent-BOM
@@ -12838,6 +14015,85 @@
   - safety-audit
   - release-gates
   - train-rollouts
+- name: CHERRL
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - rubric_reward
+  - reinforcement_learning
+  - llm_judge
+  - reward_hacking
+  - safety
+  action_space:
+  - biased_judge_injection
+  - reward_divergence_tracking
+  - hacking_onset_detection
+  - training_log_analysis
+  reward_type: controllable_biased_rubric_reward
+  verifier: clean_gold_and_biased_judge_comparison
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: verl_training_environment
+  production_signal: controllable_reward_hacking_testbed_for_rubric_based_rl
+  url: https://arxiv.org/abs/2606.04923
+  repo: https://github.com/THUAIS-Lab/CHERRL
+  notes: Public CHERRL environment for reproducing and detecting rubric-reward
+    hacking by separating clean and biased LLM-judge reward channels, exposing
+    reward divergence and hacking onset during RL training.
+  id: cherrl
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: controllable_rubric_reward_hacking_environment
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.04923
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/THUAIS-Lab/CHERRL
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: biased_rl_training_rollouts_and_reward_logs
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_training_restart
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: weak
+  release_gate_fit: strong
+  reward_family: rubric
+  verifier_family: llm_judge
+  verifier_recomputable: partial
+  verifier_isolation: dual_judge_reward_channels
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: reward_model_audit
+  runtime_host: local_or_self_hosted
+  network_policy: not_specified
+  credential_boundary: judge_endpoint_boundary
+  approval_policy: reward_audit_required
+  audit_log: reward_divergence_and_hacking_onset_records
+  telemetry_type: biased_and_unbiased_judge_scores_with_training_logs
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - train-rollouts
 - name: OS-Harm
   category: computer-world
   year: 2025
@@ -14241,7 +15497,7 @@
   trainable: closed
   resettable: 
   trajectories: false
-  sandbox: 
+  sandbox: model_release
   production_signal: doubao_model_report
   url: https://seed.bytedance.com/en/public_papers/seed1-5-vl-technical-report
   repo: https://github.com/ByteDance-Seed/Seed1.5-VL
@@ -14295,7 +15551,8 @@
   audit_log: not_specified
   telemetry_type: not_specified
   destructive_action_scope: environment_limited_or_unknown
-  reader_paths: []
+  reader_paths:
+  - production-direction
 - name: AppWorld
   category: api-world
   year: 2024
@@ -15095,7 +16352,7 @@
     - overview
     - status
     checked_at: '2026-05-22'
-    confidence: medium
+    confidence: high
   trajectory_availability: none
   trajectory_access: limited
   trajectory_type: none
@@ -18845,12 +20102,6 @@
     - dataset
     checked_at: '2026-06-14'
     confidence: high
-  - url: https://huggingface.co/datasets/leosltl/Android-Control
-    type: dataset
-    supports:
-    - dataset
-    checked_at: '2026-06-14'
-    confidence: medium
   trajectory_availability: public
   trajectory_access: public
   trajectory_type: environment_rollouts
@@ -18924,12 +20175,6 @@
     - dataset
     checked_at: '2026-06-14'
     confidence: high
-  - url: https://huggingface.co/datasets/rootsautomation/ScreenSpot
-    type: dataset
-    supports:
-    - dataset
-    checked_at: '2026-06-14'
-    confidence: medium
   trajectory_availability: partial
   trajectory_access: limited
   trajectory_type: logged_interactions
@@ -19098,7 +20343,8 @@
   audit_log: not_specified
   telemetry_type: not_specified
   destructive_action_scope: environment_limited_or_unknown
-  reader_paths: []
+  reader_paths:
+  - production-direction
 - name: InfiGUI-R1
   category: gui-world
   year: 2025
@@ -21217,6 +22463,96 @@
   reader_paths:
   - build-evals
   - train-rollouts
+- name: Cosmos 3
+  category: generative-3d-world
+  year: 2026
+  modality:
+  - language
+  - image
+  - video
+  - audio
+  - action
+  - physical_ai
+  - robotics
+  - world_model
+  action_space:
+  - omnimodal_generation
+  - forward_dynamics
+  - inverse_dynamics
+  - robot_policy
+  - trajectory_reasoning
+  reward_type: benchmark_and_human_eval
+  verifier: benchmark_eval_and_model_cards
+  trainable: partial
+  resettable: generated_asset
+  trajectories: synthetic
+  sandbox: world_model
+  production_signal: nvidia_omnimodal_world_model_for_physical_ai
+  url: https://research.nvidia.com/labs/cosmos-lab/cosmos3/
+  repo: https://github.com/nvidia/cosmos
+  notes: NVIDIA omnimodal world-model release for Physical AI that unifies
+    language, image, video, audio, and action modeling, including forward
+    dynamics, inverse dynamics, robot-policy, and trajectory-reasoning examples.
+  id: cosmos-3
+  resource_kind: model_release
+  canonical_category: generative-3d-world
+  subtype: omnimodal_physical_ai_world_model
+  status: model_or_system_release
+  content_evidence: true
+  sources:
+  - url: https://research.nvidia.com/labs/cosmos-lab/cosmos3/
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-15'
+    confidence: official
+  - url: https://arxiv.org/abs/2606.02800
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/nvidia/cosmos
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: synthetic_physical_world_rollouts
+  trajectory_public: false
+  reset_support: none
+  reset_mechanism: none
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: model_card_and_benchmark_suite
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: world_model
+  runtime_host: local_or_self_hosted
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: model_license_and_use_policy
+  audit_log: benchmark_and_model_card_metrics
+  telemetry_type: multimodal_generation_and_policy_benchmark_metrics
+  destructive_action_scope: generated_world_assets
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - foundations
 - name: Genie 2
   category: generative-3d-world
   year: 2024
@@ -24594,7 +25930,7 @@
     - overview
     - status
     checked_at: '2026-05-22'
-    confidence: medium
+    confidence: high
   trajectory_availability: synthetic
   trajectory_access: limited
   trajectory_type: fsm_verified_web_trajectories
@@ -30404,7 +31740,7 @@
     - overview
     - status
     checked_at: '2026-06-15'
-    confidence: medium
+    confidence: high
   trajectory_availability: none
   trajectory_access: limited
   trajectory_type: none
@@ -30483,7 +31819,7 @@
     - overview
     - status
     checked_at: '2026-06-15'
-    confidence: medium
+    confidence: high
   trajectory_availability: synthetic
   trajectory_access: limited
   trajectory_type: self_built_virtual_task_practice_rollouts
@@ -30562,7 +31898,7 @@
     - overview
     - status
     checked_at: '2026-06-15'
-    confidence: medium
+    confidence: high
   trajectory_availability: synthetic
   trajectory_access: limited
   trajectory_type: synthesized_failure_targeted_agent_tasks
@@ -30895,6 +32231,378 @@
   - safety-audit
   - release-gates
   - production-direction
+- name: Policy and World Modeling Co-Training
+  category: training-framework
+  year: 2026
+  modality:
+  - language_agent
+  - world_model
+  - reinforcement_learning
+  - rollouts
+  action_space:
+  - policy_rollout
+  - next_observation_prediction
+  - auxiliary_world_model_training
+  - reward_adaptive_loss_balancing
+  reward_type: benchmark_reward_with_world_model_auxiliary_loss
+  verifier: benchmark_task_success_across_agentic_tasks
+  trainable: true
+  resettable: partial
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: world_model_auxiliary_supervision_for_agent_rl_rollouts
+  url: https://arxiv.org/abs/2606.02388
+  repo:
+  notes: PaW co-trains the policy and a world-modeling auxiliary objective from
+    on-policy RL rollouts, using action-entropy data selection, noise-tolerant
+    world-model loss, and reward-adaptive balancing so language agents learn
+    what actions do to environments without adding inference-time simulation.
+  id: policy-world-modeling-cotraining
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: language_agent_world_model_cotraining_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.02388
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: on_policy_rl_rollouts_with_next_observation_supervision
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_environment_episode_replay
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: strong
+  online_rl_fit: strong
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_environment_and_policy_training_loop
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: benchmark_policy_dependent
+  audit_log: rollout_transition_and_world_model_training_records
+  telemetry_type: on_policy_rollouts_actions_next_observations_and_rewards
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+- name: StainFlow
+  category: training-framework
+  year: 2026
+  modality:
+  - gui
+  - mobile
+  - process_reward
+  - reinforcement_learning
+  - trajectories
+  action_space:
+  - entity_stain_tracking
+  - evidence_linking
+  - process_reward_scoring
+  - gui_rollout
+  reward_type: entity_stain_flow_process_reward
+  verifier: visually_verifiable_entity_state_tracking_and_key_node_evidence_windows
+  trainable: true
+  resettable: partial
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: process_reward_credit_assignment_for_gui_agent_rl
+  url: https://arxiv.org/abs/2606.07027
+  repo:
+  notes: Entity-stain-flow process reward model for GUI-agent RL that tracks
+    visually verifiable task entities across trajectories and links key-node
+    evidence windows, improving online RL success and trajectory completion
+    judgment on AndroidWorld and OGRBench.
+  id: stainflow
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: gui_process_reward_model
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.07027
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: gui_agent_trajectories_and_entity_evidence_windows
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: androidworld_and_ogrbench_episode_replay
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: strong
+  online_rl_fit: strong
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: process_reward
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: gui_benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: gui_benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: benchmark_policy_dependent
+  audit_log: entity_state_evidence_and_key_node_reward_records
+  telemetry_type: gui_trajectory_frames_entities_and_process_reward_signals
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+- name: OpenWebRL
+  category: training-framework
+  year: 2026
+  modality:
+  - web
+  - browser
+  - visual_web_agent
+  - online_rl
+  - live_web
+  action_space:
+  - browser_action
+  - click
+  - type
+  - navigate
+  - live_browser_rollout
+  - trajectory_level_judging
+  reward_type: trajectory_level_success_judging_for_online_rl
+  verifier: live_web_benchmark_success_judge
+  trainable: true
+  resettable: website_dependent
+  trajectories: partial
+  sandbox: live_browser_infrastructure
+  production_signal: online_multi_turn_rl_for_visual_web_agents_on_real_websites
+  url: https://arxiv.org/abs/2606.02031
+  repo:
+  notes: Open framework for training visual web agents with online multi-turn RL
+    on real websites, covering live-browser infrastructure, multimodal context
+    management, trajectory-level success judging, and efficient policy
+    optimization.
+  id: openwebrl
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: visual_web_agent_online_rl_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.02031
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: live_web_rl_rollouts_and_initialization_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: website_and_benchmark_dependent_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: strong
+  online_rl_fit: strong
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: live_web_benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: live_browser_runtime
+  runtime_host: local_or_self_hosted
+  network_policy: live_web_policy_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: live_web_safety_boundary_required
+  audit_log: browser_rollouts_context_windows_and_success_judgments
+  telemetry_type: live_web_actions_observations_rewards_and_benchmark_scores
+  destructive_action_scope: website_task_dependent
+  reader_paths:
+  - train-rollouts
+  - build-evals
+- name: Speculative Rollback Correction
+  category: training-framework
+  year: 2026
+  modality:
+  - web
+  - browser
+  - imitation_learning
+  - resettable_environment
+  - trajectories
+  action_space:
+  - web_agent_action
+  - fixed_horizon_branch_review
+  - rollback_correction
+  - teacher_intervention
+  - verifier_filtering
+  reward_type: hard_verifier_passing_trajectory_filter
+  verifier: hard_webarena_infinity_task_verifier
+  trainable: true
+  resettable: true
+  trajectories: partial
+  sandbox: webarena_infinity
+  production_signal: verifier_passing_web_agent_imitation_data_collection
+  url: https://arxiv.org/abs/2606.12485
+  repo: https://github.com/LongkunHao/SRC_gui_agent
+  notes: Branch-level imitation framework for resettable web-agent environments
+    that executes speculative segments before teacher review, rolls back harmful
+    deviations, filters successful rollouts with a hard verifier, and reports
+    977 verifier-passing trajectories plus 9,183 next-action examples on
+    WebArena-Infinity.
+  id: speculative-rollback-correction
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: web_agent_branch_level_imitation_framework
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12485
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/LongkunHao/SRC_gui_agent
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: verifier_passing_web_agent_rollouts_and_next_action_examples
+  trajectory_public: false
+  trajectory_count: 977
+  reset_support: episode_reset
+  reset_mechanism: speculative_branch_rollback_in_resettable_web_environment
+  trainability_status: framework_ready
+  sft_fit: strong
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: resettable_web_benchmark_environment
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: teacher_review_and_hard_verifier_required
+  audit_log: branch_review_rollback_and_verifier_passing_trajectory_records
+  telemetry_type: speculative_segments_teacher_corrections_rollbacks_and_examples
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - foundations
+- name: ADMIRE / Adaptive Milestone Reward
+  category: training-framework
+  year: 2026
+  modality:
+  - gui
+  - mobile
+  - androidworld
+  - milestone_reward
+  - reinforcement_learning
+  action_space:
+  - milestone_distillation
+  - asymmetric_credit_assignment
+  - gui_rollout
+  - failed_trajectory_scaffolding
+  reward_type: adaptive_milestone_reward
+  verifier: verifiable_dynamic_milestones_from_successful_explorations
+  trainable: true
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: verifiable_milestone_credit_assignment_for_gui_agent_rl
+  url: https://arxiv.org/abs/2602.11524
+  repo:
+  notes: Adaptive milestone reward mechanism for GUI-agent RL that distills
+    verifiable milestones from successful explorations, denoises successful
+    trajectories, and scaffolds failed trajectories for long-horizon mobile GUI
+    tasks.
+  id: admire-adaptive-milestone-reward
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: gui_milestone_reward_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2602.11524
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: gui_agent_success_and_failure_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: androidworld_and_benchmark_episode_replay
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: strong
+  online_rl_fit: strong
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: process_reward
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: gui_benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: gui_benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: benchmark_policy_dependent
+  audit_log: milestone_credit_assignment_and_reward_records
+  telemetry_type: gui_trajectory_milestones_rewards_and_success_metrics
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
 - name: ShoppingBench Trajectory Primitive
   category: training-framework
   year: 2026
@@ -30996,3 +32704,379 @@
   - train-rollouts
   - build-evals
   - foundations
+- name: Sibling-Guided Credit Distillation
+  category: training-framework
+  year: 2026
+  modality:
+  - tools
+  - reinforcement_learning
+  - long_horizon
+  - credit_assignment
+  action_space:
+  - tool_call
+  - api_action
+  - reasoning_token
+  - rollout_comparison
+  reward_type: outcome_verification_with_stepwise_credit_reference
+  verifier: external_outcome_verifier_and_llm_sibling_rollout_credit_reference
+  trainable: true
+  resettable: partial
+  trajectories: partial
+  sandbox: tool_use_benchmark
+  production_signal: safer_credit_assignment_for_long_horizon_tool_use_rl
+  url: https://arxiv.org/abs/2606.12634
+  repo:
+  notes: Sibling-guided credit distillation framework for long-horizon tool-use RL
+    that contrasts successful and failed sibling rollouts, uses distillation for
+    credit assignment rather than actor imitation, and keeps policy-gradient
+    optimization in charge of verifier-aligned tool behavior.
+  id: sibling-guided-credit-distillation
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: long_horizon_tool_use_credit_distillation
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.12634
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: successful_and_failed_sibling_tool_use_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_rollout_resampling
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: process_reward
+  verifier_family: hybrid
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: tool_use_benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: benchmark_policy_dependent
+  audit_log: sibling_rollout_contrast_and_credit_reassignment_records
+  telemetry_type: tool_use_rollouts_verifier_outcomes_and_credit_references
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - release-gates
+- name: TRACE Rollout Budget Allocation
+  category: training-framework
+  year: 2026
+  modality:
+  - reinforcement_learning
+  - multi_turn
+  - agentic_rl
+  - rollout_budgeting
+  action_space:
+  - react_turn
+  - rollout_prefix
+  - budget_allocation
+  - contrastive_exploration
+  reward_type: verifiable_reward_with_turn_level_informativeness
+  verifier: rollout_reward_contrast_and_prefix_level_value_signal
+  trainable: true
+  resettable: partial
+  trajectories: partial
+  sandbox: benchmark_dependent
+  production_signal: efficient_rollout_allocation_for_multi_turn_agentic_rl
+  url: https://arxiv.org/abs/2606.11119
+  repo:
+  notes: Unified rollout-budget allocation framework for agentic RL that treats
+    each ReAct-style thought-action-observation turn as a distinct node, allocates
+    rollout resources to informative prompt roots and turn-level prefixes, and
+    targets reward contrast in multi-turn RLVR.
+  id: trace-rollout-budget-allocation
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: agentic_rl_rollout_budget_allocator
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.11119
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: multi_turn_agentic_rl_rollout_prefixes
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_rollout_reallocation
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: benchmark_policy_dependent
+  audit_log: rollout_prefix_budget_and_reward_contrast_records
+  telemetry_type: react_turn_rollouts_prefixes_and_rewards
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+- name: HiViG
+  category: gui-world
+  year: 2026
+  modality:
+  - gui
+  - computer_use
+  - vision
+  - trajectory_history
+  action_space:
+  - gui_action
+  - pre_execution_action_evaluation
+  - macro_action_history
+  - visual_grounding
+  reward_type: critic_guided_action_selection
+  verifier: history_aware_visually_grounded_multimodal_critic
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: gui_benchmark_environment
+  production_signal: test_time_visual_critic_for_computer_use_agents
+  url: https://arxiv.org/abs/2606.11078
+  repo: https://github.com/G-JWLee/HiViG
+  notes: History-aware visually grounded critic for computer-use agents that
+    summarizes earlier GUI interactions, evaluates candidate actions before
+    execution, and uses real GUI trajectories to improve visual grounding and
+    long-horizon action assessment.
+  id: hivig
+  resource_kind: agent_infrastructure
+  canonical_category: gui-world
+  subtype: history_aware_gui_agent_critic
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.11078
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/G-JWLee/HiViG
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: real_gui_trajectories_for_critic_training
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_gui_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: task_dependent
+  verifier_family: judge
+  verifier_recomputable: partial
+  verifier_isolation: gui_benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: gui_benchmark_environment
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: pre_execution_action_review
+  audit_log: critic_scores_macro_action_history_and_visual_grounding_records
+  telemetry_type: gui_history_summaries_candidate_actions_and_critic_feedback
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - release-gates
+- name: Text World Models for LLM Agents
+  category: research-world
+  year: 2026
+  modality:
+  - text
+  - world_model
+  - web
+  - terminal
+  - api
+  action_space:
+  - action_conditioned_transition_prediction
+  - webpage_state_prediction
+  - terminal_output_prediction
+  - api_response_prediction
+  reward_type: planning_and_evaluation_support_signal
+  verifier: formal_framework_and_curated_bibliography
+  trainable: false
+  resettable: not_applicable
+  trajectories: false
+  sandbox: taxonomy_and_bibliography
+  production_signal: text_world_model_layer_for_llm_agent_planning_and_evaluation
+  url: https://arxiv.org/abs/2606.09032
+  repo: https://github.com/sustech-nlp/awesome-text-world-models
+  notes: Survey and live bibliography defining text world models as transition
+    models over textual states for LLM agents, covering webpage, terminal, API,
+    and dialogue dynamics for planning, efficient learning, and principled
+    evaluation.
+  id: text-world-models-for-llm-agents
+  resource_kind: agent_infrastructure
+  canonical_category: research-world
+  subtype: text_world_model_foundation_survey
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.09032
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  - url: https://github.com/sustech-nlp/awesome-text-world-models
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: not_applicable
+  reset_mechanism: not_applicable
+  trainability_status: not_applicable
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: evaluation_principles
+  verifier_family: taxonomy
+  verifier_recomputable: partial
+  verifier_isolation: not_applicable
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: not_applicable
+  runtime_host: not_applicable
+  network_policy: not_applicable
+  credential_boundary: not_applicable
+  approval_policy: not_applicable
+  audit_log: bibliography_and_taxonomy_updates
+  telemetry_type: not_applicable
+  destructive_action_scope: not_applicable
+  reader_paths:
+  - foundations
+  - train-rollouts
+  - build-evals
+- name: CUA-HandCrafted / Domain-Conditioned Safety
+  category: computer-world
+  year: 2026
+  modality:
+  - browser
+  - computer_use
+  - safety
+  - prompt_injection
+  action_space:
+  - browser_action
+  - multi_step_web_task
+  - prompt_injection_template
+  - coding_skill_injection_cross_reference
+  reward_type: attack_success_and_domain_conditioned_safety_measurement
+  verifier: benchmark_attack_success_rate_and_reproducibility_audit
+  trainable: false
+  resettable: partial
+  trajectories: false
+  sandbox: browser_benchmark
+  production_signal: domain_conditioned_safety_measurement_for_frontier_cuas
+  url: https://arxiv.org/abs/2606.05233
+  repo:
+  notes: Public benchmark report with 793 computer-use-agent red-teaming episodes
+    spanning 24 multi-step web tasks, 56 attack templates, eight attack families,
+    and four system-prompt configurations, paired with a coding-domain cross-reference
+    and reproducibility audit.
+  instance_count: 793
+  task_count: 24
+  attack_template_count: 56
+  id: cua-handcrafted-domain-conditioned-safety
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: computer_use_safety_red_teaming_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.05233
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-15'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: benchmark_episodes_not_publicly_packaged_as_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: browser_task_and_prompt_configuration_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: browser_benchmark_dependent
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: browser_red_teaming_benchmark
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: safety_red_team_review
+  audit_log: attack_template_prompt_configuration_and_success_measurement
+  telemetry_type: multi_step_browser_episode_safety_outcomes
+  destructive_action_scope: browser_benchmark_tasks
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - build-evals

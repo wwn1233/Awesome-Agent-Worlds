@@ -290,7 +290,7 @@ function renderRows(items) {
       <td>${escapeHtml(label("kind", item.resource_kind))}<br>${escapeHtml(label("category", item.canonical_category))}</td>
       <td class="score">${item.readiness_score}/14<br>${escapeHtml(label("label", item.display_label))}</td>
       <td>${evidence}</td>
-      <td>${escapeHtml(item.reward_type)}<br>${escapeHtml(item.verifier_family)} / ${escapeHtml(item.verifier)}</td>
+      <td>${escapeHtml(label("field", item.reward_type))}<br>${escapeHtml(label("field", item.verifier_family))} / ${escapeHtml(label("field", item.verifier))}</td>
       <td><span class="flags">${labels}</span></td>
     </tr>`;
   }).join("");

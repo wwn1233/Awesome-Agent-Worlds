@@ -61,7 +61,7 @@
       allResetModes: "All reset modes",
       sortBy: "Sort by",
       score: "score",
-      catalogStatus: { indexed: "indexed", monitor: "tracking", tracking: "tracking" }
+      catalogStatus: { indexed: "indexed" }
     },
     zh: {
       documentTitle: "Awesome Agent Worlds｜智能体世界索引",
@@ -124,7 +124,7 @@
       allResetModes: "全部重置方式",
       sortBy: "排序方式",
       score: "评分",
-      catalogStatus: { indexed: "已入库", monitor: "追踪中", tracking: "追踪中" }
+      catalogStatus: { indexed: "已入库" }
     }
   };
 
@@ -172,8 +172,8 @@
       "release-gates": "发布门禁",
       "safety-audit": "安全审计"
     },
-    source: { high: "高可信", medium: "中等可信", official: "官方", reference: "参考" },
-    catalogStatus: { indexed: "已入库", monitor: "追踪中", tracking: "追踪中" },
+    source: { high: "高可信", official: "官方" },
+    catalogStatus: { indexed: "已入库" },
     trajectory: {
       none: "无公开轨迹",
       partial: "部分轨迹",
@@ -232,8 +232,29 @@
     }
   };
 
+  const displayOverrides = {
+    ai2thor: "AI2-THOR",
+    api: "API",
+    browser_environment: "browser environment",
+    closed_or_private: "closed/private",
+    dataset_replay: "dataset replay",
+    episode_reset: "episode reset",
+    generated_interactive_world: "generated interactive world",
+    llm_judge: "LLM judge",
+    local_or_self_hosted: "local/self-hosted",
+    private_only: "private only",
+    private_telemetry: "private telemetry",
+      public_training_ready: "public training ready",
+    self_hosted_web: "self-hosted web",
+      task_dependent: "task dependent",
+    vm: "VM"
+  };
+
   function titleCase(value) {
-    return String(value ?? "no").replaceAll("_", " ").replace(/\b\w/g, (char) => char.toUpperCase());
+    const raw = String(value ?? "no");
+    if (displayOverrides[raw]) return displayOverrides[raw];
+    return raw.replaceAll("_", " ").replaceAll("-", " ").replace(/\b\w/g, (char) => char.toUpperCase())
+      .replace(/\b(Api|Gui|Mcp|Llm|Vlm|Rl|Sft|Vm)\b/g, (word) => word.toUpperCase());
   }
 
   function initialLanguage() {

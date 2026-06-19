@@ -2,7 +2,7 @@
 __pycache__/
 *.pyc
 
-# Public release guardrails.
+# Keep the public repository focused on reader-facing files.
 .github/*
 !.github/ISSUE_TEMPLATE/
 !.github/ISSUE_TEMPLATE/add-resource.md

@@ -19,7 +19,7 @@
 
 - Source support tags: `overview`, `status`, `reproducibility`, `code`, `benchmark_design`, `dataset`, `trajectories`
 - Reader paths: `build-evals`, `train-rollouts`, `foundations`, `production-direction`, `release-gates`, `safety-audit`
-- Source confidence: `official`, `high`, `medium`
+- Source confidence: `official`, `high`
 
 ## Checklist
 
@@ -27,4 +27,4 @@
 - [ ] Source support tags use the vocabulary already present in existing entries.
 - [ ] Reader paths and source confidence values use the public template vocabulary.
 - [ ] Public copy is reader-facing and source-backed.
-- [ ] README, Resource Index, Hot Papers, public docs, and Static Explorer data stay consistent when source data changes.
+- [ ] README, Resource Index, Hot Papers, public docs, and Static Explorer catalog stay consistent when source data changes.
