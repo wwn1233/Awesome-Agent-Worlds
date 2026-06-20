@@ -125,9 +125,9 @@ function init() {
   refs.trajectories.textContent = data.summary.trajectory_assets;
   refs.average.textContent = `${data.summary.average_score}/14`;
   refs.hot.textContent = data.hot_papers.visible || data.hot_papers.papers.length;
-  refs.homeWorlds.textContent = data.kinds.world || 0;
-  refs.homeBenchmarks.textContent = data.kinds.benchmark || 0;
-  refs.homeProduction.textContent = data.labels["production-grade"] || 0;
+  refs.homeWorlds.textContent = data.summary.resources;
+  refs.homeBenchmarks.textContent = data.summary.public_runnable;
+  refs.homeProduction.textContent = data.hot_papers.visible || data.hot_papers.papers.length;
   refs.homeCategories.textContent = data.summary.categories;
 
   [

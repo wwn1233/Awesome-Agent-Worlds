@@ -6,7 +6,7 @@ Static Explorer is the bilingual web view for Awesome Agent Worlds. It turns the
 
 Static Explorer 是 Awesome Agent Worlds 的双语可视化首页。它把资源索引转换成一个可按表面筛选、可搜索、可切换中英文的轻量网页，用于快速查看 Agent Worlds 资源、证据字段、成熟度标签和每周热点论文精简视图。
 
-主要界面包括：首页概览、交互表面地图、每周热点论文精简视图、资源浏览器和语言切换。读者可以从任务场景进入，也可以按类别、成熟度、轨迹可用性、reset 支持、源码可用性和来源可信度过滤资源。
+主要界面包括：首页概览、核心指标栏、交互表面地图、每周热点论文精简视图、资源浏览器和语言切换。读者可以从任务场景进入，也可以按类别、成熟度、轨迹可用性、reset 支持、源码可用性和来源可信度过滤资源。
 
 ## Run Locally
 
@@ -25,9 +25,12 @@ http://127.0.0.1:8026/index.html
 No build step is required. The page reads `data.js`, `i18n.js`, `app.js`, and `surfaces.js` directly.
 The public catalog is mirrored in `others/data/resources.yaml`; the Hot Papers strip highlights a compact indexed subset of the full weekly Hot Papers table.
 
+中文本地查看：在仓库根目录运行上面的 `ruby` 命令，然后打开 `http://127.0.0.1:8026/index.html`。页面右上角可以在中文和英文界面之间切换。
+
 ## Interface
 
-- **Home** summarizes the repository scope, indexed resources, average readiness, trajectory coverage, and weekly Hot Papers strip.
+- **Home** summarizes repository scope through curated resources, public-runnable coverage, Hot Papers, and category count.
+- **Metrics band** shows total resources, public-runnable entries, trajectory assets, average readiness, and Hot Papers count.
 - **World surface map** filters resources by infrastructure/protocols and where agents act: web, GUI, mobile, code, API, research, embodied worlds, and training loops.
 - **Weekly hot papers** highlights a compact subset of recent papers already indexed in the catalog.
 - **Resource explorer** provides search, category filters, readiness labels, trajectory/reset fields, source confidence, sorting, and a public-repository toggle.

@@ -34,6 +34,20 @@ Choose one category:
 - training-framework
 - agent-infrastructure
 
+## Agent World Surface
+
+Choose one reader-facing surface:
+
+- infra
+- web
+- gui
+- mobile
+- code
+- api
+- research
+- embodied
+- training
+
 ## Resource Kind
 
 Choose one:
@@ -77,3 +91,6 @@ Allowed reader paths: `build-evals`, `train-rollouts`, `foundations`,
 `production-direction`, `release-gates`, `safety-audit`.
 
 Allowed source confidence values: `official`, `high`.
+
+Canonical categories should match the Resource Index vocabulary. Agent World
+surfaces should match the README and Static Explorer vocabulary.

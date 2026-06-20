@@ -1,9 +1,46 @@
 # Changelog
 
+## 2026-06-20
+
+- Added WRBench / Persistent State Core to cover paper-only world-model state-persistence diagnostics over camera-intervention and return-view probes.
+- Refreshed README routes, Reading Order, Selection Guide, Resource Index, Hot Papers, and Static Explorer data for the expanded 510-resource catalog.
+- Updated `CITATION.cff` to version 0.3.19 with the June 20 release date.
+
 ## 2026-06-19
 
+- Added NRT-Bench to cover multi-turn red-team evaluation for LLM agent teams in safety-critical simulated control rooms.
+- Added MemGUI-Agent to cover long-horizon mobile GUI context management, public demonstration trajectories, and released mobile-agent model artifacts.
+- Added EnvScaler, ScaleEnv, and AgentScaler / Environment Scaling to strengthen environment-scaling coverage for tool-interactive agent training.
+- Added RODS, MyPCBench, LabOSBench, VISUALSKILL, Agentic Automata Learning, Self-Driving Negotiator, and Data Leakage Risks in Tool-Using LLM Agents from first-party arXiv sources.
+- Added AgentHijack, OSGuard, PhoneHarness, MalSkillBench, ProvenanceGuard, MobileForge, Weblica, and RoTS / GUI-RobustEval to strengthen computer-use robustness, phone-use harnessing, skill/MCP safety, and GUI/web rollout infrastructure coverage.
+- Added Beyond GUI Paradigm / CLI-Advantage, EnvRL, and MCP Runtime Fault Taxonomy to cover CLI-capable mobile-agent evaluation, environment-dynamics agentic RL, and MCP server runtime reliability evidence.
+- Added EgoBench, SMH-Bench, AsyncWebRL, GAIS, SkillHarm, and DeltaMCP to strengthen egocentric tool-agent evaluation, smart-home validation, visual web-agent RL, grounded tool-interaction synthesis, skill-attack safety, and MCP server regeneration coverage.
+- Added ProCUA-SFT, PANDO, and Evoflux to cover synthetic desktop CUA SFT trajectories, online web-agent skill distillation, and executable MCP workflow repair.
+- Added OpenSearch-VL to cover open multimodal search-agent SFT/RL data, visual/search tool environments, and fatal-aware agentic reinforcement learning.
+- Added Gamma-World to cover public-code generative multi-agent world modeling for independently controllable shared-world rollouts.
+- Added Kairos to cover open Physical-AI world-model stacks with model releases, embodied benchmarks, and low-latency rollout generation.
+- Added SCR-Bench / Skill Composition Risk and Attested Tool-Server Admission to strengthen agent-skill composition risk and MCP tool-server admission-control coverage.
+- Added BadWorld, GE-Sim 2.0, Description-Code Inconsistency / DCIChecker, PACT / Argument-Level Provenance, CompSkillBench / Compositional Skill Routing, and BioManus / MCP-Native Biomedical Agent to strengthen world-model robustness, robot world simulation, MCP safety, compositional skill routing, and biomedical MCP planning coverage.
+- Added World Models in Words, iMaC, SurgVista, and Environment-Grounded Automated Prompt Optimization to strengthen state-transition auditing, embodied and surgical world-model rollouts, and environment-grounded game-agent prompt optimization coverage.
+- Added TClone, Hack-Verifiable Environments, LiteCoder-Terminal, and TIER to strengthen forkable GUI workspace isolation, verifiable reward-hacking environments, terminal-agent training worlds, and trajectory-invariant tool-execution rewards.
+- Added DeepInsight, EvoTrainer, and SkillSmith / Skill-Tool Co-Evolution to strengthen physical-AI stack evaluation, agentic RL harness co-evolution, and skill-tool self-improvement coverage.
+- Added From Trainee to Trainer / LLM-as-Environment-Engineer, AgentJet, AI Sandboxes, Harness Engineering for Physical AI, VASO, Embodied-BenchClaw, FATE-VLA, and HyperSim to strengthen self-designing training environments, distributed agentic RL, sandbox assurance, physical-AI harnessing, verifiable robot skills, embodied benchmark construction, failure-seeking VLA tests, and sim-to-real environment synthesis.
+- Added LLM-as-Code Agentic Programming for Agent Harness, Agent JIT Compilation, Claw-R1, TEE-Backed Isolation for Self-Hosted Computer-Use Agents, Memory-Induced Tool-Drift / MEMDRIFT, and PhAIL / Physical AI Leaderboard to strengthen executable agent harnesses, latency-aware web-agent execution, step-level agentic RL middleware, CUA isolation, memory/tool safety, and real-robot VLA evaluation coverage.
+- Expanded weekly Hot Papers coverage for ScaleWoB, Speculative Rollback Correction, and How Mobile World Model Guides GUI Agents.
 - Refreshed the weekly Hot Papers public view and Static Explorer catalog for the June 19 weekly pass.
-- Updated `CITATION.cff` to version 0.3.7 with the June 19 release date.
+- Refreshed README routes, Reading Order, Selection Guide, Resource Index, Flagship Matrix, Hot Papers, and Static Explorer data for the expanded 509-resource catalog.
+- Added a README Catalog Snapshot aligned with the Static Explorer and Resource Index coverage metrics.
+- Added the weekly Hot Papers strip count to the README Catalog Snapshot to match the Static Explorer homepage.
+- Added the README Catalog Snapshot date so public coverage metrics have a clear reference point.
+- Clarified that readiness scores describe world-readiness evidence rather than paper impact or model quality.
+- Clarified the Static Explorer guide so homepage and metrics-band descriptions match the current interface.
+- Added a concise Chinese local-viewing note to the Static Explorer guide.
+- Tightened the issue and pull request templates plus README contribution guidance for categories, Agent World surfaces, resource kinds, source evidence, reader paths, and evidence dates.
+- Clarified the issue-template distinction between canonical categories and reader-facing surfaces.
+- Clarified Resource Index runtime labels for NRT-Bench and Agent-World.
+- Normalized the NRT-Bench Hot Papers display title and refreshed Static Explorer asset versioning for the June 19 509-resource catalog.
+- Localized the Static Explorer world-surface map labels for Chinese and English readers.
+- Updated `CITATION.cff` to version 0.3.18 with the June 19 release date.
 
 ## 2026-06-15
 
@@ -29,7 +66,7 @@
 - Refined reader-facing status labels in the Resource Index, Flagship Matrix, and Static Explorer.
 - Clarified the Static Explorer interface summary in the README.
 - Clarified the public Hot Papers view so reader-facing tables and the Static Explorer expose indexed entries only.
-- Refreshed README reader routes, Selection Guide, Reading Order, Resource Index, Hot Papers, and Static Explorer catalog for the expanded 441-resource catalog.
+- Refreshed README reader routes, Selection Guide, Reading Order, Resource Index, Hot Papers, and Static Explorer catalog for the expanded 445-resource catalog.
 - Improved Resource Index and Static Explorer display labels so public tables use reader-facing terms instead of raw schema values.
 
 ## 2026-06-14
@@ -42,7 +79,7 @@
 
 ## 2026-06-13
 
-- Added MacArena, MobileGym, PhoneWorld, SimuWoB, iOSWorld, and CUA-Gym to the public index, Resource Index, and Static Explorer; refreshed weekly Hot Papers indexing for matching recent papers.
+- Added MacArena, MobileGym, PhoneWorld, ScaleWoB, iOSWorld, and CUA-Gym to the public index, Resource Index, and Static Explorer; refreshed weekly Hot Papers indexing for matching recent papers.
 - Added MCP-Persona, MedCTA, StakeBench, Workflow-GYM, PRO-CUA, and BraveGuard to strengthen personalized MCP, clinical tool-agent, web-agent safety, professional GUI workflow, CUA training, and CUA guard coverage.
 - Added ClawGUI to cover GUI-agent training, standardized evaluation, and deployment-harness infrastructure.
 - Added HomeFlow to cover verifiable smart-home simulation, state-based goals, MCTS trajectory synthesis, and RLVE-style post-training.
