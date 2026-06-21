@@ -3595,6 +3595,367 @@
   - safety-audit
   - release-gates
   - build-evals
+- name: MolmoWeb
+  category: web-world
+  year: 2026
+  modality:
+  - web
+  - browser
+  - vision
+  - multimodal
+  - trajectories
+  action_space:
+  - screenshot_grounded_browser_action
+  - visual_language_action_policy
+  - parallel_rollout_selection
+  reward_type: browser_task_pass_rate
+  verifier: webvoyager_online_mind2web_and_deepshop_benchmarks
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: synthetic
+  sandbox: browser_environment
+  production_signal: open_visual_web_agent_data_and_evaluation_harness
+  url: https://arxiv.org/abs/2604.08516
+  repo:
+  notes: Paper-backed open visual web-agent family and MolmoWebMix training mixture,
+    combining synthetic browser-task trajectories, human demonstrations, atomic
+    web-skill trajectories, and GUI perception data for screenshot-only browser
+    action policies.
+  id: molmoweb
+  resource_kind: model_release
+  canonical_category: web-world
+  subtype: open_visual_web_agent
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.08516
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-21'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: synthetic_browser_tasks_human_demonstrations_and_web_skill_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_environment_reset
+  trainability_status: framework_ready
+  sft_fit: strong
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: browser_benchmark
+  negative_side_effect_checks: unknown
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: browser_environment
+  runtime_host: benchmark_dependent
+  network_policy: web_benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: benchmark_rollout_results
+  telemetry_type: screenshots_actions_and_pass_rates
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - production-direction
+- name: UI-Copilot
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - vlm
+  - tools
+  - rl
+  action_space:
+  - gui_action
+  - copilot_tool_invocation
+  - memory_retrieval
+  - calculator_call
+  reward_type: long_horizon_gui_task_success
+  verifier: memgui_bench_and_androidworld_scores
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: mobile_gui_benchmark_environment
+  production_signal: tool_integrated_policy_optimization_for_long_horizon_gui_agents
+  url: https://arxiv.org/abs/2604.13822
+  repo:
+  notes: Collaborative mobile GUI-agent framework that separates task execution
+    from a lightweight retriever/calculator copilot, then trains selective tool
+    invocation and multi-turn execution with Tool-Integrated Policy Optimization.
+  id: ui-copilot
+  resource_kind: training_framework
+  canonical_category: mobile-world
+  subtype: tool_integrated_mobile_gui_agent_training
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.13822
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-21'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: on_policy_mobile_gui_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: memgui_bench_and_androidworld_task_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: mobile_gui_benchmarks
+  negative_side_effect_checks: unknown
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mobile_gui_benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: benchmark_rollout_results
+  telemetry_type: gui_actions_tool_invocations_and_task_scores
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - production-direction
+- name: MCP Pitfall Lab
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - mcp
+  - tools
+  - security
+  - traces
+  - multimodal
+  action_space:
+  - tool_metadata_poisoning_test
+  - puppet_server_attack
+  - multimodal_tool_chain_test
+  - static_analysis
+  - trace_audit
+  reward_type: objective_validator_and_risk_score
+  verifier: mcp_traces_and_objective_validators
+  trainable: false
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: mcp_security_testbed
+  production_signal: trace_based_mcp_server_hardening_and_regression_testing
+  url: https://arxiv.org/abs/2604.21477
+  repo:
+  notes: Protocol-aware MCP security testing framework that turns developer
+    pitfalls into reproducible scenarios across email, document, and crypto
+    workflows, using MCP traces and objective validators instead of agent
+    self-report.
+  id: mcp-pitfall-lab
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: mcp_trace_grounded_security_testbed
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.21477
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-21'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: mcp_security_trace_corpus
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: challenge_variant_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: mcp_security_testbed
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_tool_server_testbed
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: security_review
+  audit_log: mcp_trace_and_static_analysis_findings
+  telemetry_type: tool_calls_trace_evidence_and_sink_actions
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - build-evals
+- name: Task2MCP / T2MRec
+  category: api-world
+  year: 2026
+  modality:
+  - mcp
+  - tools
+  - software_engineering
+  - retrieval
+  action_space:
+  - mcp_server_recommendation
+  - retrieval
+  - ranking
+  - conversational_tool_selection
+  reward_type: recommendation_relevance_and_coverage
+  verifier: recommendation_metrics_and_structural_compatibility
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: false
+  sandbox: task_to_mcp_evaluation_environment
+  production_signal: task_oriented_mcp_server_discovery_for_developer_agents
+  url: https://arxiv.org/abs/2604.17234
+  repo:
+  notes: Task-centered MCP server recommendation dataset and model for development
+    tasks, pairing taxonomy-grounded tasks with curated MCP servers and an
+    interactive recommendation agent prototype.
+  id: task2mcp-t2mrec
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: mcp_server_recommendation_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.17234
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-21'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: task_dataset_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: weak
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: dataset_benchmark
+  negative_side_effect_checks: unknown
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_server_selection_layer
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: recommendation_rankings_and_guidelines
+  telemetry_type: task_server_matches_and_ranking_scores
+  destructive_action_scope: not_applicable
+  reader_paths:
+  - foundations
+  - build-evals
+  - production-direction
+- name: CoEvoSkills
+  category: training-framework
+  year: 2026
+  modality:
+  - skills
+  - code_artifacts
+  - verification
+  - self_evolution
+  action_space:
+  - skill_generation
+  - skill_revision
+  - surrogate_verifier_feedback
+  - professional_task_execution
+  reward_type: skillsbench_pass_rate
+  verifier: surrogate_verifier_and_skillsbench_evaluation
+  trainable: partial
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: skill_package_generation_environment
+  production_signal: autonomous_multi_file_skill_construction_for_coding_agents
+  url: https://arxiv.org/abs/2604.01687
+  repo:
+  notes: Self-evolving skill framework where a generator iteratively constructs
+    multi-file agent skills while a surrogate verifier co-evolves to provide
+    actionable feedback without ground-truth test access.
+  id: coevoskills
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: self_evolving_agent_skill_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.01687
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-21'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: skill_generation_and_revision_rollouts
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: skillsbench_task_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: hybrid_verifier
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_hidden_tests
+  negative_side_effect_checks: unknown
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: skill_generation_and_evaluation_split
+  runtime_host: benchmark_dependent
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: hidden_test_boundary
+  audit_log: skill_revision_and_verifier_feedback_records
+  telemetry_type: skill_artifacts_feedback_and_pass_rates
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - foundations
+  - production-direction
 - name: WRBench / Persistent State Core
   category: generative-3d-world
   year: 2026

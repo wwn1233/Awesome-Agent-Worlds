@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-21
+
+- Added MolmoWeb, UI-Copilot, MCP Pitfall Lab, Task2MCP / T2MRec, and CoEvoSkills from first-party arXiv sources to strengthen open visual web-agent data, mobile GUI tool-invocation training, trace-grounded MCP hardening, MCP server recommendation, and self-evolving agent-skill coverage.
+- Refreshed the weekly Hot Papers public view, Resource Index, Awesome list, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 515-resource catalog.
+- Updated `CITATION.cff` to version 0.3.20 with the June 21 release date.
+
 ## 2026-06-20
 
 - Added WRBench / Persistent State Core to cover paper-only world-model state-persistence diagnostics over camera-intervention and return-view probes.

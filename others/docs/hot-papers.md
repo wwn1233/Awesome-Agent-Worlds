@@ -5,7 +5,7 @@ an indexed strip from this table; this document keeps the fuller weekly view.
 
 Curated resources are the entries in the Resource Index and main README.
 
-- Updated: 2026-06-20
+- Updated: 2026-06-21
 - Cadence: weekly
 - Source scope: recent arXiv papers with Agent Worlds evidence
 - Catalog status: indexed
@@ -22,17 +22,13 @@ catalog. Entries require first-party evidence and complete catalog evidence fiel
 
 | Paper | Published | Evidence | Catalog status |
 | --- | --- | --- | --- |
-| [WRBench / Persistent State Core](https://arxiv.org/abs/2606.20545v1) | 2026-06-18 | evaluation, benchmark, world model | indexed |
+| [Current World Models Lack a Persistent State Core](https://arxiv.org/abs/2606.20545v1) | 2026-06-18 | evaluation, benchmark, world model | indexed |
 | [NRT-Bench: LLM Agent Safety and Multi-Turn Red-Teaming in Safety-Critical Systems](https://arxiv.org/abs/2606.20408v1) | 2026-06-18 | evaluation, benchmark, agent safety, safety evaluation, multi-turn red-teaming, red-teaming, jailbreak benchmarks, safety-critical systems, critical safety function, simulated nuclear | indexed |
 | [MobileForge: Annotation-Free Adaptation for Mobile GUI Agents with Hierarchical Feedback-Guided Policy Optimization](https://arxiv.org/abs/2606.19930v1) | 2026-06-18 | gui agent, trajectory, rollout, evaluation, mobileworld, mobile gui agent | indexed |
 | [MemGUI-Agent: An End-to-End Long-Horizon Mobile GUI Agent with Proactive Context Management](https://arxiv.org/abs/2606.19926v1) | 2026-06-18 | gui agent, trajectory, benchmark, mobileworld, memgui-bench, mobile gui agent | indexed |
 | [SurgVista: Long-Horizon Surgical World Modeling with Plausible Instrument-Tissue Dynamics](https://arxiv.org/abs/2606.19889v1) | 2026-06-18 | rollout, evaluation, world model, robot policy | indexed |
 | [ScaleWoB: Guiding GUI Agents with Coding Agents via Large-Scale Environmental Synthesis](https://arxiv.org/abs/2605.25160v2) | 2026-05-24 | gui agent, interactive environment, agent benchmark, verifiable reward, evaluation, benchmark, real-world environment, real-world environments, synthetic environment, mobile gui agent | indexed |
-| [Native Active Perception as Reasoning for Omni-Modal Understanding](https://arxiv.org/abs/2606.19341v1) | 2026-06-17 | trajectory, benchmark, agentic reinforcement learning, trajectory synthesis, test-time scaling | indexed |
 | [RODS: Reward-Driven Online Data Synthesis for Multi-Turn Tool-Use Agents](https://arxiv.org/abs/2606.19047v1) | 2026-06-17 | multi-turn tool-use agents, tool-use rl, online data synthesis, rollout reward variance, grpo | indexed |
-| [REVES: REvision and VErification--Augmented Training for Test-Time Scaling](https://arxiv.org/abs/2606.18910v1) | 2026-06-17 | post-training, rollout, multi-turn reinforcement learning, test-time scaling, revision | indexed |
-| [Learning from Own Solutions: Self-Conditioned Credit Assignment for Reinforcement Learning with Verifiable Rewards](https://arxiv.org/abs/2606.18810v1) | 2026-06-17 | verifiable reward, rlvr, rollout, benchmark, process reward, process reward model | indexed |
-| [DeFAb: A Verifiable Benchmark for Defeasible Abduction in Foundation Models](https://arxiv.org/abs/2606.18557v1) | 2026-06-17 | verifier, rlvr, evaluation, benchmark, verifiable benchmark, revision | indexed |
 | [AI Sandboxes: A Threat Model, Taxonomy, and Measurement Framework](https://arxiv.org/abs/2606.18532v1) | 2026-06-16 | sandbox, evaluation, physical ai | indexed |
 | [VISUALSKILL: Multimodal Skills for Computer-Use Agents](https://arxiv.org/abs/2606.18448v1) | 2026-06-16 | computer-use agents, multimodal skills, mcp tool, live-application ui exploration, cua-world | indexed |
 | [Compositional Skill Routing for LLM Agents: Decompose, Retrieve, and Compose](https://arxiv.org/abs/2606.18051v1) | 2026-06-16 | evaluation, benchmark, mcp, mcp server, skill library | indexed |
@@ -100,7 +96,6 @@ catalog. Entries require first-party evidence and complete catalog evidence fiel
 | [Hardening Agent Benchmarks with Adversarial Hacker-Fixer Loops](https://arxiv.org/abs/2606.08960v1) | 2026-06-08 | hacker-fixer, benchmark hardening, agent benchmarks, exploit-resistant verifier, adversarial loops | indexed |
 | [Prisma-World: Camera-Controllable Multi-Agent Video World Model](https://arxiv.org/abs/2606.09507v1) | 2026-06-08 | prisma-world, multi-agent video world model, camera-controllable generation, cross-view consistency, shared scene geometry | indexed |
 | [Emergence World: A Platform for Evaluating Long-Horizon Multi-Agent Autonomy](https://arxiv.org/abs/2606.08367v1) | 2026-06-06 | evaluation, multi-agent autonomy, long-horizon multi-agent autonomy, continuously running multi-agent simulation, shared spatial world, persistent memory systems | indexed |
-| [CATPO: Critique-Augmented Tree Policy Optimization](https://arxiv.org/abs/2606.08346v1) | 2026-06-06 | verifiable reward, trajectory, rlvr, rollout, benchmark, process reward, process reward model | indexed |
 | [Benchmarking Open-Ended Multi-Agent Coordination in Language Agents](https://arxiv.org/abs/2606.08340v1) | 2026-06-06 | alem, open-ended multi-agent coordination, craftax-like dynamics, long-horizon survival world, communication, coordination reward | indexed |
 | [Cosmos 3: Omnimodal World Models for Physical AI](https://arxiv.org/abs/2606.02800v2) | 2026-06-01 | cosmos 3, omnimodal world model, physical ai, forward dynamics, inverse dynamics, robot policy | indexed |
 | [StainFlow: Entity-Stain Tracking and Evidence Linking for Process Rewards in GUI Agents](https://arxiv.org/abs/2606.07027v1) | 2026-06-05 | gui agent, process reward model, visually verifiable task entities, trajectory completion judgment, online rl | indexed |
@@ -134,12 +129,13 @@ catalog. Entries require first-party evidence and complete catalog evidence fiel
 | [SkillSmith: Co-Evolving Skills and Tools for Self-Improving Agent Systems](https://arxiv.org/abs/2606.01314v1) | 2026-05-31 | benchmark, self-evolving agent, wildclawbench | indexed |
 | [HomeFlow: A Data Flywheel for Smart Home Agent Training with Verifiable Simulation](https://arxiv.org/abs/2606.01230v1) | 2026-05-31 | homeflow, homeenv, verifiable simulation, smart home agents, state-based success conditions, mcts-flow trajectories, rlve | indexed |
 | [Agent JIT Compilation for Latency-Optimizing Web Agent Planning and Scheduling](https://arxiv.org/abs/2605.21470v2) | 2026-05-20 | web agent, computer-use agent, computer-use agents | indexed |
-| [PhAIL / Physical AI Leaderboard](https://arxiv.org/abs/2605.29710v1) | 2026-05-28 | rollout, evaluation, benchmark, physical ai | indexed |
+| [PhAIL: A Real-Robot VLA Benchmark and Distributional Methodology](https://arxiv.org/abs/2605.29710v1) | 2026-05-28 | rollout, evaluation, benchmark, physical ai | indexed |
 | [World Models in Words: Auditing Physical State-Transition Commitments in Vision-Language Models](https://arxiv.org/abs/2605.29585v1) | 2026-05-28 | verifier, evaluation, benchmark, world model, hybrid verifier, state transition | indexed |
 | [LiteCoder-Terminal: Scaling Long-Horizon Terminal Environments for Learning Language Agents](https://arxiv.org/abs/2605.29559v1) | 2026-05-28 | trajectory, verifiable environments | indexed |
 | [PhoneWorld: Scaling Phone-Use Agent Environments](https://arxiv.org/abs/2605.29486v1) | 2026-05-28 | agent benchmark, verifier, rollout, evaluation, benchmark, phone-use agent, phone-use agents | indexed |
 | [Recovering Policy-Induced Errors: Benchmarking and Trajectory Synthesis for Robust GUI Agents](https://arxiv.org/abs/2605.29447v1) | 2026-05-28 | gui agent, trajectory, evaluation, benchmark, trajectory synthesis, gui-robust | indexed |
 | [STAMP: Training Explicit Memory for Mobile GUI Agents in Controllable and Scalable Virtual Environments](https://arxiv.org/abs/2605.29324v1) | 2026-05-28 | stamp, memory-world, mobile gui agents, controllable virtual environments, verifiable memory supervision, online reinforcement learning | indexed |
+| [Human-Guided Harm Recovery for Computer Use Agents](https://arxiv.org/abs/2604.18847v2) | 2026-04-20 | computer use, evaluation, benchmark, agent safety | indexed |
 | [PRO-CUA: Process-Reward Optimization for Computer Use Agents](https://arxiv.org/abs/2605.29119v1) | 2026-05-27 | computer use, trajectory, rollout, benchmark, process reward, process reward model | indexed |
 | [Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players](https://arxiv.org/abs/2605.28816v1) | 2026-05-27 | agent world, embodied agent, rollout, world model | indexed |
 | [DeltaMCP: Incremental Regeneration via Spec-Aware Transformation for MCP servers](https://arxiv.org/abs/2605.28148v1) | 2026-05-27 | evaluation, benchmark, mcp, mcp server, mcp servers, mcp tool, mcp tools | indexed |
@@ -153,7 +149,7 @@ catalog. Entries require first-party evidence and complete catalog evidence fiel
 | [HyperSim: A Holistic Sim-To-Real Framework For Robust Robotic Manipulation](https://arxiv.org/abs/2605.26638v1) | 2026-05-26 | trajectory, environment synthesis | indexed |
 | [PANDO: Efficient Multimodal AI Agents via Online Skill Distillation](https://arxiv.org/abs/2605.24785v2) | 2026-05-24 | web agent, verifier, trajectory, rollout, evaluation, skill library | indexed |
 | [AgentHijack: Benchmarking Computer Use Agent Robustness to Common Environment Corruptions](https://arxiv.org/abs/2605.25707v1) | 2026-05-25 | computer use, evaluation, benchmark, computer-use agent, computer-use agents | indexed |
-| [Memory-Induced Tool-Drift / MEMDRIFT](https://arxiv.org/abs/2605.24941v1) | 2026-05-24 | benchmark, mcp, mcp server, mcp servers | indexed |
+| [Memory-Induced Tool-Drift in LLM Agents](https://arxiv.org/abs/2605.24941v1) | 2026-05-24 | benchmark, mcp, mcp server, mcp servers | indexed |
 | [Distilling Game Code World Model Generation into Lightweight Large Language Models](https://arxiv.org/abs/2605.24375v1) | 2026-05-23 | verifiable reward, post-training, rlvr, environment generation, world model, state transition | indexed |
 | [How Mobile World Model Guides GUI Agents?](https://arxiv.org/abs/2605.10347v2) | 2026-05-11 | gui agent, mobile agent, verifier, rollout, world model, mobile world model, mobileworld, mobile gui agent | indexed |
 | [HarnessAPI: A Skill-First Framework for Unified Streaming APIs and MCP Tools](https://arxiv.org/abs/2605.22733v1) | 2026-05-21 | harnessapi, skill-first framework, mcp tools, openapi, streaming api | indexed |
@@ -202,6 +198,10 @@ catalog. Entries require first-party evidence and complete catalog evidence fiel
 | [Learning to Build the Environment: Self-Evolving Reasoning RL via Verifiable Environment Synthesis](https://arxiv.org/abs/2605.14392v1) | 2026-05-14 | evoenv, verifiable environment synthesis, self-evolving reasoning rl, environment-construction loop, rlvr | indexed |
 | [Exploiting LLM Agent Supply Chains via Payload-less Skills](https://arxiv.org/abs/2605.14460v1) | 2026-05-14 | payload-less skills, semantic compliance hijacking, agent supply chain, skill security, scanner evasion | indexed |
 | [AgentForesight: Online Auditing for Early Failure Prediction in Multi-Agent Systems](https://arxiv.org/abs/2605.08715v2) | 2026-05-09 | agentforesight, online auditing, multi-agent failures, afttraj-2k, trajectory intervention | indexed |
+| [AgentTrap: Measuring Runtime Trust Failures in Third-Party Agent Skills](https://arxiv.org/abs/2605.13940v1) | 2026-05-13 | agenttrap, third-party skills, runtime trust failures, agent safety, skill environment, benchmark | indexed |
+| [ReVision: Scaling Computer-Use Agents via Temporal Visual Redundancy Reduction](https://arxiv.org/abs/2605.11212v2) | 2026-05-11 | revision, temporal visual redundancy reduction, visual patch selector, visual history, computer-use agents | indexed |
+| [Toward Scalable Verifiable Reward: Proxy State-Based Evaluation for Multi-turn Tool-Calling LLM Agents](https://arxiv.org/abs/2602.16246v3) | 2026-02-18 | proxy state-based evaluation, verifiable reward, tool-use environment, trajectory, benchmark | indexed |
+| [ATBench: A Diverse and Realistic Agent Trajectory Benchmark for Safety Evaluation and Diagnosis](https://arxiv.org/abs/2604.02022v3) | 2026-04-02 | atbench, agent trajectory benchmark, trajectory-level safety, agent safety, trajectory, benchmark | indexed |
 | [WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation](https://arxiv.org/abs/2605.10912v1) | 2026-05-11 | wildclawbench, long-horizon agent evaluation, native-runtime benchmark, docker, tool-use environment, benchmark | indexed |
 | [Agent-ValueBench: A Comprehensive Benchmark for Evaluating Value Orientations and Understanding Value Shifts in LLM Agents](https://arxiv.org/abs/2605.10365v1) | 2026-05-11 | agent-valuebench, agent values, value-conflict tasks, executable sandbox environments, trajectory-level rubrics | indexed |
 | [LITMUS: Benchmarking Behavioral Jailbreaks of LLM Agents in Operating Systems](https://arxiv.org/abs/2605.10779v1) | 2026-05-11 | litmus, llm agents, operating systems, behavioral jailbreaks, state rollback | indexed |
@@ -216,6 +216,7 @@ catalog. Entries require first-party evidence and complete catalog evidence fiel
 | [Chasing the Public Score: User Pressure and Evaluation Exploitation in Coding Agent Workflows](https://arxiv.org/abs/2604.20200v1) | 2026-04-23 | agentpressurebench, coding agents, public score exploitation, hidden private evaluation, agent safety | indexed |
 | [Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence](https://arxiv.org/abs/2604.18292v1) | 2026-04-20 | agent world, environment synthesis, real-world environment, tool ecosystem, mcp, self-evolving training, agent training arena, verifiable reward | indexed |
 | [Agent^2: Evaluate and Improve Agents via Reinforcement Learning](https://arxiv.org/abs/2604.10547v1) | 2026-04-12 | agent^2 rl-bench, rl post-training, grading api, isolated workspaces, agentic rl pipelines | indexed |
+| [EE-MCP: Self-Evolving MCP-GUI Agents via Automated Environment Generation and Experience Learning](https://arxiv.org/abs/2604.09815v1) | 2026-04-10 | gui agent, trajectory, computer-use agent, computer-use agents, environment generation, mcp, mcp-gui | indexed |
 | [AutoWebWorld: Synthesizing Infinite Verifiable Web Environments via Finite State Machines](https://arxiv.org/abs/2602.14296v1) | 2026-02-15 | autowebworld, verifiable web environments, finite state machines, synthetic trajectories, web gui agents | indexed |
 
 This view is refreshed weekly. Main-index entries are retained only
