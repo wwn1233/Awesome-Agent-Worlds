@@ -1,9 +1,16 @@
 # Changelog
 
+## 2026-06-27
+
+- Added Qwen-AgentWorld, Fara-1.5, MacAgentBench, GUI vs. CLI Execution Benchmark, VisCritic, Autonomous Evaluation for CUA RL, Argus / CUA Uncertainty Quantification, ToolBench-X, AgentCIBench / Contextual Integrity, ShareLock, Agent Policy-as-Code Autoformalization, and VIGIL from first-party arXiv sources.
+- Refreshed the weekly Hot Papers public view, Resource Index, Awesome list, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 529-resource catalog.
+- Updated `CITATION.cff` to version 0.3.21 with the June 27 release date.
+
 ## 2026-06-21
 
 - Added MolmoWeb, UI-Copilot, MCP Pitfall Lab, Task2MCP / T2MRec, and CoEvoSkills from first-party arXiv sources to strengthen open visual web-agent data, mobile GUI tool-invocation training, trace-grounded MCP hardening, MCP server recommendation, and self-evolving agent-skill coverage.
-- Refreshed the weekly Hot Papers public view, Resource Index, Awesome list, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 515-resource catalog.
+- Added MCP Tool-Poisoning Client Study and Connor / Malicious MCP Servers to strengthen client-side tool-poisoning analysis and component-level malicious MCP server detection coverage.
+- Refreshed the weekly Hot Papers public view, Resource Index, Awesome list, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 517-resource catalog.
 - Updated `CITATION.cff` to version 0.3.20 with the June 21 release date.
 
 ## 2026-06-20

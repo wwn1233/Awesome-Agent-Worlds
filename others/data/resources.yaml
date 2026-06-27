@@ -3595,6 +3595,888 @@
   - safety-audit
   - release-gates
   - build-evals
+- name: Qwen-AgentWorld
+  category: research-world
+  year: 2026
+  modality:
+  - language_world_model
+  - mcp
+  - search
+  - terminal
+  - swe
+  - android
+  - web
+  - os
+  action_space:
+  - next_state_prediction
+  - environment_simulation
+  - agentic_domain_rollout
+  - benchmark_evaluation
+  reward_type: agentworldbench_simulation_and_planning_score
+  verifier: agentworldbench_cross_domain_evaluation
+  trainable: partial
+  resettable: generated_world
+  trajectories: partial
+  sandbox: world_model
+  production_signal: open_language_world_models_for_agentic_environment_simulation
+  url: https://arxiv.org/abs/2606.24597
+  repo: https://github.com/QwenLM/Qwen-AgentWorld
+  notes: Open language-world-model release and AgentWorldBench benchmark for simulating
+    agentic environments across MCP, search, terminal, SWE, Android, web, and OS
+    domains, trained from more than 10M real-world environment interaction trajectories.
+  trajectory_count: 10000000
+  id: qwen-agentworld
+  resource_kind: model_release
+  canonical_category: research-world
+  subtype: language_world_model_for_general_agents
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.24597
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-27'
+    confidence: high
+  - url: https://github.com/QwenLM/Qwen-AgentWorld
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: cross_domain_environment_interaction_trajectories
+  trajectory_public: false
+  reset_support: none
+  reset_mechanism: generated_state_initialization
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: language_world_model_runtime
+  runtime_host: local_or_self_hosted
+  network_policy: domain_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: model_license_and_benchmark_policy
+  audit_log: benchmark_prediction_and_rollout_records
+  telemetry_type: observations_actions_next_state_predictions_and_scores
+  destructive_action_scope: generated_world_assets
+  reader_paths:
+  - foundations
+  - train-rollouts
+  - build-evals
+  - production-direction
+- name: Fara-1.5
+  category: training-framework
+  year: 2026
+  modality:
+  - computer_use
+  - web
+  - synthetic_environment
+  - user_simulation
+  - trajectories
+  action_space:
+  - computer_use_action
+  - solver_harness_rollout
+  - user_simulator_turn
+  - verifier_scoring
+  reward_type: task_correctness_efficiency_and_safety_verifiers
+  verifier: complementary_cua_trajectory_verifiers
+  trainable: true
+  resettable: partial
+  trajectories: synthetic
+  sandbox: synthetic_environment
+  production_signal: scalable_cua_data_pipeline_with_live_and_synthetic_environments
+  url: https://arxiv.org/abs/2606.20785
+  repo:
+  notes: FaraGen1.5 data-generation pipeline for computer-use agents, composed of
+    environments, solvers, and verifiers over live websites plus synthetic environments
+    for authenticated or irreversible domains, with user-simulator support for multi-turn
+    rollouts.
+  id: fara-1-5
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: scalable_computer_use_environment_generation_pipeline
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.20785
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: synthetic_and_live_cua_solver_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: synthetic_environment_and_live_site_task_reset
+  trainability_status: framework_ready
+  sft_fit: strong
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: hybrid
+  verifier_family: hybrid
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: live_and_synthetic_cua_environments
+  runtime_host: benchmark_dependent
+  network_policy: domain_dependent
+  credential_boundary: synthetic_or_auth_gated_domain_boundary
+  approval_policy: verifier_gated_rollout_filtering
+  audit_log: solver_rollouts_and_verifier_scores
+  telemetry_type: computer_use_trajectories_user_simulator_turns_and_scores
+  destructive_action_scope: synthetic_or_benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - production-direction
+- name: MacAgentBench
+  category: computer-world
+  year: 2026
+  modality:
+  - macos
+  - desktop
+  - gui
+  - cli
+  - computer_use
+  action_space:
+  - mouse
+  - keyboard
+  - cli_command
+  - multi_application_workflow
+  reward_type: deterministic_rule_based_multi_checkpoint_score
+  verifier: deterministic_rule_based_final_state_and_checkpoint_evaluation
+  trainable: partial
+  resettable: partial
+  trajectories: false
+  sandbox: desktop_apps
+  production_signal: framework_augmented_macos_cua_benchmark
+  url: https://arxiv.org/abs/2606.22557
+  repo: https://github.com/JetAstra/MacAgentBench
+  notes: macOS desktop-agent benchmark with 676 tasks across 25 applications, nearly
+    60 percent GUI-plus-CLI workflows, deterministic rule-based evaluation, and fine-grained
+    multi-checkpoint scoring for long-horizon multi-application tasks.
+  task_count: 676
+  app_count: 25
+  id: macagentbench
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: macos_desktop_agent_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.22557
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-27'
+    confidence: high
+  - url: https://github.com/JetAstra/MacAgentBench
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: macos_task_state_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: 'yes'
+  verifier_isolation: macos_task_environment
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: macos_desktop_benchmark
+  runtime_host: local_or_self_hosted
+  network_policy: application_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: benchmark_policy_dependent
+  audit_log: checkpoint_scores_and_capability_annotations
+  telemetry_type: gui_cli_actions_final_state_checks_and_checkpoint_scores
+  destructive_action_scope: benchmark_desktop_tasks
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+- name: GUI vs. CLI Execution Benchmark
+  category: computer-world
+  year: 2026
+  modality:
+  - desktop
+  - gui
+  - cli
+  - computer_use
+  action_space:
+  - screen_only_gui_action
+  - skill_mediated_cli_action
+  - verifier_guided_skill_augmentation
+  reward_type: matched_final_state_verifier
+  verifier: controlled_final_state_verifiers_across_gui_and_cli_conditions
+  trainable: false
+  resettable: partial
+  trajectories: false
+  sandbox: desktop_apps
+  production_signal: execution_layer_bottleneck_analysis_for_computer_use_agents
+  url: https://arxiv.org/abs/2606.24551
+  repo:
+  notes: Matched execution-layer benchmark with 440 desktop tasks across 18 applications
+    and 12 workflow categories, comparing screen-only GUI agents and skill-mediated
+    CLI agents under identical goals, states, and final-state verifiers.
+  task_count: 440
+  app_count: 18
+  id: gui-vs-cli-execution-benchmark
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: matched_gui_cli_computer_use_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.24551
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: matched_desktop_task_initial_state_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: desktop_benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: desktop_benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: application_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: modality_native_action_restrictions
+  audit_log: matched_goal_state_verifier_and_success_records
+  telemetry_type: gui_and_cli_action_traces_with_final_state_scores
+  destructive_action_scope: benchmark_desktop_tasks
+  reader_paths:
+  - build-evals
+  - foundations
+  - production-direction
+- name: VisCritic
+  category: training-framework
+  year: 2026
+  modality:
+  - gui
+  - vision
+  - process_reward
+  - screenshots
+  action_space:
+  - pre_action_screenshot
+  - post_action_screenshot
+  - gui_action_review
+  - error_type_diagnosis
+  reward_type: visual_state_comparison_process_reward
+  verifier: siamese_visual_process_reward_model
+  trainable: true
+  resettable: dataset_replay
+  trajectories: partial
+  sandbox: gui_benchmark_environment
+  production_signal: visual_process_reward_for_gui_agent_step_level_verification
+  url: https://arxiv.org/abs/2606.24525
+  repo:
+  notes: Visual process-reward framework for GUI agents that compares pre-action and
+    post-action screenshots in visual feature space, trains from weakly supervised
+    trajectory samples, and provides task-progress and error-type diagnostics.
+  id: viscritic
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: gui_visual_process_reward_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.24525
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    - trajectories
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: weakly_supervised_gui_trajectory_samples
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: screenshot_pair_and_trajectory_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: process_reward
+  verifier_family: hybrid
+  verifier_recomputable: partial
+  verifier_isolation: gui_benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: gui_benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: critic_guided_step_review
+  audit_log: screenshot_pairs_action_success_progress_and_error_types
+  telemetry_type: pre_post_action_screenshots_and_process_reward_scores
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - release-gates
+- name: Autonomous Evaluation for CUA RL
+  category: training-framework
+  year: 2026
+  modality:
+  - computer_use
+  - gui
+  - vision_language_model
+  - reinforcement_learning
+  action_space:
+  - gui_action
+  - final_screenshot_evaluation
+  - noisy_reward_estimation
+  reward_type: autonomous_vlm_terminal_reward
+  verifier: vision_language_task_completion_judge_with_noise_correction
+  trainable: true
+  resettable: partial
+  trajectories: partial
+  sandbox: gui_benchmark_environment
+  production_signal: scalable_reward_signal_for_cua_reinforcement_learning
+  url: https://arxiv.org/abs/2606.24515
+  repo:
+  notes: Reinforcement-learning framework for computer-use agents that uses an autonomous
+    vision-language evaluator over final screenshots as a scalable terminal reward,
+    then treats the feedback as a noisy binary reward channel during policy optimization.
+  id: autonomous-evaluation-for-cua-rl
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: vlm_rewarded_computer_use_rl_framework
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.24515
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: gui_rl_rollouts_with_terminal_vlm_feedback
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: gui_benchmark_episode_reset
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: strong
+  online_rl_fit: strong
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: judge
+  verifier_family: judge
+  verifier_recomputable: partial
+  verifier_isolation: gui_benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: gui_benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: noisy_reward_calibration_required
+  audit_log: screenshots_vlm_feedback_and_reward_estimates
+  telemetry_type: gui_rollouts_terminal_screenshots_and_vlm_rewards
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - release-gates
+- name: Argus / CUA Uncertainty Quantification
+  category: gui-world
+  year: 2026
+  modality:
+  - gui
+  - computer_use
+  - vlm
+  - uncertainty
+  action_space:
+  - gui_grounding_prediction
+  - uncertainty_scoring
+  - rejection_calibration
+  reward_type: grounding_uncertainty_calibration_and_selective_risk
+  verifier: cross_regime_uq_benchmark_for_gui_grounding
+  trainable: false
+  resettable: dataset_replay
+  trajectories: false
+  sandbox: gui_grounding_benchmark
+  production_signal: uncertainty_and_rejection_benchmark_for_executable_gui_clicks
+  url: https://arxiv.org/abs/2606.25760
+  repo:
+  notes: Argus benchmark for post-hoc uncertainty quantification in executable GUI
+    grounding, covering a 27-method open-weight matrix over four VLM agents and four
+    datasets plus closed-source frontier-vendor settings where internals are unavailable.
+  id: argus-cua-uncertainty-quantification
+  resource_kind: benchmark
+  canonical_category: gui-world
+  subtype: gui_grounding_uncertainty_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.25760
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: dataset_replay
+  reset_mechanism: gui_grounding_dataset_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: gui_grounding_benchmark
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: gui_grounding_benchmark
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: rejection_calibration_policy
+  audit_log: uncertainty_scores_rejection_regions_and_grounding_errors
+  telemetry_type: gui_grounding_predictions_uncertainty_scores_and_errors
+  destructive_action_scope: not_applicable
+  reader_paths:
+  - build-evals
+  - release-gates
+  - foundations
+- name: ToolBench-X
+  category: api-world
+  year: 2026
+  modality:
+  - tools
+  - api
+  - reliability
+  - multi_step
+  action_space:
+  - tool_call
+  - sequential_workflow
+  - parallel_workflow
+  - mixed_workflow
+  - hazard_recovery
+  reward_type: canonical_final_answer_under_tool_environment_hazards
+  verifier: deterministic_tools_and_canonical_answer_evaluation
+  trainable: partial
+  resettable: partial
+  trajectories: false
+  sandbox: simulated_apis
+  production_signal: recoverable_tool_environment_unreliability_benchmark
+  url: https://arxiv.org/abs/2606.25819
+  repo: https://github.com/Foreverskyou/ToolBench-X
+  notes: Executable benchmark for tool-using agents under recoverable environment
+    hazards, injecting specification drift, invocation error, execution failure,
+    output drift, and cross-source conflict while preserving solvability.
+  id: toolbench-x
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: tool_environment_unreliability_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.25819
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-27'
+    confidence: high
+  - url: https://github.com/Foreverskyou/ToolBench-X
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: deterministic_tool_environment_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: programmatic_checker
+  verifier_family: programmatic
+  verifier_recomputable: 'yes'
+  verifier_isolation: deterministic_tool_environment
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: deterministic_tool_environment
+  runtime_host: local_or_self_hosted
+  network_policy: simulated_or_benchmark_tools
+  credential_boundary: not_applicable
+  approval_policy: hazard_injection_protocol
+  audit_log: tool_hazard_instances_recovery_paths_and_answer_checks
+  telemetry_type: tool_calls_hazard_events_outputs_and_final_answers
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - build-evals
+  - release-gates
+  - foundations
+- name: AgentCIBench / Contextual Integrity
+  category: computer-world
+  year: 2026
+  modality:
+  - computer_use
+  - privacy
+  - personal_apps
+  - gui
+  action_space:
+  - cross_application_context_access
+  - email_calendar_todo_action
+  - privacy_sensitive_content_selection
+  reward_type: contextual_integrity_violation_detection
+  verifier: deterministic_contextual_integrity_scenario_scoring
+  trainable: false
+  resettable: partial
+  trajectories: false
+  sandbox: personal_app_benchmark
+  production_signal: contextual_privacy_release_gate_for_computer_use_agents
+  url: https://arxiv.org/abs/2606.23189
+  repo:
+  notes: Deterministically scored CUA privacy harness targeting contextual-integrity
+    failures across personal applications, including visual co-location, task-ambiguity
+    overshare, and recipient-misalignment scenarios.
+  id: agentcibench-contextual-integrity
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: computer_use_contextual_integrity_privacy_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.23189
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: personal_app_scenario_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: personal_app_benchmark
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: personal_application_benchmark
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: synthetic_personal_app_state
+  approval_policy: privacy_policy_and_recipient_context
+  audit_log: contextual_integrity_scenario_and_violation_records
+  telemetry_type: personal_app_actions_privacy_context_and_violation_labels
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - build-evals
+- name: ShareLock
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - mcp
+  - security
+  - tool_poisoning
+  action_space:
+  - multi_tool_threshold_poisoning
+  - malicious_instruction_sharding
+  - tool_metadata_attack
+  reward_type: tool_poisoning_stealth_and_attack_success
+  verifier: mcp_tool_poisoning_attack_evaluation
+  trainable: false
+  resettable: not_applicable
+  trajectories: false
+  sandbox: mcp_security_analysis
+  production_signal: multi_tool_mcp_poisoning_threat_model
+  url: https://arxiv.org/abs/2606.27027
+  repo:
+  notes: Multi-tool threshold poisoning attack against MCP that shards malicious
+    instructions across cooperating tools to reduce inspection risk and expose a
+    security gap in tool metadata review.
+  id: sharelock
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: mcp_multi_tool_poisoning_attack_analysis
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.27027
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: not_applicable
+  trajectory_access: not_applicable
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: not_applicable
+  reset_mechanism: not_applicable
+  trainability_status: not_applicable
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: weak
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: security_analysis
+  verifier_recomputable: partial
+  verifier_isolation: mcp_security_testbed
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_security_testbed
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: security_review_required
+  audit_log: poisoned_tool_metadata_and_attack_success_records
+  telemetry_type: mcp_tool_descriptions_threshold_shares_and_detection_results
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
+- name: Agent Policy-as-Code Autoformalization
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - agent_policy
+  - mcp
+  - safety
+  - formal_methods
+  action_space:
+  - prompt_policy_translation
+  - mcp_tool_description_translation
+  - cedar_policy_generation
+  - generator_critic_verification
+  reward_type: formal_policy_coverage_and_verification
+  verifier: cedar_policy_verification_and_medagentbench_policy_coverage
+  trainable: false
+  resettable: not_applicable
+  trajectories: false
+  sandbox: policy_enforcement_layer
+  production_signal: formal_policy_enforcement_for_agent_prompts_and_mcp_tools
+  url: https://arxiv.org/abs/2606.26649
+  repo:
+  notes: Autoformalization pipeline that translates agent prompts, MCP tool descriptions,
+    and natural-language policy documents into Cedar policy language with an LLM
+    generator-critic loop and formally verified enforcement artifacts.
+  id: agent-policy-as-code-autoformalization
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: agent_policy_as_code_autoformalization
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.26649
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: not_applicable
+  trajectory_access: not_applicable
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: not_applicable
+  reset_mechanism: not_applicable
+  trainability_status: not_applicable
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: formal
+  verifier_recomputable: partial
+  verifier_isolation: policy_enforcement_layer
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: policy_enforcement_layer
+  runtime_host: benchmark_dependent
+  network_policy: not_applicable
+  credential_boundary: policy_defined
+  approval_policy: formal_policy_enforcement
+  audit_log: generated_policies_coverage_and_verification_records
+  telemetry_type: source_specifications_generated_cedar_policies_and_verification_results
+  destructive_action_scope: policy_defined
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
+- name: VIGIL
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - agent_skills
+  - runtime_enforcement
+  - safety
+  action_space:
+  - behavioral_specification_monitoring
+  - runtime_intervention
+  - event_granularity_selection
+  reward_type: behavioral_specification_violation_prevention
+  verifier: runtime_behavioral_specification_monitor
+  trainable: false
+  resettable: not_applicable
+  trajectories: false
+  sandbox: skill_runtime_monitor
+  production_signal: runtime_enforcement_for_third_party_agent_skills
+  url: https://arxiv.org/abs/2606.26524
+  repo:
+  notes: Runtime enforcement framework for behavioral specifications in AI agent
+    skills, targeting access permissions, disclosure limits, execution privileges,
+    and preconditions for third-party skill packages.
+  id: vigil
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: agent_skill_runtime_enforcement
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.26524
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-27'
+    confidence: high
+  trajectory_availability: not_applicable
+  trajectory_access: not_applicable
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: not_applicable
+  reset_mechanism: not_applicable
+  trainability_status: not_applicable
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: weak
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: runtime_policy
+  verifier_recomputable: partial
+  verifier_isolation: skill_runtime_monitor
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: skill_runtime_monitor
+  runtime_host: local_or_self_hosted
+  network_policy: skill_dependent
+  credential_boundary: skill_policy_defined
+  approval_policy: runtime_policy_monitoring
+  audit_log: observed_events_policy_state_and_interventions
+  telemetry_type: skill_runtime_events_specification_state_and_enforcement_actions
+  destructive_action_scope: skill_policy_defined
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
 - name: MolmoWeb
   category: web-world
   year: 2026
@@ -7902,6 +8784,85 @@
   - safety-audit
   - release-gates
   - production-direction
+- name: MCP Tool-Poisoning Client Study
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - mcp
+  - security
+  - prompt_injection
+  - client_eval
+  action_space:
+  - tool_metadata_poisoning
+  - hidden_parameter_exploitation
+  - unauthorized_tool_invocation
+  - client_guardrail_comparison
+  reward_type: attack_success_and_mitigation_coverage
+  verifier: stride_dread_threat_model_and_client_attack_matrix
+  trainable: false
+  resettable: partial
+  trajectories: false
+  sandbox: mcp_client_security_testbed
+  production_signal: client_side_mcp_tool_poisoning_defense_requirements
+  url: https://arxiv.org/abs/2603.22489
+  repo:
+  notes: Threat model and empirical client study for MCP prompt injection through
+    tool-poisoning vectors, covering STRIDE/DREAD analysis, seven major MCP
+    clients, static validation, parameter visibility, warnings, sandboxing,
+    audit logging, and user-transparency controls.
+  id: mcp-tool-poisoning-client-study
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: mcp_client_tool_poisoning_evaluation
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2603.22489
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-21'
+    confidence: high
+  - url: https://arxiv.org/abs/2603.21642
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-21'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: attack_case_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: weak
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: mcp_client_security_testbed
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_client_tool_invocation_boundary
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: tool_permission_boundary
+  approval_policy: client_side_tool_invocation_review
+  audit_log: client_guardrail_feature_matrix_and_attack_results
+  telemetry_type: attack_success_static_validation_and_warning_coverage
+  destructive_action_scope: benchmark_attack_cases
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
 - name: VIPER-MCP
   category: agent-infrastructure
   year: 2026
@@ -7970,6 +8931,79 @@
   audit_log: confirmed_exploit_traces
   telemetry_type: static_alerts_and_prompt_evolution_traces
   destructive_action_scope: sandbox_limited
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
+- name: Connor / Malicious MCP Servers
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - mcp
+  - security
+  - malicious_servers
+  - behavioral_detection
+  action_space:
+  - mcp_component_manipulation
+  - pre_execution_shell_command_scan
+  - tool_intent_extraction
+  - in_execution_behavior_trace_analysis
+  reward_type: malicious_server_detection_f1_and_attack_success
+  verifier: component_centric_mcp_attack_dataset_and_behavioral_detector
+  trainable: false
+  resettable: partial
+  trajectories: partial
+  sandbox: mcp_security_benchmark
+  production_signal: behavioral_deviation_detection_for_malicious_mcp_servers
+  url: https://arxiv.org/abs/2604.01905
+  repo:
+  notes: Component-centric study of malicious MCP servers with 114 proof-of-concept
+    servers, multi-component attack compositions, evaluation across MCP hosts
+    and LLMs, and Connor, a two-stage detector that combines pre-execution
+    analysis with in-execution behavioral deviation tracing.
+  instance_count: 114
+  id: connor-malicious-mcp-servers
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: mcp_malicious_server_behavior_detector
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.01905
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-21'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: mcp_tool_behavior_traces
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: malicious_server_dataset_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: mcp_host_and_server_testbed
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mcp_server_behavior_boundary
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: tool_permission_boundary
+  approval_policy: pre_execution_and_in_execution_security_review
+  audit_log: component_attack_cases_and_behavioral_deviation_reports
+  telemetry_type: shell_command_intent_and_behavior_trace_features
+  destructive_action_scope: benchmark_attack_cases
   reader_paths:
   - safety-audit
   - release-gates
