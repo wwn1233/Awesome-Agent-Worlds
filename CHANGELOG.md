@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-29
+
+- Refreshed the weekly Hot Papers public view for the June 29 weekly cycle while keeping the curated catalog at 529 resources.
+- Added a compact README view-selection guide so professional readers can move directly to the Resource Index, Selection Guide, Hot Papers view, or Static Explorer.
+- Updated `CITATION.cff` to version 0.3.22 with the June 29 release date.
+
 ## 2026-06-27
 
 - Added Qwen-AgentWorld, Fara-1.5, MacAgentBench, GUI vs. CLI Execution Benchmark, VisCritic, Autonomous Evaluation for CUA RL, Argus / CUA Uncertainty Quantification, ToolBench-X, AgentCIBench / Contextual Integrity, ShareLock, Agent Policy-as-Code Autoformalization, and VIGIL from first-party arXiv sources.

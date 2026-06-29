@@ -52,7 +52,7 @@ The reusable asset is the verified trajectory, not just the final score.
 
 | Scope | Current coverage |
 |---|---:|
-| Snapshot date | 2026-06-27 |
+| Snapshot date | 2026-06-29 |
 | Curated resources | 529 |
 | Canonical categories | 11 |
 | Public runnable resources | 87 |
@@ -63,6 +63,16 @@ The reusable asset is the verified trajectory, not just the final score.
 
 Readiness scores summarize world-readiness evidence; they are not claims about
 scientific impact or model quality.
+
+## Choose the Right View
+
+| Need | Use |
+|---|---|
+| A fast conceptual map | This README, starting with the reader-goal routes below. |
+| Evidence fields, scores, and source links | [Resource Index](./others/docs/resource-index.md). |
+| A practical decision path for evaluations or post-training | [Selection Guide](./others/docs/selection-guide.md). |
+| A weekly frontier scan of indexed papers | [Hot Papers](./others/docs/hot-papers.md). |
+| Interactive filtering by surface, maturity, trajectories, reset, and source confidence | [Static Explorer](./site/index.html). |
 
 ## How to Read This List
 
