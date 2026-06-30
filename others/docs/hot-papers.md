@@ -5,7 +5,7 @@ an indexed strip from this table; this document keeps the fuller weekly view.
 
 Curated resources are the entries in the Resource Index and main README.
 
-- Updated: 2026-06-29
+- Updated: 2026-06-30
 - Cadence: weekly
 - Source scope: recent arXiv papers with Agent Worlds evidence
 - Catalog status: indexed
@@ -22,10 +22,15 @@ catalog. Entries require first-party evidence and complete catalog evidence fiel
 
 | Paper | Published | Evidence | Catalog status |
 | --- | --- | --- | --- |
+| [Self-Evolving World Models for LLM Agent Planning](https://arxiv.org/abs/2606.30639v1) | 2026-06-29 | world model, revision | indexed |
+| [Whose Side Is Your Agent On? Multi-Party Principal Loyalty in LLM Agents](https://arxiv.org/abs/2606.30383v1) | 2026-06-29 | evaluation, benchmark, safety evaluation, failure trajectories | indexed |
+| [TACO: Tool-Augmented Credit Optimization for Agentic Tool Use](https://arxiv.org/abs/2606.30251v1) | 2026-06-29 | tool agent, benchmark, process reward | indexed |
+| [OSWorld2.0: Benchmarking Computer Use Agents on Long-Horizon Real-World Tasks](https://arxiv.org/abs/2606.29537v1) | 2026-06-28 | computer use, benchmark, professional task | indexed |
+| [Beyond Function Calling: Benchmarking Tool-Using Agents under Tool-Environment Unreliability](https://arxiv.org/abs/2606.25819v2) | 2026-06-24 | evaluation, benchmark, test-time scaling | indexed |
+| [TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents](https://arxiv.org/abs/2606.28480v1) | 2026-06-26 | evaluation, benchmark, computer-use agent, computer-use agents | indexed |
 | [ShareLock: A Stealthy Multi-Tool Threshold Poisoning Attack Against MCP](https://arxiv.org/abs/2606.27027v1) | 2026-06-25 | benchmark, mcp, tool poisoning | indexed |
 | [Autoformalization of Agent Instructions into Policy-as-Code](https://arxiv.org/abs/2606.26649v1) | 2026-06-25 | benchmark, agent safety, mcp, mcp tool | indexed |
 | [VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills](https://arxiv.org/abs/2606.26524v1) | 2026-06-25 | evaluation, third-party skills | indexed |
-| [Beyond Function Calling: Benchmarking Tool-Using Agents under Tool-Environment Unreliability](https://arxiv.org/abs/2606.25819v1) | 2026-06-24 | evaluation, benchmark, test-time scaling | indexed |
 | [Uncertainty Quantification for Computer-Use Agents: A Benchmark across Vision-Language Models and GUI Grounding Datasets](https://arxiv.org/abs/2606.25760v1) | 2026-06-24 | gui agent, benchmark, computer-use agent, computer-use agents | indexed |
 | [Qwen-AgentWorld: Language World Models for General Agents](https://arxiv.org/abs/2606.24597v1) | 2026-06-23 | benchmark, real-world environment, real-world environments, world model, language world model, environment simulation, state transition | indexed |
 | [VisCritic: Visual State Comparison as Process Reward for GUI Agents](https://arxiv.org/abs/2606.24525v1) | 2026-06-23 | gui agent, benchmark, process reward, process reward model | indexed |
@@ -33,6 +38,7 @@ catalog. Entries require first-party evidence and complete catalog evidence fiel
 | [GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents](https://arxiv.org/abs/2606.24551v1) | 2026-06-22 | gui agent, verifier, evaluation, benchmark, computer-use agent, computer-use agents | indexed |
 | [Capable but Careless: Do Computer-Use Agents Follow Contextual Integrity?](https://arxiv.org/abs/2606.23189v1) | 2026-06-22 | evaluation, computer-use agent, computer-use agents | indexed |
 | [MacAgentBench: Benchmarking AI Agents on Real-World macOS Desktop](https://arxiv.org/abs/2606.22557v1) | 2026-06-21 | computer use, agent benchmark, evaluation, benchmark, skill library | indexed |
+| ["What Happens Locally, Leaks Globally": Detecting Privacy Leakage Risks in MCP Servers](https://arxiv.org/abs/2606.21338v1) | 2026-06-19 | mcp, mcp server, mcp servers | indexed |
 | [Current World Models Lack a Persistent State Core](https://arxiv.org/abs/2606.20545v1) | 2026-06-18 | evaluation, benchmark, world model | indexed |
 | [Fara-1.5: Scalable Learning Environments for Computer Use Agents](https://arxiv.org/abs/2606.20785v1) | 2026-06-18 | computer use, verifier, rollout, benchmark, synthetic environment | indexed |
 | [NRT-Bench: LLM Agent Safety and Multi-Turn Red-Teaming in Safety-Critical Systems](https://arxiv.org/abs/2606.20408v1) | 2026-06-18 | evaluation, benchmark, agent safety, safety evaluation, multi-turn red-teaming, red-teaming, jailbreak benchmarks, safety-critical systems, critical safety function, simulated nuclear | indexed |
@@ -196,12 +202,7 @@ catalog. Entries require first-party evidence and complete catalog evidence fiel
 | [TClone: Low-Latency Forking of Live GUI Environments for Computer-Use Agents](https://arxiv.org/abs/2605.17320v1) | 2026-05-17 | computer-use agent, computer-use agents | indexed |
 | [When Robots Do the Chores: A Benchmark and Agent for Long-Horizon Household Task Execution](https://arxiv.org/abs/2605.14504v2) | 2026-05-14 | longact, holomind, long-horizon household task, embodied agent | indexed |
 | [TOBench: A Task-Oriented Omni-Modal Benchmark for Real-World Tool-Using Agents](https://arxiv.org/abs/2605.16909v1) | 2026-05-16 | tobench, mm-toolbench, omni-modal tool use, mcp servers, closed-loop verification | indexed |
-| [AgentKernelArena: Generalization-Aware Benchmarking of GPU Kernel Optimization Agents](https://arxiv.org/abs/2605.16819v1) | 2026-05-16 | agentkernelarena, gpu kernel optimization, coding agents, correctness, performance checks | indexed |
-| [TIER: Trajectory-Invariant Execution Rewards for Multi-Step Tool Composition](https://arxiv.org/abs/2605.16790v1) | 2026-05-16 | trajectory, benchmark, tool composition | indexed |
 | [SaaS-Bench: Can Computer-Use Agents Leverage Real-World SaaS to Solve Professional Workflows?](https://arxiv.org/abs/2605.15777v1) | 2026-05-15 | saas-bench, computer-use agents, self-hosted saas, professional workflows, verification checkpoints | indexed |
-| [BioXArena: Benchmarking LLM Agents on Multi-Modal Biomedical Machine Learning Tasks](https://arxiv.org/abs/2605.15766v1) | 2026-05-15 | bioxarena, biomedical machine learning, multimodal biomedical datasets, hidden graders, agent trajectories | indexed |
-| [Toward Securing AI Agents Like Operating Systems](https://arxiv.org/abs/2605.14932v1) | 2026-05-14 | agent security, operating systems, access control, process isolation, audit | indexed |
-| [D-VLA: A High-Concurrency Distributed Asynchronous Reinforcement Learning Framework for Vision-Language-Action Models](https://arxiv.org/abs/2605.13276v2) | 2026-05-13 | d-vla, vision-language-action, distributed reinforcement learning, asynchronous rollouts, embodied agents | indexed |
 | [Learning to Build the Environment: Self-Evolving Reasoning RL via Verifiable Environment Synthesis](https://arxiv.org/abs/2605.14392v1) | 2026-05-14 | evoenv, verifiable environment synthesis, self-evolving reasoning rl, environment-construction loop, rlvr | indexed |
 | [AgentForesight: Online Auditing for Early Failure Prediction in Multi-Agent Systems](https://arxiv.org/abs/2605.08715v2) | 2026-05-09 | agentforesight, online auditing, multi-agent failures, afttraj-2k, trajectory intervention | indexed |
 | [WildClawBench: A Benchmark for Real-World, Long-Horizon Agent Evaluation](https://arxiv.org/abs/2605.10912v1) | 2026-05-11 | wildclawbench, long-horizon agent evaluation, native-runtime benchmark, docker, tool-use environment, benchmark | indexed |

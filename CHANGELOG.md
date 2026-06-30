@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-06-30
+
+- Added OSWorld 2.0, TUA-Bench, WorldEvolver, PrincipalBench / Multi-Party Principal Loyalty, MCPPrivacyDetector, and TACO from first-party arXiv, project-page, or repository sources.
+- Refreshed the weekly Hot Papers public view, Resource Index, Flagship Matrix, Static Explorer data, README reader routes, Reading Order, and Selection Guide for the expanded 535-resource catalog.
+- Updated `CITATION.cff` to version 0.3.23 with the June 30 release date.
+
 ## 2026-06-29
 
 - Refreshed the weekly Hot Papers public view for the June 29 weekly cycle while keeping the curated catalog at 529 resources.

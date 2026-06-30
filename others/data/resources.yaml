@@ -3595,6 +3595,465 @@
   - safety-audit
   - release-gates
   - build-evals
+- name: OSWorld 2.0
+  category: computer-world
+  year: 2026
+  modality:
+  - desktop
+  - gui
+  - computer_use
+  - long_horizon
+  - vlm
+  action_space:
+  - mouse
+  - keyboard
+  - desktop_app
+  - cross_application_workflow
+  reward_type: binary_completion_and_partial_task_score
+  verifier: execution_based_task_evaluators_and_safety_reports
+  trainable: partial
+  resettable: true
+  trajectories: true
+  sandbox: vm
+  production_signal: long_horizon_professional_computer_use_benchmark
+  url: https://osworld-v2.xlang.ai/
+  repo: https://github.com/xlang-ai/OSWorld-V2
+  notes: Long-horizon successor to OSWorld with 108 realistic desktop workflows,
+    release manifests, environment providers, gated task classes, trajectory
+    viewer/download links, and safety-sensitive execution reports for professional
+    computer-use evaluation.
+  task_count: 108
+  id: osworld-2-0
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: long_horizon_computer_use_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.29537
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  - url: https://osworld-v2.xlang.ai/
+    type: project_page
+    supports:
+    - overview
+    - status
+    - trajectories
+    checked_at: '2026-06-30'
+    confidence: high
+  - url: https://github.com/xlang-ai/OSWorld-V2
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-30'
+    confidence: high
+  trajectory_availability: public
+  trajectory_access: public
+  trajectory_type: released_agent_trajectories_and_viewer
+  trajectory_public: true
+  reset_support: episode_reset
+  reset_mechanism: vm_provider_reset_and_release_manifest
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_environment
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: desktop_vm_and_mocked_services
+  runtime_host: local_or_cloud_provider
+  network_policy: benchmark_dependent
+  credential_boundary: task_and_service_dependent
+  approval_policy: public_evaluation_review
+  audit_log: release_manifest_task_state_trajectory_and_safety_report_records
+  telemetry_type: long_horizon_desktop_action_trajectories
+  destructive_action_scope: benchmark_vm_and_mocked_services
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - release-gates
+- name: TUA-Bench
+  category: code-world
+  year: 2026
+  modality:
+  - terminal
+  - shell
+  - files
+  - live_web
+  - scientific_tools
+  action_space:
+  - shell_command
+  - file_operation
+  - terminal_tool_use
+  - containerized_task_execution
+  reward_type: execution_based_task_score
+  verifier: deterministic_setup_scripts_and_execution_based_scoring
+  trainable: partial
+  resettable: true
+  trajectories: false
+  sandbox: docker
+  production_signal: general_purpose_terminal_use_agent_benchmark
+  url: https://www.tuabench.ai/
+  repo: https://github.com/facebookresearch/TUA-Bench
+  notes: Meta research benchmark with 120 real-world terminal-use tasks across
+    everyday digital workflows and specialized scientific or engineering tools,
+    using deterministic setup scripts and execution-based scoring.
+  task_count: 120
+  id: tua-bench
+  resource_kind: benchmark
+  canonical_category: code-world
+  subtype: terminal_use_agent_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.28480
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  - url: https://www.tuabench.ai/
+    type: project_page
+    supports:
+    - overview
+    - status
+    checked_at: '2026-06-30'
+    confidence: high
+  - url: https://github.com/facebookresearch/TUA-Bench
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-30'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: deterministic_setup_script_and_container_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: 'yes'
+  verifier_isolation: containerized_terminal_environment
+  negative_side_effect_checks: partial
+  reproducibility: public_runnable
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: containerized_terminal_tasks
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: provider_api_key_only
+  approval_policy: benchmark_run_configuration_review
+  audit_log: setup_script_task_artifact_and_execution_score_records
+  telemetry_type: terminal_command_logs_and_execution_scores
+  destructive_action_scope: containerized_task_environment
+  reader_paths:
+  - build-evals
+  - release-gates
+- name: WorldEvolver
+  category: research-world
+  year: 2026
+  modality:
+  - text
+  - world_model
+  - embodied_text_env
+  - planning
+  action_space:
+  - action_transition_prediction
+  - retrieval_based_simulation
+  - context_revision
+  - selective_foresight
+  reward_type: downstream_agent_success_and_world_model_prediction_accuracy
+  verifier: alfworld_scienceworld_agentboard_evaluation
+  trainable: false
+  resettable: not_applicable
+  trajectories: false
+  sandbox: world_model
+  production_signal: self_evolving_world_model_context_for_llm_agent_planning
+  url: https://arxiv.org/abs/2606.30639
+  repo:
+  notes: Self-evolving world-model framework that revises deployment-time memory
+    and foresight context from action-transition mismatches while keeping the
+    downstream agent and model parameters frozen.
+  id: worldevolver
+  resource_kind: agent_infrastructure
+  canonical_category: research-world
+  subtype: self_evolving_agent_world_model
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.30639
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: not_applicable
+  reset_mechanism: not_applicable
+  trainability_status: not_applicable
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: task_dependent
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_environment_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_environment_dependent
+  runtime_host: not_specified
+  network_policy: not_applicable
+  credential_boundary: not_applicable
+  approval_policy: not_applicable
+  audit_log: prediction_observation_mismatch_and_downstream_success_records
+  telemetry_type: world_model_prediction_and_agent_success_metrics
+  destructive_action_scope: benchmark_environment
+  reader_paths:
+  - foundations
+  - train-rollouts
+  - build-evals
+- name: PrincipalBench / Multi-Party Principal Loyalty
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - llm_agent
+  - multi_party_dialogue
+  - safety
+  - instruction_hierarchy
+  action_space:
+  - counterparty_dialogue
+  - private_state_handling
+  - leak_probe_response
+  - loyalty_scaffold
+  reward_type: principal_loyalty_and_over_refusal_tradeoff
+  verifier: dual_judges_and_integrity_audit_gate
+  trainable: false
+  resettable: not_applicable
+  trajectories: false
+  sandbox: safety_benchmark
+  production_signal: multi_party_agent_loyalty_measurement_for_deployed_assistants
+  url: https://arxiv.org/abs/2606.30383
+  repo:
+  notes: Multi-party LLM-agent safety benchmark that tests whether an agent remains
+    loyal to the principal it represents while interacting with a counterparty
+    whose interests may diverge.
+  task_count: 75
+  id: principalbench-multi-party-loyalty
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: multi_party_agent_loyalty_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.30383
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: not_applicable
+  reset_mechanism: not_applicable
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: judge
+  verifier_recomputable: partial
+  verifier_isolation: dual_judge_and_integrity_gate
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: multi_party_dialogue_safety_eval
+  runtime_host: benchmark_dependent
+  network_policy: not_applicable
+  credential_boundary: principal_private_state
+  approval_policy: safety_eval_review
+  audit_log: leak_probe_dual_judge_and_integrity_gate_records
+  telemetry_type: multi_turn_dialogue_harm_and_over_refusal_metrics
+  destructive_action_scope: dialogue_only
+  reader_paths:
+  - safety-audit
+  - release-gates
+- name: MCPPrivacyDetector
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - mcp
+  - static_analysis
+  - privacy
+  - tool_server
+  action_space:
+  - mcp_tool_handler_analysis
+  - taint_flow_detection
+  - implicit_sink_detection
+  - cross_language_program_lifting
+  reward_type: privacy_leakage_detection_rate_and_case_validation
+  verifier: cross_language_static_analysis_and_protocol_guided_taint_flows
+  trainable: false
+  resettable: not_applicable
+  trajectories: false
+  sandbox: static_analysis_framework
+  production_signal: mcp_server_privacy_leakage_detection_for_tool_ecosystems
+  url: https://arxiv.org/abs/2606.21338
+  repo:
+  notes: Context-aware static analysis framework for detecting privacy leakage
+    in MCP servers, targeting protocol-induced flows where return values,
+    exceptions, or debug output cross the local-to-LLM boundary.
+  instance_count: 10655
+  id: mcpprivacydetector
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: mcp_privacy_static_analysis
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.21338
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: not_applicable
+  reset_mechanism: not_applicable
+  trainability_status: not_applicable
+  sft_fit: not_applicable
+  rlvr_fit: not_applicable
+  online_rl_fit: not_applicable
+  distillation_fit: not_applicable
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: runtime_policy
+  verifier_recomputable: partial
+  verifier_isolation: static_analysis
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: static_code_analysis
+  runtime_host: not_applicable
+  network_policy: not_applicable
+  credential_boundary: local_tool_server_secret_boundary
+  approval_policy: privacy_review
+  audit_log: taint_flow_implicit_sink_and_leakage_case_records
+  telemetry_type: static_analysis_findings
+  destructive_action_scope: none
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
+- name: TACO
+  category: training-framework
+  year: 2026
+  modality:
+  - multimodal
+  - code_tool_agent
+  - tool_use
+  - reinforcement_learning
+  action_space:
+  - code_operation
+  - tool_call
+  - answer_probe
+  - advantage_routing
+  reward_type: judge_free_tool_contribution_advantage
+  verifier: outcome_gated_answer_probe_and_task_correctness
+  trainable: true
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: service_environment
+  production_signal: credit_assignment_for_agentic_tool_use_rl
+  url: https://arxiv.org/abs/2606.30251
+  repo:
+  notes: Tool-Augmented Credit Optimization is a GRPO-style training method for
+    code-tool agents that credits individual tool calls by their effect on
+    answer correctness without requiring an external judge model.
+  id: taco-tool-augmented-credit-optimization
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: tool_use_credit_assignment_rl
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.30251
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: code_tool_reasoning_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_tool_task_reset
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: strong
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: task_dependent
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_environment_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_tool_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: training_run_review
+  audit_log: answer_probe_tool_contribution_and_outcome_advantage_records
+  telemetry_type: tool_call_credit_and_task_correctness_metrics
+  destructive_action_scope: benchmark_tool_environment
+  reader_paths:
+  - train-rollouts
+  - foundations
 - name: Qwen-AgentWorld
   category: research-world
   year: 2026

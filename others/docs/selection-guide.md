@@ -8,7 +8,7 @@ product gating.
 ```text
 What do you need the world to prove?
 ├── GUI or computer-control ability
-│   ├── Need public reproducibility? -> OSWorld, OSWorld-Verified, OpenCUA
+│   ├── Need public reproducibility or long-horizon desktop workflows? -> OSWorld, OSWorld-Verified, OSWorld 2.0, OpenCUA
 │   ├── Need robustness to OS or environment corruptions? -> AgentHijack, OSGuard
 │   ├── Need host-level isolation for self-hosted computer-use agents? -> TEE-Backed Isolation for Self-Hosted Computer-Use Agents
 │   ├── Need personalized desktop or cross-app personal-assistant workflows? -> MyPCBench, AgentCIBench / Contextual Integrity
@@ -44,13 +44,14 @@ What do you need the world to prove?
 ├── Software-engineering ability
 │   ├── Need patch correctness? -> SWE-bench, SWE-bench Verified
 │   ├── Need trainable rollouts? -> SWE-Gym
-│   └── Need terminal generality or scalable terminal training worlds? -> Terminal-Bench, LiteCoder-Terminal
+│   └── Need terminal generality or scalable terminal training worlds? -> Terminal-Bench, TUA-Bench, LiteCoder-Terminal
 ├── Tool/API and enterprise workflow ability
 │   ├── Need stateful apps? -> AppWorld
 │   ├── Need policy-following tool calls? -> tau-bench, tau2-bench
 │   ├── Need agent-native CLI harnesses for existing software? -> CLI-Anything
 │   ├── Need MCP breadth, workflow repair, tool trajectories, governed tools, tool-environment hazards, or safety? -> Toolathlon, TOUCAN, MCP-Flow, Evoflux, Tool Forge, ADK Arena, MCP-AgentBench, CompSkillBench / Compositional Skill Routing, ToolBench-X, SafeMCP, Attested Tool-Server Admission, MCP-SafetyBench
 │   ├── Need MCP server runtime-fault taxonomy? -> MCP Runtime Fault Taxonomy
+│   ├── Need MCP server privacy leakage checks? -> MCPPrivacyDetector
 │   ├── Need MCP server regeneration under API drift? -> DeltaMCP
 │   ├── Need MCP source attribution, malicious skill audits, skill composition risk, threshold poisoning, formal policy enforcement, or skill runtime enforcement? -> ProvenanceGuard, Description-Code Inconsistency / DCIChecker, PACT / Argument-Level Provenance, MalSkillBench, SkillHarm, SCR-Bench / Skill Composition Risk, ShareLock, Agent Policy-as-Code Autoformalization, VIGIL
 │   ├── Need grounded tool-interaction synthesis? -> GAIS
@@ -67,7 +68,7 @@ What do you need the world to prove?
 │   ├── Need long-horizon multi-agent autonomy? -> Emergence World
 │   ├── Need dynamic memory under changing environments? -> EvoArena
 │   ├── Need open-ended multi-agent coordination? -> Alem
-│   ├── Need language or text world-model foundations? -> Qwen-AgentWorld, Text World Models for LLM Agents
+│   ├── Need language or text world-model foundations? -> Qwen-AgentWorld, WorldEvolver, Text World Models for LLM Agents
 │   ├── Need auditable physical state-transition commitments? -> World Models in Words
 │   ├── Need generated-world state-persistence diagnostics? -> WRBench / Persistent State Core
 │   ├── Need controlled hidden-world inference? -> Agentic Automata Learning
@@ -79,13 +80,13 @@ What do you need the world to prove?
 │   ├── Need real-robot VLA leaderboard-style evaluation? -> PhAIL / Physical AI Leaderboard
 │   └── Need broad knowledge tasks? -> GAIA, AgentBoard
 └── Training from interaction
-    ├── Need multi-world, language-world-model, scalable CUA environment, cloud-console, terminal, mobile-demonstration, scientific-discovery, desktop CUA SFT, live web, web-agent imitation, generated robot rollouts, or live tool-use rollouts? -> AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence, Qwen-AgentWorld, Fara-1.5, EnvScaler, ScaleEnv, EnvFactory, AgentScaler / Environment Scaling, RODS, From Trainee to Trainer / LLM-as-Environment-Engineer, AgentJet, EvoTrainer, Role-Agent, CoEvolve, SENTINEL, LiteCoder-Terminal, TIER, MobileForge, Weblica, RoTS / GUI-RobustEval, AsyncWebRL, OpenWebRL, PANDO, OpenSearch-VL, GE-Sim 2.0, iMaC, SurgVista, HyperSim, ProCUA-SFT, Speculative Rollback Correction, AliyunConsoleAgent, HomeFlow, Teach-and-Repeat, PhoneHarness, EurekAgent, PROVE / Synthesize and Reward, TOUCAN, MCP-Flow, ToolBench-X, GAIS, BioManus / MCP-Native Biomedical Agent, CompSkillBench / Compositional Skill Routing, RAGEN, VAGEN
+    ├── Need multi-world, language-world-model, scalable CUA environment, cloud-console, terminal, mobile-demonstration, scientific-discovery, desktop CUA SFT, live web, web-agent imitation, generated robot rollouts, or live tool-use rollouts? -> AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence, Qwen-AgentWorld, WorldEvolver, Fara-1.5, EnvScaler, ScaleEnv, EnvFactory, AgentScaler / Environment Scaling, RODS, From Trainee to Trainer / LLM-as-Environment-Engineer, AgentJet, EvoTrainer, Role-Agent, CoEvolve, SENTINEL, LiteCoder-Terminal, TIER, MobileForge, Weblica, RoTS / GUI-RobustEval, AsyncWebRL, OpenWebRL, PANDO, OpenSearch-VL, GE-Sim 2.0, iMaC, SurgVista, HyperSim, ProCUA-SFT, Speculative Rollback Correction, AliyunConsoleAgent, HomeFlow, Teach-and-Repeat, PhoneHarness, EurekAgent, PROVE / Synthesize and Reward, TOUCAN, MCP-Flow, ToolBench-X, GAIS, BioManus / MCP-Native Biomedical Agent, CompSkillBench / Compositional Skill Routing, RAGEN, VAGEN
     ├── Need environment-grounded prompt optimization for game agents? -> Environment-Grounded Automated Prompt Optimization
     ├── Need step-level agentic RL data middleware? -> Claw-R1
     ├── Need executable harness control flow for agent programs? -> LLM-as-Code Agentic Programming for Agent Harness
     ├── Need action-conditioned embodied or surgical world-model rollouts? -> iMaC, SurgVista
     ├── Need environment-dynamics auxiliary objectives for agentic RL? -> EnvRL
-    ├── Need long-horizon tool-use credit assignment or rollout budgeting? -> Sibling-Guided Credit Distillation, TRACE Rollout Budget Allocation
+    ├── Need long-horizon tool-use credit assignment, tool-call credit assignment, or rollout budgeting? -> Sibling-Guided Credit Distillation, TACO, TRACE Rollout Budget Allocation
     ├── Need agent-arena trajectory distillation? -> ShoppingBench Trajectory Primitive
     ├── Need annotation-free mobile GUI adaptation? -> MobileForge
     ├── Need self-evolution, skill evolution, or procedural world-model training? -> OpenSkill, SkillCAT, SkillSmith / Skill-Tool Co-Evolution, VASO, ProPlay, ADWM, Policy and World Modeling Co-Training, Game Code World Model Generation, SimWorld Studio
@@ -100,6 +101,7 @@ What do you need the world to prove?
 | Use case | Best first resource | Reward/verifier | Main risk |
 | --- | --- | --- | --- |
 | GUI evaluation | OSWorld-Verified | Execution state | Expensive and brittle UI state. |
+| Long-horizon computer use | OSWorld 2.0 | Execution-based task evaluators and safety reports | Gated task classes and long-horizon workflows require careful runtime setup and safety review. |
 | Personalized computer use | MyPCBench | Rubric-grading judge over seeded personal-assistant tasks | Persona and simulated-account coverage should not be over-read as deployment personalization. |
 | Hybrid computer-use evaluation | WeaveBench | Trajectory-aware artifact judge | Artifact-aware judging is useful, but paper-only evidence limits runtime reproducibility. |
 | Computer-use robustness | AgentHijack | Corruption-configured task success | Corruptions improve stress testing but do not replace adversarial safety audits. |
@@ -144,6 +146,7 @@ What do you need the world to prove?
 | Agent harness control flow | LLM-as-Code Agentic Programming for Agent Harness | Call-tree and control-flow evidence for agent harness programs | Paper evidence should be separated from reusable runtime or benchmark availability. |
 | Governed tool execution | Tool Forge | Sandbox-verified tool validation | Validation-carrying tools should still be checked against deployment policy and side-effect boundaries. |
 | MCP runtime reliability | MCP Runtime Fault Taxonomy | Empirical open coding and developer survey over MCP server faults | Fault-taxonomy evidence supports reliability review, not direct benchmark performance claims. |
+| MCP privacy leakage | MCPPrivacyDetector | Cross-language static analysis over MCP server code | Static-analysis evidence should be reviewed against supported languages, sinks, and server patterns. |
 | MCP server regeneration | DeltaMCP | Azure REST API spec evaluation | Generation-quality evidence supports server-maintenance review, not direct agent capability claims. |
 | Malicious skill auditing | MalSkillBench | Runtime-verified malicious behavior checks | Sandbox coverage and behavior triggers determine detection transfer. |
 | Lifecycle skill attacks | SkillHarm | Deterministic attack-success evaluator | Attack construction coverage depends on skill ecosystem assumptions and sandbox boundaries. |
@@ -173,12 +176,14 @@ What do you need the world to prove?
 | Search agents beyond saturated tasks | LoHoSearch / DailyReport | KG-verified answers or cascade rubrics | Live search drift and rubric judge variance can dominate score interpretation. |
 | Dynamic environment memory | EvoArena | Evolving task and chain-level accuracy | Gains from memory patches should be checked against update leakage and replay assumptions. |
 | Text world-model foundations | Text World Models for LLM Agents | Formal transition-model taxonomy and curated bibliography | Survey evidence is useful for framing, not direct runtime readiness. |
+| Self-evolving world models | WorldEvolver | ALFWorld, ScienceWorld, and AgentBoard evaluation | Paper evidence should be separated from reusable runtime or code availability. |
 | Physical state-transition audit | World Models in Words | Hybrid trace verifier over typed state-transition commitments | Final answers can hide inconsistent transition commitments; inspect intermediate state traces. |
 | Generated-world state persistence | WRBench / Persistent State Core | Camera-intervention and return-view consistency diagnostics over generated videos | Paper-only evidence should be treated as a diagnostic benchmark, not a released resettable runtime. |
 | Hidden world-model inference | Agentic Automata Learning | Oracle feedback and exact DFA checks | Controlled automata worlds test inference discipline, not direct GUI or web deployment readiness. |
 | Long-horizon multi-agent autonomy | Emergence World | Continuous simulation logs and governance metrics | Live external data and long-running dynamics complicate reset and reproducibility. |
 | Open-ended multi-agent coordination | Alem | Survival return and coordination reward | Current public repo status should be checked before treating it as runnable code. |
 | Terminal agents | Terminal-Bench | Command-line task success | Environment maintenance. |
+| General-purpose terminal use | TUA-Bench | Deterministic setup scripts and execution-based scoring | Live web and specialized tool tasks make network and dependency boundaries explicit. |
 | Terminal training environments | LiteCoder-Terminal | Executable terminal environment checks | Synthetic terminal worlds need diversity and hidden-test checks before broad coding-agent claims. |
 | Embodied agents | MineDojo / AI2-THOR | Simulator state | Sim-to-real transfer. |
 | Hidden-intent driving interaction | Self-Driving Negotiator | Privileged simulator-state reward | Text-only driving negotiation isolates social reasoning but should not be treated as full autonomous-driving simulation. |
@@ -203,6 +208,7 @@ What do you need the world to prove?
 | Cloud-console web-agent training | AliyunConsoleAgent | Backend audit logs and outcome rewards | Cloud credentials and account isolation must be checked before reuse. |
 | GUI RL/eval harness | ClawGUI | Benchmark pipeline and process reward | Public code and device coverage should be checked before treating it as reusable infrastructure. |
 | Step-level agentic RL middleware | Claw-R1 | Step records over prompts, responses, actions, rewards, and outcomes | Middleware quality depends on environment adapters and reward provenance, not only record volume. |
+| Tool-call credit assignment | TACO | Judge-free answer-probe and task-correctness rewards | Credit estimates depend on probe design and benchmark task correctness signals. |
 | CUA process rewards | PRO-CUA | Process reward model | Reward shaping must be checked against actual trajectory evidence. |
 | GUI process rewards | StainFlow | Entity evidence flow and key-node verification | Process rewards should be calibrated against real GUI trajectories and task-completion checks. |
 | GUI milestone rewards | ADMIRE / Adaptive Milestone Reward | Dynamically distilled verifiable milestones | Milestone shaping should be checked against final task completion and cross-environment transfer. |
@@ -215,6 +221,7 @@ What do you need the world to prove?
 | Live MCP tool-use RL | PROVE / Synthesize and Reward | Programmatic rewards on stateful MCP servers | Live-server rewards need careful reset and side-effect boundaries. |
 | MCP workflow repair | Evoflux | MCP-Bench execution feedback and validation | Live tool catalogs make feasibility and side-effect boundaries benchmark dependent. |
 | CUA safety guard | BraveGuard / Open-World CUA Guard | Trajectory-level risk detection | Guard evaluation depends on attack and benign-task coverage. |
+| Multi-party agent loyalty | PrincipalBench / Multi-Party Principal Loyalty | Dual judges and integrity-audit gate | Multi-party dialogue safety should be separated from single-turn refusal or generic helpfulness tests. |
 | Rubric reward-hacking testbed | CHERRL | Clean and biased LLM-judge reward comparison | Synthetic judge biases make hacking observable, but transfer to production reward systems still needs separate validation. |
 | Reward-hacking environments | Hack-Verifiable Environments | TextArena environments and environment-level hack detection | Verifiable hacks expose reward-hacking behavior, but transfer to production reward systems needs separate validation. |
 | Dual-role agent training | Role-Agent | Prediction-observation alignment and benchmark return | Process rewards should be checked against real rollout quality, not just final score. |
