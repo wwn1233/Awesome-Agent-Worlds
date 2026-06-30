@@ -20,7 +20,7 @@ const refs = {
   resources: document.querySelector("#metricResources"),
   runnable: document.querySelector("#metricRunnable"),
   trajectories: document.querySelector("#metricTrajectories"),
-  average: document.querySelector("#metricAverage"),
+  rationales: document.querySelector("#metricRationales"),
   hot: document.querySelector("#metricHot"),
   homeWorlds: document.querySelector("#homeWorlds"),
   homeBenchmarks: document.querySelector("#homeBenchmarks"),
@@ -123,7 +123,7 @@ function init() {
   refs.resources.textContent = data.summary.resources;
   refs.runnable.textContent = data.summary.public_runnable;
   refs.trajectories.textContent = data.summary.trajectory_assets;
-  refs.average.textContent = `${data.summary.average_score}/14`;
+  refs.rationales.textContent = contentResources.filter((item) => item.why_it_matters).length;
   refs.hot.textContent = data.hot_papers.visible || data.hot_papers.papers.length;
   refs.homeWorlds.textContent = data.summary.resources;
   refs.homeBenchmarks.textContent = data.summary.public_runnable;
@@ -204,7 +204,7 @@ function matches(item) {
     item.display_label,
     item.reward_type,
     item.verifier,
-    item.notes,
+    item.notes, item.why_it_matters,
     item.modality.join(" "),
     item.action_space.join(" "),
     item.reader_paths.join(" ")
@@ -282,11 +282,11 @@ function renderRows(items) {
       .map((flag) => `<span class="flag">${escapeHtml(label("flag", flag))}</span>`)
       .join("");
     const trajectoryCount = item.trajectory_count ? `${Number(item.trajectory_count).toLocaleString()} ${ui("trajectoryCount")}` : "";
+    const why = item.why_it_matters ? `<small class="resourceWhy">${escapeHtml(ui("whyItMatters"))}: ${escapeHtml(item.why_it_matters)}</small>` : "";
     const evidence = [item.scale, trajectoryCount, label("trajectory", item.trajectory_availability),
       label("reset", item.reset_support), label("reproducibility", item.reproducibility)].filter(Boolean).map(escapeHtml).join("<br>");
-
     return `<tr>
-      <td><a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a><br>${escapeHtml(item.notes)}</td>
+      <td><a href="${escapeHtml(item.url)}">${escapeHtml(item.name)}</a><br>${escapeHtml(item.notes)}${why ? `<br>${why}` : ""}</td>
       <td>${escapeHtml(label("kind", item.resource_kind))}<br>${escapeHtml(label("category", item.canonical_category))}</td>
       <td class="score">${item.readiness_score}/14<br>${escapeHtml(label("label", item.display_label))}</td>
       <td>${evidence}</td>

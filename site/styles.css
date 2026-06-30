@@ -286,6 +286,7 @@ th {
 }
 
 a { color: var(--blue); font-weight: 800; text-decoration: none; }
+.resourceWhy { display: block; margin-top: 5px; color: var(--muted); line-height: 1.35; }
 .score { font-weight: 900; }
 .flags { display: flex; flex-wrap: wrap; gap: 5px; }
 .flag { border: 1px solid var(--line); border-radius: 999px; padding: 2px 7px; }

@@ -20,6 +20,8 @@
   url: https://os-world.github.io/
   repo: https://github.com/xlang-ai/OSWorld
   notes: Real computer tasks in OS environments with execution-based evaluation.
+  why_it_matters: Establishes the canonical desktop-computer world pattern with
+    controllable OS tasks, executable checks, and cross-application GUI actions.
   id: osworld
   resource_kind: world
   canonical_category: computer-world
@@ -97,6 +99,8 @@
   notes: Self-evolving synthetic-data and verifier-based RL framework for
     multi-turn tool-using agents, synthesizing tool-grounded dialogues with
     executable per-instance checkers and GRPO-style training.
+  why_it_matters: Links scalable synthetic tool-use data, executable checkers,
+    and verifier-based RL into one post-training path for interactive agents.
   id: eigendata
   resource_kind: training_framework
   canonical_category: training-framework
@@ -166,6 +170,8 @@
   notes: Production-proven agentic detection and response system with ADR-Bench,
     covering 302 tasks, 17 attack techniques, and 133 MCP servers for
     enterprise agent security.
+  why_it_matters: Brings enterprise observability, red-teaming, and online
+    detection into the MCP agent security stack.
   task_count: 302
   api_count: 133
   id: adr-bench
@@ -238,6 +244,8 @@
   notes: Agent failure-diagnosis framework and benchmark with public code,
     115 annotated failed trajectories, and a dataset for tracing root causes
     in multi-step tool-using agents.
+  why_it_matters: Turns long failed agent trajectories into auditable critical-step
+    diagnoses for debugging and regression analysis.
   trajectory_count: 115
   id: agentrx
   resource_kind: benchmark
@@ -332,6 +340,8 @@
   notes: Online auditing framework for multi-agent systems with AFTraj-2K,
     a public corpus of 2,276 safe and unsafe trajectories annotated for
     decisive-error detection, step localization, and responsible-agent attribution.
+  why_it_matters: Moves failure analysis from post-hoc explanation to runtime
+    warning signals before multi-agent mistakes propagate.
   trajectory_count: 2276
   domain_count: 3
   id: agentforesight
@@ -427,6 +437,8 @@
   notes: ICML 2025 Spotlight benchmark for automated failure attribution in
     multi-agent systems, with public code, dataset, demo tooling, and fine-grained
     annotations linking task failures to responsible agents and decisive steps.
+  why_it_matters: Makes multi-agent failures actionable by asking which agent
+    failed and at which decisive step.
   task_count: 184
   trajectory_count: 184
   scenario_count: 127
@@ -530,6 +542,8 @@
   notes: Compositional GUI-agent benchmark for realistic media post-production
     workflows across professional creative applications, transforming raw
     screen recordings and low-level logs into structured grounded trajectories.
+  why_it_matters: Extends GUI-agent evaluation beyond browsers and office tasks
+    into dense, long-horizon creative software workflows.
   task_count: 186
   app_count: 7
   id: cutverse
@@ -603,6 +617,8 @@
     justify deployment-level claims, and that interaction and deployment
     evidence should be reported with fixed scaffolds, profiles, and explicit
     inferential distance.
+  why_it_matters: Clarifies why Agent Worlds need system-level evidence instead
+    of treating isolated model scores as deployment readiness.
   id: deployment-relevant-alignment-evaluation
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -673,6 +689,8 @@
   notes: Training-free visual token reduction method for GUI-agent screenshots,
     using adaptive quadtrees and temporal consistency to reduce visual tokens
     while preserving grounding and navigation performance.
+  why_it_matters: Targets a practical CUA bottleneck by reducing screenshot
+    tokens while preserving spatial grounding cues for GUI action.
   id: aquaui
   resource_kind: agent_infrastructure
   canonical_category: gui-world
@@ -743,6 +761,8 @@
   notes: Closed-loop harness-evolution framework for coding agents that makes
     editable components, trajectory evidence, and edit predictions observable
     so harness changes become falsifiable and revertible.
+  why_it_matters: Treats agent harness design as an observable, reversible, and
+    falsifiable engineering loop rather than prompt-only tuning.
   id: agentic-harness-engineering
   resource_kind: training_framework
   canonical_category: training-framework
@@ -815,6 +835,8 @@
   notes: Open-source biomedical deep-research agent toolkit that decouples
     benchmark loading, tool exposure, tool selection, execution mode, context
     management, and scoring across 147 biomedical benchmarks and 75 tools.
+  why_it_matters: Gives biomedical deep-research agents a modular arena across
+    many benchmarks, tools, and scoring modes.
   instance_count: 147
   api_count: 75
   id: biomedarena
@@ -896,6 +918,9 @@
   notes: Biomedical machine-learning benchmark where agents write executable
     training pipelines for 76 heterogeneous multimodal tasks across 9 domains,
     using hidden labels, held-out graders, and normalized biology-aware metrics.
+  why_it_matters: Extends research-agent evaluation into executable biomedical
+    ML pipelines with hidden labels, private graders, and domain-normalized
+    metrics.
   task_count: 76
   scenario_count: 9
   id: bioxarena
@@ -977,6 +1002,8 @@
   notes: Open benchmark platform for AI coding agents across real-world
     software engineering workflows, with track-based datasets, independently
     scored trials, public scoreboards, and open benchmark governance.
+  why_it_matters: Gives coding-agent evaluation a public arena structure with
+    tracks, scored trials, and governance beyond one-off benchmark releases.
   task_count: 140
   app_count: 15
   id: dpai-arena
@@ -1058,6 +1085,8 @@
   notes: Competitive software-engineering arena where LLMs act as patch
     submitters and test reviewers over long-context GitHub issues, with
     retrieval-augmented code search and repository-native CI validation.
+  why_it_matters: Models software work as an adversarial patch-and-review loop,
+    closer to CI-driven development than single-agent patch generation.
   instance_count: 460
   id: swingarena
   resource_kind: benchmark
@@ -1153,6 +1182,8 @@
     Linux system-administration and infrastructure tasks plus four sabotage
     objectives covering malware execution, secret exfiltration, privilege
     escalation, and firewall disablement.
+  why_it_matters: Brings privileged shell agents into a control setting where
+    usefulness and sabotage detection are evaluated together.
   task_count: 637
   safety_moment_count: 4
   id: basharena
@@ -1241,6 +1272,8 @@
   notes: Benchmark for agents that autonomously design, implement, and run RL
     post-training pipelines, with isolated workspaces, grading APIs, and
     instrumentation for agentic RL engineering workflows.
+  why_it_matters: Tests whether agents can engineer the RL post-training loop
+    itself, not just solve fixed benchmark tasks.
   task_count: 6
   id: agent2-rl-bench
   resource_kind: benchmark
@@ -1321,6 +1354,8 @@
     training-side diagnostic harnesses, using rollout-level evidence,
     revised diagnostics, intervention backtests, and reusable skills to avoid
     promoting invalid high-scoring branches.
+  why_it_matters: Couples policy improvement with evolving diagnostics so high
+    scores must survive rollout-level evidence and backtests.
   id: evotrainer
   resource_kind: training_framework
   canonical_category: training-framework
@@ -1393,6 +1428,9 @@
   notes: Agentified Agent Assessment framework that uses judge agents, A2A-style
     task management, and MCP tool access to make agent assessment more open,
     standardized, and reproducible across heterogeneous agent submissions.
+  why_it_matters: Reframes agent evaluation as an interoperable assessment
+    protocol, useful when benchmarks must compare heterogeneous agent systems
+    without custom harness rewrites.
   competition_count: 1
   id: agentbeats
   resource_kind: agent_infrastructure
@@ -1464,6 +1502,8 @@
   notes: MCP safety-control framework that regulates an agent's tool-acquisition
     power through environment-grounded look-ahead reasoning before potentially
     risky MCP capabilities are granted.
+  why_it_matters: Makes MCP tool acquisition a governable world-state transition,
+    giving release gates a concrete place to filter unsafe capability expansion.
   id: safemcp
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -1537,6 +1577,8 @@
     LLMs using SFT and GRPO/RLVR over a 30-game dataset, with generated code
     specifying rules, legal actions, state transitions, observations, and
     rewards under hierarchical verification.
+  why_it_matters: Turns executable game code into a compact world-model target
+    with rules, transitions, observations, and rewards.
   id: game-code-world-model-generation
   resource_kind: training_framework
   canonical_category: training-framework
@@ -1615,6 +1657,8 @@
   notes: Context-aware pre-upload exposure control layer for mobile GUI agents,
     selectively releasing task-needed screenshot content while masking incidental
     private context before a remote multimodal agent receives the observation.
+  why_it_matters: Treats every mobile screenshot as a privacy boundary and preserves
+    task utility through selective pre-upload exposure.
   id: caped-mobile-gui-privacy
   resource_kind: safety_control
   canonical_category: mobile-world
@@ -1688,6 +1732,8 @@
     physically grounded 3D environments, uses verifier feedback to revise them,
     exports Gym-style embodied learning environments, and co-evolves curricula
     from agent performance.
+  why_it_matters: Turns 3D embodied environment generation into a verifier-guided
+    loop that can export reusable Gym-style training worlds.
   id: simworld-studio
   resource_kind: world
   canonical_category: embodied-world
@@ -1773,6 +1819,8 @@
   notes: Failure-driven RL framework for tool-using language-model agents where
     a controller summarizes recurring rollout failures, a proposer generates
     executable stress-test tasks, and the solver trains on targeted tasks.
+  why_it_matters: Uses recurring rollout failures to generate targeted stress
+    tasks for tool-agent reinforcement learning.
   id: sentinel-failure-driven-rl
   resource_kind: training_framework
   canonical_category: training-framework
@@ -1844,6 +1892,8 @@
     projects raw trajectories into decision-relevant observations and converts
     proposed actions into executable transitions or trajectory-grounded
     rejections.
+  why_it_matters: Makes the harness boundary learnable by compressing
+    observations and rejecting invalid actions with trajectory evidence.
   id: harnessbridge
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -1915,6 +1965,8 @@
   notes: Training-free skill self-evolution framework that compares same-task
     success and failure trajectories, replays candidate skill patches on source
     task clones, and routes only relevant sub-skills at inference time.
+  why_it_matters: Makes skill updates testable by replaying patches against
+    cloned tasks before routing them at inference time.
   id: skillcat
   resource_kind: training_framework
   canonical_category: training-framework
@@ -1986,6 +2038,8 @@
     proposes bundles that can modify both skills and tools, estimates
     complementarity and conflict from execution traces, and records
     anti-patterns to veto repeated failure modes.
+  why_it_matters: Treats skills and tools as a coupled design space, using
+    trace evidence to avoid repeated anti-patterns.
   id: skillsmith-skill-tool-coevolution
   resource_kind: training_framework
   canonical_category: training-framework
@@ -2202,6 +2256,9 @@
   notes: Open-ended benchmark for daily search-agent tasks, with 150 timely
     user-facing tasks and 3,546 associated rubrics for interpretable cascade
     performance attribution and user-centric aggregation.
+  why_it_matters: Makes search-agent evaluation more user-facing by combining
+    timely information needs with decomposed rubrics and preference-aware
+    aggregation.
   task_count: 150
   scenario_count: 3546
   id: dailyreport
@@ -2276,6 +2333,9 @@
     executable ReAct-style framework that interleaves reasoning, tool calls,
     observations, geospatial processing, simulation, and artifact-backed
     computation.
+  why_it_matters: Brings Earth-system Agent Worlds into executable workflows
+    where geospatial tools, simulators, numeric scoring, and artifact provenance
+    are evaluated together.
   id: terrabench
   resource_kind: benchmark
   canonical_category: research-world
@@ -2347,6 +2407,8 @@
   notes: Verifiable benchmark for short-horizon epigenomics analysis with 106
     evaluations across CUT&Tag/CUT&RUN, ATAC-seq, ChIP-seq, and DNA methylation
     workflows, reporting 5,088 valid model-harness trajectories.
+  why_it_matters: Shows how biomedical research agents can be graded against
+    deterministic workflow-state decisions instead of broad text-only answers.
   task_count: 106
   trajectory_count: 5088
   id: epibench
@@ -2421,6 +2483,8 @@
   notes: Environmental geospatial-analysis benchmark with 93 tasks across 18
     categories and 16 tools, evaluating structured tool-calling agents against
     a self-hostable API for Spain and Portugal indicator analysis.
+  why_it_matters: Brings tool-agent evaluation into self-hostable geospatial
+    APIs where cost, accuracy, and structured calls are all measurable.
   task_count: 93
   api_count: 16
   id: geonatureagent-benchmark
@@ -2504,6 +2568,9 @@
     a scientist-authored contract combines rubric, difficulty curriculum, and
     knowledge base, gating a meta-optimizer coding agent over GSAS-II behind
     MCP and A2A.
+  why_it_matters: Treats scientific-agent building as a contract-driven
+    workflow where expert judgment, tool boundaries, and curriculum progression
+    remain explicit.
   id: agentbuild-rietveld-refinement
   resource_kind: agent_infrastructure
   canonical_category: research-world
@@ -2575,6 +2642,8 @@
   notes: Agentic molecular-dynamics pipeline-design system that uses verbal
     rewards from multi-agent physics-expert debate to densify sparse simulator
     feedback, then evaluates generated pipelines on SAMPL host-guest benchmarks.
+  why_it_matters: Highlights sparse-feedback scientific worlds where simulators
+    need expert debate signals before agent-generated pipelines can be judged.
   id: mdforge
   resource_kind: agent_infrastructure
   canonical_category: research-world
@@ -2741,6 +2810,8 @@
   notes: Benchmark and dataset for drag-based GUI interactions, covering common
     drag operations such as text highlighting, cell selection, element resizing,
     and slider manipulation across desktop, web, and mobile-style interfaces.
+  why_it_matters: Covers a neglected GUI action family where agents must drag,
+    select, resize, and manipulate sliders rather than only click.
   id: dragon
   resource_kind: benchmark
   canonical_category: gui-world
@@ -2972,6 +3043,8 @@
   notes: Benchmark for AI systems that discover and validate better ML methods,
     with public tasks, task data, agent logs, and a Harbor adapter for running
     research-agent workflows in reproducible environments.
+  why_it_matters: Tests whether agents can generate and validate better
+    machine-learning methods inside reproducible research workflows.
   task_count: 142
   package_count: 66
   trajectory_count: 140
@@ -3061,6 +3134,8 @@
   notes: Benchmark for persistent assistants in evolving information environments,
     covering multi-source conflict reasoning, dynamic belief revision, and
     implicit personalization with hidden ground truth and executable workspace checks.
+  why_it_matters: Evaluates persistent assistants in evolving information worlds
+    with conflict, belief revision, and hidden state.
   task_count: 337
   scenario_count: 12
   domain_count: 8
@@ -3239,6 +3314,8 @@
     software environments, with public Docker Compose settings, production-like
     engineering tasks, sabotage side tasks, monitor evaluations, and
     pre-computed trajectories for frontier models.
+  why_it_matters: Puts coding agents in live multi-service software environments
+    where legitimate work and sabotage side tasks coexist.
   task_count: 1667
   app_count: 20
   safety_moment_count: 185
@@ -3471,6 +3548,8 @@
   notes: Agentic-learning framework that studies how agents can improve by
     building and evolving their own training environments, tying environment
     synthesis directly to rollout collection and reinforcement learning.
+  why_it_matters: Links environment synthesis directly to agent learning, making
+    the training world part of the optimization loop.
   id: evoenv
   resource_kind: training_framework
   canonical_category: training-framework
@@ -3541,6 +3620,8 @@
   notes: Agent prompt-injection benchmark and defense suite with realistic website
     scenarios, attack templates, and mitigation evaluation for browser and tool-use
     agents operating over untrusted web content.
+  why_it_matters: Shows that ambiguity-seeking interaction itself can widen
+    the prompt-injection attack surface for web agents.
   scenario_count: 728
   id: aspi
   resource_kind: benchmark
@@ -3595,6 +3676,381 @@
   - safety-audit
   - release-gates
   - build-evals
+- name: SWE-INTERACT
+  category: code-world
+  year: 2026
+  modality:
+  - coding_agent
+  - repository
+  - user_simulator
+  - multi_turn_interaction
+  action_space:
+  - code_edit
+  - shell_command
+  - user_dialogue
+  - workspace_inspection
+  reward_type: multi_turn_software_task_success
+  reward_family: task_dependent
+  verifier: user_simulator_and_software_task_evaluation
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  trainable: partial
+  trainability_status: evaluation_only
+  resettable: partial
+  reset_support: partial
+  reset_mechanism: repository_task_session_replay
+  trajectories: false
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  sandbox: repo_sandbox
+  reproducibility: paper_or_api
+  access: public_page
+  content_evidence: true
+  evidence_type: paper
+  sources:
+  - url: https://arxiv.org/abs/2606.30573
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+  production_signal: user_driven_long_horizon_coding_agent_evaluation
+  url: https://arxiv.org/abs/2606.30573
+  repo:
+  notes: Multi-turn coding-agent testbed where a user simulator starts from
+    vague or incomplete instructions, inspects the workspace, reveals
+    requirements over time, and tests interactive goal discovery rather than
+    single-turn issue repair.
+  why_it_matters: Captures the user-in-the-loop ambiguity and iterative
+    refinement that single-turn SWE benchmarks miss.
+  id: swe-interact
+  resource_kind: benchmark
+  canonical_category: code-world
+  subtype: multi_turn_coding_agent_benchmark
+  status: documented
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  negative_side_effect_checks: partial
+  isolation_boundary: repository_workspace
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: user_simulator_feedback_loop
+  audit_log: workspace_state_user_feedback_and_task_success_records
+  telemetry_type: multi_turn_coding_session_logs
+  destructive_action_scope: repository_workspace
+- name: Phone-use Agent Misuse Study
+  category: mobile-world
+  year: 2026
+  modality:
+  - phone
+  - mobile_gui
+  - real_device
+  - safety
+  action_space:
+  - mobile_app_operation
+  - account_action
+  - purchase_flow
+  - refusal_boundary
+  reward_type: misuse_completion_and_refusal_measurement
+  reward_family: safety_gate
+  verifier: real_device_task_outcomes_and_manual_safety_review
+  verifier_family: measurement_study
+  verifier_recomputable: partial
+  verifier_isolation: real_device_experiment
+  trainable: false
+  trainability_status: evaluation_only
+  resettable: false
+  reset_support: none
+  reset_mechanism: real_app_state_dependent
+  trajectories: false
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  sandbox: real_device
+  reproducibility: paper_or_api
+  access: public_page
+  content_evidence: true
+  evidence_type: paper
+  sources:
+  - url: https://arxiv.org/abs/2606.27944
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
+  production_signal: real_phone_misuse_risk_measurement_for_phone_use_agents
+  url: https://arxiv.org/abs/2606.27944
+  repo:
+  notes: Real-device phone-use agent misuse study across commercial mobile apps,
+    measuring refusal and task-completion behavior for harmful requests and
+    highlighting a safety-awareness execution gap for phone-control agents.
+  why_it_matters: Gives release reviewers a real-device misuse signal for agents
+    that can operate commercial mobile apps on behalf of users.
+  app_count: 27
+  id: phone-use-agent-misuse-study
+  resource_kind: safety_control
+  canonical_category: mobile-world
+  subtype: real_device_phone_agent_misuse_measurement
+  status: documented
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  negative_side_effect_checks: explicit
+  isolation_boundary: real_phone_and_commercial_app_boundary
+  runtime_host: real_device
+  network_policy: real_app_dependent
+  credential_boundary: user_account_and_commercial_service
+  approval_policy: safety_red_team_review
+  audit_log: real_device_task_outcome_and_refusal_records
+  telemetry_type: phone_agent_task_execution_safety_outcomes
+  destructive_action_scope: real_service_actions
+- name: SkillHarness
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - computer_use
+  - skill_learning
+  - safety
+  - dynamic_environment
+  action_space:
+  - skill_boundary_detection
+  - trajectory_supervision
+  - selective_skill_reuse
+  - safety_constraint_update
+  reward_type: unsafe_skill_rate_and_execution_stability
+  reward_family: safety_gate
+  verifier: multi_source_supervision_over_dynamic_cua_interactions
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: dynamic_environment_eval
+  trainable: partial
+  trainability_status: framework_ready
+  resettable: partial
+  reset_support: partial
+  reset_mechanism: dynamic_environment_task_replay
+  trajectories: partial
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: interaction_trajectories_with_skill_boundaries
+  trajectory_public: false
+  sandbox: benchmark_dependent
+  reproducibility: paper_or_api
+  access: public_page
+  content_evidence: true
+  evidence_type: paper
+  sources:
+  - url: https://arxiv.org/abs/2606.20636
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  reader_paths:
+  - safety-audit
+  - train-rollouts
+  - release-gates
+  production_signal: safe_skill_learning_for_dynamic_computer_use_agents
+  url: https://arxiv.org/abs/2606.20636
+  repo:
+  notes: Safe skill-harnessing framework for computer-use agents that treats
+    skill learning and reuse as a safety-constrained interaction process under
+    prompt injections, pop-ups, and other dynamic environment changes.
+  why_it_matters: Connects reusable CUA skills with safety boundaries, selective
+    reuse, and dynamic-environment robustness instead of static skill libraries.
+  id: skillharness
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: safe_cua_skill_harness
+  status: documented
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  negative_side_effect_checks: explicit
+  isolation_boundary: dynamic_cua_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: task_dependent
+  approval_policy: safety_constraint_review
+  audit_log: skill_boundary_supervision_and_reuse_decision_records
+  telemetry_type: skill_learning_execution_stability_and_unsafe_rate_metrics
+  destructive_action_scope: benchmark_environment
+- name: AutoSpec
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - llm_agent
+  - runtime_policy
+  - safety_rules
+  - code_execution
+  action_space:
+  - safe_unsafe_trace_annotation
+  - counterexample_mining
+  - ilp_rule_revision
+  - policy_verification
+  reward_type: safety_rule_precision_recall_and_f1
+  reward_family: safety_gate
+  verifier: cegis_and_ilp_guided_rule_verification
+  verifier_family: runtime_policy
+  verifier_recomputable: partial
+  verifier_isolation: policy_rule_evaluation
+  trainable: false
+  trainability_status: not_applicable
+  resettable: dataset_replay
+  reset_support: dataset_replay
+  reset_mechanism: annotated_execution_trace_replay
+  trajectories: partial
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: annotated_agent_execution_traces
+  trajectory_public: false
+  sandbox: policy_spec
+  reproducibility: paper_or_api
+  access: public_page
+  content_evidence: true
+  evidence_type: paper
+  sources:
+  - url: https://arxiv.org/abs/2606.24245
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - production-direction
+  production_signal: auditable_safety_rule_evolution_for_deployed_llm_agents
+  url: https://arxiv.org/abs/2606.24245
+  repo:
+  notes: Safety-rule evolution framework that updates expert-written runtime
+    rules from annotated safe and unsafe agent traces using counterexample-guided
+    synthesis and inductive logic programming.
+  why_it_matters: Turns trace-level safety failures into auditable rule updates
+    for production agents that need interpretable runtime controls.
+  instance_count: 291
+  id: autospec
+  resource_kind: safety_control
+  canonical_category: agent-infrastructure
+  subtype: agent_safety_rule_evolution
+  status: documented
+  sft_fit: not_applicable
+  rlvr_fit: not_applicable
+  online_rl_fit: not_applicable
+  distillation_fit: not_applicable
+  release_gate_fit: strong
+  negative_side_effect_checks: explicit
+  isolation_boundary: runtime_policy_boundary
+  runtime_host: benchmark_dependent
+  network_policy: task_dependent
+  credential_boundary: policy_dependent
+  approval_policy: expert_rule_review
+  audit_log: annotated_trace_counterexample_and_rule_revision_records
+  telemetry_type: safety_rule_precision_recall_and_counterexample_metrics
+  destructive_action_scope: policy_guarded_agent_actions
+- name: MCP Server Architecture Patterns
+  category: agent-infrastructure
+  year: 2026
+  modality:
+  - mcp
+  - server_architecture
+  - production_telemetry
+  - replication_package
+  action_space:
+  - server_pattern_classification
+  - transport_benchmarking
+  - tool_count_analysis
+  - corpus_annotation
+  reward_type: taxonomy_reliability_and_tool_selection_measurement
+  reward_family: engineering_signal
+  verifier: replication_package_with_corpus_prompts_and_benchmarks
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: replication_package
+  trainable: false
+  trainability_status: not_applicable
+  resettable: dataset_replay
+  reset_support: dataset_replay
+  reset_mechanism: corpus_and_prompt_replay
+  trajectories: partial
+  trajectory_availability: public
+  trajectory_access: public
+  trajectory_type: corpus_prompts_and_tool_count_telemetry
+  trajectory_public: true
+  sandbox: service_environment
+  reproducibility: public_code
+  access: public_code
+  content_evidence: true
+  evidence_type: artifact
+  sources:
+  - url: https://arxiv.org/abs/2606.30317
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-06-30'
+    confidence: high
+  - url: https://github.com/rodriguescarson/mcp-patterns-icsme2026
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-06-30'
+    confidence: high
+  reader_paths:
+  - production-direction
+  - foundations
+  - build-evals
+  production_signal: mcp_server_pattern_taxonomy_for_llm_integrated_applications
+  url: https://arxiv.org/abs/2606.30317
+  repo: https://github.com/rodriguescarson/mcp-patterns-icsme2026
+  notes: Replication package and industry experience paper cataloguing recurring
+    MCP server architecture patterns, anti-patterns, transport overhead, and
+    tool-count effects across production and public MCP servers.
+  why_it_matters: Gives MCP builders a reproducible architecture taxonomy and
+    measurement package for server design, transport, and tool-count tradeoffs.
+  id: mcp-server-architecture-patterns
+  resource_kind: agent_infrastructure
+  canonical_category: agent-infrastructure
+  subtype: mcp_server_architecture_replication_package
+  status: public_artifact
+  sft_fit: not_applicable
+  rlvr_fit: not_applicable
+  online_rl_fit: not_applicable
+  distillation_fit: weak
+  release_gate_fit: candidate
+  negative_side_effect_checks: partial
+  isolation_boundary: mcp_server_runtime_boundary
+  runtime_host: local_or_self_hosted
+  network_policy: server_dependent
+  credential_boundary: server_dependent
+  approval_policy: architecture_review
+  audit_log: corpus_classification_transport_and_tool_count_records
+  telemetry_type: server_pattern_and_tool_selection_measurement
+  destructive_action_scope: replication_package_only
 - name: OSWorld 2.0
   category: computer-world
   year: 2026
@@ -3622,6 +4078,8 @@
     release manifests, environment providers, gated task classes, trajectory
     viewer/download links, and safety-sensitive execution reports for professional
     computer-use evaluation.
+  why_it_matters: Pushes desktop-agent evaluation toward long-horizon professional
+    workflows with released manifests, environment providers, and trajectory inspection.
   task_count: 108
   id: osworld-2-0
   resource_kind: benchmark
@@ -3710,6 +4168,8 @@
   notes: Meta research benchmark with 120 real-world terminal-use tasks across
     everyday digital workflows and specialized scientific or engineering tools,
     using deterministic setup scripts and execution-based scoring.
+  why_it_matters: Makes terminal-use agents comparable on real digital workflows
+    with deterministic setup and execution-based scoring.
   task_count: 120
   id: tua-bench
   resource_kind: benchmark
@@ -3795,6 +4255,8 @@
   notes: Self-evolving world-model framework that revises deployment-time memory
     and foresight context from action-transition mismatches while keeping the
     downstream agent and model parameters frozen.
+  why_it_matters: Treats world-model memory as a deployment-time object that can
+    be revised from action-transition mismatches without retraining the base agent.
   id: worldevolver
   resource_kind: agent_infrastructure
   canonical_category: research-world
@@ -3866,6 +4328,8 @@
   notes: Multi-party LLM-agent safety benchmark that tests whether an agent remains
     loyal to the principal it represents while interacting with a counterparty
     whose interests may diverge.
+  why_it_matters: Measures whether agents preserve loyalty across competing principals,
+    a key risk for delegated real-world agent systems.
   task_count: 75
   id: principalbench-multi-party-loyalty
   resource_kind: safety_control
@@ -3937,6 +4401,8 @@
   notes: Context-aware static analysis framework for detecting privacy leakage
     in MCP servers, targeting protocol-induced flows where return values,
     exceptions, or debug output cross the local-to-LLM boundary.
+  why_it_matters: Turns MCP privacy leakage into a static-analysis target at the
+    local-to-LLM boundary.
   instance_count: 10655
   id: mcpprivacydetector
   resource_kind: safety_control
@@ -4009,6 +4475,8 @@
   notes: Tool-Augmented Credit Optimization is a GRPO-style training method for
     code-tool agents that credits individual tool calls by their effect on
     answer correctness without requiring an external judge model.
+  why_it_matters: Attacks sparse tool-use credit assignment by optimizing step-level
+    credit for agentic tool calls.
   id: taco-tool-augmented-credit-optimization
   resource_kind: training_framework
   canonical_category: training-framework
@@ -4083,6 +4551,8 @@
   notes: Open language-world-model release and AgentWorldBench benchmark for simulating
     agentic environments across MCP, search, terminal, SWE, Android, web, and OS
     domains, trained from more than 10M real-world environment interaction trajectories.
+  why_it_matters: Connects language world models with broad agent-domain simulation,
+    making environment prediction visible as agent infrastructure.
   trajectory_count: 10000000
   id: qwen-agentworld
   resource_kind: model_release
@@ -4166,6 +4636,8 @@
     environments, solvers, and verifiers over live websites plus synthetic environments
     for authenticated or irreversible domains, with user-simulator support for multi-turn
     rollouts.
+  why_it_matters: Pairs live and synthetic computer-use environments with solvers
+    and verifiers to generate scalable CUA training rollouts.
   id: fara-1-5
   resource_kind: training_framework
   canonical_category: training-framework
@@ -4239,6 +4711,8 @@
   notes: macOS desktop-agent benchmark with 676 tasks across 25 applications, nearly
     60 percent GUI-plus-CLI workflows, deterministic rule-based evaluation, and fine-grained
     multi-checkpoint scoring for long-horizon multi-application tasks.
+  why_it_matters: Extends desktop-agent evaluation to real macOS workflows with
+    mixed GUI and CLI actions plus checkpoint scoring.
   task_count: 676
   app_count: 25
   id: macagentbench
@@ -4318,6 +4792,8 @@
   notes: Matched execution-layer benchmark with 440 desktop tasks across 18 applications
     and 12 workflow categories, comparing screen-only GUI agents and skill-mediated
     CLI agents under identical goals, states, and final-state verifiers.
+  why_it_matters: Separates visual execution limits from skill-mediated automation,
+    clarifying which CUA failures come from the interface layer.
   task_count: 440
   app_count: 18
   id: gui-vs-cli-execution-benchmark
@@ -4391,6 +4867,8 @@
   notes: Visual process-reward framework for GUI agents that compares pre-action and
     post-action screenshots in visual feature space, trains from weakly supervised
     trajectory samples, and provides task-progress and error-type diagnostics.
+  why_it_matters: Adds a GUI-native process reward signal, making screenshot-level
+    state change a reusable verifier for long-horizon agent rollouts.
   id: viscritic
   resource_kind: training_framework
   canonical_category: training-framework
@@ -4462,6 +4940,8 @@
   notes: Reinforcement-learning framework for computer-use agents that uses an autonomous
     vision-language evaluator over final screenshots as a scalable terminal reward,
     then treats the feedback as a noisy binary reward channel during policy optimization.
+  why_it_matters: Highlights a scalable reward route for CUA RL when GUI task
+    success is visually grounded and hard to encode as programmatic rewards.
   id: autonomous-evaluation-for-cua-rl
   resource_kind: training_framework
   canonical_category: training-framework
@@ -4532,6 +5012,8 @@
   notes: Argus benchmark for post-hoc uncertainty quantification in executable GUI
     grounding, covering a 27-method open-weight matrix over four VLM agents and four
     datasets plus closed-source frontier-vendor settings where internals are unavailable.
+  why_it_matters: Makes GUI-agent abstention and calibration measurable before
+    uncertain clicks become executable actions.
   id: argus-cua-uncertainty-quantification
   resource_kind: benchmark
   canonical_category: gui-world
@@ -4604,6 +5086,8 @@
   notes: Executable benchmark for tool-using agents under recoverable environment
     hazards, injecting specification drift, invocation error, execution failure,
     output drift, and cross-source conflict while preserving solvability.
+  why_it_matters: Tests whether tool agents can recover from realistic tool-environment
+    unreliability rather than only clean API calls.
   id: toolbench-x
   resource_kind: benchmark
   canonical_category: api-world
@@ -4681,6 +5165,8 @@
   notes: Deterministically scored CUA privacy harness targeting contextual-integrity
     failures across personal applications, including visual co-location, task-ambiguity
     overshare, and recipient-misalignment scenarios.
+  why_it_matters: Makes contextual privacy violations measurable before
+    computer-use agents are released into mixed personal and work settings.
   id: agentcibench-contextual-integrity
   resource_kind: benchmark
   canonical_category: computer-world
@@ -4750,6 +5236,8 @@
   notes: Multi-tool threshold poisoning attack against MCP that shards malicious
     instructions across cooperating tools to reduce inspection risk and expose a
     security gap in tool metadata review.
+  why_it_matters: Shows that MCP safety must reason over cooperating tool sets,
+    not just inspect each tool description in isolation.
   id: sharelock
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -4821,6 +5309,8 @@
   notes: Autoformalization pipeline that translates agent prompts, MCP tool descriptions,
     and natural-language policy documents into Cedar policy language with an LLM
     generator-critic loop and formally verified enforcement artifacts.
+  why_it_matters: Turns ambiguous agent instructions and MCP tool descriptions
+    into enforceable policy artifacts that release gates can inspect.
   id: agent-policy-as-code-autoformalization
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -4890,6 +5380,8 @@
   notes: Runtime enforcement framework for behavioral specifications in AI agent
     skills, targeting access permissions, disclosure limits, execution privileges,
     and preconditions for third-party skill packages.
+  why_it_matters: Turns natural-language skill boundaries into runtime checks,
+    which is essential when agent worlds depend on reusable third-party skills.
   id: vigil
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -4962,6 +5454,9 @@
     combining synthetic browser-task trajectories, human demonstrations, atomic
     web-skill trajectories, and GUI perception data for screenshot-only browser
     action policies.
+  why_it_matters: Gives the catalog an open visual-web training anchor where
+    browser trajectories, GUI perception data, and screenshot-only policies are
+    tied together.
   id: molmoweb
   resource_kind: model_release
   canonical_category: web-world
@@ -5109,6 +5604,8 @@
     pitfalls into reproducible scenarios across email, document, and crypto
     workflows, using MCP traces and objective validators instead of agent
     self-report.
+  why_it_matters: Converts MCP developer mistakes into replayable security
+    worlds, making server hardening measurable instead of anecdotal.
   id: mcp-pitfall-lab
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -5180,6 +5677,8 @@
   notes: Task-centered MCP server recommendation dataset and model for development
     tasks, pairing taxonomy-grounded tasks with curated MCP servers and an
     interactive recommendation agent prototype.
+  why_it_matters: Treats MCP server selection as a benchmarkable retrieval
+    problem for developer agents facing large tool ecosystems.
   id: task2mcp-t2mrec
   resource_kind: benchmark
   canonical_category: api-world
@@ -5251,6 +5750,8 @@
   notes: Self-evolving skill framework where a generator iteratively constructs
     multi-file agent skills while a surrogate verifier co-evolves to provide
     actionable feedback without ground-truth test access.
+  why_it_matters: Shows how agent skills can be treated as evolving, testable
+    artifacts rather than static prompts or one-off tool wrappers.
   id: coevoskills
   resource_kind: training_framework
   canonical_category: training-framework
@@ -5321,6 +5822,8 @@
   notes: Paper-only WRBench diagnostic benchmark evaluating whether generated world
     models maintain evolving physical state while targets leave and re-enter view,
     using 9,600 videos from 23 models across four control paradigms.
+  why_it_matters: Turns persistent hidden world state into a testable benchmark
+    objective instead of judging only visible frame quality.
   instance_count: 9600
   model_count: 23
   control_paradigm_count: 4
@@ -5395,6 +5898,8 @@
   notes: Closed-loop RL framework where the current policy analyzes failure
     trajectories, behavior summaries, and environment statistics, then proposes
     the next-stage training-environment configuration for multi-agent reasoning.
+  why_it_matters: Makes environment redesign itself part of the training loop,
+    connecting failure trajectories to automated curriculum updates.
   id: from-trainee-to-trainer-llm-environment-engineer
   resource_kind: training_framework
   canonical_category: training-framework
@@ -5467,6 +5972,8 @@
     model optimization from arbitrary agent execution on client nodes, supporting
     heterogeneous multi-agent training, isolated runtimes, fault tolerance, and
     live agent-code iteration.
+  why_it_matters: Separates GPU optimization from heterogeneous agent execution
+    so agentic RL can scale across isolated runtimes.
   id: agentjet
   resource_kind: training_framework
   canonical_category: training-framework
@@ -5545,6 +6052,8 @@
   notes: Threat model, taxonomy, and measurement framework for AI sandboxes
     spanning simulation, digital twins, hardware/software-in-the-loop testbeds,
     cyber ranges, and regulatory sandboxes.
+  why_it_matters: Gives sandbox claims measurable axes for fidelity,
+    controllability, observability, containment, reproducibility, and governance.
   id: ai-sandboxes-threat-taxonomy-measurement
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -5687,6 +6196,8 @@
   notes: Verification-guided self-evolution loop for LLM-generated robot skill
     contracts, using formal interfaces, planner-facing interfaces, model-checker
     filters, and counterexample traces as optimization feedback.
+  why_it_matters: Connects robot skill evolution to formal contracts and
+    counterexample traces instead of relying on unverified prompt revisions.
   id: vaso-verifiable-self-evolving-skills
   resource_kind: training_framework
   canonical_category: embodied-world
@@ -5830,6 +6341,8 @@
   notes: Failure-aware VLA test-generation approach that turns embodied-policy
     evaluation into active failure discovery, steering scene generation toward
     high-risk and diverse regions using observed executions and surrogate models.
+  why_it_matters: Finds embodied-agent failures adaptively by steering test generation
+    toward risky and diverse robot-policy trajectories.
   id: fate-vla
   resource_kind: benchmark
   canonical_category: embodied-world
@@ -5972,6 +6485,8 @@
   notes: Agent harness architecture that moves looping, branching, and sequencing
     into program control while invoking the LLM only as an adaptive code component,
     using call-tree context to improve long visual-operation stability.
+  why_it_matters: Clarifies the control-flow boundary between deterministic
+    harness code and probabilistic model calls for long-horizon agent worlds.
   id: llm-as-code-agentic-programming-for-agent-harness
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -6043,6 +6558,8 @@
   notes: Just-in-time compilation system for browser-based computer-use agents,
     compiling task descriptions into executable code plans with tool calls,
     LLM calls, parallel scheduling, and invariant-enforcing tool protocols.
+  why_it_matters: Reframes web-agent execution as compilable control flow with
+    tool invariants, a production concern beyond raw benchmark accuracy.
   id: agent-jit-compilation
   resource_kind: agent_infrastructure
   canonical_category: web-world
@@ -6114,6 +6631,8 @@
     interactions through a gateway, stores prompts, responses, rewards, and
     metadata in a data pool, and turns interaction traces into managed training
     assets.
+  why_it_matters: Provides an operational layer for converting live agent-world
+    interactions into inspectable, curatable, training-ready RL records.
   id: claw-r1
   resource_kind: training_framework
   canonical_category: training-framework
@@ -6265,6 +6784,8 @@
     biased long-term memories silently shift tool-call parameters across 105
     scenarios, five bias dimensions, seven professional domains, and a scan of
     6,062 tools across 288 verified MCP servers.
+  why_it_matters: Exposes memory-tool coupling as a production safety surface,
+    linking personalization state to hidden parameter drift in tool calls.
   scenario_count: 105
   tool_count: 6062
   mcp_server_count: 288
@@ -6340,6 +6861,8 @@
     with time-to-success distributions, Human-Relative Throughput, bootstrap
     confidence intervals, per-rollout artifacts, and significance tests instead
     of only binary success rates.
+  why_it_matters: Moves physical-AI evaluation toward real-robot distributions,
+    throughput, confidence intervals, and rollout-level artifacts.
   id: phail-physical-ai-leaderboard
   resource_kind: benchmark
   canonical_category: embodied-world
@@ -6430,6 +6953,8 @@
     3.1M step-level samples across 2,484 application combinations, using
     automated grounded task generation, feasibility checks, and trajectory
     execution in full desktop environments.
+  why_it_matters: Provides large-scale desktop trajectory supervision for
+    computer-use agents with feasibility checks and grounded execution.
   trajectory_count: 93000
   instance_count: 3100000
   task_count: 2484
@@ -6507,6 +7032,9 @@
     agents that analyzes VisualWebArena trajectories, maintains a structured
     skill library, and reports trajectory-level efficiency metrics for action
     repetition, step overhead, and prompt-cache use.
+  why_it_matters: Connects web-agent skill learning with trajectory efficiency,
+    so world experience can reduce repeated exploration rather than only raise
+    success rates.
   task_count: 910
   id: pando
   resource_kind: training_framework
@@ -6582,6 +7110,8 @@
     repairs executable MCP-style workflow graphs through structured edits,
     execution feedback, adaptive intensity, and diversity pruning over live
     MCP-Bench tasks spanning 250 tools.
+  why_it_matters: Treats failed tool workflows as repairable execution graphs,
+    a useful pattern for smaller agents operating over changing MCP catalogs.
   api_count: 250
   id: evoflux
   resource_kind: agent_infrastructure
@@ -6725,6 +7255,8 @@
   notes: Open multi-step RL framework for visual web agents that overlaps
     rollout, gradient update, and policy refresh, using an everlasting rollout
     pool, lightweight screenshot handling, and WebGym task infrastructure.
+  why_it_matters: Shows how visual web-agent RL can scale by overlapping rollout
+    collection, training, and policy refresh.
   id: asyncwebrl
   resource_kind: training_framework
   canonical_category: training-framework
@@ -6817,6 +7349,8 @@
   notes: Smart-home benchmark built on the executable and verifiable HomeEnv
     simulator, covering 1,100 tasks across 7 categories, 22 subcategories, and
     homes with up to 135 devices.
+  why_it_matters: Grounds smart-home agents in executable device state, making
+    home automation outcomes inspectable rather than conversational.
   task_count: 1100
   category_count: 7
   subcategory_count: 22
@@ -6891,6 +7425,8 @@
   notes: Lifecycle-aware skill-attack benchmark with fixed-payload and
     self-mutating poisoning scenarios, 879 attack samples, 71 skills, 12 risk
     types, and deterministic evaluators.
+  why_it_matters: Frames reusable agent skills as a supply-chain attack surface
+    with public samples and deterministic checks for release gating.
   sample_count: 879
   skill_count: 71
   risk_count: 12
@@ -6986,6 +7522,8 @@
     protocol-anchored environments from real-world MCP servers and generates
     structure-guided tasks, interaction experiences, tool policies, and
     training data for tool-calling agents.
+  why_it_matters: Connects tool-agent data generation to real MCP protocols,
+    reducing ungrounded task synthesis for API-world training.
   id: gais
   resource_kind: training_framework
   canonical_category: training-framework
@@ -7070,6 +7608,8 @@
   notes: Specification-aware incremental regeneration method for enterprise MCP
     servers that updates affected tools after OpenAPI changes, evaluated on
     Azure REST API specifications against full-regeneration baselines.
+  why_it_matters: Addresses the maintenance problem behind production MCP
+    worlds, where API drift must update tools without regenerating everything.
   id: deltamcp
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -7143,6 +7683,8 @@
     MobileWorld, and a 45-template CLI-Advantage task suite covering bulk
     operations, filtering, aggregation, cross-app workflows, and hidden device
     state.
+  why_it_matters: Shows where mobile agents should move beyond screen tapping
+    into faster and more reliable command interfaces.
   task_count: 45
   id: beyond-gui-cli-advantage
   resource_kind: benchmark
@@ -7214,6 +7756,8 @@
   notes: Agentic RL framework that turns rollout interaction trajectories into
     auxiliary state-prediction and inverse-dynamics learning signals, evaluated
     on long-horizon ALFWorld and WebShop tasks.
+  why_it_matters: Highlights environment dynamics as trainable supervision,
+    helping distinguish world-learning signals from sparse terminal rewards.
   id: envrl
   resource_kind: training_framework
   canonical_category: training-framework
@@ -7284,6 +7828,8 @@
   notes: Empirical taxonomy of runtime faults in MCP servers based on 837
     MCP-specific runtime-fault threads from 473 actively maintained
     repositories and a validation survey of 55 MCP server developers.
+  why_it_matters: Provides a fault vocabulary for MCP runtime reliability,
+    helping benchmarks and release checks cover observed server failures.
   instance_count: 837
   repository_count: 473
   developer_survey_count: 55
@@ -7360,6 +7906,9 @@
     exploration, task mining, rollout evaluation, and hierarchical
     feedback-guided policy optimization for AndroidWorld and MobileWorld-style
     evaluation.
+  why_it_matters: Makes mobile Agent Worlds adaptation a closed loop over app
+    exploration, curriculum mining, rollout feedback, and policy updates without
+    manual annotations.
   id: mobileforge
   resource_kind: training_framework
   canonical_category: training-framework
@@ -7431,6 +7980,8 @@
   notes: Web Replica framework for constructing reproducible visual web-agent
     training environments through HTTP-level caching and LLM-grounded
     environment synthesis, scaling RL training across thousands of web tasks.
+  why_it_matters: Addresses the reproducibility bottleneck for live web RL by
+    replaying and synthesizing stable interactive web worlds at scale.
   id: weblica
   resource_kind: training_framework
   canonical_category: training-framework
@@ -7504,6 +8055,8 @@
     framework for policy-induced GUI-agent error recovery, with 1,216 executable
     test cases and 800K synthesized recovery-data examples reported in the
     paper.
+  why_it_matters: Targets recovery after self-induced GUI errors, a deployment
+    failure mode that ordinary success-only benchmarks often under-measure.
   instance_count: 800000
   task_count: 1216
   id: rots-gui-robusteval
@@ -7586,6 +8139,8 @@
   notes: Computer-use-agent robustness benchmark and agent framework covering 9
     common non-adversarial environment corruptions across 3,321 configurable
     tasks, with public project page, code, and dataset links.
+  why_it_matters: Makes CUA robustness concrete by injecting realistic non-adversarial
+    desktop corruptions before release evaluation.
   task_count: 3321
   id: agenthijack
   resource_kind: benchmark
@@ -7673,6 +8228,8 @@
   notes: Safety benchmark for computer-use agents that pairs local action-level
     guardrail decisions with OSWorld-derived risk-augmented execution tasks and
     state-based safety invariants.
+  why_it_matters: Adds an OS-level release gate for unsafe computer-use actions
+    across both action and full-task granularity.
   id: osguard
   resource_kind: safety_control
   canonical_category: computer-world
@@ -7747,6 +8304,8 @@
   notes: Mixed-action phone-agent harness and benchmark for Android workflows
     that combine GUI, CLI, and MCP-style tools with trace-backed grading over
     observable side effects rather than next-screen action alone.
+  why_it_matters: Reframes phone-agent evaluation around verifiable side
+    effects across GUI, CLI, and tool actions.
   id: phoneharness
   resource_kind: world
   canonical_category: mobile-world
@@ -7921,6 +8480,8 @@
   notes: Source-aware verifier for MCP-grounded answers that preserves tool and
     source IDs from captured MCP traces, routes atomic claims to source-specific
     evidence, and detects cross-source attribution errors.
+  why_it_matters: Keeps MCP answer verification source-aware, preventing claims
+    from borrowing evidence across tools or sources.
   instance_count: 281
   id: provenanceguard
   resource_kind: safety_control
@@ -7994,6 +8555,8 @@
   notes: Personal computer-use benchmark with a seeded Linux desktop, 17 simulated
     real-world web applications, and 184 personal-assistant tasks inspired by
     real user requests.
+  why_it_matters: Moves CUA evaluation toward personal desktop state and
+    assistant-style requests instead of generic single-app tasks.
   id: mypcbench
   resource_kind: benchmark
   canonical_category: computer-world
@@ -8061,6 +8624,8 @@
   notes: Browser-based benchmark for multimodal GUI agents controlling simulated
     scientific instruments, preserving feedback-driven parameter adjustment while
     avoiding physical-instrument cost and safety risk.
+  why_it_matters: Moves GUI-agent evaluation into scientific instrument control
+    with feedback-driven tuning and safe browser simulators.
   id: labosbench
   resource_kind: benchmark
   canonical_category: gui-world
@@ -8190,6 +8755,8 @@
   notes: Interactive benchmark where tool-calling LLM agents infer hidden
     deterministic finite automata through membership and equivalence queries,
     giving a controlled testbed for world-model discovery.
+  why_it_matters: Provides a clean hidden-world testbed for measuring whether
+    agents can actively discover transition structure through queries.
   id: agentic-automata-learning
   resource_kind: benchmark
   canonical_category: research-world
@@ -8255,6 +8822,8 @@
   notes: Reward-driven online data synthesis framework for multi-turn tool-use
     agents that uses rollout reward variance to find capability-boundary tasks
     and refresh informative RL samples.
+  why_it_matters: Treats shifting capability boundaries as a data-generation
+    signal, keeping tool-use RL curricula informative as policies improve.
   id: rods
   resource_kind: training_framework
   canonical_category: training-framework
@@ -8320,6 +8889,9 @@
   notes: Hierarchical multimodal skill format for computer-use agents, using an
     MCP-style topic loader over text and figures derived from authored
     documentation plus live application exploration.
+  why_it_matters: Shows why CUA skill artifacts should preserve visual workflow
+    evidence, not just text procedures, when agents operate unfamiliar GUI
+    software.
   id: visualskill
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -8455,6 +9027,8 @@
   notes: Lightweight configurable framework for injecting deceptive e-commerce interface
     patterns into existing web environments and evaluating multimodal web-agent safety
     under controlled frontend manipulations.
+  why_it_matters: Turns deceptive web-interface patterns into controlled safety
+    tests for multimodal browser agents.
   id: webdecept
   resource_kind: safety_control
   canonical_category: web-world
@@ -8525,6 +9099,8 @@
   repo:
   notes: Camera-controllable multi-agent video world model that couples multiple
     generated viewpoints through geometry-aware denoising for cross-view consistency.
+  why_it_matters: Makes multi-agent world generation inspectable through camera
+    control, shared geometry, and cross-view consistency checks.
   id: prisma-world
   resource_kind: model_release
   canonical_category: generative-3d-world
@@ -8605,6 +9181,8 @@
     for multiple independently controllable agents, using permutation-symmetric
     agent conditioning, sparse hub attention, and a causal student for
     action-responsive 24 FPS streaming.
+  why_it_matters: Extends world-model rollouts from single-agent control to
+    independently controllable multi-agent interactive worlds.
   id: gamma-world
   resource_kind: model_release
   canonical_category: generative-3d-world
@@ -8683,6 +9261,8 @@
   notes: LLM-as-a-developer methodology and ADK evaluation arena that compares
     agent development kits through documentation-grounded code generation, Docker
     isolation, validation feedback, and benchmark adapters.
+  why_it_matters: Evaluates agent frameworks as developer-facing systems, not
+    only as benchmark wrappers or model prompts.
   id: adk-arena
   resource_kind: benchmark
   canonical_category: agent-infrastructure
@@ -8834,6 +9414,8 @@
   notes: Validation-carrying toolchain for converting capability intent into governed,
     sandbox-verified, cataloged tool artifacts exposed to agents through token-efficient
     intent-scoped routing.
+  why_it_matters: Turns tool creation into a governed supply chain with sandbox
+    validation, contracts, routing, credential boundaries, and audit records.
   id: tool-forge
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -8912,6 +9494,8 @@
   notes: Unified graph representation for security-auditable LLM agents that
     records operations, data flows, tool use, and dependencies so reviewers can
     trace provenance and localize risky agent behavior.
+  why_it_matters: Makes agent security review queryable across tools, memory,
+    and multi-agent state instead of relying on fragmented logs.
   id: agent-bom
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -8983,6 +9567,8 @@
   notes: Conceptual framework defining GUI Agent Autonomy Levels, a six-level
     taxonomy for clarifying capability, responsibility, and risk as agents move
     from click-by-click assistance toward higher-autonomy software interaction.
+  why_it_matters: Gives readers a vocabulary for comparing GUI-agent autonomy,
+    responsibility, and deployment risk.
   id: gui-agent-autonomy-levels
   resource_kind: agent_infrastructure
   canonical_category: gui-world
@@ -9492,6 +10078,8 @@
   notes: Generative 3D belief world model for embodied agents under partial
     observability, released with code, models, and data for 3D-CORE style
     belief inference tasks.
+  why_it_matters: Gives embodied agents an explicit 3D belief state for reasoning
+    about unseen space instead of reacting only to the current view.
   id: 3d-belief
   resource_kind: world
   canonical_category: embodied-world
@@ -9577,6 +10165,8 @@
   notes: Evolving benchmark for functional theory of mind in embodied agents,
     built around 300 multi-agent household tasks with partial observability,
     private information, constrained communication, and formal verification.
+  why_it_matters: Tests embodied social reasoning where agents must act under
+    partial observability, private beliefs, and limited communication.
   task_count: 300
   id: enacttom
   resource_kind: benchmark
@@ -9723,6 +10313,8 @@
   notes: OS-level agent-safety benchmark for behavioral jailbreaks, covering
     819 high-risk test cases with semantic-physical dual verification and
     rollback support across real operating-system environments.
+  why_it_matters: Makes OS-level jailbreak behavior testable with rollback and
+    both semantic and physical-state verification.
   task_count: 819
   id: litmus-os-agent-jailbreaks
   resource_kind: benchmark
@@ -9795,6 +10387,8 @@
   notes: Benchmark for measuring how coding agents behave when pressured to
     improve a public score, with 1,326 multi-round trajectories over shortcut
     seeking, hidden-evaluation transfer, and instruction-violation risks.
+  why_it_matters: Exposes how public-score pressure can make coding agents exploit
+    evaluation artifacts instead of improving hidden performance.
   task_count: 34
   trajectory_count: 1326
   id: agentpressurebench
@@ -9889,6 +10483,8 @@
   notes: Web-development benchmark framed as a virtual software agency, covering
     requirement interpretation, implementation, testing, and product-style
     delivery for coding agents.
+  why_it_matters: Moves coding-agent evaluation from isolated fixes toward
+    agency-style web delivery with requirements, implementation, and testing.
   id: swe-webdevbench
   resource_kind: benchmark
   canonical_category: code-world
@@ -9973,6 +10569,8 @@
   repo: https://github.com/segev-shlomov/ST-WebAgentBench
   notes: Web-agent benchmark focused on safety and trustworthiness, useful as
     an older anchor for current browser-agent release gates and risk taxonomies.
+  why_it_matters: Adds an enterprise safety lens for browser agents, where task
+    completion must be judged together with policy compliance.
   id: st-webagentbench
   resource_kind: benchmark
   canonical_category: web-world
@@ -10058,6 +10656,8 @@
   notes: Benchmark framing for whether coding agents can reproduce findings in
     computational materials science, adding a scientific-workflow angle to
     research-agent evaluation.
+  why_it_matters: Tests whether coding agents can reproduce scientific materials
+    workflows, not just pass software tests.
   id: automat
   resource_kind: benchmark
   canonical_category: research-world
@@ -10128,6 +10728,8 @@
   notes: Open-source search-agent system and training recipe for automated
     information seeking, linking browser/search rollouts to deep-research style
     agent training.
+  why_it_matters: Links open search-agent rollouts and training recipes to
+    deep-research style information seeking.
   id: openseeker-v2
   resource_kind: training_framework
   canonical_category: research-world
@@ -10215,6 +10817,9 @@
     SearchVL-SFT-36k, SearchVL-RL-8k, model checkpoints, SFT/RL code, and a
     unified visual plus retrieval tool environment for active perception,
     external evidence gathering, and fatal-aware multi-turn RL.
+  why_it_matters: Supplies open data, code, and tool environments for multimodal
+    search agents, making deep-search training recipes easier to inspect and
+    reuse.
   id: opensearch-vl
   resource_kind: training_framework
   canonical_category: training-framework
@@ -10295,6 +10900,8 @@
   notes: Skill-curation framework for self-evolving agents, relevant to
     converting experience traces into reusable skills and agent-training
     curricula.
+  why_it_matters: Frames skill curation as a learned policy over accumulated
+    experience, which is central to agents that improve across task streams.
   id: skillos
   resource_kind: training_framework
   canonical_category: training-framework
@@ -11118,6 +11725,8 @@
   notes: Unified GUI-agent model release with mid-training over GUI data, online
     RL from full-trajectory navigation rollouts, model merging across grounding,
     web, and mobile specialists, and an open evaluation/deployment toolchain.
+  why_it_matters: Represents the shift from isolated GUI grounding models toward
+    unified GUI agents trained with trajectory-level rollouts.
   id: ui-venus-1-5
   resource_kind: model_release
   canonical_category: gui-world
@@ -11423,6 +12032,8 @@
   notes: Long-horizon agent-memory benchmark that unifies tool-use dialogue,
     deep-research search, coding, and computer-use regimes behind one
     memory-reasoning interface with memory-isolated scoring.
+  why_it_matters: Unifies memory evaluation across tool, web, code, research,
+    and computer-use agents with isolated memory scoring.
   id: memgym
   resource_kind: benchmark
   canonical_category: research-world
@@ -11495,6 +12106,8 @@
   notes: Multi-session memory-agent-environment benchmark where agents must
     learn from earlier actions and feedback, distill memories, and use those
     memories in later interdependent subtasks.
+  why_it_matters: Evaluates agent memory where past interactions must guide later
+    interdependent actions, not just recall.
   id: memoryarena
   resource_kind: benchmark
   canonical_category: research-world
@@ -11637,6 +12250,8 @@
   notes: Automated terminal-agent environment synthesis pipeline that uses
     executable skills as the primitive for co-generating task instructions,
     environments, teacher trajectories, and skill graphs.
+  why_it_matters: Shows how terminal worlds can be synthesized from executable
+    skills, tying tasks, environments, and teacher trajectories into one loop.
   instance_count: 5723
   id: terminal-world
   resource_kind: training_framework
@@ -11711,6 +12326,8 @@
     terminal training environments, with LiteCoder-Terminal-SFT expert
     trajectories and LiteCoder-Terminal-RL environments for trajectory-level
     preference optimization.
+  why_it_matters: Provides scalable terminal worlds with executable rewards and
+    trajectories for SFT and preference optimization.
   trajectory_count: 11255
   environment_count: 602
   id: litecoder-terminal
@@ -11785,6 +12402,8 @@
   notes: Runtime-native skill abstraction that packages metadata, action
     schemas, Python executors, hooks, routing, and skill-local state into an
     executable control surface for LLM agents.
+  why_it_matters: Moves reusable skills from prompt text into executable,
+    observable, and policy-governed runtime objects.
   id: formal-skill-fairyclaw
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -12220,6 +12839,8 @@
   notes: Runtime safety and observability layer that intercepts proposed agent
     actions before host execution, evaluates declarative policy, asks for human
     approval on sensitive actions, and records replayable audit trails.
+  why_it_matters: Adds a local-agent firewall pattern around filesystem, shell,
+    browser, and MCP actions with policy checks, approval, and replayable audit logs.
   id: agentwall
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -12913,6 +13534,8 @@
     skills through capability trees and DAG pipelines, evaluated on 30
     artifact-rich tasks across five categories and skill-ecosystem scales from
     200 to 200K skills.
+  why_it_matters: Treats large skill libraries as an operating layer with
+    retrieval, orchestration, DAG execution, and artifact-quality evaluation.
   task_count: 30
   skill_count: 200000
   id: agentskillos
@@ -13066,6 +13689,9 @@
   notes: Survey of SKILL.md-style modular skills, progressive disclosure, MCP
     integration, skill acquisition, deployment, and lifecycle governance for
     agent systems.
+  why_it_matters: Gives the repo a concise foundation for skill-based agents
+    spanning progressive loading, MCP integration, acquisition, deployment, and
+    governance.
   id: agent-skills-for-llms
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -13374,6 +14000,8 @@
   notes: Long-horizon agent security benchmark spanning five attack families,
     28 realistic agentic environments, and 644 security test cases for
     tracking adaptive multi-turn agent attacks.
+  why_it_matters: Tests attacks that unfold over multiple turns and
+    environments, where single-turn defenses can miss drift or poisoning.
   scenario_count: 28
   task_count: 644
   id: agentlab
@@ -13454,6 +14082,8 @@
   notes: Long-horizon healthcare workflow benchmark covering provider prior
     authorization, payer utilization management, and care management over 20
     simulated healthcare apps exposed through 87 MCP tools.
+  why_it_matters: Tests API agents in policy-dense healthcare workflows where
+    long-horizon tool use, roles, and handoffs interact.
   task_count: 75
   app_count: 20
   id: chi-bench
@@ -13543,6 +14173,8 @@
     for Gmail, Calendar, Docs, Drive, and Slack, with deterministic
     snapshot/restore, 44 tasks, and public trajectory data for capability
     and unsafe-action analysis.
+  why_it_matters: Provides stateful productivity workspaces where capability and
+    unsafe actions can be evaluated without touching live accounts.
   task_count: 44
   app_count: 5
   trajectory_count: 7834
@@ -13640,6 +14272,8 @@
     business automation patterns, requiring agents to discover REST API
     endpoints, follow layered policies, and write correct data across CRM,
     inbox, calendar, messaging, and business-system states.
+  why_it_matters: Measures whether agents can discover APIs and obey business
+    policies across realistic cross-application automations.
   id: automationbench
   resource_kind: benchmark
   canonical_category: api-world
@@ -13711,6 +14345,8 @@
   notes: Enterprise API-agent benchmark and sandbox covering Slack, Linear, Box,
     and Google Calendar replicas, with 224 tasks across 108 endpoints and
     deterministic state-diff contracts for evaluation and RL/SFT training.
+  why_it_matters: Turns enterprise API tasks into isolated sandboxes with
+    deterministic state diffs suitable for evaluation and training.
   task_count: 224
   api_count: 108
   app_count: 4
@@ -13801,6 +14437,8 @@
   notes: Clinical-agent benchmark with 100 long-horizon physician tasks over a
     FHIR-compliant EHR environment, 670 checkpoints, physician validation,
     and multi-run reliability reporting.
+  why_it_matters: Grounds clinical agent evaluation in executable EHR tasks with
+    physician validation and reliability metrics.
   task_count: 100
   scenario_count: 21
   id: physicianbench
@@ -13882,6 +14520,8 @@
     incomplete, ambiguous, and capability-limited user requests, instantiated
     as an in-car assistant environment with an LLM-simulated user, mutable
     state, 58 interconnected tools, and 19 domain policies.
+  why_it_matters: Tests whether tool agents ask, defer, or refuse correctly
+    when user intent is ambiguous or capabilities are limited.
   api_count: 58
   id: car-bench
   resource_kind: world
@@ -13961,6 +14601,8 @@
   notes: Benchmark of long-horizon coding tasks derived from real open-source
     version upgrades, stressing multi-target implementation across many files
     rather than single-issue bug fixing.
+  why_it_matters: Tests whether coding agents can execute roadmap-scale upgrades
+    across repositories instead of only closing one issue.
   task_count: 115
   id: roadmapbench
   resource_kind: benchmark
@@ -14033,6 +14675,8 @@
   notes: Interactive debugging framework for LLM-based software-engineering
     agents, exposing execution trajectories through seven GUI panels so users
     can inspect and modify agent behavior during long-horizon coding tasks.
+  why_it_matters: Makes software-agent trajectories inspectable and controllable
+    through debugging primitives such as breakpoints and stepwise execution.
   id: agentstepper
   resource_kind: agent_infrastructure
   canonical_category: code-world
@@ -14105,6 +14749,8 @@
     instances from real historical bug-fix pull requests across six major
     Verilog/SystemVerilog and Chisel projects, validated by native simulation
     and regression flows.
+  why_it_matters: Extends repository-scale coding-agent evaluation into hardware
+    projects with native simulation and regression checks.
   task_count: 417
   id: hwe-bench
   resource_kind: benchmark
@@ -14177,6 +14823,8 @@
   notes: Automated benchmark for LLM agents on authentic software-security
     tasks, constructing reproducible vulnerability instances, PoC-generation
     tasks, and vulnerability-patching tasks with isolated harnesses.
+  why_it_matters: Brings code agents into security-critical repair worlds where
+    exploits, patches, and harnesses can be checked in isolation.
   id: sec-bench
   resource_kind: benchmark
   canonical_category: code-world
@@ -14262,6 +14910,8 @@
   notes: Repository-level ML programming benchmark with 9641 examples across
     18 GitHub repositories, including ML-Agent-Bench for autonomous
     end-to-end task execution in a Linux sandbox.
+  why_it_matters: Covers ML engineering as a code-world surface, where agents
+    must run experiments and modify repository code inside a sandbox.
   task_count: 9641
   id: ml-bench
   resource_kind: benchmark
@@ -14349,6 +14999,8 @@
     with 54 tasks curated from merged vLLM and SGLang performance pull
     requests and dual hard/soft metrics that distinguish true optimization
     from accidental metric wins.
+  why_it_matters: Separates genuine inference optimization from lucky benchmark
+    wins using real serving pull requests and dual metrics.
   task_count: 54
   id: iso-bench
   resource_kind: benchmark
@@ -14443,6 +15095,8 @@
     continuous-integration loop, with 100 tasks that average 233 days and 71
     commits of evolution history and require iterative analysis, requirements,
     coding, and regression control.
+  why_it_matters: Evaluates long-term codebase maintenance through CI loops
+    rather than one-shot patch generation.
   task_count: 100
   id: swe-ci
   resource_kind: benchmark
@@ -14529,6 +15183,8 @@
   notes: Cyberdefense benchmark where LLM agents must find and patch 22
     novel critical vulnerabilities in open-source codebases, targeting
     proactive security capabilities rather than known issue repair.
+  why_it_matters: Tests defensive coding agents on novel critical vulnerabilities
+    rather than known bug-fix patterns.
   task_count: 22
   id: zerodaybench
   resource_kind: benchmark
@@ -14905,6 +15561,8 @@
   notes: Open-world tool-use environment creator built around 5,571 tools across
     204 applications, with task synthesis, state perturbations, a world engine,
     and 1,170 tool-agent trajectories for data curation.
+  why_it_matters: Provides a large open tool world with unified APIs, perturbable
+    state, verifiable rewards, and reusable trajectories.
   api_count: 5571
   app_count: 204
   trajectory_count: 1170
@@ -15078,6 +15736,8 @@
   notes: Lightweight environment benchmark where static JSON tool calls make
     horizon and difficulty controllable through hidden slots and decoy budgets,
     enabling fast validation across six domains.
+  why_it_matters: Makes horizon and difficulty tunable with low-overhead tool
+    calls, useful for training-time validation loops.
   id: agentce-bench
   resource_kind: benchmark
   canonical_category: api-world
@@ -15292,6 +15952,8 @@
   notes: Memory-centric mobile GUI benchmark with 128 tasks across 26 apps,
     pass@k protocols, Progressive Scrutiny evaluation, and public task and
     trajectory datasets.
+  why_it_matters: Makes cross-session memory and environment-specific mobile
+    experience an explicit evaluation target.
   task_count: 128
   app_count: 26
   scenario_count: 68
@@ -15389,6 +16051,8 @@
   notes: Mobile GUI-agent training framework that injects deterministic memory
     variables into controllable virtual environments, produces verifiable
     explicit-memory supervision, and evaluates on Memory-World.
+  why_it_matters: Shows how controllable mobile worlds can generate verifiable
+    supervision for explicit agent memory.
   instance_count: 356
   trajectory_count: 4194
   id: stamp-memory-world
@@ -15461,6 +16125,8 @@
   notes: Foundation survey and live bibliography that organizes agentic world
     models by predictor, simulator, and evolver levels across physical, digital,
     social, and scientific governing-law regimes.
+  why_it_matters: Supplies a field map for agent world models across physical,
+    digital, social, and scientific law regimes.
   paper_count: 400
   id: agentic-world-modeling
   resource_kind: agent_infrastructure
@@ -15547,6 +16213,9 @@
     environment modeling, synthesis, evaluation, and applications through a
     lifecycle view that directly frames environments as the substrate for
     agent capability development.
+  why_it_matters: Provides a field-level lifecycle vocabulary for treating
+    environments as the substrate of agent capability, evaluation, and
+    co-evolution.
   id: agentic-environment-engineering-survey
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -15689,6 +16358,9 @@
     scientific discovery, emphasizing execution environments, resources,
     constraints, artifact management, collaboration, and reward-hacking
     suppression over fixed workflow prescription.
+  why_it_matters: Frames scientific discovery progress around environment
+    engineering, constraints, artifacts, collaboration, and reward-hacking
+    controls.
   id: eurekagent
   resource_kind: agent_infrastructure
   canonical_category: research-world
@@ -16358,6 +17030,8 @@
   notes: Long-horizon web-assistance benchmark from real user instruction
     sequences over multiple websites, combining ambiguous user intent, GUI
     grounding, speech input, and sequential context.
+  why_it_matters: Brings real user ambiguity, evolving instructions, and GUI
+    grounding into long-horizon web-agent evaluation.
   id: realwebassist
   resource_kind: benchmark
   canonical_category: web-world
@@ -16451,6 +17125,8 @@
     V1 everyday online tasks across 144 platforms, V2 updates, final-request
     interception for safety, and multi-layer recordings for trajectory
     diagnosis.
+  why_it_matters: Tests browser agents on everyday live-site write tasks while
+    preserving safety through final-request interception and trace diagnosis.
   task_count: 153
   app_count: 144
   id: clawbench
@@ -16906,6 +17582,8 @@
   repo:
   notes: Hierarchical evaluator for long GUI-agent trajectories that segments
     traces into subtasks, diagnoses local failures, and aggregates task-level judgments.
+  why_it_matters: Makes long GUI-trajectory evaluation diagnostic by localizing
+    which subtask failed instead of returning only a final verdict.
   id: guide-gui-evaluation
   resource_kind: benchmark
   canonical_category: gui-world
@@ -16975,6 +17653,8 @@
   notes: Faithfulness-first SFT and reinforcement fine-tuning pipeline for
     mobile GUI agents, using GuAE to stabilize sparse GUI rewards and improve
     evidence-grounded action consistency.
+  why_it_matters: Targets evidence-grounded mobile action rather than shortcut
+    behavior that only appears successful.
   id: faithful-mobile-gui-agents
   resource_kind: training_framework
   canonical_category: mobile-world
@@ -17046,6 +17726,8 @@
   notes: Runtime safety layer that intercepts agent tool calls before execution
     and returns allow, warn, block, or review verdicts, with MCP-compatible
     framing for side-effecting tools.
+  why_it_matters: Places safety decisions at the pre-execution tool-call boundary,
+    where file, shell, HTTP, and database actions can still be blocked or reviewed.
   scenario_count: 930
   id: agenttrust
   resource_kind: safety_control
@@ -17188,6 +17870,8 @@
   notes: Benchmark for dynamic open-web GUI tasks where agents must find
     external documentation, interpret procedural instructions, and ground them
     into executable actions.
+  why_it_matters: Tests whether agents can use external documentation as an
+    operational resource instead of relying on memorized UI knowledge.
   id: docos
   resource_kind: benchmark
   canonical_category: web-world
@@ -17258,6 +17942,8 @@
   notes: Dataset and benchmark for GUI-agent robustness under real-world
     anomalies, constructed from RPA-collected user action sequences and
     multimodal task descriptions.
+  why_it_matters: Stress-tests GUI agents under realistic anomalies that
+    idealized screenshot benchmarks usually hide.
   id: gui-robust
   resource_kind: dataset
   canonical_category: gui-world
@@ -17337,6 +18023,8 @@
   notes: Context-ReAct search-agent line that treats context operations as
     explicit actions and fine-tunes LongSeeker from synthetic long-horizon
     search trajectories.
+  why_it_matters: Makes context management an explicit search-agent action for
+    long-horizon information seeking.
   trajectory_count: 10000
   id: longseeker
   resource_kind: model_release
@@ -17415,6 +18103,8 @@
   notes: Step-level smartphone GUI benchmark with interleaved screenshots,
     audio, and video clips across mobile applications, exposing temporal and
     auditory bottlenecks missed by static screenshots.
+  why_it_matters: Adds temporal video and audio cues to mobile GUI evaluation,
+    beyond static screenshot grounding.
   app_count: 29
   trajectory_count: 709
   instance_count: 2579
@@ -17665,6 +18355,8 @@
   notes: Controlled GUI environment suite for testing how augmented usability
     heuristics affect computer-use agent task completion, efficiency, and
     human usability preservation.
+  why_it_matters: Links interface design choices to agent reliability while
+    preserving human usability as a constraint.
   id: ui-verse
   resource_kind: benchmark
   canonical_category: gui-world
@@ -17877,6 +18569,8 @@
   notes: Automated red-teaming pipeline that audits agent benchmarks for
     reward-hacking flaws, reporting 219 distinct flaws across popular software,
     web, desktop, and terminal agent benchmarks.
+  why_it_matters: Checks whether agent benchmarks invite reward hacking before
+    their scores become trusted leaderboard signals.
   instance_count: 219
   id: benchjack
   resource_kind: benchmark
@@ -18018,6 +18712,8 @@
   notes: Long-term memory benchmark for web and enterprise agents with 451
     questions, five memory abilities, 1,870 public task trajectories, and
     accuracy-latency evaluation for memory systems.
+  why_it_matters: Measures whether web agents retain environment-specific
+    experience about workflows, state changes, and interface pitfalls.
   task_count: 451
   trajectory_count: 1870
   id: longmemeval-v2
@@ -18424,6 +19120,8 @@
   notes: Test-time verifier-guided action selection framework for embodied
     agents, using candidate action scoring to improve long-horizon task
     execution without retraining the base policy.
+  why_it_matters: Adds a lightweight test-time verifier gate for embodied action
+    selection when retraining the base policy is impractical.
   id: vegas-embodied-action-selection
   resource_kind: training_framework
   canonical_category: embodied-world
@@ -18493,6 +19191,8 @@
   notes: GUI critique framework and benchmark that replaces binary action
     labels with continuous semantic-alignment feedback for diagnosing and
     training graphical-interface agents.
+  why_it_matters: Gives GUI agents finer-grained critique signals than binary
+    valid-or-invalid action labels.
   id: bbbench-bbcritic
   resource_kind: benchmark
   canonical_category: gui-world
@@ -18719,6 +19419,9 @@
   notes: Disaster Operational Response Agent benchmark with 515 expert-authored
     tasks across 45 real disasters, 108 MCP-style geospatial tools, and
     expert-verified replayable gold trajectories.
+  why_it_matters: Tests operational research agents on disaster-response worlds
+    where geospatial tools, multimodal evidence, rescue planning, and expert
+    trajectories interact.
   task_count: 515
   scenario_count: 45
   api_count: 108
@@ -19078,6 +19781,8 @@
   notes: Executable benchmark that compiles egocentric cooking videos into
     hidden symbolic world graphs and transition rules for partial-observation
     belief-state planning.
+  why_it_matters: Converts egocentric video into executable hidden-state worlds
+    for testing belief tracking and replanning.
   id: ego2world
   resource_kind: world
   canonical_category: embodied-world
@@ -19296,6 +20001,8 @@
   notes: Controlled multi-agent calendar scheduling environment with oracle
     solutions for coordination quality, communication efficiency, fairness, and
     privacy leakage under decentralized private-information constraints.
+  why_it_matters: Turns coordination, privacy leakage, fairness, and efficiency
+    tradeoffs into measurable calendar-agent outcomes.
   id: calbench
   resource_kind: benchmark
   canonical_category: api-world
@@ -19367,6 +20074,8 @@
   notes: Long-horizon embodied-agent strategy that treats specialized VLA
     policies as tools under a high-level VLM planner, with explicit tool
     selection, progress feedback, and Tool-Aligned Post-Training.
+  why_it_matters: Frames specialized VLA policies as callable tools, making
+    long-horizon robot control a planner-and-tool orchestration problem.
   id: vlas-as-tools
   resource_kind: training_framework
   canonical_category: embodied-world
@@ -19817,6 +20526,8 @@
   repo: 
   notes: Computer-use safety benchmark for benign-looking user instructions where
     harm emerges from task context, environment threats, or multi-agent decomposition.
+  why_it_matters: Shows that apparently benign desktop instructions can become
+    unsafe through context, environment threats, or decomposition.
   id: os-blind
   resource_kind: benchmark
   canonical_category: computer-world
@@ -19886,6 +20597,8 @@
   repo: 
   notes: Harmful-behavior benchmark with 2,653 instances where locally plausible
     steps accumulate into unauthorized or unsafe agent behavior.
+  why_it_matters: Tests whether agents become unsafe when harmless-looking steps
+    accumulate into hazardous execution paths.
   instance_count: 2653
   id: agenthazard
   resource_kind: benchmark
@@ -19963,6 +20676,8 @@
   repo: https://github.com/tychenn/LPS-Bench
   notes: Long-horizon planning safety benchmark for MCP-based computer-use agents
     across 65 scenarios, seven task domains, and nine risk types.
+  why_it_matters: Evaluates planning-time safety awareness before execution,
+    making it useful for MCP-based CUA release gates.
   scenario_count: 65
   id: lps-bench
   resource_kind: benchmark
@@ -20114,6 +20829,8 @@
   notes: Verifiable benchmark for mobile GUI agents on real-world closed-source
     Android apps, using GRADE to judge visual trajectories against external
     task guidelines without hidden app-state access.
+  why_it_matters: Stresses mobile agents on closed-source daily apps where hidden
+    state makes ordinary automatic verification difficult.
   task_count: 350
   app_count: 94
   id: androiddaily
@@ -20187,6 +20904,8 @@
   notes: Context-aware screenshot-injection benchmark for mobile GUI agents,
     placing attacker-controlled text inside ordinary user-generated content
     regions to test whether VLM agents follow untrusted app content.
+  why_it_matters: Turns mobile prompt-injection risk into executable GUI
+    scenarios grounded in user-generated content.
   instance_count: 1111
   app_count: 10
   scenario_count: 11
@@ -20262,6 +20981,8 @@
   notes: Phone-use safety benchmark from "Safe, or Simply Incapable?" with
     700 safety-critical moments across more than 130 apps; separates safe
     choices, unsafe choices, and inability to act.
+  why_it_matters: Separates genuine safe decisions from mere inability, closing
+    a major blind spot in phone-use safety evaluation.
   safety_moment_count: 700
   app_count_min: 130
   id: phonesafety
@@ -20335,6 +21056,8 @@
   notes: Phone-use environment pipeline that converts real GUI trajectories and
     screenshots into controllable mock Android apps, executable tasks,
     automatic verifiers, and training rollouts across 34 apps and 16 domains.
+  why_it_matters: Scales phone-use environment creation from real trajectories
+    into controllable apps, verifiers, and training rollouts.
   app_count: 34
   domain_count: 16
   id: phoneworld
@@ -20409,6 +21132,8 @@
   notes: Browser-hosted mobile simulation platform with programmable structured
     state, deterministic judges, parallel rollouts, and MobileGym-Bench across
     28 apps and 416 parameterized task templates.
+  why_it_matters: Gives mobile GUI agents resettable, inspectable, and parallel
+    environments suitable for online RL and deterministic judging.
   task_count: 416
   app_count: 28
   id: mobilegym
@@ -20499,6 +21224,8 @@
   notes: Cross-platform GUI environment-synthesis framework that uses coding
     agents to generate backend-free, URL-served interactive worlds with
     verifiable rewards, covering mobile, desktop, and in-vehicle interfaces.
+  why_it_matters: Scales GUI worlds by generating controllable tasks and
+    interfaces for repeatable computer-use evaluation.
   task_count: 1000
   id: scalewob
   resource_kind: world
@@ -20585,6 +21312,8 @@
   notes: Long-horizon mobile GUI agent that treats context management as
     explicit actions through ConAct, with released code, MemGUI-3K trajectory
     data, and an 8B SFT model for memory-aware mobile GUI control.
+  why_it_matters: Treats context management as part of the mobile action policy
+    so long-horizon facts do not disappear in prompt history.
   instance_count: 64430
   trajectory_count: 2956
   id: memgui-agent
@@ -20687,6 +21416,8 @@
   notes: Native iOS simulator benchmark centered on persistent user identity,
     covering 133 tasks over 26 newly built iOS apps with seeded personal data,
     rubrics, and evaluation code described in the paper.
+  why_it_matters: Extends phone-agent evaluation to personalized iOS tasks with
+    persistent identity, app-spanning data, and user history.
   task_count: 133
   app_count: 26
   id: iosworld
@@ -20912,6 +21643,8 @@
   url: https://github.com/web-arena-x/visualwebarena
   repo: https://github.com/web-arena-x/visualwebarena
   notes: Multimodal extension of WebArena for visually grounded web agents.
+  why_it_matters: Extends web-world evaluation from DOM-only interaction toward
+    visual grounding, which is central for VLM browser agents.
   id: visualwebarena
   resource_kind: world
   canonical_category: web-world
@@ -21539,6 +22272,8 @@
   url: https://openai.com/index/swe-lancer/
   repo: https://github.com/openai/preparedness
   notes: Freelance software tasks valued at real-world payouts.
+  why_it_matters: Connects code-agent evaluation to economically grounded
+    software work instead of only synthetic issue-fixing tasks.
   id: swe-lancer
   resource_kind: world
   canonical_category: code-world
@@ -21768,6 +22503,8 @@
   url: https://openai.com/index/browsecomp/
   repo: https://github.com/openai/simple-evals
   notes: 1266 hard-to-find information tasks for browsing agents.
+  why_it_matters: Measures persistent, strategic web search over hard-to-find
+    facts, complementing UI-control benchmarks with deep browsing ability.
   task_count: 1266
   id: browsecomp
   resource_kind: world
@@ -21917,6 +22654,8 @@
   notes: Native-runtime benchmark with 60 bilingual multimodal tasks running
     in Dockerized CLI agent harnesses, graded by rule checks, environment-state
     audits, and semantic judges.
+  why_it_matters: Tests long-horizon agents in native runtime environments with
+    hybrid grading over files, state, and semantic outcomes.
   task_count: 60
   id: wildclawbench
   resource_kind: benchmark
@@ -21996,6 +22735,8 @@
   notes: Continuously updated web-agent benchmark that refreshes tasks from live
     events and evaluates multimodal browser agents under temporal information
     drift rather than static website snapshots.
+  why_it_matters: Keeps web-agent evaluation tied to changing live information
+    instead of frozen website snapshots.
   id: liveclawbench
   resource_kind: benchmark
   canonical_category: web-world
@@ -22074,6 +22815,8 @@
   notes: Web-agent benchmark focused on multi-agent coordination, including
     collaborative planning, task decomposition, and browser execution across
     agent teams rather than single-agent web navigation alone.
+  why_it_matters: Moves web-agent evaluation from single-agent browsing to coordination
+    with website-specific content agents.
   id: agentwebbench
   resource_kind: benchmark
   canonical_category: web-world
@@ -22152,6 +22895,8 @@
   notes: Web-agent prompt-injection defense framework that combines adversarial
     training and inference-time defense to improve task success while reducing
     attack success under malicious webpage instructions.
+  why_it_matters: Provides a defense-oriented benchmark path for reducing web
+    prompt-injection risk without abandoning task success.
   id: ward-webagent
   resource_kind: safety_control
   canonical_category: web-world
@@ -22230,6 +22975,8 @@
   notes: DUDE teaches web agents to resist deceptive interfaces and releases
     the Real UI Clickboxes benchmark with non-clickable or misleading UI areas
     for measuring whether agents should click or abstain.
+  why_it_matters: Makes abstention and deceptive-click resistance measurable
+    for VLM web agents facing misleading UI affordances.
   scenario_count: 1407
   id: dude-real-ui-clickboxes
   resource_kind: safety_control
@@ -22393,6 +23140,8 @@
   notes: Scalable evaluation framework for multi-turn tool-calling agents that
     infers structured proxy state from interaction traces and verifies goal
     completion plus hallucination constraints.
+  why_it_matters: Offers a scalable alternative to deterministic backends by checking
+    proxy final state from full tool-use traces.
   id: proxy-state-based-evaluation
   resource_kind: training_framework
   canonical_category: training-framework
@@ -22698,6 +23447,8 @@
     tasks across 6 core agentic capabilities and 32 scenarios, using user
     simulation plus a Docker sandbox for visual and functional rubric-based
     assessment.
+  why_it_matters: Stresses long-context agents with user simulation, visual
+    assessment, and functional rubrics rather than static QA.
   task_count: 138
   id: agencybench
   resource_kind: benchmark
@@ -22777,6 +23528,8 @@
   notes: Unified benchmark for general LLM agents across search, coding,
     reasoning, and tool-use domains, including sequential and parallel test-time
     scaling analysis.
+  why_it_matters: Measures general agents across search, coding, reasoning, and
+    tool use while testing whether extra inference-time scaling actually helps.
   id: general-agentbench
   resource_kind: benchmark
   canonical_category: research-world
@@ -22853,6 +23606,8 @@
   notes: Long-context agent benchmark built from simulated environment rollouts,
     exposing weaknesses in dynamic information synthesis under high-density
     tool responses.
+  why_it_matters: Turns long-context tool traces into environment rollouts that
+    reveal failures in dynamic information synthesis.
   id: agentlongbench
   resource_kind: benchmark
   canonical_category: research-world
@@ -23457,6 +24212,8 @@
   url: https://cora-agent.github.io/
   repo:
   notes: Mobile GUI safety framework and Phone-Harm benchmark with step-level harm labels, selective execution, and user-tunable risk control.
+  why_it_matters: Adds risk-controlled execute-or-abstain decisions for mobile GUI
+    agents before irreversible actions happen.
   id: cora-phone-harm
   resource_kind: benchmark
   canonical_category: mobile-world
@@ -23685,6 +24442,8 @@
   url: https://xjzzzzzzzz.github.io/mcpsafety.github.io/
   repo: https://github.com/xjzzzzzzzz/MCPSafety
   notes: Real-MCP-server benchmark for multi-turn safety evaluation across browser automation, financial analysis, location navigation, repository management, and web search.
+  why_it_matters: Grounds MCP safety evaluation in real servers and cross-server
+    workflows instead of isolated prompt attacks.
   id: mcp-safetybench
   resource_kind: benchmark
   canonical_category: api-world
@@ -23840,6 +24599,8 @@
   url: https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices
   repo:
   notes: Official MCP security guidance covering authorization, attack vectors, mitigation patterns, token handling, scope minimization, and session-risk controls.
+  why_it_matters: Anchors MCP tool exposure in official authorization, scoping,
+    token-handling, and session-risk guidance.
   id: mcp-security-best-practices
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -24066,6 +24827,8 @@
     argument level rather than whole-tool-call level, checking whether each
     authority-bearing argument satisfies a role-specific trust contract in
     mixed-trust workflows.
+  why_it_matters: Binds trust to individual tool-call arguments, closing gaps
+    where one call mixes safe and unsafe provenance.
   id: pact-argument-level-provenance
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -24138,6 +24901,8 @@
     sub-tasks, retrieving skills, and composing dependency-aware plans over
     real MCP server skills, with 300 compositional queries over 2,209 skills
     from 24 functional categories.
+  why_it_matters: Tests whether skill-based agents can decompose requests,
+    retrieve real MCP skills, and compose dependency-aware executable plans.
   scenario_count: 300
   api_count: 2209
   id: compskillbench-compositional-skill-routing
@@ -24212,6 +24977,8 @@
     bioinformatics software into MCP servers and plans over a typed graph of
     tools, operations, datatypes, and workflow stages for compact task-specific
     workflow execution.
+  why_it_matters: Shows how MCP can standardize heterogeneous biomedical tools
+    while graph planning keeps complex workflows tractable.
   id: biomanus-mcp-native-biomedical-agent
   resource_kind: agent_infrastructure
   canonical_category: api-world
@@ -24284,6 +25051,8 @@
     state-transition commitments rather than final answers only, with
     WMW-TraceBank, verifier contracts, typed error labels, human audit, and
     trace-level intervention results.
+  why_it_matters: Turns VLM physical reasoning into auditable state-transition
+    commitments, exposing invalid world models hidden behind correct answers.
   scenario_count: 200
   instance_count: 3200
   id: world-models-in-words
@@ -24421,6 +25190,8 @@
   repo: https://github.com/microsoft/agent-lightning
   notes: Decouples agent execution from RL training and decomposes arbitrary
     agent trajectories into transition-level training data.
+  why_it_matters: Makes heterogeneous agent traces trainable by separating
+    runtime execution from RL optimization.
   id: agent-lightning
   resource_kind: training_framework
   canonical_category: training-framework
@@ -24738,6 +25509,8 @@
   notes: Skill-first Python framework that treats a typed skill folder as the
     source of truth for streaming HTTP endpoints, OpenAPI documentation, and MCP
     tool registration.
+  why_it_matters: Shows a practical path from typed skills to HTTP, OpenAPI,
+    and MCP surfaces without duplicating tool contracts.
   id: harnessapi
   negative_side_effect_checks: unknown
   isolation_boundary: service_runtime
@@ -25001,6 +25774,8 @@
   notes: Semantic tool-interface paradigm for enterprise agents, replacing
     human-oriented CRUD assumptions with search, resolve, preview, execute,
     verify, and recover phases plus governance metadata.
+  why_it_matters: Reframes enterprise APIs around agent-safe intent resolution,
+    preview, verification, recovery, and governance metadata.
   id: agent-first-tool-api
   negative_side_effect_checks: partial
   isolation_boundary: api_contract_boundary
@@ -25132,6 +25907,8 @@
   notes: Task-oriented omni-modal tool-use benchmark with executable customer
     service and intelligent-creation workflows, MCP servers, tools, artifact
     inspection, and closed-loop verification.
+  why_it_matters: Extends MCP-style tool evaluation to omni-modal workflows
+    where generated artifacts and service outcomes can be inspected.
   task_count: 100
   api_count: 324
   server_count: 27
@@ -25164,6 +25941,8 @@
   url: https://cloud.google.com/blog/products/ai-machine-learning/agent2agent-protocol-is-getting-an-upgrade
   repo: https://github.com/a2aproject
   notes: Open protocol for interoperable agent collaboration.
+  why_it_matters: Provides a production-facing interoperability layer for agents
+    that need to delegate, coordinate, and exchange task state across systems.
   id: agent2agent-protocol
   resource_kind: protocol
   canonical_category: agent-infrastructure
@@ -25302,6 +26081,8 @@
   url: https://github.com/Tencent-Hunyuan/HY-World-2.0
   repo: https://github.com/Tencent-Hunyuan/HY-World-2.0
   notes: Persistent, editable, navigable 3D worlds from text, image, or video.
+  why_it_matters: Shifts generated worlds from disposable videos toward persistent
+    3D assets that can be inspected, edited, and imported into simulators.
   id: hy-world-2-0
   resource_kind: world
   canonical_category: generative-3d-world
@@ -25659,6 +26440,8 @@
   repo: https://github.com/MinorJerry/WebVoyager
   notes: Multimodal web navigation benchmark using real websites and screenshot-grounded
     browser actions.
+  why_it_matters: Provides a widely used live-web navigation setting for
+    screenshot-grounded agents acting on real sites.
   id: webvoyager
   resource_kind: world
   canonical_category: web-world
@@ -25726,6 +26509,8 @@
   repo: https://github.com/OSU-NLP-Group/Mind2Web
   notes: Large web-agent demonstration corpus with cross-domain website splits and
     structured actions.
+  why_it_matters: Supplies cross-domain web action demonstrations, making it a
+    foundation for training and evaluating generalist browser agents.
   id: mind2web
   resource_kind: dataset
   canonical_category: web-world
@@ -25930,6 +26715,8 @@
   repo: https://github.com/McGill-NLP/weblinx
   notes: Large corpus of web demonstrations for learning from human browser interaction
     traces.
+  why_it_matters: Adds conversational human web-interaction traces, bridging
+    browser control with assistant-style task context.
   id: weblinx
   resource_kind: dataset
   canonical_category: web-world
@@ -25996,6 +26783,8 @@
   url: https://github.com/ServiceNow/WorkArena
   repo: https://github.com/ServiceNow/WorkArena
   notes: Enterprise workflow benchmark built on ServiceNow-style browser tasks.
+  why_it_matters: Moves web agents into knowledge-work workflows with resettable
+    enterprise tasks and programmatic validation.
   id: workarena
   resource_kind: world
   canonical_category: web-world
@@ -26129,6 +26918,8 @@
   url: https://assistantbench.github.io/
   repo: https://github.com/assistantbench/assistantbench
   notes: Realistic assistant tasks requiring web navigation and information synthesis.
+  why_it_matters: Connects browser navigation to time-consuming assistant work,
+    where success depends on synthesis rather than a single UI action.
   id: assistantbench
   resource_kind: world
   canonical_category: web-world
@@ -27117,6 +27908,8 @@
   url: https://huggingface.co/datasets/SWE-bench/SWE-bench_Verified
   repo: https://github.com/SWE-bench/SWE-bench
   notes: Human-validated SWE-bench subset used heavily in frontier code-agent evaluation.
+  why_it_matters: Serves as a common frontier baseline for repository repair,
+    making code-agent progress comparable across labs.
   id: swe-bench-verified
   resource_kind: world
   canonical_category: code-world
@@ -27192,6 +27985,8 @@
   repo: https://github.com/SWE-bench/SWE-bench
   notes: SWE-bench extension for software issues that require visual context or UI
     artifacts.
+  why_it_matters: Adds visual software artifacts to repository repair, linking
+    coding agents with multimodal UI understanding.
   id: swe-bench-multimodal
   resource_kind: world
   canonical_category: code-world
@@ -27265,6 +28060,8 @@
   repo: https://github.com/SWE-bench/SWE-bench
   notes: Harder SWE-style evaluation referenced by OpenAI as Verified saturates for
     frontier systems.
+  why_it_matters: Marks the shift from saturated public repair sets toward
+    harder hidden-test code worlds for frontier evaluation.
   id: swe-bench-pro
   resource_kind: world
   canonical_category: code-world
@@ -27339,6 +28136,8 @@
   repo: https://github.com/SWE-Gym/SWE-Gym
   notes: Training-oriented environment for software-engineering agents built around
     SWE-style tasks.
+  why_it_matters: Turns SWE-style repository tasks into a training environment
+    with public trajectories and verifiable unit-test rewards.
   id: swe-gym
   resource_kind: world
   canonical_category: code-world
@@ -27405,6 +28204,8 @@
   repo: https://github.com/laude-institute/terminal-bench
   notes: Benchmark for agents that solve tasks through terminal commands in isolated
     environments.
+  why_it_matters: Provides a reusable terminal sandbox where command-line
+    agents are judged by executable task outcomes.
   id: terminal-bench
   resource_kind: world
   canonical_category: code-world
@@ -27473,6 +28274,8 @@
   repo: https://github.com/TheAgentCompany/TheAgentCompany
   notes: Simulated company environment for evaluating agents on realistic knowledge-work
     tasks.
+  why_it_matters: Broadens code-world evaluation into workplace workflows where
+    agents combine code, browsing, messaging, and tool use.
   id: theagentcompany
   resource_kind: world
   canonical_category: code-world
@@ -27970,6 +28773,8 @@
   repo: https://github.com/AlibabaResearch/DAMO-ConvAI
   notes: API planning benchmark for tool-augmented agents and multi-step function
     use.
+  why_it_matters: Remains a foundational API-world benchmark for evaluating
+    multi-step tool planning over simulated service state.
   id: api-bank
   resource_kind: world
   canonical_category: api-world
@@ -28119,6 +28924,8 @@
   repo: 
   notes: OpenAI software-engineering agent product that turns repository work into
     a production agent surface.
+  why_it_matters: Shows repository sandboxes, test logs, and asynchronous coding
+    tasks becoming a mainstream production agent workflow.
   id: openai-codex
   resource_kind: closed_product_signal
   canonical_category: code-world
@@ -28187,6 +28994,8 @@
   repo: 
   notes: OpenAI production guidance describing sandboxing, approvals, network policy,
     managed configuration, and agent-native telemetry for coding agents.
+  why_it_matters: Provides a production reference for sandboxing, approval
+    boundaries, network policy, managed configuration, and agent telemetry.
   id: openai-codex-safety-controls
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -28320,6 +29129,8 @@
   repo: 
   notes: Anthropic coding agent product showing repository and terminal workflows
     as a core agent surface.
+  why_it_matters: Signals that terminal and repository control are now product
+    surfaces for frontier model labs, not only research benchmarks.
   id: claude-code
   resource_kind: closed_product_signal
   canonical_category: code-world
@@ -28682,6 +29493,8 @@
   notes: NVIDIA omnimodal world-model release for Physical AI that unifies
     language, image, video, audio, and action modeling, including forward
     dynamics, inverse dynamics, robot-policy, and trajectory-reasoning examples.
+  why_it_matters: Connects perception, generation, action, and dynamics in one
+    open physical-AI world-model stack.
   id: cosmos-3
   resource_kind: model_release
   canonical_category: generative-3d-world
@@ -28770,6 +29583,8 @@
     cross-embodiment data, unified understanding/generation/prediction, hybrid
     linear temporal attention, released model weights, and low-latency rollout
     generation for observation-action-feedback loops.
+  why_it_matters: Frames world models as deployable physical-AI infrastructure
+    with persistent memory, low-latency rollouts, and edge-aware execution.
   id: kairos
   resource_kind: model_release
   canonical_category: generative-3d-world
@@ -28852,6 +29667,8 @@
     proprioceptive state estimation, automatic task evaluation through a world
     judge, and efficient rollout generation for scalable policy evaluation and
     world-model-centric policy learning.
+  why_it_matters: Adds rewards, proprioception, and efficient rollouts to make
+    robot world simulation usable for closed-loop policy learning.
   id: ge-sim-2
   resource_kind: model_release
   canonical_category: generative-3d-world
@@ -28940,6 +29757,8 @@
     actions into motion images and contact images, then uses generated
     rollouts to evaluate robot-policy checkpoints across long-horizon
     manipulation tasks.
+  why_it_matters: Makes robot actions visible to the world model through motion
+    and contact images, improving policy-evaluation rollouts.
   task_count: 8
   id: imac-embodied-world-model
   resource_kind: model_release
@@ -29030,6 +29849,8 @@
     dynamics with deformation consistency regularization, drift adaptation
     training, and SurgWorld-Bench metrics for instrument-motion accuracy and
     tissue-response fidelity.
+  why_it_matters: Brings world-model evaluation into surgical settings where
+    long-horizon drift and tissue-contact fidelity are safety-critical.
   id: surgvista
   resource_kind: model_release
   canonical_category: generative-3d-world
@@ -29102,6 +29923,8 @@
   notes: Label-free adversarial benchmark for interactive visual world models
     that perturbs a single context image and evaluates whether future rollouts
     break down across unseen camera paths or action sequences.
+  why_it_matters: Brings safety evaluation into generated 3D worlds where
+    fragile rollout dynamics can be attacked and measured.
   id: badworld
   resource_kind: safety_control
   canonical_category: generative-3d-world
@@ -29983,6 +30806,8 @@
   repo: https://github.com/ServiceNow/EnterpriseOps-Gym
   notes: Enterprise operations gym with containerized service workflows for stateful
     tool agents.
+  why_it_matters: Brings enterprise-style stateful planning and access-protocol
+    constraints into containerized agent evaluation.
   id: enterpriseops-gym
   resource_kind: world
   canonical_category: api-world
@@ -30130,6 +30955,8 @@
   repo: https://github.com/scaleapi/mcp-atlas
   notes: Large-scale MCP benchmark with real servers, realistic multi-step workflows,
     and a public benchmark subset.
+  why_it_matters: Measures tool-use competency on authentic MCP servers with
+    multi-step orchestration and claim-level scoring.
   id: mcp-atlas
   resource_kind: world
   canonical_category: api-world
@@ -30368,6 +31195,8 @@
   repo: https://github.com/alfworld/alfworld
   notes: Aligns text-game tasks with embodied household environments for interactive
     agent learning.
+  why_it_matters: Bridges abstract language policies and embodied household
+    control, making it a key foundation for text-to-action world alignment.
   id: alfworld
   resource_kind: world
   canonical_category: embodied-world
@@ -31764,6 +32593,8 @@
   repo: https://github.com/google-gemini/gemini-cli
   notes: Google open-source terminal agent that brings Gemini into coding, problem-solving,
     and task-management workflows.
+  why_it_matters: Adds an open-source terminal-agent product signal with local
+    code editing, inspection, and tool-use workflows.
   id: gemini-cli
   resource_kind: world
   canonical_category: code-world
@@ -31977,6 +32808,8 @@
   repo:
   notes: Self-evolving training arena that mines real-world MCP/tool ecosystems
     into verifiable environments and uses them for multi-environment RL.
+  why_it_matters: Directly targets the central Agent Worlds bottleneck by scaling
+    realistic, verifiable tool environments and feeding them back into training.
   scenario_count: 1978
   api_count: 19822
   id: agent-world
@@ -32056,6 +32889,8 @@
   notes: Programmatic synthesis framework that builds tool-interactive
     environments, generates rule-checked scenarios, and releases environment
     metadata, SFT/RL scenarios, trajectories, and models.
+  why_it_matters: Scales tool-interaction sandboxes programmatically, producing
+    rule-checked scenarios and trajectories for SFT and RL.
   scenario_count: 7000
   trajectory_count: 9000
   id: envscaler
@@ -32138,6 +32973,9 @@
   notes: Environment-synthesis framework that constructs fully interactive
     tool-use environments and verifiable tasks from scratch, using procedural
     testing, dependency-graph expansion, and executable action verification.
+  why_it_matters: Targets the scarcity of interactive tool-use worlds by
+    synthesizing environments and verifiers rather than only prompts or
+    trajectories.
   id: scaleenv
   resource_kind: training_framework
   canonical_category: training-framework
@@ -32283,6 +33121,8 @@
   notes: RACES composes 300 verifiable environments with sequential, parallel,
     sort, and select operators, using generated composite environments as RL
     training substrates for reasoning generalization.
+  why_it_matters: Treats verifiable environments as composable training blocks,
+    enabling recursive environment scaling for agent RL.
   environment_count: 300
   id: races-verifiable-environment-composition
   resource_kind: training_framework
@@ -32355,6 +33195,8 @@
   notes: Scalable CUA RLVR pipeline that co-generates task instructions,
     initial and golden environment states, and reward functions; the paper
     reports 32,112 verified training tuples grounded in 110 environments.
+  why_it_matters: Frames CUA training as joint design of tasks, states,
+    environments, and rewards for synthetic but verifiable computer-use worlds.
   task_count: 32112
   app_count: 110
   id: cua-gym
@@ -32649,6 +33491,9 @@
   notes: Real-world cloud-console web-agent training framework with distilled
     trajectories, GRPO training, Terraform-backed rollout stabilization, and
     audit-log-grounded reward checks for documentation verification tasks.
+  why_it_matters: Shows how Agent Worlds can move from toy websites to
+    production cloud consoles by combining sandbox provisioning, audit logs, and
+    RL.
   task_count: 278
   id: aliyun-console-agent
   resource_kind: training_framework
@@ -32730,6 +33575,8 @@
   notes: Verifier-grounded software-world framework covering 33 desktop
     applications and 1,000 finalized tasks with app-specific state verifiers,
     task synthesis, trajectories, and auditable partial-credit rewards.
+  why_it_matters: Makes desktop-world growth verifier-grounded, extensible, and
+    auditable through app-specific state checks.
   task_count: 1000
   app_count: 33
   id: opencomputer
@@ -32818,6 +33665,8 @@
   notes: Forkable personal workspace system for computer-use agents that
     snapshots live GUI workspaces, creates isolated branches, supports rollback,
     and selectively commits or merges branches for safer speculative execution.
+  why_it_matters: Gives computer-use agents a fork-and-rollback primitive for
+    speculative GUI actions in live workspaces.
   id: tclone
   resource_kind: agent_infrastructure
   canonical_category: computer-world
@@ -32888,6 +33737,8 @@
   notes: Synthesizes controllable web GUI environments from finite-state
     machines, enabling programmatic transition checks and verified trajectory
     generation for web-agent training.
+  why_it_matters: Synthesizes verifiable web worlds with finite-state transitions,
+    addressing the scarcity of checked web-agent trajectories.
   scenario_count: 29
   trajectory_count: 11663
   id: autowebworld
@@ -32968,6 +33819,8 @@
   notes: Locally deployable SaaS workflow benchmark with 23 self-hosted SaaS
     systems, 106 professional tasks, and per-task verifiers over application
     state for strict and partial progress scoring.
+  why_it_matters: Moves browser-agent evaluation toward self-hosted professional
+    SaaS workflows with application-state verifiers.
   task_count: 106
   app_count: 23
   id: saas-bench
@@ -33045,6 +33898,8 @@
   notes: Spatio-temporal tool-use benchmark with 227 interactive tasks,
     executable environments, injected dynamic triggers, and failure-trajectory
     analysis for adaptive replanning.
+  why_it_matters: Forces tool agents to replan under changing spatio-temporal
+    state instead of solving static API calls.
   task_count: 227
   id: stt-arena
   resource_kind: benchmark
@@ -33185,6 +34040,9 @@
   notes: Fully automated framework for exploring and verifying stateful
     executable tool environments and synthesizing natural multi-turn
     trajectories for robust agentic RL.
+  why_it_matters: Provides an environment-first route to tool-agent RL, where
+    executable state and multi-turn traces are generated and checked before
+    training.
   scenario_count: 85
   trajectory_count: 2575
   id: envfactory
@@ -33334,6 +34192,8 @@
   notes: Generalization-aware GPU kernel optimization benchmark for coding
     agents, with 196 tasks across HIP, Triton, and PyTorch-to-HIP translation,
     gated correctness/performance checks, and unseen-configuration evaluation.
+  why_it_matters: Checks whether coding-agent kernel optimizations generalize
+    beyond observed shapes instead of hardcoding fast paths.
   task_count: 196
   id: agentkernelarena
   resource_kind: benchmark
@@ -34120,6 +34980,8 @@
   notes: Diagnostic embodied-agent benchmark over five photorealistic
     multi-room apartments and 300 human-verified tasks, with an executable
     action API and optional probes for perception, memory, and planning.
+  why_it_matters: Links embodied task failure to perception, memory, and planning
+    probes instead of reporting only aggregate success.
   task_count: 300
   scenario_count: 5
   id: prism-embodied-intent
@@ -34201,6 +35063,8 @@
   notes: Week-long egocentric video memory benchmark with 500 human-verified
     questions across entity, event, and behavior memory, requiring multi-evidence
     aggregation over long temporal spans.
+  why_it_matters: Pushes embodied memory evaluation to week-long egocentric
+    evidence rather than short clips or single-event recall.
   task_count: 500
   id: egomemreason
   resource_kind: benchmark
@@ -34296,6 +35160,8 @@
   notes: Radiology-agent benchmark where agents operate an OHIF viewer and
     Orthanc DICOM server through 21 function-calling tools, with 655 tasks
     scored along planning, execution, and outcome.
+  why_it_matters: Puts medical agents inside a live DICOM viewer stack, separating
+    tool orchestration from imaging perception bottlenecks.
   task_count: 655
   id: abra-radiology-agent
   resource_kind: benchmark
@@ -34381,6 +35247,8 @@
   repo: https://github.com/Snowflake-Labs/agent-world-model
   notes: Open-source synthetic environment generator with 1,000 executable,
     SQL-backed MCP tool-use environments for agentic RL.
+  why_it_matters: Shows how generated MCP-style environments can become
+    executable, stateful training worlds instead of static tool-use datasets.
   scenario_count: 1000
   id: agent-world-model
   resource_kind: world
@@ -34617,6 +35485,8 @@
   repo: https://github.com/Hybrid-Gym/Hybrid-Gym
   notes: Coding-agent training environment with synthetic tasks for transferable
     skills such as function localization, dependency search, and issue localization.
+  why_it_matters: Turns transferable coding-agent skills into trainable synthetic
+    environments that improve out-of-distribution software tasks.
   id: hybrid-gym
   resource_kind: training_framework
   canonical_category: code-world
@@ -34693,6 +35563,8 @@
   repo: https://github.com/R2E-Gym/R2E-Gym
   notes: Procedurally curated executable SWE training environments with synthetic
     issue generation and hybrid test-time verification for open-weight coding agents.
+  why_it_matters: Provides executable training worlds and hybrid verifiers for
+    scaling open-weight software-engineering agents.
   id: r2e-gym
   resource_kind: training_framework
   canonical_category: code-world
@@ -34913,6 +35785,8 @@
   url: https://arxiv.org/abs/2604.27776
   repo: https://github.com/HITsz-TMG/WindowsWorld
   notes: Process-centric Windows benchmark for professional cross-application GUI workflows.
+  why_it_matters: Stresses professional Windows workflows where progress across
+    multiple applications matters as much as final state.
   task_count: 181
   app_count: 17
   id: windowsworld
@@ -35074,6 +35948,8 @@
   notes: Online macOS benchmark with 421 manually verified tasks across 50
     applications, running on Apple's native Virtualization framework for Apple
     Silicon and stressing cross-platform GUI competence.
+  why_it_matters: Tests whether CUA competence transfers to native macOS instead
+    of only Linux-style benchmark surfaces.
   task_count: 421
   app_count: 50
   id: macarena
@@ -35210,6 +36086,8 @@
   url: https://gameworld-project.github.io/
   repo: https://github.com/gameworld-project/gameworld
   notes: Browser-game benchmark with 34 games, 170 tasks, and state-verifiable progress metrics.
+  why_it_matters: Provides a state-verifiable game world for timing, navigation,
+    reactive control, and long-horizon multimodal agent behavior.
   task_count: 170
   app_count: 34
   id: gameworld
@@ -35577,6 +36455,8 @@
   url: https://arxiv.org/abs/2604.24964
   repo:
   notes: Long-horizon live-web benchmark with 200 realistic tasks, rubric checkpoints, and trajectory-efficiency metrics.
+  why_it_matters: Stresses cross-site, hours-scale browsing where rubric
+    progress is more informative than binary task success.
   task_count: 200
   id: odysseys
   resource_kind: world
@@ -35803,6 +36683,8 @@
   url: https://arxiv.org/abs/2601.22130
   repo:
   notes: ServiceNow-based workflow environment with business rules and constrained enterprise task completion.
+  why_it_matters: Brings hidden workflow state, business rules, and cascading
+    side effects into enterprise agent evaluation.
   id: world-of-workflows
   resource_kind: world
   canonical_category: api-world
@@ -36002,6 +36884,8 @@
   repo:
   notes: World-model-augmented MCP agent framework that simulates state
     transitions before execution and evaluates improvements on MCP-Bench tasks.
+  why_it_matters: Connects MCP tool execution with world-model lookahead so
+    agents can plan over predicted state transitions.
   id: mcp-cosmos
   resource_kind: training_framework
   canonical_category: api-world
@@ -36309,6 +37193,8 @@
   repo:
   notes: MCP-native benchmark for dynamic, interdependent commercial-software
     automation with 300+ tested tools across 7 stateful sandboxes.
+  why_it_matters: Stress-tests MCP agents in stateful interdependent tool sandboxes
+    where retrieval, verification, and recovery failures appear together.
   api_count: 300
   environment_count: 7
   id: complexmcp
@@ -36383,6 +37269,8 @@
     tool composition, using function schemas and runtime execution to score
     format validity, schema adherence, execution success, and answer correctness
     without relying on a single reference trajectory.
+  why_it_matters: Converts runtime execution and schemas into dense rewards for
+    multi-step tool composition without a single reference trajectory.
   task_count: 1710
   api_count: 163
   id: tier-trajectory-invariant-execution-rewards
@@ -36741,6 +37629,8 @@
   notes: Full-stack enterprise agent platform with MCP-exposed applications,
     automated trajectory synthesis, integrated training, and EnterpriseArena
     covering 15 applications and 140+ tools.
+  why_it_matters: Connects enterprise MCP applications, trajectory synthesis,
+    training, and evaluation into one full-stack agent platform.
   api_count: 140
   environment_count: 15
   id: enterpriselab
@@ -36970,6 +37860,8 @@
   notes: Browser-based short-video GUI benchmark where agents act on an
     autonomously evolving screen and decide how much visual evidence to watch,
     with environment-graded actions and information-efficiency metrics.
+  why_it_matters: Tests GUI agents on living-screen interfaces that keep
+    changing while the agent is deciding what to observe and do.
   task_count: 499
   video_count: 1528
   id: livingscreen
@@ -37053,6 +37945,8 @@
   notes: Online GUI benchmark for high-dynamic environments where important
     interface state can change between actions, paired with DynamicUI, which
     uses screen-recording context selection and reflection.
+  why_it_matters: Tests agents in dynamic interfaces where single screenshots
+    miss state changes between actions.
   app_count: 10
   id: dynamicguibench-dynamicui
   resource_kind: world
@@ -37191,6 +38085,8 @@
   repo: 
   notes: Framework for converting reliable intermediate symbolic or algorithmic
     oracles into dense turn-level rewards for long-horizon agentic reasoning.
+  why_it_matters: Densifies RLVR for long-horizon agents by rewarding objectively
+    checkable intermediate decisions.
   id: verifiable-process-rewards
   resource_kind: training_framework
   canonical_category: training-framework
@@ -37260,6 +38156,8 @@
   repo:
   notes: Synthesizes lightweight GUI training environments from real applications
     and equips them with code-native verifiable rewards for GUI-agent post-training.
+  why_it_matters: Turns GUI post-training environments into generated tasks with
+    code-native verifiable rewards.
   id: gui-genesis
   resource_kind: training_framework
   canonical_category: gui-world
@@ -37408,6 +38306,8 @@
   notes: Dynamic benchmark for third-party agent skills with 141 tasks across
     malicious and benign workflows, judging complete trajectories for runtime
     trust failures and unsafe side effects.
+  why_it_matters: Turns third-party skill trust into a trajectory-level
+    benchmark over benign workflows, malicious skills, and side effects.
   task_count: 141
   instance_count: 141
   id: agenttrap
@@ -37570,6 +38470,8 @@
   repo:
   notes: Generator-backed benchmark framework for executable command-line
     workflows under pre-existing, stale, partial, or conflicting state.
+  why_it_matters: Tests CLI agents against persistent state conflict where
+    inspecting the environment before acting is essential.
   id: clawforge
   resource_kind: benchmark
   canonical_category: code-world
@@ -37776,6 +38678,8 @@
   notes: Personalized MCP benchmark with stateful simulated tools for social,
     collaboration, email, and content-management scenarios, covering 173 human-verified
     tasks and 24 MCP servers.
+  why_it_matters: Evaluates personalized MCP agents across stateful personal
+    applications instead of isolated generic tool calls.
   task_count: 173
   api_count: 24
   id: mcp-persona
@@ -37858,6 +38762,8 @@
   notes: Clinical tool-agent benchmark with 107 clinician-validated multimodal
     tasks, five executable tools, public evaluation code, and trajectory-aware
     diagnostics for tool routing, argument validity, evidence use, and final outcome.
+  why_it_matters: Evaluates clinical tool use as a process, exposing routing,
+    argument, evidence, and trajectory failures before final answers.
   task_count: 107
   instance_count: 1926
   id: medcta
@@ -38035,6 +38941,8 @@
   notes: Long-horizon computer-use benchmark for professional GUI workflows across
     specialized software environments, highlighting stage omission, error propagation,
     objective drift, and limited domain understanding in current agents.
+  why_it_matters: Exposes long-horizon professional workflow failures such as
+    stage omission, error propagation, and objective drift.
   id: workflow-gym
   resource_kind: benchmark
   canonical_category: computer-world
@@ -38112,6 +39020,8 @@
   notes: Long-horizon hybrid-interface CUA benchmark with 114 tasks across 8
     real-world work domains, requiring GUI, CLI, code, browser, and tool
     operations in a single trajectory with artifact-aware judging.
+  why_it_matters: Connects GUI, CLI, code, browser, and tool actions in one
+    evaluation path for hybrid computer-use agents.
   task_count: 114
   domain_count: 8
   id: weavebench
@@ -38184,6 +39094,9 @@
   notes: Process-reward optimization framework for computer-use agents that trains
     from the agent's own live rollout states using dense step-level PRM feedback
     and group-relative advantages.
+  why_it_matters: Moves CUA optimization beyond filtered demos by using dense
+    process feedback from live rollout states for long-horizon GUI credit
+    assignment.
   id: pro-cua
   resource_kind: training_framework
   canonical_category: training-framework
@@ -38254,6 +39167,8 @@
   notes: Adaptive defense framework for safer computer-use agents that mines emerging
     open-world threats, instantiates executable tasks, collects rollouts, and trains
     guard models with trajectory-level supervision.
+  why_it_matters: Moves CUA safety from static prompts to trajectory-level guards
+    trained on mined open-world threat tasks.
   id: braveguard
   resource_kind: safety_control
   canonical_category: agent-infrastructure
@@ -38328,6 +39243,8 @@
     into DAGs, dispatches parallel CUA subagents, replans during execution, and
     evaluates on existing OSWorld, Online-Mind2Web, WebTailBench, and Odysseys
     worlds.
+  why_it_matters: Adds orchestration as a scaling axis for computer-use worlds,
+    where manager agents preserve state and coordinate parallel CUA workers.
   id: multi-agent-computer-use
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -38413,6 +39330,9 @@
   notes: MCP-style tool interface that lets tool-augmented agents invoke a code
     block over existing tool schemas, synthesize HyperTool-format trajectories,
     and verify multi-step tool use in real MCP environments.
+  why_it_matters: Compresses deterministic multi-tool workflows into a
+    verifiable execution unit, reducing trace-level burden on the language
+    model.
   id: hypertool
   resource_kind: agent_infrastructure
   canonical_category: agent-infrastructure
@@ -38557,6 +39477,8 @@
     clinical scenarios across 10 medical domains, including paired intent and
     step-level goals plus deterministic checking over task completion and
     clinical safety dimensions.
+  why_it_matters: Brings GUI-agent evaluation into clinical software, where
+    domain knowledge and safety checks matter beyond task completion.
   scenario_count: 18
   id: medcua-bench
   resource_kind: benchmark
@@ -38629,6 +39551,8 @@
   notes: Verifiable benchmark for conversational recommender agents with
     reveal-tagged user constraints, catalog tools, policy checks, and
     programmatic scoring against public task and catalog data.
+  why_it_matters: Gives recommender agents programmatic scoring over catalog
+    predicates, user constraints, and policy compliance.
   task_count: 60
   id: tau-rec
   resource_kind: benchmark
@@ -39540,6 +40464,9 @@
     on real websites, covering live-browser infrastructure, multimodal context
     management, trajectory-level success judging, and efficient policy
     optimization.
+  why_it_matters: Makes online RL for visual web agents legible as an
+    infrastructure problem across browser runtime, context management, judging,
+    and policy update loops.
   id: openwebrl
   resource_kind: training_framework
   canonical_category: training-framework
@@ -40089,6 +41016,8 @@
     models over textual states for LLM agents, covering webpage, terminal, API,
     and dialogue dynamics for planning, efficient learning, and principled
     evaluation.
+  why_it_matters: Frames textual state-transition models as a common planning
+    layer across web, terminal, API, and dialogue agents.
   id: text-world-models-for-llm-agents
   resource_kind: agent_infrastructure
   canonical_category: research-world
@@ -40168,6 +41097,8 @@
     spanning 24 multi-step web tasks, 56 attack templates, eight attack families,
     and four system-prompt configurations, paired with a coding-domain cross-reference
     and reproducibility audit.
+  why_it_matters: Evaluates computer-use safety under domain-conditioned tasks
+    instead of relying on generic prompt-injection headlines.
   instance_count: 793
   task_count: 24
   attack_template_count: 56

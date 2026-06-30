@@ -3,12 +3,14 @@
 ## 2026-06-30
 
 - Added OSWorld 2.0, TUA-Bench, WorldEvolver, PrincipalBench / Multi-Party Principal Loyalty, MCPPrivacyDetector, and TACO from first-party arXiv, project-page, or repository sources.
-- Refreshed the weekly Hot Papers public view, Resource Index, Flagship Matrix, Static Explorer data, README reader routes, Reading Order, and Selection Guide for the expanded 535-resource catalog.
-- Updated `CITATION.cff` to version 0.3.23 with the June 30 release date.
+- Added SWE-INTERACT, Phone-use Agent Misuse Study, SkillHarness, AutoSpec, and MCP Server Architecture Patterns from first-party arXiv or repository sources.
+- Refreshed the weekly Hot Papers public view, Resource Index, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 540-resource catalog.
+- Updated the Static Explorer metrics band and README Catalog Snapshot to expose 291 inclusion-rationale entries in the 540-resource catalog.
+- Updated `CITATION.cff` to version 0.3.24 with the June 30 release date.
 
 ## 2026-06-29
 
-- Refreshed the weekly Hot Papers public view for the June 29 weekly cycle while keeping the curated catalog at 529 resources.
+- Refreshed the weekly Hot Papers public view for the June 29 weekly cycle.
 - Added a compact README view-selection guide so professional readers can move directly to the Resource Index, Selection Guide, Hot Papers view, or Static Explorer.
 - Updated `CITATION.cff` to version 0.3.22 with the June 29 release date.
 

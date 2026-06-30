@@ -1,10 +1,10 @@
 # Static Explorer
 
-Static Explorer is the bilingual web view for Awesome Agent Worlds. It turns the curated index into a lightweight interface for browsing agent-world resources, filtering by surface, comparing evidence fields, and following indexed papers from the weekly Hot Papers view through a compact homepage strip.
+Static Explorer is the bilingual web view for Awesome Agent Worlds. It turns the curated index into a lightweight interface for browsing agent-world resources, filtering by surface, comparing evidence fields and inclusion rationale, and following indexed papers from the weekly Hot Papers view through a compact homepage strip.
 
 ## 中文说明
 
-Static Explorer 是 Awesome Agent Worlds 的双语可视化首页。它把资源索引转换成一个可按表面筛选、可搜索、可切换中英文的轻量网页，用于快速查看 Agent Worlds 资源、证据字段、成熟度标签和每周热点论文精简视图。
+Static Explorer 是 Awesome Agent Worlds 的双语可视化首页。它把资源索引转换成一个可按表面筛选、可搜索、可切换中英文的轻量网页，用于快速查看 Agent Worlds 资源、证据字段、纳入理由、成熟度标签和每周热点论文精简视图。
 
 主要界面包括：首页概览、核心指标栏、交互表面地图、每周热点论文精简视图、资源浏览器和语言切换。读者可以从任务场景进入，也可以按类别、成熟度、轨迹可用性、reset 支持、源码可用性和来源可信度过滤资源。
 
@@ -30,10 +30,10 @@ The public catalog is mirrored in `others/data/resources.yaml`; the Hot Papers s
 ## Interface
 
 - **Home** summarizes repository scope through curated resources, public-runnable coverage, Hot Papers, and category count.
-- **Metrics band** shows total resources, public-runnable entries, trajectory assets, average readiness, and Hot Papers count.
+- **Metrics band** shows total resources, public-runnable entries, trajectory assets, inclusion-rationale coverage, and Hot Papers count.
 - **World surface map** filters resources by infrastructure/protocols and where agents act: web, GUI, mobile, code, API, research, embodied worlds, and training loops.
 - **Weekly hot papers** highlights a compact subset of recent papers already indexed in the catalog.
-- **Resource explorer** provides search, category filters, readiness labels, trajectory/reset fields, source confidence, sorting, and a public-repository toggle.
+- **Resource explorer** provides search, category filters, readiness labels, trajectory/reset fields, source confidence, searchable `Why` / `纳入理由` lines, sorting, and a public-repository toggle.
 - **Language switch** changes the interface between Chinese and English.
 
 The interface groups 11 canonical resource categories into broader reader-facing surfaces. Canonical category placement is maintained in the Resource Index.
@@ -53,4 +53,5 @@ The interface groups 11 canonical resource categories into broader reader-facing
 1. Start from the infrastructure layer or world surface that matches your agent task.
 2. Use the surface cards or filters to narrow by resource kind, readiness, trajectory availability, reset support, and source confidence.
 3. Sort by recommendation, maturity score, recency, name, or curated priority.
-4. Open each resource from the table to inspect the first-party project page, paper, or repository.
+4. Read the `Why` / `纳入理由` line to understand why a resource belongs in this catalog.
+5. Open each resource from the table to inspect the first-party project page, paper, or repository.
