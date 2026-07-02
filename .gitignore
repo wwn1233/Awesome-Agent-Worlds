@@ -2,7 +2,33 @@
 __pycache__/
 *.pyc
 
-# Keep the public repository focused on reader-facing files.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/CITATION.cff
+!/CHANGELOG.md
+!/.github/
+!/site/
+!/utils/
+!/others/
+
+site/*
+!site/README.md
+!site/app.js
+!site/data.js
+!site/home.css
+!site/i18n.js
+!site/index.html
+!site/styles.css
+!site/surfaces.js
+
+utils/*
+!utils/agent-world-loop.svg
+!utils/awesome_agent_worlds_poster.png
+!utils/awesome_agent_worlds_poster_cn.png
+!utils/world-stack.svg
+
 .github/*
 !.github/ISSUE_TEMPLATE/
 !.github/ISSUE_TEMPLATE/add-resource.md

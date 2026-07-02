@@ -24,14 +24,17 @@
 - Agent World surfaces: `infra`, `web`, `gui`, `mobile`, `code`, `api`, `research`, `embodied`, `training`
 - Source support tags: `overview`, `status`, `reproducibility`, `code`, `benchmark_design`, `dataset`, `trajectories`
 - Reader paths: `build-evals`, `train-rollouts`, `foundations`, `production-direction`, `release-gates`, `safety-audit`
-- Source confidence: `official`, `high`
+- Source confidence values inside `sources`: `official`, `high`
 
 ## Checklist
 
 - [ ] New or changed resources are edited in `others/data/resources.yaml`.
+- [ ] New resources satisfy the [Selection Guide inclusion criteria](https://github.com/wwn1233/Awesome-Agent-Worlds/blob/main/others/docs/selection-guide.md#inclusion-criteria).
 - [ ] Source support tags use the vocabulary already present in existing entries.
 - [ ] Reader paths and source confidence values use the public template vocabulary.
+- [ ] Each source URL has a `confidence` value inside the `sources` list.
 - [ ] Canonical category, resource kind, and Agent World surface use the public template vocabulary.
 - [ ] Evidence dates are current for newly added or materially updated resources.
 - [ ] Public copy is reader-facing and source-backed.
 - [ ] README, Resource Index, Hot Papers, public docs, and Static Explorer catalog stay consistent when source data changes.
+- [ ] `others/data/resources.yaml` remains the canonical resource source; `site/data.js` is only the Static Explorer browser bundle.

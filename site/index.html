@@ -14,8 +14,15 @@
         <a class="brand" href="#home">Awesome Agent Worlds</a>
         <nav class="navLinks" aria-label="Primary navigation">
           <a href="#home" data-i18n="navHome">首页</a>
-          <a href="#explorer" data-i18n="navExplorer">资源索引</a>
-          <a href="#hot-papers" data-i18n="navHotPapers">热点论文</a>
+          <a href="#explorer" data-i18n="navExplorer">资源浏览器</a>
+          <a href="../others/docs/resource-index.md" data-i18n="navResourceIndex">资源索引文档</a>
+          <a href="../others/docs/selection-guide.md#reader-starter-packs" data-i18n="navSelectionGuide">选型指南</a>
+          <a href="../others/docs/reading-order.md" data-i18n="navReadingOrder">阅读顺序</a>
+          <a href="../others/data/resources.yaml" data-i18n="navData">结构化数据</a>
+          <a href="#hot-papers" data-i18n="navFeaturedHotPapers">精选热点论文</a>
+          <a href="../others/docs/hot-papers.md" data-i18n="navHotPapers">Hot Papers</a>
+          <a href="../README.md#citation" data-i18n="navCitation">引用</a>
+          <a href="README.md#related-docs" data-i18n="navMoreDocs">更多文档</a>
         </nav>
         <div class="languageSwitch" role="group" aria-label="Language">
           <button type="button" data-lang="zh" aria-pressed="true">中文</button>
@@ -32,12 +39,13 @@
           <p class="heroLead" data-i18n="heroLead">面向专业读者的 LLM/VLM 智能体环境、验证器、轨迹、安全评测与生产信号汇总库。</p>
           <div class="homeActions">
             <a href="#explorer" data-i18n="primaryAction">浏览索引</a>
-            <a href="#hot-papers" data-i18n="secondaryAction">热点论文</a>
+            <a href="../others/docs/selection-guide.md#reader-starter-packs" data-i18n="starterAction">新读者入口</a>
+            <a href="#hot-papers" data-i18n="secondaryAction">精选 12</a>
           </div>
           <div class="homeFacts" aria-label="Homepage metrics">
             <div><b id="homeWorlds">0</b><span data-i18n="homeWorlds">内容资源</span></div>
             <div><b id="homeBenchmarks">0</b><span data-i18n="homeBenchmarks">公开可运行</span></div>
-            <div><b id="homeProduction">0</b><span data-i18n="homeProduction">热点论文</span></div>
+            <div><b id="homeProduction">0</b><span data-i18n="homeProduction">精选论文</span></div>
             <div><b id="homeCategories">0</b><span data-i18n="homeCategories">分类方向</span></div>
           </div>
         </div>
@@ -67,15 +75,16 @@
         <div><b id="metricRunnable">0</b><span data-i18n="metricRunnable">公开可运行</span></div>
         <div><b id="metricTrajectories">0</b><span data-i18n="metricTrajectories">轨迹资产</span></div>
         <div><b id="metricRationales">0</b><span data-i18n="metricRationales">纳入理由</span></div>
-        <div><b id="metricHot">0</b><span data-i18n="metricHot">热点论文</span></div>
+        <div><b id="metricHot">0</b><span data-i18n="metricHot">精选 12</span></div>
       </section>
 
-      <section id="hot-papers" class="hotline" aria-label="Hot papers">
+      <section id="hot-papers" class="hotline" aria-label="Featured hot papers">
         <div class="hotHead">
           <div>
-            <p class="eyebrow" data-i18n="hotEyebrow">每周 arXiv 视图</p>
-            <h2 data-i18n="hotTitle">每周热点论文视图</h2>
-            <p class="hotNote" data-i18n="hotNote">首页展示已入库热点论文，完整每周表格见 Hot Papers 文档。</p>
+            <p class="eyebrow" data-i18n="hotEyebrow">每周精选视图</p>
+            <h2 data-i18n="hotTitle">精选 12 篇热点论文</h2>
+            <p class="hotNote" data-i18n="hotNote">首页展示 Featured 12 精选条带，完整每周表格见 Hot Papers 文档。</p>
+            <p id="hotMeta" class="hotMeta">更新：2026-07-01 · 每周</p>
           </div>
         </div>
         <div id="hotPapers" class="hotGrid"></div>
@@ -154,12 +163,25 @@
               <tbody id="resourceRows"></tbody>
             </table>
           </div>
+          <button id="moreRows" type="button" data-i18n="showMore">显示更多</button>
         </section>
       </section>
     </main>
-    <script src="data.js?v=20260630-03"></script>
-    <script src="i18n.js?v=20260630-03"></script>
-    <script src="app.js?v=20260630-03"></script>
-    <script src="surfaces.js?v=20260630-03"></script>
+    <script src="data.js?v=20260701"></script>
+    <script src="i18n.js?v=20260701"></script>
+    <script>
+      if (["127.0.0.1", "localhost"].includes(location.hostname)) {
+        const repoRoot = "https://github.com/wwn1233/Awesome-Agent-Worlds/blob/main/";
+        document.querySelectorAll('a[href$=".md"], a[href*=".md#"], a[href$=".yaml"]').forEach((link) => {
+          const target = new URL(link.getAttribute("href"), location.href);
+          link.href = `${repoRoot}${target.pathname.replace(/^\//, "")}${target.hash}`;
+          link.target = "_blank";
+          link.rel = "noopener";
+          link.title = "Open this document on GitHub";
+        });
+      }
+    </script>
+    <script src="app.js?v=20260701"></script>
+    <script src="surfaces.js?v=20260701"></script>
   </body>
 </html>

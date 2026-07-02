@@ -19,28 +19,41 @@ html[lang="zh-CN"] h2 {
 
 .brand {
   color: var(--ink);
+  flex: 0 0 auto;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 18px;
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .navLinks {
   display: flex;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 12px;
+  justify-content: flex-end;
   margin-left: auto;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+
+.navLinks::-webkit-scrollbar { display: none; }
 
 .navLinks a {
   color: var(--muted);
   font-size: 13px;
   font-weight: 800;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .navLinks a:hover { color: var(--ink); }
 
 .languageSwitch {
   display: grid;
+  flex: 0 0 auto;
   grid-template-columns: repeat(2, 52px);
   gap: 4px;
   padding: 4px;
@@ -83,8 +96,10 @@ html[lang="zh-CN"] h2 {
 
 .homeCopy h1 {
   max-width: 900px;
-  font-size: clamp(42px, 6vw, 76px);
+  font-size: 76px;
   line-height: 0.94;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 .heroLead {
@@ -214,6 +229,8 @@ html[lang="zh-CN"] h2 {
 .surface.embodied { border-left-color: #9b3f73; }
 .surface.training { border-left-color: #59631c; }
 
+#moreRows { margin-top: 12px; }
+
 @media (max-width: 980px) {
   .topbar,
   .navLinks {
@@ -229,5 +246,20 @@ html[lang="zh-CN"] h2 {
 
   .languageSwitch {
     margin-left: 0;
+  }
+
+  .homeCopy h1 {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 560px) {
+  .homeCopy {
+    padding: 20px;
+  }
+
+  .homeCopy h1 {
+    font-size: 38px;
+    line-height: 1;
   }
 }

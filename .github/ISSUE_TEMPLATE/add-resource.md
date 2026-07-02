@@ -1,6 +1,6 @@
 ---
 name: Add a resource
-about: Suggest a new Agent World, benchmark, dataset, product signal, or training framework
+about: Suggest a new Agent World resource, benchmark, protocol, safety control, product signal, model release, or training framework
 title: "[Resource] "
 labels: resource
 assignees: ""
@@ -8,7 +8,9 @@ assignees: ""
 
 Check the README scope before submitting a resource. A good entry should expose
 an environment, benchmark, verifier, trajectory, sandbox, protocol, safety
-control, or training-loop contribution.
+control, or training-loop contribution. Use the [Selection Guide inclusion
+criteria](https://github.com/wwn1233/Awesome-Agent-Worlds/blob/main/others/docs/selection-guide.md#inclusion-criteria)
+when deciding whether the resource is catalog-ready.
 
 ## Resource
 
@@ -64,8 +66,9 @@ Choose one:
 
 ## Why it belongs
 
-Explain what world, verifier, reward, trajectory, sandbox, or training loop this
-resource contributes.
+Explain what world, verifier, reward, trajectory, sandbox, protocol, safety
+control, product signal, model release, or training loop this resource
+contributes.
 
 ## Evidence
 
@@ -90,7 +93,9 @@ Allowed support tags: `overview`, `status`, `reproducibility`, `code`,
 Allowed reader paths: `build-evals`, `train-rollouts`, `foundations`,
 `production-direction`, `release-gates`, `safety-audit`.
 
-Allowed source confidence values: `official`, `high`.
+Allowed source confidence values: `official`, `high`. Add confidence inside
+each `sources` entry in `others/data/resources.yaml`; the web view derives its
+resource-level source confidence from those source records.
 
 Canonical categories should match the Resource Index vocabulary. Agent World
 surfaces should match the README and Static Explorer vocabulary.

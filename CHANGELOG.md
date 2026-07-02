@@ -1,11 +1,44 @@
 # Changelog
 
+## 2026-07-03
+
+- Released the expanded 656-resource catalog with inclusion rationales for every entry.
+- Added first-party coverage for WebArena-Infinity, GUI-360, CUA-Suite / VideoCUA, WebChain, WebSP-Eval, WebTestBench, CocoaBench, and HippoCamp from project-page, repository, dataset, or arXiv sources.
+- Added first-party coverage for SGDR / State-Grounded Dynamic Retrieval, OPID / On-Policy Skill Distillation, CRAFT / Counterfactual Credit Assignment, and Tool-RL-Box / Tool-Use RL Collapse from arXiv and repository sources.
+- Added first-party coverage for MCP Apps Extension, Agent Client Protocol, AG-UI, ContextForge MCP Gateway, Snyk Agent Scan, and Amazon Bedrock AgentCore from official documentation, project-page, repository, or product sources.
+- Refreshed README routes, Resource Index, Flagship Matrix, Static Explorer data, and public metadata for the 656-resource snapshot.
+- Updated `CITATION.cff` to version 0.3.45 with the July 3 release date.
+
+## 2026-07-01
+
+- Released the expanded 638-resource catalog with inclusion rationales for every entry.
+- Added first-party coverage for Gym-Anything / CUA-World, ScienceBoard, SCUBA, HealthAdminBench, RedTeamCUA / RTC-Bench, OSExpert / OSExpert-Eval, Cua / Cua Bench, Playwright MCP, UI-CUBE, InfiniteWeb, WebStep, and ProSoftArena from project-page, repository, dataset, official documentation, or arXiv sources.
+- Added first-party coverage for BrowserBC, QVal, TRIAGE, ECHO, ScratchWorld, and WorldRoamBench from arXiv, project-page, or repository sources.
+- Added first-party coverage for AI-Infra-Guard, Agent Protocol Governance Gaps, PEEU / GUI Experience Exploration, and Failure-Driven CUA Self-Improvement from arXiv sources.
+- Added first-party coverage for OpenMobile, ATBench-Claw / ATBench-Codex, and TRACE / Capability-Targeted Agentic Training from project-page, repository, or arXiv sources.
+- Added first-party coverage for Plan-RewardBench, Agent-as-Annotators, PlanGuard, Proteus Skill Red Team, Cloud-Native Embodied Simulation Infrastructure, and Agentic-Ideation from project-page, repository, dataset, or arXiv sources.
+- Added first-party coverage for GraphGPO, TAO-RL, WLA-0 / World-Language-Action Model, and A2World from arXiv sources.
+- Added first-party coverage for EmbodiedClaw, VERITAS, ToolPrivacyBench, and TwinRouterBench from arXiv sources.
+- Added first-party coverage for PreAct, Automating SKILL.md Generation for Computer-Using Agents, ToolPro, SIMMER, and ViPSim from arXiv sources.
+- Added first-party coverage for Official MCP Registry, MCP Inspector, OpenAI Apps SDK, Inspect AI, Cloudflare Agents SDK, and Magentic-UI from official documentation or repository sources.
+- Added first-party coverage for KnowU-Bench, MobileBench-OL, AndroidLab, and A3 / Android Agent Arena from project-page, repository, or arXiv sources.
+- Added first-party coverage for WebWorld and WebForge from arXiv, repository, or dataset sources.
+- Added first-party coverage for MMBench-GUI, OS-Genesis, UI-NEXUS, and AndroidLens from project-page, repository, dataset, or arXiv sources.
+- Added first-party coverage for Windows Agent Arena, PC Agent-E, AgentCPM-GUI / CAGUI, LearnAct / LearnGUI, MAS-Bench, FedMABench, MobileWorldBench, WebRL, and Go-Browse from project-page, repository, dataset, or arXiv sources.
+- Added first-party coverage for UI-S1, VenusBench-Mobile, AgentTrek, DynaWeb, PSPA-Bench, and MobiBench from project-page, repository, dataset, or arXiv sources.
+- Added first-party coverage for long-horizon desktop workloads, office GUI tasks, semantic OS layers, verified GUI search, terminal/SWE environment synthesis, MCP execution-control invariants, web-agent privacy diagnostics, and world-model calibration.
+- Added first-party coverage for D3-Gym, SWE-Universe, VeriEnv, COMAP, Agent-Authored World Modeling, Internalizing the Future, Xiaomi-GUI-0, ATMem / STR-GRPO, SWE-TRACE, OpenAgenet / OAN Yellow Paper, and agent-skill credential safety.
+- Promoted Structured Data, Selection Guide, Reading Order, Hot Papers, Citation, and Static Explorer routes as first-class reader entry points.
+- Clarified public-runnable, public-repository, trajectory-asset, weekly Hot Papers, and readiness-label definitions.
+- Clarified Static Explorer local viewing with Ruby and Python commands, and surfaced the Hot Papers update date and weekly cadence in the homepage.
+- Updated `CITATION.cff` to version 0.3.44 with the July 1 release date.
+
 ## 2026-06-30
 
 - Added OSWorld 2.0, TUA-Bench, WorldEvolver, PrincipalBench / Multi-Party Principal Loyalty, MCPPrivacyDetector, and TACO from first-party arXiv, project-page, or repository sources.
 - Added SWE-INTERACT, Phone-use Agent Misuse Study, SkillHarness, AutoSpec, and MCP Server Architecture Patterns from first-party arXiv or repository sources.
 - Refreshed the weekly Hot Papers public view, Resource Index, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 540-resource catalog.
-- Updated the Static Explorer metrics band and README Catalog Snapshot to expose 291 inclusion-rationale entries in the 540-resource catalog.
+- Updated the Static Explorer metrics band and README Catalog Snapshot to expose inclusion-rationale coverage in the 540-resource catalog.
 - Updated `CITATION.cff` to version 0.3.24 with the June 30 release date.
 
 ## 2026-06-29
@@ -17,14 +50,14 @@
 ## 2026-06-27
 
 - Added Qwen-AgentWorld, Fara-1.5, MacAgentBench, GUI vs. CLI Execution Benchmark, VisCritic, Autonomous Evaluation for CUA RL, Argus / CUA Uncertainty Quantification, ToolBench-X, AgentCIBench / Contextual Integrity, ShareLock, Agent Policy-as-Code Autoformalization, and VIGIL from first-party arXiv sources.
-- Refreshed the weekly Hot Papers public view, Resource Index, Awesome list, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 529-resource catalog.
+- Refreshed the weekly Hot Papers public view, Resource Index, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 529-resource catalog.
 - Updated `CITATION.cff` to version 0.3.21 with the June 27 release date.
 
 ## 2026-06-21
 
 - Added MolmoWeb, UI-Copilot, MCP Pitfall Lab, Task2MCP / T2MRec, and CoEvoSkills from first-party arXiv sources to strengthen open visual web-agent data, mobile GUI tool-invocation training, trace-grounded MCP hardening, MCP server recommendation, and self-evolving agent-skill coverage.
 - Added MCP Tool-Poisoning Client Study and Connor / Malicious MCP Servers to strengthen client-side tool-poisoning analysis and component-level malicious MCP server detection coverage.
-- Refreshed the weekly Hot Papers public view, Resource Index, Awesome list, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 517-resource catalog.
+- Refreshed the weekly Hot Papers public view, Resource Index, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 517-resource catalog.
 - Updated `CITATION.cff` to version 0.3.20 with the June 21 release date.
 
 ## 2026-06-20
@@ -43,7 +76,7 @@
 - Added Beyond GUI Paradigm / CLI-Advantage, EnvRL, and MCP Runtime Fault Taxonomy to cover CLI-capable mobile-agent evaluation, environment-dynamics agentic RL, and MCP server runtime reliability evidence.
 - Added EgoBench, SMH-Bench, AsyncWebRL, GAIS, SkillHarm, and DeltaMCP to strengthen egocentric tool-agent evaluation, smart-home validation, visual web-agent RL, grounded tool-interaction synthesis, skill-attack safety, and MCP server regeneration coverage.
 - Added ProCUA-SFT, PANDO, and Evoflux to cover synthetic desktop CUA SFT trajectories, online web-agent skill distillation, and executable MCP workflow repair.
-- Added OpenSearch-VL to cover open multimodal search-agent SFT/RL data, visual/search tool environments, and fatal-aware agentic reinforcement learning.
+- Added OpenSearch-VL to cover open multimodal search-agent SFT/RL data, visual/search tool environments, and failure-aware agentic reinforcement learning.
 - Added Gamma-World to cover public-code generative multi-agent world modeling for independently controllable shared-world rollouts.
 - Added Kairos to cover open Physical-AI world-model stacks with model releases, embodied benchmarks, and low-latency rollout generation.
 - Added SCR-Bench / Skill Composition Risk and Attested Tool-Server Admission to strengthen agent-skill composition risk and MCP tool-server admission-control coverage.
@@ -54,19 +87,10 @@
 - Added From Trainee to Trainer / LLM-as-Environment-Engineer, AgentJet, AI Sandboxes, Harness Engineering for Physical AI, VASO, Embodied-BenchClaw, FATE-VLA, and HyperSim to strengthen self-designing training environments, distributed agentic RL, sandbox assurance, physical-AI harnessing, verifiable robot skills, embodied benchmark construction, failure-seeking VLA tests, and sim-to-real environment synthesis.
 - Added LLM-as-Code Agentic Programming for Agent Harness, Agent JIT Compilation, Claw-R1, TEE-Backed Isolation for Self-Hosted Computer-Use Agents, Memory-Induced Tool-Drift / MEMDRIFT, and PhAIL / Physical AI Leaderboard to strengthen executable agent harnesses, latency-aware web-agent execution, step-level agentic RL middleware, CUA isolation, memory/tool safety, and real-robot VLA evaluation coverage.
 - Expanded weekly Hot Papers coverage for ScaleWoB, Speculative Rollback Correction, and How Mobile World Model Guides GUI Agents.
-- Refreshed the weekly Hot Papers public view and Static Explorer catalog for the June 19 weekly pass.
-- Refreshed README routes, Reading Order, Selection Guide, Resource Index, Flagship Matrix, Hot Papers, and Static Explorer data for the expanded 509-resource catalog.
-- Added a README Catalog Snapshot aligned with the Static Explorer and Resource Index coverage metrics.
-- Added the weekly Hot Papers strip count to the README Catalog Snapshot to match the Static Explorer homepage.
-- Added the README Catalog Snapshot date so public coverage metrics have a clear reference point.
-- Clarified that readiness scores describe world-readiness evidence rather than paper impact or model quality.
-- Clarified the Static Explorer guide so homepage and metrics-band descriptions match the current interface.
-- Added a concise Chinese local-viewing note to the Static Explorer guide.
-- Tightened the issue and pull request templates plus README contribution guidance for categories, Agent World surfaces, resource kinds, source evidence, reader paths, and evidence dates.
-- Clarified the issue-template distinction between canonical categories and reader-facing surfaces.
-- Clarified Resource Index runtime labels for NRT-Bench and Agent-World.
-- Normalized the NRT-Bench Hot Papers display title and refreshed Static Explorer asset versioning for the June 19 509-resource catalog.
-- Localized the Static Explorer world-surface map labels for Chinese and English readers.
+- Released the 509-resource catalog with refreshed README, Reading Order, Selection Guide, Resource Index, Flagship Matrix, Hot Papers, and Static Explorer views.
+- Added catalog snapshot metrics and clarified that readiness scores describe world-readiness evidence rather than paper impact or model quality.
+- Tightened public contribution guidance for categories, Agent World surfaces, resource kinds, source evidence, reader paths, and evidence dates.
+- Improved the bilingual Static Explorer surface map and local viewing guide.
 - Updated `CITATION.cff` to version 0.3.18 with the June 19 release date.
 
 ## 2026-06-15
@@ -94,7 +118,7 @@
 - Clarified the Static Explorer interface summary in the README.
 - Clarified the public Hot Papers view so reader-facing tables and the Static Explorer expose indexed entries only.
 - Refreshed README reader routes, Selection Guide, Reading Order, Resource Index, Hot Papers, and Static Explorer catalog for the expanded 445-resource catalog.
-- Improved Resource Index and Static Explorer display labels so public tables use reader-facing terms instead of raw schema values.
+- Improved Resource Index and Static Explorer display labels so public tables use reader-facing terms instead of structured-field values.
 
 ## 2026-06-14
 

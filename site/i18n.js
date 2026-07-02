@@ -4,28 +4,35 @@
       documentTitle: "Awesome Agent Worlds",
       navHome: "Home",
       navExplorer: "Explorer",
+      navResourceIndex: "Index",
+      navSelectionGuide: "Selection",
+      navReadingOrder: "Reading",
+      navData: "Data",
+      navFeaturedHotPapers: "Featured 12",
       navHotPapers: "Hot Papers",
+      navCitation: "Cite", navMoreDocs: "Docs",
       heroEyebrow: "Awesome Agent Worlds",
       heroTitle: "Verifiable Agent World Index",
       heroLead: "A professional map of runnable environments, verifiers, trajectories, safety benchmarks, and production signals for LLM/VLM agents.",
       primaryAction: "Explore index",
-      secondaryAction: "Hot papers",
+      starterAction: "Start here",
+      secondaryAction: "Featured 12",
       mapEyebrow: "World surface map",
       mapTitle: "Enter agent worlds by interaction surface",
       mapText: "Start with the system layer or interaction surface, then filter by verifier, trajectory, sandbox, and training value.",
       homeWorlds: "curated resources",
       homeBenchmarks: "public runnable",
-      homeProduction: "hot papers",
+      homeProduction: "featured papers",
       homeCategories: "categories",
       metricResources: "resources",
       metricRunnable: "public runnable",
       metricTrajectories: "trajectory assets",
       trajectoryCount: "trajectories",
       metricRationales: "rationale notes",
-      metricHot: "hot papers",
-      hotEyebrow: "Weekly arXiv view",
-      hotTitle: "Weekly Hot Papers view",
-      hotNote: "The homepage shows indexed hot papers; the full weekly table is in the Hot Papers document.",
+      metricHot: "Featured 12",
+      hotEyebrow: "Featured weekly view",
+      hotTitle: "Featured 12 Hot Papers",
+      hotNote: "The homepage shows a Featured 12 strip; the full weekly table is in the Hot Papers document.",
       explorerLabel: "Resource explorer",
       filterSearch: "Search",
       filterPath: "Reader path",
@@ -51,8 +58,8 @@
       thReward: "Reward / Verifier",
       thFlags: "Flags",
       whyItMatters: "Why",
-      emptyHot: "No Hot Papers entries in the current view.",
-      emptyRows: "No resources match the current filters.",
+      emptyHot: "No Featured Hot Papers entries in the current view.",
+      emptyRows: "No resources match the current filters.", showMore: "Show more",
       allPaths: "All paths",
       allKinds: "All kinds",
       allCategories: "All categories",
@@ -61,35 +68,41 @@
       allTrajectories: "All trajectories",
       allResetModes: "All reset modes",
       sortBy: "Sort by",
-      score: "score",
-      catalogStatus: { indexed: "indexed" }
+      score: "score", catalogStatus: { indexed: "indexed" }
     },
     zh: {
       documentTitle: "Awesome Agent Worlds｜智能体世界索引",
       navHome: "首页",
-      navExplorer: "资源索引",
+      navExplorer: "资源浏览",
+      navResourceIndex: "索引",
+      navSelectionGuide: "选型",
+      navReadingOrder: "阅读",
+      navData: "数据",
+      navFeaturedHotPapers: "精选 12",
       navHotPapers: "热点论文",
+      navCitation: "引用", navMoreDocs: "文档",
       heroEyebrow: "Awesome Agent Worlds",
       heroTitle: "可验证智能体世界索引",
       heroLead: "面向专业读者的 LLM/VLM 智能体环境、验证器、轨迹、安全评测与生产信号汇总库。",
       primaryAction: "浏览索引",
-      secondaryAction: "热点论文",
+      starterAction: "新读者入口",
+      secondaryAction: "精选 12",
       mapEyebrow: "世界表面地图",
       mapTitle: "从交互表面进入智能体世界",
       mapText: "先按系统层或交互表面定位，再用验证器、轨迹、沙箱和训练价值做筛选。",
       homeWorlds: "内容资源",
       homeBenchmarks: "公开可运行",
-      homeProduction: "热点论文",
+      homeProduction: "精选论文",
       homeCategories: "分类方向",
       metricResources: "内容资源",
       metricRunnable: "公开可运行",
       metricTrajectories: "轨迹资产",
       trajectoryCount: "条轨迹",
       metricRationales: "纳入理由",
-      metricHot: "热点论文",
-      hotEyebrow: "每周 arXiv 视图",
-      hotTitle: "每周热点论文视图",
-      hotNote: "首页展示已入库热点论文，完整每周表格见 Hot Papers 文档。",
+      metricHot: "精选 12",
+      hotEyebrow: "每周精选视图",
+      hotTitle: "精选 12 篇热点论文",
+      hotNote: "首页展示 Featured 12 精选条带，完整每周表格见 Hot Papers 文档。",
       explorerLabel: "资源浏览器",
       filterSearch: "搜索",
       filterPath: "阅读路径",
@@ -115,8 +128,8 @@
       thReward: "奖励 / 验证器",
       thFlags: "标签",
       whyItMatters: "纳入理由",
-      emptyHot: "当前视图中没有热点论文条目。",
-      emptyRows: "没有资源匹配当前筛选条件。",
+      emptyHot: "当前视图中没有精选热点论文条目。",
+      emptyRows: "没有资源匹配当前筛选条件。", showMore: "显示更多",
       allPaths: "全部路径",
       allKinds: "全部类型",
       allCategories: "全部分类",
@@ -125,8 +138,7 @@
       allTrajectories: "全部轨迹",
       allResetModes: "全部重置方式",
       sortBy: "排序方式",
-      score: "评分",
-      catalogStatus: { indexed: "已入库" }
+      score: "评分", catalogStatus: { indexed: "已入库" }
     }
   };
 
@@ -261,11 +273,7 @@
 
   function initialLanguage() {
     let saved = null;
-    try {
-      saved = localStorage.getItem("agent-worlds-language");
-    } catch (_error) {
-      saved = null;
-    }
+    try { saved = localStorage.getItem("agent-worlds-language"); } catch (_error) { saved = null; }
     if (saved === "zh" || saved === "en") return saved;
     return navigator.language.toLowerCase().startsWith("zh") ? "zh" : "en";
   }
@@ -273,11 +281,11 @@
   window.AGENT_WORLDS_I18N = {
     initialLanguage,
     saveLanguage(lang) {
-      try {
-        localStorage.setItem("agent-worlds-language", lang);
-      } catch (_error) {
-        // Language still switches for the current page even when storage is blocked.
-      }
+      try { localStorage.setItem("agent-worlds-language", lang); } catch (_error) {}
+    },
+    hotMeta(lang, updated, cadence) {
+      const cadenceText = cadence === "weekly" ? (lang === "zh" ? "每周" : "weekly") : titleCase(cadence);
+      return `${lang === "zh" ? "更新：" : "Updated: "}${updated || "unknown"} · ${cadenceText}`;
     },
     t(lang, key) {
       return (copy[lang] && copy[lang][key]) || copy.en[key] || key;

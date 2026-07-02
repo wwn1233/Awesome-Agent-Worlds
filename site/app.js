@@ -1,18 +1,9 @@
 const i18n = window.AGENT_WORLDS_I18N;
 
 const state = {
-  lang: i18n.initialLanguage(),
-  search: "",
-  path: "all",
-  kind: "all",
-  category: "all",
-  label: "all",
-  source: "all",
-  trajectory: "all",
-  reset: "all",
-  surface: "all",
-  sort: "recommended",
-  repoOnly: false
+  lang: i18n.initialLanguage(), search: "", path: "all", kind: "all", category: "all",
+  label: "all", source: "all", trajectory: "all", reset: "all", surface: "all",
+  sort: "recommended", repoOnly: false, visible: 100
 };
 
 const data = window.AGENT_WORLDS_DATA;
@@ -38,24 +29,19 @@ const refs = {
   sort: document.querySelector("#sortSelect"),
   repoOnly: document.querySelector("#repoOnly"),
   resetButton: document.querySelector("#resetButton"),
+  hotMeta: document.querySelector("#hotMeta"),
   hotPapers: document.querySelector("#hotPapers"),
   resultCount: document.querySelector("#resultCount"),
   bars: document.querySelector("#categoryBars"),
-  rows: document.querySelector("#resourceRows")
+  rows: document.querySelector("#resourceRows"),
+  moreRows: document.querySelector("#moreRows")
 };
 
 const contentResources = data.resources;
-function text(value) {
-  if (value === true) return "yes";
-  if (value === false || value === null || value === undefined) return "no";
-  return String(value);
-}
-function ui(key) {
-  return i18n.t(state.lang, key);
-}
-function label(group, value) {
-  return i18n.format(state.lang, group, value);
-}
+const PAGE_SIZE = 100;
+function text(value) { return value === true ? "yes" : (value === false || value === null || value === undefined ? "no" : String(value)); }
+function ui(key) { return i18n.t(state.lang, key); }
+function label(group, value) { return i18n.format(state.lang, group, value); }
 
 function escapeHtml(value) {
   return text(value)
@@ -65,9 +51,7 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
-function unique(values) {
-  return [...new Set(values.filter(Boolean))].sort();
-}
+function unique(values) { return [...new Set(values.filter(Boolean))].sort(); }
 
 function optionList(values, label, formatter = (value) => i18n.format("en", "", value)) {
   return [`<option value="all">${label}</option>`]
@@ -115,8 +99,14 @@ function applyLanguage() {
     button.setAttribute("aria-pressed", String(active));
   });
   populateFilters();
+  renderHotMeta();
   renderHotPapers();
   render();
+}
+
+function renderHotMeta() {
+  if (!refs.hotMeta) return;
+  refs.hotMeta.textContent = i18n.hotMeta(state.lang, data.hot_papers.updated, data.hot_papers.cadence);
 }
 
 function init() {
@@ -144,11 +134,13 @@ function init() {
   ].forEach(([type, element, handler]) => {
     element.addEventListener(type, (event) => {
       handler(event);
+      state.visible = PAGE_SIZE;
       render();
     });
   });
 
   refs.resetButton.addEventListener("click", resetFilters);
+  refs.moreRows.addEventListener("click", () => { state.visible += PAGE_SIZE; render(); });
   refs.langButtons.forEach((button) => {
     button.addEventListener("click", () => {
       state.lang = button.dataset.lang;
@@ -189,7 +181,8 @@ function resetFilters() {
     reset: "all",
     surface: "all",
     sort: "recommended",
-    repoOnly: false
+    repoOnly: false,
+    visible: PAGE_SIZE
   });
   syncControls();
   render();
@@ -265,6 +258,7 @@ function renderBars(items) {
     button.addEventListener("click", () => {
       state.surface = "all";
       state.category = button.dataset.category;
+      state.visible = PAGE_SIZE;
       refs.category.value = state.category;
       render(); window.AGENT_WORLDS_UPDATE_SURFACE?.();
     });
@@ -274,10 +268,14 @@ function renderBars(items) {
 function renderRows(items) {
   if (!items.length) {
     refs.rows.innerHTML = `<tr><td class="empty" colspan="6">${escapeHtml(ui("emptyRows"))}</td></tr>`;
+    refs.moreRows.hidden = true;
     return;
   }
 
-  refs.rows.innerHTML = items.map((item) => {
+  const visibleItems = items.slice(0, state.visible);
+  refs.moreRows.hidden = visibleItems.length >= items.length;
+  refs.moreRows.textContent = `${ui("showMore")} (${visibleItems.length}/${items.length})`;
+  refs.rows.innerHTML = visibleItems.map((item) => {
     const labels = item.strictness_labels.slice(0, 5)
       .map((flag) => `<span class="flag">${escapeHtml(label("flag", flag))}</span>`)
       .join("");

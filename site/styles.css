@@ -97,16 +97,10 @@ h2 { font-size: 30px; }
   box-shadow: var(--shadow);
 }
 
-.hotHead {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: start;
-  margin-bottom: 12px;
-}
+.hotHead { display: flex; justify-content: space-between; gap: 16px; align-items: start; margin-bottom: 12px; }
 
-.hotNote { max-width: 680px; margin: 6px 0 0; }
-.hotNote { color: var(--muted); font-size: 13px; line-height: 1.45; }
+.hotNote { max-width: 680px; margin: 6px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+.hotMeta { margin: 6px 0 0; color: var(--muted); font-size: 12px; font-weight: 700; }
 
 .hotGrid {
   display: grid;
