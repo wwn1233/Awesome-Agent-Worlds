@@ -53,14 +53,14 @@ The reusable asset is the verified trajectory, not just the final score.
 | Scope | Current coverage |
 |---|---:|
 | Snapshot date | 2026-07-03 |
-| Curated resources | 656 |
+| Curated resources | 660 |
 | Canonical categories | 11 |
-| Public runnable resources | 92 |
+| Public runnable resources | 93 |
 | Weekly Hot Papers strip | 12 |
-| Resources with trajectory assets | 398 |
-| Resources with public repositories | 300 |
-| Resources with inclusion rationale | 656 |
-| Average readiness score | 9.0 / 14 |
+| Resources with trajectory assets | 401 |
+| Resources with public repositories | 304 |
+| Resources with inclusion rationale | 660 |
+| Average readiness score | 8.9 / 14 |
 
 Readiness scores summarize world-readiness evidence; they are not claims about
 scientific impact or model quality.
@@ -94,8 +94,8 @@ from the [Selection Guide starter packs](./others/docs/selection-guide.md#reader
 
 | Reader goal | Start with | Then use |
 |---|---|---|
-| Build agent evaluations | OSWorld-Verified; OSWorld 2.0; BrowserGym; WebArena-Verified; AndroidWorld; KnowU-Bench; MobileBench-OL; SWE-bench Verified; ScienceBoard; SCUBA; HealthAdminBench; UI-CUBE; WebStep; ChainWorld; PPT-Eval; CocoaBench; HippoCamp; WebTestBench; ScratchWorld; WorldRoamBench; SIMMER; Inspect AI; Plan-RewardBench | [Selection Guide](./others/docs/selection-guide.md) and [Resource Index](./others/docs/resource-index.md). |
-| Audit agent safety | RedTeamCUA / RTC-Bench; PhoneSafety / Safe, or Simply Incapable?; SafeMCP; MCP Security Invariants Benchmark; AI-Infra-Guard; ToolPrivacyBench; ATBench-Claw / ATBench-Codex; PlanGuard; Proteus Skill Red Team; Web PII Leakage Benchmark; WebSP-Eval; Snyk Agent Scan | [Selection Guide](./others/docs/selection-guide.md) safety routes and [Hot Papers](./others/docs/hot-papers.md). |
+| Build agent evaluations | OSWorld-Verified; OSWorld 2.0; OSWorld-Human; BrowserGym; WebArena-Verified; AndroidWorld; KnowU-Bench; MobileBench-OL; SWE-bench Verified; GameCraft-Bench; ScienceBoard; SCUBA; HealthAdminBench; UI-CUBE; WebStep; ChainWorld; PPT-Eval; CocoaBench; HippoCamp; WebTestBench; ScratchWorld; WorldRoamBench; SIMMER; Inspect AI; Plan-RewardBench | [Selection Guide](./others/docs/selection-guide.md) and [Resource Index](./others/docs/resource-index.md). |
+| Audit agent safety | RedTeamCUA / RTC-Bench; PhoneSafety / Safe, or Simply Incapable?; SafeMCP; MCP Security Invariants Benchmark; AI-Infra-Guard; ToolPrivacyBench; GUIGuard-Bench; WebPII; ATBench-Claw / ATBench-Codex; PlanGuard; Proteus Skill Red Team; Web PII Leakage Benchmark; WebSP-Eval; Snyk Agent Scan | [Selection Guide](./others/docs/selection-guide.md) safety routes and [Hot Papers](./others/docs/hot-papers.md). |
 | Debug agent failures | AgentHijack; RoTS / GUI-RobustEval; Failure-Driven CUA Self-Improvement; WebStep; Terminal Wrench; FATE; BenchJack; Evidence-Supported Bounds for Interactive-Agent Evaluation | Search the [Static Explorer](./site/README.md) by verifier, trajectory, and failure mode. |
 | Train from rollouts | AgentGym; Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence; Gym-Anything / CUA-World; OSExpert / OSExpert-Eval; PC Agent-E; Qwen-AgentWorld; WebRL; WebWorld; WebArena-Infinity; InfiniteWeb; AutoWebWorld; DynaWeb; WebForge; AgentTrek; Go-Browse; GUI-360; CUA-Suite / VideoCUA; WebChain; LearnAct / LearnGUI; UI-S1; Agent-as-Annotators; OpenMobile; SGDR / State-Grounded Dynamic Retrieval; OPID / On-Policy Skill Distillation; CRAFT / Counterfactual Credit Assignment; Tool-RL-Box / Tool-Use RL Collapse; BrowserBC; TRIAGE; GraphGPO; TAO-RL; PreAct; Automating SKILL.md Generation; A2World; VERITAS; ViPSim; EmbodiedClaw; QVal; ECHO; Agentic-Ideation | [Reading Order](./others/docs/reading-order.md) Level 4 and the training-framework section below. |
 | Track production direction | OpenAI Computer-Using Agent; OpenAI Agents SDK Sandbox; OpenAI Apps SDK; MCP Apps Extension; Gemini 2.5 Computer Use; Claude Managed Agents; Amazon Bedrock AgentCore; Cua / Cua Bench; Playwright MCP; Cloudflare Agents SDK; Agent Client Protocol; AG-UI; ContextForge MCP Gateway; OSWorld 2.0; LUMOS; ToolPro; PreAct; Agent JIT Compilation; MCP Inspector; MCP Security Invariants Benchmark; Agent Protocol Governance Gaps | [Hot Papers](./others/docs/hot-papers.md) and [Flagship Matrix](./others/docs/flagship-matrix.md). |
@@ -382,6 +382,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [Executable Agentic Memory](https://arxiv.org/abs/2605.12294) — Infrastructure · GUI memory reuse
 - [GUI-GENESIS](https://arxiv.org/abs/2602.14093) — Training Infrastructure · Verifiable synthetic GUI worlds
 - [GUI Agent Autonomy Levels](https://arxiv.org/abs/2602.11514) — Infrastructure · GUI autonomy taxonomy
+- 🌟 [GUIGuard-Bench](https://futuresis.github.io/GUIGuard-page/) [[Code](https://github.com/shaluoyan523/GUIGuard-Bench)] — Safety Control · Privacy-preserving GUI-agent benchmark
 - 🌟 [Gym-Anything / CUA-World](https://cmu-l3.github.io/gym-anything/) [[Code](https://github.com/cmu-l3/gym-anything)] — Training Infrastructure · Software-scale CUA environments
 - [GUI vs. CLI Execution Benchmark](https://arxiv.org/abs/2606.24551) — Training Candidate · Matched GUI/CLI execution layers
 - [GUIDE](https://arxiv.org/abs/2604.04399) — Eval Candidate · Hierarchical trajectory diagnosis
@@ -430,6 +431,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [OSWorld-MCP](https://arxiv.org/abs/2510.24563) [[Code](https://github.com/X-PLUG/OSWorld-MCP)] — Training Candidate · GUI + MCP tools
 - 🌟 [OSWorld-Verified](https://os-world.github.io/) [[Code](https://github.com/xlang-ai/OSWorld)] — Production-grade · Public trajectories
 - 🌟 [OSWorld 2.0](https://osworld-v2.xlang.ai/) [[Code](https://github.com/xlang-ai/OSWorld-V2)] — Training Candidate · Long-horizon computer-use workflows
+- 🌟 [OSWorld-Human](https://arxiv.org/abs/2506.16042) [[Code](https://github.com/WukLab/osworld-human)] — Training Candidate · Human reference efficiency benchmark
 - 🌟 [PC Agent-E](https://gair-nlp.github.io/PC-Agent-E) [[Code](https://github.com/GAIR-NLP/PC-Agent-E)] — Training Infrastructure · Data-efficient desktop-agent trajectories
 - [OpenAI Computer-Using Agent](https://openai.com/index/computer-using-agent/) — Product Signal · Closed product
 - 🌟 [GUI-Robust](https://arxiv.org/abs/2506.14477) [[Code](https://github.com/chessbean1/GUI-Robust)] — Training Candidate · Public trajectories
@@ -491,6 +493,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - 🌟 [WebArena-Infinity](https://web-arena-x.github.io/webarena-infinity/) [[Code](https://github.com/web-arena-x/webarena-infinity)] — Training Infrastructure · Generated verifiable web environments
 - [WebChain](https://arxiv.org/abs/2603.05295) — Production-grade · Human web interaction traces
 - [Web PII Leakage Benchmark](https://arxiv.org/abs/2606.00497) — Safety Control · Social-engineering PII leakage
+- 🌟 [WebPII](https://webpii.github.io/) [[Code](https://github.com/WebPII/webpii.github.io)] — Safety Control · Visual PII detection and redaction for web agents
 - 🌟 [WebSP-Eval](https://wiscprivacy.com/webspeval/) [[Code](https://github.com/wi-pi/webspeval_code)] — Safety Control · Website security and privacy tasks
 - 🌟 [WebTestBench](https://arxiv.org/abs/2603.25226) [[Code](https://github.com/friedrichor/WebTestBench)] — Eval Candidate · End-to-end web testing benchmark
 - [WebDecept](https://arxiv.org/abs/2606.13686) — Safety Control · E-commerce deceptive-interface benchmark
@@ -599,6 +602,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [AgentStepper](https://arxiv.org/abs/2602.06593) — Infrastructure · Software-agent execution debugger
 - [ClawForge](https://arxiv.org/abs/2605.14133) — Eval Candidate · Generated CLI workflows
 - [daVinci-Env](https://arxiv.org/abs/2603.13023) — Training Infrastructure · Open SWE environment synthesis
+- 🌟 [GameCraft-Bench](https://tongxuluo.github.io/gamecraft-bench-website/) [[Code](https://github.com/tongxuluo/gamecraft-bench)] — Training Candidate · Playable game-development agent benchmark
 - 🌟 [Hybrid-Gym](https://arxiv.org/abs/2602.16819) [[Code](https://github.com/Hybrid-Gym/Hybrid-Gym)] — Training Infrastructure · Partial trajectories
 - [HWE-Bench](https://arxiv.org/abs/2604.14709) — Eval Candidate · Hardware bug repair
 - 🌟 [ISO-Bench](https://ayushnangia.github.io/iso-bench-website/) [[Code](https://github.com/Lossfunk/ISO-Bench)] — Training Candidate · Runnable
@@ -1005,6 +1009,8 @@ If you find this repository useful, please cite:
   author       = {{Awesome Agent Worlds Project}},
   year         = {2026},
   version      = {0.3.45},
+  date         = {2026-07-03},
+  note         = {Living catalog snapshot 2026-07-03},
   url          = {https://github.com/wwn1233/Awesome-Agent-Worlds}
 }
 ```

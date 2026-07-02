@@ -2,18 +2,15 @@
 Use this guide when choosing an Agent World for evaluation, post-training, or
 product gating.
 ## Reader Starter Packs
-
 | Reader | Start with | Caution |
 |---|---|---|
 | Researcher | WebArena, OSWorld, SWE-bench, AppWorld, PaperBench, D3-Gym, Qwen-AgentWorld, Text World Models for LLM Agents, COMAP, Internalizing the Future | Do not compare scores without checking verifier reliability and contamination risk. |
-| Evaluation builder | OSWorld-Verified, Windows Agent Arena, WebArena-Verified, BrowserGym, AndroidWorld, DynamicGUIBench / DynamicUI, MCPWorld, MobileWorld, tau-bench, ChainWorld, PPT-Eval | Prefer resettable or replayable worlds; live websites and apps drift. |
+| Evaluation builder | OSWorld-Verified, OSWorld-Human, Windows Agent Arena, WebArena-Verified, BrowserGym, AndroidWorld, DynamicGUIBench / DynamicUI, MCPWorld, MobileWorld, tau-bench, ChainWorld, PPT-Eval, GameCraft-Bench | Prefer resettable or replayable worlds; live websites, apps, and generated artifacts drift. |
 | Post-training engineer | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence, PC Agent-E, Qwen-AgentWorld, WebRL, DynaWeb, AgentTrek, Go-Browse, LearnAct / LearnGUI, UI-S1, Agent-RLVR, GUI-GENESIS, Agent-as-Annotators, OpenMobile, TRACE / Capability-Targeted Agentic Training, Plan-RewardBench, PEEU / GUI Experience Exploration, Failure-Driven CUA Self-Improvement, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
 | Infrastructure builder | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox, ADK Arena, LUMOS, MCP-Flow, OpenAgenet / OAN Yellow Paper, MCP Runtime Fault Taxonomy, MCP Security Invariants Benchmark, Agent Protocol Governance Gaps | Separate protocol or runtime direction from runnable world evidence and public trajectory availability. |
-| Safety auditor | PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, MCP-SafetyBench, MCPSecBench, MCPTox, SafeMCP, MCP Security Invariants Benchmark, AI-Infra-Guard, ATBench-Claw / ATBench-Codex, PlanGuard, Proteus Skill Red Team | Separate unsafe action from simple agent incapability before drawing safety conclusions. |
+| Safety auditor | PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, GUIGuard-Bench, WebPII, MCP-SafetyBench, MCPSecBench, MCPTox, SafeMCP, MCP Security Invariants Benchmark, AI-Infra-Guard, ATBench-Claw / ATBench-Codex, PlanGuard, Proteus Skill Red Team | Separate unsafe action, privacy exposure, and simple agent incapability before drawing safety conclusions. |
 | Product lead | OpenAI Computer-Using Agent, OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, Project Mariner | Product signals show direction, not reproducible public training evidence. |
-
 ## Practitioner Decision Tree
-
 ```text
 What do you need the world to prove?
 ├── GUI or computer-control ability
@@ -25,6 +22,7 @@ What do you need the world to prove?
 │   ├── Need macOS coverage? -> macOSWorld, MacArena, MacAgentBench
 │   ├── Need matched GUI-vs-CLI execution-layer analysis? -> GUI vs. CLI Execution Benchmark
 │   ├── Need GUI grounding uncertainty or rejection calibration? -> Argus / CUA Uncertainty Quantification
+│   ├── Need GUI privacy or human-reference efficiency diagnostics? -> GUIGuard-Bench, OSWorld-Human, AgentCIBench / Contextual Integrity
 │   ├── Need professional or enterprise desktop workflows? -> Workflow-GYM, SaaS-Bench, EntWorld, ComAct / ComCADBench
 │   ├── Need scientific-instrument GUI control? -> LabOSBench
 │   ├── Need fine-grained drag interactions? -> DragOn
@@ -46,12 +44,13 @@ What do you need the world to prove?
 │   ├── Need latency-aware planning and scheduling for web agents? -> Agent JIT Compilation
 │   ├── Need asynchronous RL, curriculum/model-based RL, tutorial replay, structured exploration, or online skill distillation for visual web agents? -> WebRL, DynaWeb, AgentTrek, AsyncWebRL, Go-Browse, OpenWebRL, PANDO
 │   ├── Need physical-world visual grounding before web execution? -> Ego2Web
-│   ├── Need deceptive-interface, prompt-injection, provenance, PII leakage, or stakeholder safety? -> WebDecept, Web PII Leakage Benchmark, ASPI, MIRAGE, WARD, StakeBench, Context-Fractured Decomposition Attacks, CUA-HandCrafted / Domain-Conditioned Safety
+│   ├── Need deceptive-interface, prompt-injection, provenance, PII leakage, visual PII redaction, or stakeholder safety? -> WebDecept, Web PII Leakage Benchmark, WebPII, ASPI, MIRAGE, WARD, StakeBench, Context-Fractured Decomposition Attacks, CUA-HandCrafted / Domain-Conditioned Safety
 │   ├── Need browsing/research difficulty? -> BrowseComp, WebVoyager, LoHoSearch, DailyReport
 │   └── Need multimodal deep-search training or reproducible web-agent trace diagnostics? -> OpenSearch-VL, Parallel WebBench / Trace Diagnostics
 ├── Software-engineering ability
 │   ├── Need patch correctness? -> SWE-bench, SWE-bench Verified
 │   ├── Need trainable rollouts, process rewards, or scalable SWE environment construction? -> SWE-Gym, SWE-TRACE, SWE-Universe, daVinci-Env
+│   ├── Need playable generated-game artifacts? -> GameCraft-Bench, ScratchWorld
 │   └── Need terminal generality or scalable terminal training worlds? -> Terminal-Bench, TUA-Bench, LiteCoder-Terminal, TermiGen
 ├── Tool/API and enterprise workflow ability
 │   ├── Need stateful apps? -> AppWorld
@@ -103,9 +102,7 @@ What do you need the world to prove?
     ├── Need RL over arbitrary agents? -> Agent Lightning, rLLM
     └── Need open training stacks? -> Orchard, verl, OpenRLHF, TRL
 ```
-
 ## Comparison Matrix
-
 | Use case | Best first resource | Reward/verifier | Main risk |
 | --- | --- | --- | --- |
 | GUI evaluation | OSWorld-Verified | Execution state | Expensive and brittle UI state. |
@@ -115,6 +112,8 @@ What do you need the world to prove?
 | Hybrid computer-use evaluation | WeaveBench | Trajectory-aware artifact judge | Artifact-aware judging is useful, but paper-only evidence limits runtime reproducibility. |
 | Computer-use robustness | AgentHijack | Corruption-configured task success | Corruptions improve stress testing but do not replace adversarial safety audits. |
 | Computer-use guardrails | OSGuard | Action-level labels and state invariants | Paper-only evidence should be separated from public runtime readiness. |
+| Computer-use efficiency | OSWorld-Human | Human reference trajectories and weighted efficiency scores | Reference solutions should be used for evaluation and audit, not as generic training data. |
+| GUI privacy | GUIGuard-Bench | Task completion paired with privacy-risk checks | GUI privacy coverage should be separated from ordinary task-success and grounding scores. |
 | Self-hosted CUA isolation | TEE-Backed Isolation for Self-Hosted Computer-Use Agents | TEE-audited command authorization and policy decision records | Host isolation depends on deployment architecture and should be reviewed separately from benchmark task success. |
 | Forkable GUI workspace runtime | TClone | Workspace branch, rollback, and latency measurement | Workspace branching reduces side-effect risk, but credential and session boundaries still need review. |
 | Enterprise GUI workflows | EntWorld | SQL-based deterministic state-transition validation | Paper-only evidence should not be treated as public runtime readiness. |
@@ -154,6 +153,7 @@ What do you need the world to prove?
 | Browser CUA safety | CUA-HandCrafted / Domain-Conditioned Safety | Attack success and reproducibility audit | Domain-conditioned resistance should not be generalized across tool or coding-agent settings without separate checks. |
 | Tool-agent artifact provenance | Context-Fractured Decomposition Attacks | Reproducible trigger and attack-success analysis | Attack evidence should be separated from general benchmark coverage. |
 | Web PII leakage | Web PII Leakage Benchmark | Social-engineering leakage checks | Treat PII leakage as a privacy-control signal, not as broad web-agent safety coverage. |
+| Web visual PII stewardship | WebPII | PII detection and redaction quality over web screenshots | Static screenshot privacy evidence should not be treated as a full browser-agent safety benchmark. |
 | Persistent agent-state attacks | Sleeper Attack | Cross-interaction trigger benchmark | Memory- and tool-return attacks require multi-turn state inspection, not only single-step safety checks. |
 | Enterprise workflow | WorkArena | Task state and policy checks | Domain coverage. |
 | API agents | AppWorld | Simulated database state | Gap from real APIs. |
@@ -183,6 +183,7 @@ What do you need the world to prove?
 | Clinical computer-use agents | MedCUA-Bench | Deterministic task and clinical safety checks | Clinical GUI coverage is benchmark evidence, not deployment readiness. |
 | Policy-following tools | tau-bench | User/tool/domain policy | Narrow domains. |
 | Coding agents | SWE-bench Verified | Unit tests and issue acceptance | Test leakage and issue ambiguity. |
+| Playable game development | GameCraft-Bench | Project launch and task-goal verification | Generated playable artifacts should be sandboxed and checked separately from code-compilation success. |
 | Trainable coding | SWE-Gym / SWE-TRACE / SWE-Universe | Runtime tests, process-reward traces, rollouts, PR-derived environment construction, and verifier checks | Repository distribution, reward hacking, verifier leakage, and generated-environment fidelity should be inspected. |
 | Research agents | PaperBench | Rubric judge and subtask scores | High cost and judge variance. |
 | Scientific-discovery agents | D3-Gym / EurekAgent | Task-specific evaluation scripts or metric-driven execution environments | Environment constraints, dependency replay, and reward-hacking defenses need source-level inspection. |

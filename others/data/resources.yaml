@@ -23652,7 +23652,7 @@
   reward_type: benchmark_success
   verifier: benchmark_eval
   trainable: closed
-  resettable:
+  resettable: not_applicable
   trajectories: false
   sandbox: model_release
   production_signal: doubao_model_report
@@ -26289,6 +26289,369 @@
   - train-rollouts
   - foundations
   - build-evals
+- name: GUIGuard-Bench
+  category: gui-world
+  year: 2026
+  modality:
+  - gui
+  - mobile
+  - web
+  - privacy
+  action_space:
+  - gui_task_execution
+  - privacy_sensitive_interaction
+  - action_refusal_or_completion
+  reward_type: privacy_preserving_gui_task_success
+  verifier: executable_gui_task_and_privacy_leakage_checks
+  trainable: false
+  resettable: partial
+  trajectories: partial
+  sandbox: gui_benchmark_environment
+  production_signal: privacy_preserving_gui_agent_benchmark
+  url: https://futuresis.github.io/GUIGuard-page/
+  repo: https://github.com/shaluoyan523/GUIGuard-Bench
+  notes: Privacy-preserving GUI-agent benchmark with executable tasks across mobile
+    apps and websites, pairing task completion with privacy-risk checks.
+  why_it_matters: Adds a direct GUI-agent privacy release gate where completion
+    pressure conflicts with sensitive on-screen information.
+  task_count: 704
+  app_count: 124
+  id: guiguard-bench
+  resource_kind: safety_control
+  canonical_category: gui-world
+  subtype: privacy_preserving_gui_agent_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://futuresis.github.io/GUIGuard-page/
+    type: project_page
+    supports:
+    - overview
+    - benchmark_design
+    - status
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://arxiv.org/abs/2601.18842
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://github.com/shaluoyan523/GUIGuard-Bench
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://huggingface.co/datasets/ShaofantuoshuzhengzhiSha/GUIGuard-Bench
+    type: dataset
+    supports:
+    - dataset
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: gui_task_data_and_virtual_trajectory_assets
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: gui_task_replay_and_app_or_web_state_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: weak
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: gui_benchmark_environment
+  negative_side_effect_checks: explicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: gui_privacy_benchmark
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: synthetic_or_benchmark_private_data
+  approval_policy: privacy_policy_required
+  audit_log: task_completion_and_privacy_leakage_records
+  telemetry_type: gui_actions_sensitive_fields_and_outcome_labels
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - build-evals
+- name: WebPII
+  category: web-world
+  year: 2026
+  modality:
+  - browser
+  - web
+  - screenshot
+  - privacy
+  action_space:
+  - screenshot_pii_detection
+  - pii_redaction
+  - privacy_stewardship_decision
+  reward_type: pii_detection_and_redaction_quality
+  verifier: labeled_web_pii_detection_and_redaction_benchmark
+  trainable: partial
+  resettable: not_applicable
+  trajectories: false
+  sandbox: static_web_screenshot_dataset
+  production_signal: visual_pii_detection_benchmark_for_web_agents
+  url: https://webpii.github.io/
+  repo: https://github.com/WebPII/webpii.github.io
+  notes: Web-agent privacy benchmark and dataset for detecting and redacting
+    personally identifiable information in web screenshots across multiple
+    domains.
+  why_it_matters: Covers the visual privacy layer that browser agents must handle
+    before acting on, logging, or sharing web pages containing personal data.
+  instance_count: 44865
+  scenario_count: 20
+  id: webpii
+  resource_kind: safety_control
+  canonical_category: web-world
+  subtype: web_agent_visual_pii_privacy_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://webpii.github.io/
+    type: project_page
+    supports:
+    - overview
+    - benchmark_design
+    - status
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://arxiv.org/abs/2603.17357
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://github.com/WebPII/webpii.github.io
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://huggingface.co/datasets/WebPII/webpii
+    type: dataset
+    supports:
+    - dataset
+    - reproducibility
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: not_applicable
+  trajectory_access: not_applicable
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: not_applicable
+  reset_mechanism: not_applicable
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: 'yes'
+  verifier_isolation: static_dataset
+  negative_side_effect_checks: explicit
+  reproducibility: public_dataset
+  access: public_dataset
+  evidence_type: artifact
+  isolation_boundary: static_privacy_dataset
+  runtime_host: not_applicable
+  network_policy: not_applicable
+  credential_boundary: public_dataset_with_pii_annotations
+  approval_policy: dataset_use_policy
+  audit_log: pii_labels_redaction_masks_and_model_outputs
+  telemetry_type: screenshot_regions_pii_types_and_redaction_results
+  destructive_action_scope: not_applicable
+  reader_paths:
+  - safety-audit
+  - release-gates
+  - build-evals
+- name: OSWorld-Human
+  category: computer-world
+  year: 2025
+  modality:
+  - desktop
+  - gui
+  - computer_use
+  - human_demonstration
+  action_space:
+  - mouse
+  - keyboard
+  - desktop_app
+  - efficiency_scoring
+  reward_type: human_reference_efficiency_gap
+  verifier: human_reference_trajectory_and_weighted_efficiency_score
+  trainable: false
+  resettable: dataset_replay
+  trajectories: true
+  sandbox: osworld_reference_dataset
+  production_signal: human_reference_efficiency_benchmark_for_cuas
+  url: https://arxiv.org/abs/2506.16042
+  repo: https://github.com/WukLab/osworld-human
+  notes: Annotated OSWorld efficiency benchmark with human reference trajectories
+    and step-level scoring for computer-use agents; the repository explicitly
+    warns that the reference solutions should not be used for training.
+  why_it_matters: Separates task success from human-like efficiency, exposing when
+    computer-use agents solve tasks through excessive planning, reflection, or
+    unnecessary GUI actions.
+  task_count: 233
+  trajectory_count: 281
+  id: osworld-human
+  resource_kind: benchmark
+  canonical_category: computer-world
+  subtype: computer_use_human_efficiency_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2506.16042
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://github.com/WukLab/osworld-human
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    - trajectories
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: public
+  trajectory_access: public
+  trajectory_type: human_reference_demonstrations
+  trajectory_public: true
+  reset_support: dataset_replay
+  reset_mechanism: osworld_result_replay_against_human_reference
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: weak
+  release_gate_fit: strong
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: 'yes'
+  verifier_isolation: osworld_result_scoring
+  negative_side_effect_checks: implicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: osworld_reference_scoring
+  runtime_host: local_or_self_hosted
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: benchmark_use_policy
+  audit_log: action_step_counts_and_efficiency_scores
+  telemetry_type: osworld_results_human_reference_steps_and_wes_scores
+  destructive_action_scope: benchmark_task_environment
+  reader_paths:
+  - build-evals
+  - release-gates
+  - foundations
+- name: GameCraft-Bench
+  category: code-world
+  year: 2026
+  modality:
+  - code
+  - game
+  - interactive_runtime
+  - gui
+  action_space:
+  - code_edit
+  - asset_generation
+  - game_project_build
+  - playable_runtime_test
+  reward_type: playable_game_goal_satisfaction
+  verifier: automated_game_project_launch_and_goal_check
+  trainable: partial
+  resettable: true
+  trajectories: partial
+  sandbox: isolated_game_project_environment
+  production_signal: executable_game_development_agent_benchmark
+  url: https://tongxuluo.github.io/gamecraft-bench-website/
+  repo: https://github.com/tongxuluo/gamecraft-bench
+  notes: Benchmark for collaborative game-development agents where outputs are
+    playable game projects checked through launch and task-goal verification.
+  why_it_matters: Extends code-agent evaluation from static repository patches to
+    interactive artifacts that must run as playable worlds.
+  task_count: 100
+  id: gamecraft-bench
+  resource_kind: benchmark
+  canonical_category: code-world
+  subtype: playable_game_development_agent_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://tongxuluo.github.io/gamecraft-bench-website/
+    type: project_page
+    supports:
+    - overview
+    - benchmark_design
+    - status
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://arxiv.org/abs/2606.17861
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://github.com/tongxuluo/gamecraft-bench
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: agent_game_project_build_traces
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: isolated_game_project_reset
+  trainability_status: framework_ready
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: isolated_game_project_runtime
+  negative_side_effect_checks: implicit
+  reproducibility: public_runnable
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: game_project_sandbox
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_applicable
+  approval_policy: benchmark_execution_review
+  audit_log: build_launch_and_goal_check_records
+  telemetry_type: code_changes_assets_runtime_events_and_verifier_outputs
+  destructive_action_scope: benchmark_project_sandbox
+  reader_paths:
+  - build-evals
+  - train-rollouts
+  - production-direction
 - name: UI-S1
   category: mobile-world
   year: 2025
@@ -31177,7 +31540,7 @@
   reward_type: policy_compliance
   verifier: security_guidance_and_authorization_controls
   trainable: false
-  resettable: null
+  resettable: not_applicable
   trajectories: false
   sandbox: protocol
   production_signal: official_mcp_security_guidance
@@ -31978,7 +32341,7 @@
   reward_type: external
   verifier: external
   trainable: false
-  resettable:
+  resettable: not_applicable
   trajectories: false
   sandbox: protocol
   production_signal: anthropic_open_standard
@@ -32540,7 +32903,7 @@
   reward_type: external
   verifier: external
   trainable: false
-  resettable:
+  resettable: not_applicable
   trajectories: false
   sandbox: protocol
   production_signal: google_cloud_and_linux_foundation_ecosystem

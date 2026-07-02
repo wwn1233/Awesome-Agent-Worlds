@@ -2,12 +2,13 @@
 
 ## 2026-07-03
 
-- Released the expanded 656-resource catalog with inclusion rationales for every entry.
+- Released the expanded 660-resource catalog with inclusion rationales for every entry.
+- Added first-party coverage for GUIGuard-Bench, WebPII, OSWorld-Human, and GameCraft-Bench from project-page, repository, dataset, or arXiv sources.
 - Added first-party coverage for WebArena-Infinity, GUI-360, CUA-Suite / VideoCUA, WebChain, WebSP-Eval, WebTestBench, CocoaBench, and HippoCamp from project-page, repository, dataset, or arXiv sources.
 - Added first-party coverage for SGDR / State-Grounded Dynamic Retrieval, OPID / On-Policy Skill Distillation, CRAFT / Counterfactual Credit Assignment, and Tool-RL-Box / Tool-Use RL Collapse from arXiv and repository sources.
 - Added first-party coverage for MCP Apps Extension, Agent Client Protocol, AG-UI, ContextForge MCP Gateway, Snyk Agent Scan, and Amazon Bedrock AgentCore from official documentation, project-page, repository, or product sources.
-- Refreshed README routes, Resource Index, Flagship Matrix, Static Explorer data, and public metadata for the 656-resource snapshot.
-- Updated `CITATION.cff` to version 0.3.45 with the July 3 release date.
+- Refreshed README routes, Resource Index, Flagship Matrix, Static Explorer data, and public metadata for the 660-resource snapshot.
+- Kept citation metadata at version 0.3.45 for the July 3 release date.
 
 ## 2026-07-01
 

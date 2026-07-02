@@ -61,8 +61,8 @@ display labels are derived view fields, not separate canonical source fields.
 
 - **Top navigation** uses compact labels for Home, Explorer, Index, Selection,
   Reading, Data, Featured 12, Hot Papers, Cite, and Docs. Document links stay
-  repository-relative in source, and the local web view opens Markdown and YAML
-  links on GitHub so they remain readable from a static local server.
+  repository-relative, so the local web view opens the same checkout when served
+  from the repository root.
 - **Home** summarizes repository scope through curated resources, public-runnable coverage, Featured Hot Papers coverage, category count, and direct routes to the explorer, reader starter packs, and Featured 12 strip.
 - **Metrics band** shows total resources, public-runnable entries, trajectory assets, inclusion-rationale coverage, and Featured Hot Papers count. Public-runnable entries are resources whose reproducibility field is `public_runnable`; trajectory assets count public, partial, or synthetic trajectory availability.
 - **World surface map** filters resources by infrastructure/protocols and where agents act: web, GUI, mobile, code, API, research, embodied worlds, and training loops.
