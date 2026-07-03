@@ -67,7 +67,7 @@ function populateFilters() {
   refs.source.innerHTML = optionList(unique(contentResources.map((item) => item.source_confidence)), ui("allSources"), (value) => label("source", value));
   refs.trajectory.innerHTML = optionList(unique(contentResources.map((item) => item.trajectory_availability)), ui("allTrajectories"), (value) => label("trajectory", value));
   refs.reset.innerHTML = optionList(unique(contentResources.map((item) => item.reset_support)), ui("allResetModes"), (value) => label("reset", value));
-  refs.sort.innerHTML = optionList(["recommended", "score", "newest", "name", "priority"], ui("sortBy"), (value) => label("sort", value));
+  refs.sort.innerHTML = ["recommended", "score", "newest", "name"].map((value) => `<option value="${value}">${escapeHtml(label("sort", value))}</option>`).join("");
   syncControls();
 }
 
@@ -161,11 +161,13 @@ function renderHotPapers() {
   refs.hotPapers.innerHTML = papers.map((paper) => {
     const status = label("catalogStatus", paper.catalog_status);
     const signals = paper.evidence_terms.slice(0, 4).join(", ");
-    return `<a class="hotPaper" href="${escapeHtml(paper.url)}">
-      <b>${escapeHtml(paper.title)}</b>
+    const catalogLink = paper.catalog_entry ? `<a href="${escapeHtml(paper.catalog_entry.url)}">${escapeHtml(ui("catalogEntry"))}: ${escapeHtml(paper.catalog_entry.name)}</a>` : "";
+    return `<article class="hotPaper">
+      <a href="${escapeHtml(paper.url)}"><b>${escapeHtml(paper.title)}</b></a>
       <span>${escapeHtml(paper.published.slice(0, 10))} · ${escapeHtml(status)}</span>
       <small>${escapeHtml(signals)}</small>
-    </a>`;
+      <small>${catalogLink}</small>
+    </article>`;
   }).join("");
 }
 
@@ -212,19 +214,17 @@ function matches(item) {
   if (state.trajectory !== "all" && item.trajectory_availability !== state.trajectory) return false;
   if (state.reset !== "all" && item.reset_support !== state.reset) return false;
   if (state.surface !== "all" && !(window.AGENT_WORLDS_SURFACES[state.surface] || []).includes(item.canonical_category)) return false;
-  if (state.repoOnly && !item.repo) return false;
+  if (state.repoOnly && !item.has_repo) return false;
   return true;
 }
 
 function sorted(items) {
+  if (state.sort === "recommended") return [...items];
   return [...items].sort((a, b) => {
     if (state.sort === "score") return b.readiness_score - a.readiness_score || a.name.localeCompare(b.name);
     if (state.sort === "newest") return Number(b.year) - Number(a.year) || a.name.localeCompare(b.name);
     if (state.sort === "name") return a.name.localeCompare(b.name);
-    if (state.sort === "priority") return b.curation_priority - a.curation_priority || a.name.localeCompare(b.name);
-    return (a.recommended_rank || 999) - (b.recommended_rank || 999) ||
-      b.readiness_score - a.readiness_score ||
-      a.name.localeCompare(b.name);
+    return a.name.localeCompare(b.name);
   });
 }
 
@@ -276,7 +276,7 @@ function renderRows(items) {
   refs.moreRows.hidden = visibleItems.length >= items.length;
   refs.moreRows.textContent = `${ui("showMore")} (${visibleItems.length}/${items.length})`;
   refs.rows.innerHTML = visibleItems.map((item) => {
-    const labels = item.strictness_labels.slice(0, 5)
+    const labels = item.badges.slice(0, 5)
       .map((flag) => `<span class="flag">${escapeHtml(label("flag", flag))}</span>`)
       .join("");
     const trajectoryCount = item.trajectory_count ? `${Number(item.trajectory_count).toLocaleString()} ${ui("trajectoryCount")}` : "";

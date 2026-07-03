@@ -2,9 +2,12 @@
 
 A compact decision matrix for the most important Agent World resources.
 
-Selection prioritizes curated starter resources, then readiness score.
+Selection prioritizes curated starter resources, then readiness score
+as defined in the [Selection Guide](selection-guide.md#scoring-methodology).
 Use this matrix to choose starter resources before reading the full
-resource index.
+Resource Index.
+Resource links point to primary sources; use the [Resource Index](resource-index.md)
+for catalog evidence rows, score limits, and source-confidence context.
 
 | Resource | Surface | Score | Verifier | Trajectory | Reset | Sandbox | Training | Why it matters |
 | --- | --- | ---: | --- | --- | --- | --- | --- | --- |
@@ -34,4 +37,5 @@ resource index.
 1. High score means stronger world readiness, not broader scientific impact.
 2. Product signals are included when they show frontier direction, even if
    their trajectories or sandboxes are private.
-3. Use `resource-index.md` for the complete list and score-limit details.
+3. Use [Resource Index](resource-index.md) for the complete list and
+   [Scoring Methodology](selection-guide.md#scoring-methodology) for score limits.

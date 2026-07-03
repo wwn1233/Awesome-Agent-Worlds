@@ -7059,6 +7059,80 @@
   - train-rollouts
   - foundations
   - production-direction
+- name: COMFYCLAW
+  category: training-framework
+  year: 2026
+  modality:
+  - image_generation
+  - workflow_graph
+  - vlm
+  - skill_learning
+  action_space:
+  - workflow_node_edit
+  - tool_call
+  - rollback
+  - skill_distillation
+  reward_type: vlm_verifier_score
+  verifier: region_level_vlm_verifier_with_automatic_workflow_correction
+  trainable: partial
+  resettable: partial
+  trajectories: partial
+  sandbox: comfyui_workflow_runtime
+  production_signal: self_evolving_skill_harness_for_image_generation_workflows
+  url: https://arxiv.org/abs/2607.01709
+  repo:
+  notes: Self-evolving skill harness for image-generation workflows that separates
+    planning, graph editing, automatic rollback, verification, and reusable skill
+    writing inside a ComfyUI-style workflow environment.
+  why_it_matters: Extends Agent Worlds coverage from browsers, phones, and code
+    into creative workflow tools where verifier feedback, recoverable execution,
+    and distilled skills can turn repeated agent failures into reusable assets.
+  id: comfyclaw
+  resource_kind: training_framework
+  canonical_category: training-framework
+  subtype: image_generation_workflow_skill_harness
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2607.01709
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: workflow_execution_error_verifier_feedback_and_skill_revision_traces
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: workflow_rollback_and_task_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: strong
+  release_gate_fit: candidate
+  reward_family: visual_verifier
+  verifier_family: hybrid
+  verifier_recomputable: partial
+  verifier_isolation: workflow_task_environment
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: image_workflow_runtime
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: workflow_policy_dependent
+  audit_log: workflow_edits_rollbacks_verifier_feedback_and_skill_updates
+  telemetry_type: graph_states_error_records_visual_scores_and_skill_versions
+  destructive_action_scope: generated_artifact_workspace
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - foundations
 - name: WRBench / Persistent State Core
   category: generative-3d-world
   year: 2026
@@ -9305,6 +9379,81 @@
   destructive_action_scope: benchmark_sandbox
   reader_paths:
   - train-rollouts
+  - build-evals
+  - foundations
+- name: Task-State Representation / TSR
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - vlm
+  - task_state
+  - long_horizon
+  action_space:
+  - mobile_gui_action
+  - task_state_update
+  - progress_tracker_update
+  - transition_aware_action_verification
+  reward_type: benchmark_success
+  verifier: mobile_gui_benchmark_success_and_transition_aware_action_verifier
+  trainable: false
+  resettable: benchmark_dependent
+  trajectories: false
+  sandbox: benchmark_dependent_mobile_gui_environment
+  production_signal: long_horizon_mobile_gui_task_state_wrappers
+  url: https://arxiv.org/abs/2607.00502
+  repo:
+  notes: Training-free external wrapper for long-horizon mobile GUI agents that
+    separates persistent task state from transient screen observations through
+    a global instruction summary, dynamic progress tracker, and
+    transition-aware action verifier.
+  why_it_matters: Adds an explicit task-state layer for mobile GUI agents, which
+    targets context-burden, forgotten requirements, stale-interface actions,
+    and progress hallucination in long-horizon app workflows.
+  id: task-state-representation-tsr
+  resource_kind: agent_infrastructure
+  canonical_category: mobile-world
+  subtype: mobile_gui_task_state_wrapper
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2607.00502
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: none
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_mobile_gui_reset
+  trainability_status: evaluation_only
+  sft_fit: not_applicable
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: not_applicable
+  release_gate_fit: candidate
+  reward_family: benchmark_success
+  verifier_family: hybrid
+  verifier_recomputable: partial
+  verifier_isolation: mobile_gui_benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: mobile_gui_runtime_wrapper
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: benchmark_dependent
+  approval_policy: benchmark_policy_dependent
+  audit_log: task_state_progress_and_action_transition_records
+  telemetry_type: pre_post_action_visual_comparisons_and_progress_updates
+  destructive_action_scope: benchmark_sandbox
+  reader_paths:
   - build-evals
   - foundations
 - name: Weblica
@@ -15924,6 +16073,81 @@
   audit_log: checkpoint_and_trajectory_reports
   telemetry_type: fhir_tool_calls_checkpoint_scores_and_reliability_metrics
   destructive_action_scope: simulated_ehr_only
+  reader_paths:
+  - build-evals
+  - safety-audit
+  - release-gates
+- name: EHR-Complex
+  category: api-world
+  year: 2026
+  modality:
+  - healthcare
+  - ehr
+  - sql
+  - python
+  - clinical_database
+  action_space:
+  - sql_query
+  - python_code_execution
+  - database_analysis
+  - clinical_reasoning
+  reward_type: exact_match_clinical_database_answer
+  verifier: programmatic_execution_and_exact_match_ehr_reasoning_evaluation
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: clinical_database_sandbox
+  production_signal: interactive_ehr_database_reasoning_benchmark_for_clinical_agents
+  url: https://arxiv.org/abs/2606.23301
+  repo:
+  notes: Interactive clinical database reasoning benchmark built on MIMIC-IV,
+    requiring agents to issue SQL queries or Python code over a sandboxed EHR
+    environment for patient-level and population-level clinical questions.
+  why_it_matters: Adds a large-scale EHR database world where clinical agents
+    must execute code or SQL against longitudinal records rather than solve
+    static, cleaned query-generation tasks.
+  id: ehr-complex
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: interactive_ehr_database_reasoning_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.23301
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: failed_sql_python_and_clinical_reasoning_trajectories
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: sandboxed_ehr_task_reset
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: sandboxed_clinical_database_environment
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: clinical_database_sandbox
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: synthetic_or_deidentified_ehr_data_boundary
+  approval_policy: clinical_safety_required
+  audit_log: sql_python_queries_answers_and_failed_trajectory_analysis
+  telemetry_type: query_execution_records_exact_match_scores_and_failure_traces
+  destructive_action_scope: sandboxed_ehr_database
   reader_paths:
   - build-evals
   - safety-audit
@@ -26077,8 +26301,8 @@
   repo:
   notes: Mobile GUI-shortcut hybrid benchmark with 139 complex tasks across 11
     real-world apps, 88 predefined shortcuts, and metrics for success,
-    efficiency, shortcut use, and agent-generated shortcut quality; project page
-    marks code as coming soon.
+    efficiency, shortcut use, and agent-generated shortcut quality; no public
+    repository is listed on the project page.
   why_it_matters: Captures a production-relevant mobile-agent pattern where GUI
     actions are mixed with APIs, deep links, and reusable shortcuts instead of
     forcing every task through visual tapping.
@@ -26289,6 +26513,530 @@
   - train-rollouts
   - foundations
   - build-evals
+- name: VeriGUI / Action-Effect Verification
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - verification
+  action_space:
+  - tap
+  - type
+  - screenshot_state_check
+  - corrective_action
+  reward_type: action_effect_consistency
+  verifier: action_effect_verification_and_self_correction
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: mobile_gui_benchmark
+  production_signal: verification_driven_gui_agent_recovery
+  url: https://arxiv.org/abs/2604.05477
+  repo:
+  notes: Verification-driven GUI-agent framework that checks whether a UI action
+    produced the expected screen effect and triggers retry or correction when it
+    detects a mismatch.
+  why_it_matters: Makes action-effect verification explicit, which is central for
+    long-horizon mobile agents that otherwise accumulate silent UI mistakes.
+  id: verigui-action-effect-verification
+  resource_kind: agent_infrastructure
+  canonical_category: mobile-world
+  subtype: gui_action_effect_verifier
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.05477
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: action_effect_and_correction_traces
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: environment_state
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: action_effect_check_and_recovery_records
+  telemetry_type: screenshots_actions_expected_effects_and_corrections
+  destructive_action_scope: benchmark_task_environment
+  reader_paths:
+  - build-evals
+  - release-gates
+  - safety-audit
+- name: AgentProg
+  category: mobile-world
+  year: 2025
+  modality:
+  - android
+  - gui
+  - long_horizon
+  - program_context
+  action_space:
+  - tap
+  - type
+  - swipe
+  - programmatic_context_update
+  reward_type: android_task_success
+  verifier: androidworld_task_evaluation
+  trainable: partial
+  resettable: true
+  trajectories: partial
+  sandbox: androidworld_environment
+  production_signal: programmatic_context_for_long_horizon_android_agents
+  url: https://arxiv.org/abs/2512.10371
+  repo: https://github.com/MobileLLM/AgentProg
+  notes: Android GUI-agent approach that maintains and updates program-like
+    contextual state to improve long-horizon task execution on AndroidWorld.
+  why_it_matters: Treats agent context as an executable task-state artifact,
+    connecting GUI control with reusable state representations.
+  id: agentprog
+  resource_kind: training_framework
+  canonical_category: mobile-world
+  subtype: programmatic_context_mobile_gui_agent
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2512.10371
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://github.com/MobileLLM/AgentProg
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: android_gui_agent_rollouts
+  trajectory_public: false
+  reset_support: episode_reset
+  reset_mechanism: androidworld_environment_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: isolated_runtime
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: androidworld_runtime
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: program_context_and_android_action_logs
+  telemetry_type: ui_states_actions_context_updates_and_outcomes
+  destructive_action_scope: benchmark_runtime_environment
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - foundations
+- name: UI-Voyager
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - android
+  - gui
+  - self_evolution
+  action_space:
+  - tap
+  - type
+  - swipe
+  - failure_trace_revision
+  reward_type: benchmark_task_success_and_failure_recovery
+  verifier: mobile_gui_task_evaluation
+  trainable: true
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: mobile_gui_benchmark
+  production_signal: failure_trajectory_self_evolution_for_mobile_agents
+  url: https://arxiv.org/abs/2603.24533
+  repo: https://github.com/ui-voyager/UI-Voyager
+  notes: Self-evolving mobile GUI-agent framework that uses failures and
+    trajectory revision to improve mobile task completion.
+  why_it_matters: Adds a concrete failure-to-improvement loop for GUI agents,
+    complementing static mobile benchmarks with iterative rollout repair.
+  id: ui-voyager
+  resource_kind: training_framework
+  canonical_category: mobile-world
+  subtype: failure_trajectory_self_evolving_gui_agent
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2603.24533
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://github.com/ui-voyager/UI-Voyager
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: failure_and_revision_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: benchmark_environment
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: failure_revision_and_task_success_records
+  telemetry_type: trajectories_failures_revisions_and_outcomes
+  destructive_action_scope: benchmark_task_environment
+  reader_paths:
+  - train-rollouts
+  - build-evals
+- name: UI-KOBE
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - knowledge_graph
+  - on_device_agent
+  action_space:
+  - app_graph_retrieval
+  - UI_action
+  - behavior_exploration
+  reward_type: mobile_task_success
+  verifier: mobile_gui_benchmark_eval
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: mobile_gui_benchmark
+  production_signal: knowledge_oriented_lightweight_mobile_gui_agent
+  url: https://arxiv.org/abs/2605.29534
+  repo:
+  notes: Lightweight mobile GUI-agent approach that uses an application-level
+    knowledge base to guide behavior exploration and task execution.
+  why_it_matters: Represents the on-device direction where GUI worlds need
+    compact app knowledge rather than only larger vision-language models.
+  id: ui-kobe
+  resource_kind: agent_infrastructure
+  canonical_category: mobile-world
+  subtype: knowledge_oriented_mobile_gui_agent
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.29534
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: mobile_gui_exploration_records
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: unknown
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: unknown
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: app_graph_and_gui_action_records
+  telemetry_type: app_knowledge_states_actions_and_outcomes
+  destructive_action_scope: benchmark_task_environment
+  reader_paths:
+  - build-evals
+  - production-direction
+- name: Mobile-Agent-v3.5 / GUI-Owl-1.5
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - gui
+  - vlm
+  - environment_rl
+  action_space:
+  - tap
+  - type
+  - swipe
+  - cross_platform_gui_action
+  reward_type: multi_platform_gui_task_success
+  verifier: gui_benchmark_and_environment_rl_eval
+  trainable: true
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: mobile_gui_benchmark
+  production_signal: environment_rl_scaling_for_multi_platform_gui_agents
+  url: https://arxiv.org/abs/2602.16855
+  repo: https://github.com/X-PLUG/MobileAgent
+  notes: Technical report on Mobile-Agent-v3.5 and GUI-Owl-1.5, emphasizing
+    environment reinforcement learning and scaling for multi-platform GUI agents.
+  why_it_matters: Connects mobile GUI-agent model releases with environment RL,
+    making it a useful signal for production-oriented VLM agent training.
+  id: mobile-agent-v35-gui-owl-15
+  resource_kind: model_release
+  canonical_category: mobile-world
+  subtype: multi_platform_gui_agent_model_release
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2602.16855
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://github.com/X-PLUG/MobileAgent
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: environment_rl_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: candidate
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: benchmark_environment
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: environment_rl_and_gui_task_eval_records
+  telemetry_type: cross_platform_gui_actions_rewards_and_rollouts
+  destructive_action_scope: benchmark_task_environment
+  reader_paths:
+  - train-rollouts
+  - production-direction
+  - build-evals
+- name: BEAP-Agent
+  category: gui-world
+  year: 2026
+  modality:
+  - gui
+  - long_horizon
+  - adaptive_planning
+  action_space:
+  - GUI_action
+  - backtrack
+  - replan
+  reward_type: long_horizon_gui_task_success
+  verifier: gui_task_benchmark_eval
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: gui_benchmark
+  production_signal: backtrackable_execution_for_long_horizon_gui_agents
+  url: https://arxiv.org/abs/2601.21352
+  repo:
+  notes: Backtrackable execution and adaptive planning framework for long-horizon
+    GUI agents, targeting recovery from earlier action-path mistakes.
+  why_it_matters: Adds explicit backtracking to the GUI-world stack, a practical
+    control primitive for long-horizon task execution.
+  id: beap-agent
+  resource_kind: training_framework
+  canonical_category: gui-world
+  subtype: backtrackable_gui_agent_planning
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2601.21352
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: planning_backtracking_and_gui_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: implicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: benchmark_environment
+  runtime_host: benchmark_dependent
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: backtracking_plan_and_gui_action_records
+  telemetry_type: plans_actions_backtracks_and_task_outcomes
+  destructive_action_scope: benchmark_task_environment
+  reader_paths:
+  - build-evals
+  - train-rollouts
+- name: FineState-Bench
+  category: mobile-world
+  year: 2026
+  modality:
+  - mobile
+  - android
+  - gui
+  - state_control
+  action_space:
+  - tap
+  - type
+  - fine_grained_state_control
+  reward_type: fine_grained_mobile_task_success
+  verifier: mobile_state_control_benchmark
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: partial
+  sandbox: mobile_gui_benchmark
+  production_signal: fine_grained_mobile_state_control_evaluation
+  url: https://arxiv.org/abs/2604.27974
+  repo: https://github.com/FengxianJi/FineState-Bench
+  notes: Mobile GUI benchmark focused on diagnosing and improving agents through
+    fine-grained state control rather than only final-task success.
+  why_it_matters: Makes state-level control errors visible, which helps separate
+    perception, planning, and execution failures in mobile agent worlds.
+  id: finestate-bench
+  resource_kind: benchmark
+  canonical_category: mobile-world
+  subtype: fine_grained_mobile_state_control_benchmark
+  status: public_artifact
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2604.27974
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  - url: https://github.com/FengxianJi/FineState-Bench
+    type: repository
+    supports:
+    - code
+    - reproducibility
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: partial
+  trajectory_access: limited
+  trajectory_type: fine_grained_state_control_rollouts
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: benchmark_dependent_reset
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: candidate
+  reward_family: benchmark_label
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: benchmark_dependent
+  negative_side_effect_checks: partial
+  reproducibility: public_code
+  access: public_code
+  evidence_type: artifact
+  isolation_boundary: benchmark_environment
+  runtime_host: local_or_self_hosted
+  network_policy: benchmark_dependent
+  credential_boundary: not_specified
+  approval_policy: not_specified
+  audit_log: state_control_and_task_success_records
+  telemetry_type: fine_grained_states_actions_and_outcomes
+  destructive_action_scope: benchmark_task_environment
+  reader_paths:
+  - build-evals
+  - release-gates
 - name: GUIGuard-Bench
   category: gui-world
   year: 2026
@@ -27410,7 +28158,7 @@
   notes: Official MCP registry surface and repository for discovering MCP
     servers, publishing server metadata, and supporting registry/sub-registry
     workflows.
-  why_it_matters: Turns MCP server discovery into a first-party infrastructure
+  why_it_matters: Turns MCP server discovery into an official infrastructure
     layer that can be audited separately from individual tool descriptions.
   id: official-mcp-registry
   resource_kind: agent_infrastructure
@@ -27484,10 +28232,10 @@
   resettable: not_applicable
   trajectories: false
   sandbox: local_debugging_client
-  production_signal: first_party_mcp_server_testing_and_debugging_tool
+  production_signal: official_mcp_server_testing_and_debugging_tool
   url: https://modelcontextprotocol.io/docs/tools/inspector
   repo: https://github.com/modelcontextprotocol/inspector
-  notes: First-party MCP server inspection and debugging tool for exercising
+  notes: Official MCP server inspection and debugging tool for exercising
     tools, resources, prompts, server responses, logs, and protocol edge cases.
   why_it_matters: Gives MCP server builders a concrete verifier surface before a
     server is exposed to agents or clients.
@@ -27563,7 +28311,7 @@
   resettable: partial
   trajectories: false
   sandbox: chatgpt_mcp_app_runtime
-  production_signal: first_party_chatgpt_mcp_app_interface
+  production_signal: official_chatgpt_mcp_app_interface
   url: https://developers.openai.com/apps-sdk
   repo: https://github.com/openai/openai-apps-sdk-examples
   notes: OpenAI developer surface for building ChatGPT apps backed by MCP

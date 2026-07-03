@@ -3,7 +3,7 @@
 Static Explorer is the bilingual, dependency-free web view for Awesome Agent
 Worlds. It turns the curated index into a lightweight interface for browsing
 agent-world resources, filtering by surface, comparing evidence fields and
-inclusion rationale, and following the Featured 12 strip from the weekly Hot Papers view.
+inclusion rationale, and following the Featured 12 strip from the weekly Hot Papers view back to Resource Index evidence rows.
 
 GitHub shows `site/index.html` as source code. To view the interface, run the
 local command below from the repository root and open the local URL.
@@ -42,9 +42,11 @@ No build step is required. The page reads `data.js`, `i18n.js`, `app.js`, and
 `surfaces.js` directly. Use `others/data/resources.yaml` as the canonical
 catalog; `site/data.js` is the static browser bundle used by the webpage. The
 Featured Hot Papers strip highlights a compact Featured 12 subset of the full
-weekly Hot Papers table and displays the public update date and weekly cadence.
+weekly Hot Papers table, linking each card to both the paper and its Resource
+Index evidence row.
 
-中文本地查看：在仓库根目录运行上面的 `ruby` 或 `python3` 命令，然后打开 `http://127.0.0.1:8026/site/index.html`。页面右上角可以在中文和英文界面之间切换。
+中文本地查看：在仓库根目录运行上面的 `ruby` 或 `python3` 命令，然后打开
+`http://127.0.0.1:8026/site/index.html`。页面右上角可以在中文和英文界面之间切换。
 
 ## Structured Data
 
@@ -55,7 +57,8 @@ boundary, per-source confidence values, reader paths, source URLs, and inclusion
 rationale for each resource. The web view and Resource Index add derived scoring
 fields. Entries are maintained from primary sources, and readiness labels are evidence labels
 rather than claims about model quality or scientific impact. Readiness scores and
-display labels are derived view fields, not separate canonical source fields.
+display labels are derived view fields; the public rubric is documented in the
+[Selection Guide scoring methodology](../others/docs/selection-guide.md#scoring-methodology).
 
 ## Interface
 
@@ -63,20 +66,40 @@ display labels are derived view fields, not separate canonical source fields.
   Reading, Data, Featured 12, Hot Papers, Cite, and Docs. Document links stay
   repository-relative, so the local web view opens the same checkout when served
   from the repository root.
-- **Home** summarizes repository scope through curated resources, public-runnable coverage, Featured Hot Papers coverage, category count, and direct routes to the explorer, reader starter packs, and Featured 12 strip.
-- **Metrics band** shows total resources, public-runnable entries, trajectory assets, inclusion-rationale coverage, and Featured Hot Papers count. Public-runnable entries are resources whose reproducibility field is `public_runnable`; trajectory assets count public, partial, or synthetic trajectory availability.
+- **Home** summarizes repository scope through curated resources,
+  public-runnable coverage, Featured Hot Papers coverage, category count, and
+  direct routes to the explorer, reader starter packs, and Featured 12 strip.
+- **Metrics band** shows total resources, public-runnable entries, trajectory
+  assets, inclusion-rationale coverage, and Featured Hot Papers count.
+  Public-runnable entries are resources whose reproducibility field is
+  `public_runnable`; trajectory assets count public, partial, or synthetic
+  trajectory availability.
 - **World surface map** filters resources by infrastructure/protocols and where agents act: web, GUI, mobile, code, API, research, embodied worlds, and training loops.
-- **Featured Hot Papers** highlights the Featured 12 indexed papers from the current public weekly table, with the same update date and weekly cadence shown in the Hot Papers document.
-- **Resource explorer** provides search, category filters, readiness labels, trajectory/reset fields, source confidence, searchable `Why` / `纳入理由` lines, sorting, a public-repository toggle, and incremental row loading for the full catalog.
+- **Featured Hot Papers** highlights the Featured 12 indexed papers from the current public weekly table, with links to the paper and Resource Index evidence row.
+- **Resource explorer** provides search, category filters, readiness labels,
+  trajectory/reset fields, source confidence, searchable `Why` / `纳入理由`
+  lines, comparison-friendly sorting, a public-repository toggle, and
+  incremental row loading for the full catalog.
 - **Language switch** changes the interface between Chinese and English.
 
 The interface groups 11 canonical resource categories into broader reader-facing surfaces. Canonical category placement is maintained in the Resource Index.
+
+## Evidence Path
+
+Use the homepage and Featured 12 strip for discovery, then open the linked
+Resource Index row before adopting, comparing, or citing a resource. The evidence
+row is the stable public record for category, verifier, reset and trajectory
+evidence, source confidence, and caveat.
+
+中文使用路径：先用首页、表面地图和 Featured 12 快速发现资源，再打开对应的 Resource Index
+证据行，核对类别、验证器、reset、轨迹、来源可信度和限制条件。
 
 ## Related Docs
 
 - [Resource Index](../others/docs/resource-index.md)
 - [Structured Data](../others/data/resources.yaml)
 - [Selection Guide](../others/docs/selection-guide.md)
+- [Scoring Methodology](../others/docs/selection-guide.md#scoring-methodology)
 - [Reading Order](../others/docs/reading-order.md)
 - [Hot Papers](../others/docs/hot-papers.md)
 - [Flagship Matrix](../others/docs/flagship-matrix.md)
@@ -89,6 +112,7 @@ The interface groups 11 canonical resource categories into broader reader-facing
 
 1. Start from the infrastructure layer or world surface that matches your agent task.
 2. Use the surface cards or filters to narrow by resource kind, readiness, trajectory availability, reset support, and source confidence.
-3. Sort by recommendation, maturity score, recency, name, or curated priority.
+3. Sort by maturity score, recency, or name when comparing similar resources.
 4. Read the `Why` / `纳入理由` line to understand why a resource belongs in this catalog.
-5. Open each resource from the table to inspect the first-party project page, paper, or repository.
+5. Open each resource from the table to inspect the primary-source project page, paper, or repository.
+6. For Featured 12 papers, open the catalog-entry link to verify the Resource Index evidence row.

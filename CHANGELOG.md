@@ -2,33 +2,40 @@
 
 ## 2026-07-03
 
-- Released the expanded 660-resource catalog with inclusion rationales for every entry.
-- Added first-party coverage for GUIGuard-Bench, WebPII, OSWorld-Human, and GameCraft-Bench from project-page, repository, dataset, or arXiv sources.
-- Added first-party coverage for WebArena-Infinity, GUI-360, CUA-Suite / VideoCUA, WebChain, WebSP-Eval, WebTestBench, CocoaBench, and HippoCamp from project-page, repository, dataset, or arXiv sources.
-- Added first-party coverage for SGDR / State-Grounded Dynamic Retrieval, OPID / On-Policy Skill Distillation, CRAFT / Counterfactual Credit Assignment, and Tool-RL-Box / Tool-Use RL Collapse from arXiv and repository sources.
-- Added first-party coverage for MCP Apps Extension, Agent Client Protocol, AG-UI, ContextForge MCP Gateway, Snyk Agent Scan, and Amazon Bedrock AgentCore from official documentation, project-page, repository, or product sources.
-- Refreshed README routes, Resource Index, Flagship Matrix, Static Explorer data, and public metadata for the 660-resource snapshot.
+- Released the expanded 670-resource catalog with inclusion rationales for every entry.
+- Added primary-source coverage for GUIGuard-Bench, WebPII, OSWorld-Human, and GameCraft-Bench from project-page, repository, dataset, or arXiv sources.
+- Added primary-source coverage for WebArena-Infinity, GUI-360, CUA-Suite / VideoCUA, WebChain, WebSP-Eval, WebTestBench, CocoaBench, and HippoCamp from project-page, repository, dataset, or arXiv sources.
+- Added primary-source coverage for SGDR / State-Grounded Dynamic Retrieval, OPID / On-Policy Skill Distillation, CRAFT / Counterfactual Credit Assignment, and Tool-RL-Box / Tool-Use RL Collapse from arXiv and repository sources.
+- Added primary-source coverage for MCP Apps Extension, Agent Client Protocol, AG-UI, ContextForge MCP Gateway, Snyk Agent Scan, and Amazon Bedrock AgentCore from official documentation, project-page, repository, or product sources.
+- Added primary-source coverage for Task-State Representation / TSR from arXiv.
+- Added primary-source coverage for COMFYCLAW from arXiv.
+- Added primary-source coverage for EHR-Complex from arXiv.
+- Added primary-source coverage for VeriGUI / Action-Effect Verification, FineState-Bench, AgentProg, UI-Voyager, UI-KOBE, Mobile-Agent-v3.5 / GUI-Owl-1.5, and BEAP-Agent from arXiv and repository sources.
+- Refreshed README routes, Resource Index, Flagship Matrix, Static Explorer data, Hot Papers, and public metadata for the 670-resource snapshot.
+- Clarified Hot Papers cycle wording, compact Resource Index row semantics, and the public 14-point readiness scoring methodology.
+- Refined Static Explorer sorting and browser data fields so the public web view exposes reader-facing catalog evidence only.
+- Added a concise Selection Guide reading path that routes readers from starter packs to the decision tree and comparison matrix.
 - Kept citation metadata at version 0.3.45 for the July 3 release date.
 
 ## 2026-07-01
 
 - Released the expanded 638-resource catalog with inclusion rationales for every entry.
-- Added first-party coverage for Gym-Anything / CUA-World, ScienceBoard, SCUBA, HealthAdminBench, RedTeamCUA / RTC-Bench, OSExpert / OSExpert-Eval, Cua / Cua Bench, Playwright MCP, UI-CUBE, InfiniteWeb, WebStep, and ProSoftArena from project-page, repository, dataset, official documentation, or arXiv sources.
-- Added first-party coverage for BrowserBC, QVal, TRIAGE, ECHO, ScratchWorld, and WorldRoamBench from arXiv, project-page, or repository sources.
-- Added first-party coverage for AI-Infra-Guard, Agent Protocol Governance Gaps, PEEU / GUI Experience Exploration, and Failure-Driven CUA Self-Improvement from arXiv sources.
-- Added first-party coverage for OpenMobile, ATBench-Claw / ATBench-Codex, and TRACE / Capability-Targeted Agentic Training from project-page, repository, or arXiv sources.
-- Added first-party coverage for Plan-RewardBench, Agent-as-Annotators, PlanGuard, Proteus Skill Red Team, Cloud-Native Embodied Simulation Infrastructure, and Agentic-Ideation from project-page, repository, dataset, or arXiv sources.
-- Added first-party coverage for GraphGPO, TAO-RL, WLA-0 / World-Language-Action Model, and A2World from arXiv sources.
-- Added first-party coverage for EmbodiedClaw, VERITAS, ToolPrivacyBench, and TwinRouterBench from arXiv sources.
-- Added first-party coverage for PreAct, Automating SKILL.md Generation for Computer-Using Agents, ToolPro, SIMMER, and ViPSim from arXiv sources.
-- Added first-party coverage for Official MCP Registry, MCP Inspector, OpenAI Apps SDK, Inspect AI, Cloudflare Agents SDK, and Magentic-UI from official documentation or repository sources.
-- Added first-party coverage for KnowU-Bench, MobileBench-OL, AndroidLab, and A3 / Android Agent Arena from project-page, repository, or arXiv sources.
-- Added first-party coverage for WebWorld and WebForge from arXiv, repository, or dataset sources.
-- Added first-party coverage for MMBench-GUI, OS-Genesis, UI-NEXUS, and AndroidLens from project-page, repository, dataset, or arXiv sources.
-- Added first-party coverage for Windows Agent Arena, PC Agent-E, AgentCPM-GUI / CAGUI, LearnAct / LearnGUI, MAS-Bench, FedMABench, MobileWorldBench, WebRL, and Go-Browse from project-page, repository, dataset, or arXiv sources.
-- Added first-party coverage for UI-S1, VenusBench-Mobile, AgentTrek, DynaWeb, PSPA-Bench, and MobiBench from project-page, repository, dataset, or arXiv sources.
-- Added first-party coverage for long-horizon desktop workloads, office GUI tasks, semantic OS layers, verified GUI search, terminal/SWE environment synthesis, MCP execution-control invariants, web-agent privacy diagnostics, and world-model calibration.
-- Added first-party coverage for D3-Gym, SWE-Universe, VeriEnv, COMAP, Agent-Authored World Modeling, Internalizing the Future, Xiaomi-GUI-0, ATMem / STR-GRPO, SWE-TRACE, OpenAgenet / OAN Yellow Paper, and agent-skill credential safety.
+- Added primary-source coverage for Gym-Anything / CUA-World, ScienceBoard, SCUBA, HealthAdminBench, RedTeamCUA / RTC-Bench, OSExpert / OSExpert-Eval, Cua / Cua Bench, Playwright MCP, UI-CUBE, InfiniteWeb, WebStep, and ProSoftArena from project-page, repository, dataset, official documentation, or arXiv sources.
+- Added primary-source coverage for BrowserBC, QVal, TRIAGE, ECHO, ScratchWorld, and WorldRoamBench from arXiv, project-page, or repository sources.
+- Added primary-source coverage for AI-Infra-Guard, Agent Protocol Governance Gaps, PEEU / GUI Experience Exploration, and Failure-Driven CUA Self-Improvement from arXiv sources.
+- Added primary-source coverage for OpenMobile, ATBench-Claw / ATBench-Codex, and TRACE / Capability-Targeted Agentic Training from project-page, repository, or arXiv sources.
+- Added primary-source coverage for Plan-RewardBench, Agent-as-Annotators, PlanGuard, Proteus Skill Red Team, Cloud-Native Embodied Simulation Infrastructure, and Agentic-Ideation from project-page, repository, dataset, or arXiv sources.
+- Added primary-source coverage for GraphGPO, TAO-RL, WLA-0 / World-Language-Action Model, and A2World from arXiv sources.
+- Added primary-source coverage for EmbodiedClaw, VERITAS, ToolPrivacyBench, and TwinRouterBench from arXiv sources.
+- Added primary-source coverage for PreAct, Automating SKILL.md Generation for Computer-Using Agents, ToolPro, SIMMER, and ViPSim from arXiv sources.
+- Added primary-source coverage for Official MCP Registry, MCP Inspector, OpenAI Apps SDK, Inspect AI, Cloudflare Agents SDK, and Magentic-UI from official documentation or repository sources.
+- Added primary-source coverage for KnowU-Bench, MobileBench-OL, AndroidLab, and A3 / Android Agent Arena from project-page, repository, or arXiv sources.
+- Added primary-source coverage for WebWorld and WebForge from arXiv, repository, or dataset sources.
+- Added primary-source coverage for MMBench-GUI, OS-Genesis, UI-NEXUS, and AndroidLens from project-page, repository, dataset, or arXiv sources.
+- Added primary-source coverage for Windows Agent Arena, PC Agent-E, AgentCPM-GUI / CAGUI, LearnAct / LearnGUI, MAS-Bench, FedMABench, MobileWorldBench, WebRL, and Go-Browse from project-page, repository, dataset, or arXiv sources.
+- Added primary-source coverage for UI-S1, VenusBench-Mobile, AgentTrek, DynaWeb, PSPA-Bench, and MobiBench from project-page, repository, dataset, or arXiv sources.
+- Added primary-source coverage for long-horizon desktop workloads, office GUI tasks, semantic OS layers, verified GUI search, terminal/SWE environment synthesis, MCP execution-control invariants, web-agent privacy diagnostics, and world-model calibration.
+- Added primary-source coverage for D3-Gym, SWE-Universe, VeriEnv, COMAP, Agent-Authored World Modeling, Internalizing the Future, Xiaomi-GUI-0, ATMem / STR-GRPO, SWE-TRACE, OpenAgenet / OAN Yellow Paper, and agent-skill credential safety.
 - Promoted Structured Data, Selection Guide, Reading Order, Hot Papers, Citation, and Static Explorer routes as first-class reader entry points.
 - Clarified public-runnable, public-repository, trajectory-asset, weekly Hot Papers, and readiness-label definitions.
 - Clarified Static Explorer local viewing with Ruby and Python commands, and surfaced the Hot Papers update date and weekly cadence in the homepage.
@@ -36,8 +43,8 @@
 
 ## 2026-06-30
 
-- Added OSWorld 2.0, TUA-Bench, WorldEvolver, PrincipalBench / Multi-Party Principal Loyalty, MCPPrivacyDetector, and TACO from first-party arXiv, project-page, or repository sources.
-- Added SWE-INTERACT, Phone-use Agent Misuse Study, SkillHarness, AutoSpec, and MCP Server Architecture Patterns from first-party arXiv or repository sources.
+- Added OSWorld 2.0, TUA-Bench, WorldEvolver, PrincipalBench / Multi-Party Principal Loyalty, MCPPrivacyDetector, and TACO from primary-source arXiv, project-page, or repository sources.
+- Added SWE-INTERACT, Phone-use Agent Misuse Study, SkillHarness, AutoSpec, and MCP Server Architecture Patterns from primary-source arXiv or repository sources.
 - Refreshed the weekly Hot Papers public view, Resource Index, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 540-resource catalog.
 - Updated the Static Explorer metrics band and README Catalog Snapshot to expose inclusion-rationale coverage in the 540-resource catalog.
 - Updated `CITATION.cff` to version 0.3.24 with the June 30 release date.
@@ -50,13 +57,13 @@
 
 ## 2026-06-27
 
-- Added Qwen-AgentWorld, Fara-1.5, MacAgentBench, GUI vs. CLI Execution Benchmark, VisCritic, Autonomous Evaluation for CUA RL, Argus / CUA Uncertainty Quantification, ToolBench-X, AgentCIBench / Contextual Integrity, ShareLock, Agent Policy-as-Code Autoformalization, and VIGIL from first-party arXiv sources.
+- Added Qwen-AgentWorld, Fara-1.5, MacAgentBench, GUI vs. CLI Execution Benchmark, VisCritic, Autonomous Evaluation for CUA RL, Argus / CUA Uncertainty Quantification, ToolBench-X, AgentCIBench / Contextual Integrity, ShareLock, Agent Policy-as-Code Autoformalization, and VIGIL from primary-source arXiv sources.
 - Refreshed the weekly Hot Papers public view, Resource Index, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 529-resource catalog.
 - Updated `CITATION.cff` to version 0.3.21 with the June 27 release date.
 
 ## 2026-06-21
 
-- Added MolmoWeb, UI-Copilot, MCP Pitfall Lab, Task2MCP / T2MRec, and CoEvoSkills from first-party arXiv sources to strengthen open visual web-agent data, mobile GUI tool-invocation training, trace-grounded MCP hardening, MCP server recommendation, and self-evolving agent-skill coverage.
+- Added MolmoWeb, UI-Copilot, MCP Pitfall Lab, Task2MCP / T2MRec, and CoEvoSkills from primary-source arXiv sources to strengthen open visual web-agent data, mobile GUI tool-invocation training, trace-grounded MCP hardening, MCP server recommendation, and self-evolving agent-skill coverage.
 - Added MCP Tool-Poisoning Client Study and Connor / Malicious MCP Servers to strengthen client-side tool-poisoning analysis and component-level malicious MCP server detection coverage.
 - Refreshed the weekly Hot Papers public view, Resource Index, Flagship Matrix, Static Explorer data, and README reader routes for the expanded 517-resource catalog.
 - Updated `CITATION.cff` to version 0.3.20 with the June 21 release date.
@@ -72,7 +79,7 @@
 - Added NRT-Bench to cover multi-turn red-team evaluation for LLM agent teams in safety-critical simulated control rooms.
 - Added MemGUI-Agent to cover long-horizon mobile GUI context management, public demonstration trajectories, and released mobile-agent model artifacts.
 - Added EnvScaler, ScaleEnv, and AgentScaler / Environment Scaling to strengthen environment-scaling coverage for tool-interactive agent training.
-- Added RODS, MyPCBench, LabOSBench, VISUALSKILL, Agentic Automata Learning, Self-Driving Negotiator, and Data Leakage Risks in Tool-Using LLM Agents from first-party arXiv sources.
+- Added RODS, MyPCBench, LabOSBench, VISUALSKILL, Agentic Automata Learning, Self-Driving Negotiator, and Data Leakage Risks in Tool-Using LLM Agents from primary-source arXiv sources.
 - Added AgentHijack, OSGuard, PhoneHarness, MalSkillBench, ProvenanceGuard, MobileForge, Weblica, and RoTS / GUI-RobustEval to strengthen computer-use robustness, phone-use harnessing, skill/MCP safety, and GUI/web rollout infrastructure coverage.
 - Added Beyond GUI Paradigm / CLI-Advantage, EnvRL, and MCP Runtime Fault Taxonomy to cover CLI-capable mobile-agent evaluation, environment-dynamics agentic RL, and MCP server runtime reliability evidence.
 - Added EgoBench, SMH-Bench, AsyncWebRL, GAIS, SkillHarm, and DeltaMCP to strengthen egocentric tool-agent evaluation, smart-home validation, visual web-agent RL, grounded tool-interaction synthesis, skill-attack safety, and MCP server regeneration coverage.
@@ -112,7 +119,7 @@
 - Added Sibling-Guided Credit Distillation, TRACE Rollout Budget Allocation, HiViG, Text World Models for LLM Agents, and CUA-HandCrafted / Domain-Conditioned Safety to cover long-horizon tool-use credit assignment, efficient rollout allocation, GUI critic grounding, text world-model foundations, and browser CUA safety evaluation.
 - Added Speculative Rollback Correction to cover verifier-passing web-agent imitation in resettable environments.
 - Aligned `CITATION.cff` with the repository BibTeX title and refreshed the repository citation version to 0.3.6.
-- Verified first-party source evidence for AgentWebBench, AutoWebWorld, Alem, OpenSkill, and CoEvolve.
+- Verified primary-source evidence for AgentWebBench, AutoWebWorld, Alem, OpenSkill, and CoEvolve.
 - Tightened AndroidControl and ScreenSpot evidence to rely on primary paper and repository sources.
 - Tightened contribution guidance so public source confidence now accepts only `official` or `high` evidence.
 - Refined reader-facing status labels in the Resource Index, Flagship Matrix, and Static Explorer.
@@ -143,8 +150,8 @@
 - Added DynamicGUIBench / DynamicUI to cover high-dynamic GUI environments where screen-recording context can matter more than a single screenshot.
 - Clarified the PhoneSafety entry as "Safe, or Simply Incapable?" so mobile safety readers can recognize the phone-use safety evaluation directly.
 - Clarified the BraveGuard entry as an open-world CUA guard so safety readers can identify its trajectory-level defense role.
-- Upgraded PaperBench, BrowseComp, and Anthropic Agent Skills with first-party paper, specification, and code links; improved source-confidence metadata in the Static Explorer.
-- Upgraded TimeWarp, GUI-CEval, ScreenSpot-Pro, GAIA, AndroidControl, and ScreenSpot with first-party paper, project, or code links; all Static Explorer entries now use high or official source confidence.
+- Upgraded PaperBench, BrowseComp, and Anthropic Agent Skills with primary-source paper, specification, and code links; improved source-confidence metadata in the Static Explorer.
+- Upgraded TimeWarp, GUI-CEval, ScreenSpot-Pro, GAIA, AndroidControl, and ScreenSpot with primary-source paper, project, or code links; all Static Explorer entries now use high or official source confidence.
 - Updated Static Explorer homepage metrics to show average readiness alongside resource, runnable, trajectory, and Hot Papers counts.
 - Added surface-card filtering to the Static Explorer so infrastructure, web, GUI, mobile, code, API, research, embodied, and training entries can be opened directly from the homepage map.
 - Refined the Hot Papers wording around evidence standards for main-index inclusion.

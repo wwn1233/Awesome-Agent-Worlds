@@ -32,7 +32,7 @@
       metricHot: "Featured 12",
       hotEyebrow: "Featured weekly view",
       hotTitle: "Featured 12 Hot Papers",
-      hotNote: "The homepage shows a Featured 12 strip; the full weekly table is in the Hot Papers document.",
+      hotNote: "Each Featured 12 card links to the paper and its Resource Index entry; the full weekly table is in the Hot Papers document.",
       explorerLabel: "Resource explorer",
       filterSearch: "Search",
       filterPath: "Reader path",
@@ -68,7 +68,7 @@
       allTrajectories: "All trajectories",
       allResetModes: "All reset modes",
       sortBy: "Sort by",
-      score: "score", catalogStatus: { indexed: "indexed" }
+      score: "score", catalogEntry: "Catalog entry", catalogStatus: { indexed: "indexed" }
     },
     zh: {
       documentTitle: "Awesome Agent Worlds｜智能体世界索引",
@@ -102,7 +102,7 @@
       metricHot: "精选 12",
       hotEyebrow: "每周精选视图",
       hotTitle: "精选 12 篇热点论文",
-      hotNote: "首页展示 Featured 12 精选条带，完整每周表格见 Hot Papers 文档。",
+      hotNote: "每张 Featured 12 卡片都链接论文和资源索引证据行，完整每周表格见 Hot Papers 文档。",
       explorerLabel: "资源浏览器",
       filterSearch: "搜索",
       filterPath: "阅读路径",
@@ -138,7 +138,7 @@
       allTrajectories: "全部轨迹",
       allResetModes: "全部重置方式",
       sortBy: "排序方式",
-      score: "评分", catalogStatus: { indexed: "已入库" }
+      score: "评分", catalogEntry: "索引条目", catalogStatus: { indexed: "已入库" }
     }
   };
 
@@ -217,8 +217,7 @@
       recommended: "推荐顺序",
       score: "成熟度评分",
       newest: "最新年份",
-      name: "名称",
-      priority: "策展优先级"
+      name: "名称"
     },
     flag: {
       "agent-infrastructure": "智能体基础设施",
@@ -285,7 +284,7 @@
     },
     hotMeta(lang, updated, cadence) {
       const cadenceText = cadence === "weekly" ? (lang === "zh" ? "每周" : "weekly") : titleCase(cadence);
-      return `${lang === "zh" ? "更新：" : "Updated: "}${updated || "unknown"} · ${cadenceText}`;
+      return `${lang === "zh" ? "热点周期：" : "Hot Papers cycle: "}${updated || "unknown"} · ${cadenceText}`;
     },
     t(lang, key) {
       return (copy[lang] && copy[lang][key]) || copy.en[key] || key;

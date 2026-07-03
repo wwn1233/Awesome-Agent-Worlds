@@ -1,14 +1,14 @@
 # Hot Papers
 
 Weekly public view for indexed Agent Worlds papers. The current Featured 12
-is refreshed weekly, while the longer table is a compact indexed archive.
+is refreshed weekly, while the longer table is the public indexed catalog.
 The [Static Explorer Guide](../../site/README.md) explains how to run the
 local homepage that shows the featured strip.
 
 Curated resources are the entries in the
 [Resource Index](./resource-index.md) and main [README](../../README.md).
 
-- Updated: 2026-07-01
+- Hot Papers cycle: 2026-07-03
 - Cadence: weekly
 - Source scope: recent arXiv papers with Agent Worlds evidence
 - Catalog status: indexed
@@ -17,49 +17,53 @@ Curated resources are the entries in the
 
 A paper appears in this weekly view when there is clear evidence for its world
 role, observation/action surface, verifier or reward, reset or replay support,
-trajectory access, sandbox or safety boundary, and first-party source. The
+trajectory access, sandbox or safety boundary, and primary-source evidence. The
 catalog-entry column links each public row back to the main indexed record.
-Entries require first-party evidence and complete catalog evidence fields.
+Entries require primary-source evidence and complete catalog evidence fields.
 
 ## Featured 12 Indexed Papers
 
 This table mirrors the Static Explorer homepage strip. It favors current,
 indexed papers with strong Agent Worlds evidence; older indexed rows remain
-available in the archive below.
+available in the full weekly table below.
 
 | Paper | Published | Evidence | Catalog entry |
 | --- | --- | --- | --- |
+| [What Memory Do GUI Agents Really Need? From Passive Records to Active Task-Driving States](https://arxiv.org/abs/2606.31612v2) | 2026-06-30 | task-driving GUI memory, mobile GUI histories, active state management, long-horizon GUI agent | [ATMem / STR-GRPO](./resource-index.md#atmem-str-grpo) |
+| [COMFYCLAW: Self-Evolving Skill Harnesses for Image Generation Workflows](https://arxiv.org/abs/2607.01709v1) | 2026-07-02 | verifier, evaluation, benchmark, skill library, skill environment | [COMFYCLAW](./resource-index.md#comfyclaw) |
+| [A Task-State Representation for Long-Horizon Mobile GUI Agents](https://arxiv.org/abs/2607.00502v1) | 2026-07-01 | GUI agent, verifier, benchmark, mobile GUI agent | [Task-State Representation / TSR](./resource-index.md#task-state-representation-tsr) |
+| [Xiaomi-GUI-0 Technical Report](https://arxiv.org/abs/2606.31410v2) | 2026-06-30 | Xiaomi GUI benchmark, mobile UI tasks, sandboxed GUI evaluation, multimodal agent rollout | [Xiaomi-GUI-0](./resource-index.md#xiaomi-gui-0) |
+| [Building a Scalable, Reproducible, Evaluatable, and Closed-Loop Simulation Environment Foundation for Embodied Intelligence](https://arxiv.org/abs/2606.27962v2) | 2026-06-26 | trajectory, evaluation, benchmark, environment generation | [Cloud-Native Embodied Simulation Infrastructure](./resource-index.md#cloud-native-embodied-simulation-infrastructure) |
 | [QVal: Cheaply Evaluating Dense Supervision Signals for Long-Horizon LLM Agents](https://arxiv.org/abs/2606.32034v1) | 2026-06-30 | dense supervision, long-horizon agent, Q-value alignment, process reward, benchmark | [QVal](./resource-index.md#qval-dense-supervision) |
 | [TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning](https://arxiv.org/abs/2606.32017v1) | 2026-06-30 | role-typed credit, agentic RL, process reward, verifier-gated rollouts | [TRIAGE](./resource-index.md#triage-role-typed-credit-assignment) |
 | [BrowserBC: Scalable Behaviour Cloning for Browser Use via Skill Distillation](https://arxiv.org/abs/2606.32014v1) | 2026-06-30 | browser skill distillation, human browser trajectories, web agent, skill graph | [BrowserBC](./resource-index.md#browserbc) |
 | [ScratchWorld: Evaluating If World Models Compute Executable Consequences](https://arxiv.org/abs/2606.31689v1) | 2026-06-30 | executable world model, replay-verified transitions, Scratch VM, counterfactual prediction | [ScratchWorld](./resource-index.md#scratchworld) |
 | [WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models](https://arxiv.org/abs/2606.31672v1) | 2026-06-30 | interactive world model, long-horizon stability, action/vision/physics/memory, open-world benchmark | [WorldRoamBench](./resource-index.md#worldroambench) |
 | [ECHO: Prune to act, trace to learn with selective turn memory in agentic RL](https://arxiv.org/abs/2606.31650v1) | 2026-06-30 | selective turn memory, source-indexed credit, agentic RL, long-horizon tool use | [ECHO](./resource-index.md#echo-selective-turn-memory) |
-| [What Memory Do GUI Agents Really Need? From Passive Records to Active Task-Driving States](https://arxiv.org/abs/2606.31612v1) | 2026-06-30 | task-driving GUI memory, mobile GUI histories, active state management, long-horizon GUI agent | [ATMem / STR-GRPO](./resource-index.md#atmem-str-grpo) |
 | [Governance Gaps in Agent Interoperability Protocols: What MCP, A2A, and ACP Cannot Express](https://arxiv.org/abs/2606.31498v1) | 2026-06-30 | MCP, agent interoperability protocols, governance gaps, governed agent communities | [Agent Protocol Governance Gaps](./resource-index.md#agent-protocol-governance-gaps) |
-| [Ask the World Before Acting: Budgeted Environment Probing for World-Model Calibration](https://arxiv.org/abs/2606.31422v1) | 2026-06-30 | environment probing, belief calibration, long-horizon agent, world-model repair | [Ask the World Before Acting](./resource-index.md#ask-the-world-before-acting) |
-| [Xiaomi-GUI-0 Technical Report](https://arxiv.org/abs/2606.31410v1) | 2026-06-30 | Xiaomi GUI benchmark, mobile UI tasks, sandboxed GUI evaluation, multimodal agent rollout | [Xiaomi-GUI-0](./resource-index.md#xiaomi-gui-0) |
-| [Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents](https://arxiv.org/abs/2606.31270v1) | 2026-06-30 | benchmark, computer-use agent, failure-driven self-improvement, inference-time self-improvement, failed trajectories | [Failure-Driven CUA Self-Improvement](./resource-index.md#failure-driven-cua-self-improvement) |
-| [Agentic-Ideation: Sample Efficient Agentic Trajectories Synthesis for Scientific Ideation Agents](https://arxiv.org/abs/2606.31229v1) | 2026-06-30 | trajectory, trajectory synthesis, tool invocation | [Agentic-Ideation](./resource-index.md#agentic-ideation) |
 
 ## Current Indexed Agent Worlds Papers
 
-Rows are relevance-filtered within the indexed archive; final ordering favors recent updates
-and then evidence score, so the archive is not strictly sorted by the visible
-Published date.
+Rows are relevance-filtered within the indexed catalog; final ordering favors recent updates
+and then evidence score, so the catalog is not strictly sorted by the visible
+Published date. Featured 12 rows are intentionally repeated here so the
+public weekly view remains complete.
 
 | Paper | Published | Evidence | Catalog entry |
 | --- | --- | --- | --- |
+| [What Memory Do GUI Agents Really Need? From Passive Records to Active Task-Driving States](https://arxiv.org/abs/2606.31612v2) | 2026-06-30 | task-driving GUI memory, mobile GUI histories, active state management, long-horizon GUI agent | [ATMem / STR-GRPO](./resource-index.md#atmem-str-grpo) |
+| [COMFYCLAW: Self-Evolving Skill Harnesses for Image Generation Workflows](https://arxiv.org/abs/2607.01709v1) | 2026-07-02 | verifier, evaluation, benchmark, skill library, skill environment | [COMFYCLAW](./resource-index.md#comfyclaw) |
+| [A Task-State Representation for Long-Horizon Mobile GUI Agents](https://arxiv.org/abs/2607.00502v1) | 2026-07-01 | GUI agent, verifier, benchmark, mobile GUI agent | [Task-State Representation / TSR](./resource-index.md#task-state-representation-tsr) |
+| [Xiaomi-GUI-0 Technical Report](https://arxiv.org/abs/2606.31410v2) | 2026-06-30 | Xiaomi GUI benchmark, mobile UI tasks, sandboxed GUI evaluation, multimodal agent rollout | [Xiaomi-GUI-0](./resource-index.md#xiaomi-gui-0) |
+| [Building a Scalable, Reproducible, Evaluatable, and Closed-Loop Simulation Environment Foundation for Embodied Intelligence](https://arxiv.org/abs/2606.27962v2) | 2026-06-26 | trajectory, evaluation, benchmark, environment generation | [Cloud-Native Embodied Simulation Infrastructure](./resource-index.md#cloud-native-embodied-simulation-infrastructure) |
 | [QVal: Cheaply Evaluating Dense Supervision Signals for Long-Horizon LLM Agents](https://arxiv.org/abs/2606.32034v1) | 2026-06-30 | dense supervision, long-horizon agent, Q-value alignment, process reward, benchmark | [QVal](./resource-index.md#qval-dense-supervision) |
 | [TRIAGE: Role-Typed Credit Assignment for Agentic Reinforcement Learning](https://arxiv.org/abs/2606.32017v1) | 2026-06-30 | role-typed credit, agentic RL, process reward, verifier-gated rollouts | [TRIAGE](./resource-index.md#triage-role-typed-credit-assignment) |
 | [BrowserBC: Scalable Behaviour Cloning for Browser Use via Skill Distillation](https://arxiv.org/abs/2606.32014v1) | 2026-06-30 | browser skill distillation, human browser trajectories, web agent, skill graph | [BrowserBC](./resource-index.md#browserbc) |
 | [ScratchWorld: Evaluating If World Models Compute Executable Consequences](https://arxiv.org/abs/2606.31689v1) | 2026-06-30 | executable world model, replay-verified transitions, Scratch VM, counterfactual prediction | [ScratchWorld](./resource-index.md#scratchworld) |
 | [WorldRoamBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models](https://arxiv.org/abs/2606.31672v1) | 2026-06-30 | interactive world model, long-horizon stability, action/vision/physics/memory, open-world benchmark | [WorldRoamBench](./resource-index.md#worldroambench) |
 | [ECHO: Prune to act, trace to learn with selective turn memory in agentic RL](https://arxiv.org/abs/2606.31650v1) | 2026-06-30 | selective turn memory, source-indexed credit, agentic RL, long-horizon tool use | [ECHO](./resource-index.md#echo-selective-turn-memory) |
-| [What Memory Do GUI Agents Really Need? From Passive Records to Active Task-Driving States](https://arxiv.org/abs/2606.31612v1) | 2026-06-30 | task-driving GUI memory, mobile GUI histories, active state management, long-horizon GUI agent | [ATMem / STR-GRPO](./resource-index.md#atmem-str-grpo) |
 | [Governance Gaps in Agent Interoperability Protocols: What MCP, A2A, and ACP Cannot Express](https://arxiv.org/abs/2606.31498v1) | 2026-06-30 | MCP, agent interoperability protocols, governance gaps, governed agent communities | [Agent Protocol Governance Gaps](./resource-index.md#agent-protocol-governance-gaps) |
 | [Ask the World Before Acting: Budgeted Environment Probing for World-Model Calibration](https://arxiv.org/abs/2606.31422v1) | 2026-06-30 | environment probing, belief calibration, long-horizon agent, world-model repair | [Ask the World Before Acting](./resource-index.md#ask-the-world-before-acting) |
-| [Xiaomi-GUI-0 Technical Report](https://arxiv.org/abs/2606.31410v1) | 2026-06-30 | Xiaomi GUI benchmark, mobile UI tasks, sandboxed GUI evaluation, multimodal agent rollout | [Xiaomi-GUI-0](./resource-index.md#xiaomi-gui-0) |
 | [Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents](https://arxiv.org/abs/2606.31270v1) | 2026-06-30 | benchmark, computer-use agent, failure-driven self-improvement, inference-time self-improvement, failed trajectories | [Failure-Driven CUA Self-Improvement](./resource-index.md#failure-driven-cua-self-improvement) |
 | [Agentic-Ideation: Sample Efficient Agentic Trajectories Synthesis for Scientific Ideation Agents](https://arxiv.org/abs/2606.31229v1) | 2026-06-30 | trajectory, trajectory synthesis, tool invocation | [Agentic-Ideation](./resource-index.md#agentic-ideation) |
 | [Securing the AI Agent: A Unified Framework for Multi-Layer Agent Red Teaming](https://arxiv.org/abs/2606.31227v1) | 2026-06-30 | MCP server, ai-infra-guard, multi-layer agent red teaming | [AI-Infra-Guard](./resource-index.md#ai-infra-guard) |
@@ -76,7 +80,6 @@ Published date.
 | [Beyond Function Calling: Benchmarking Tool-Using Agents under Tool-Environment Unreliability](https://arxiv.org/abs/2606.25819v2) | 2026-06-24 | tool-environment unreliability, tool-using agent, benchmark | [ToolBench-X](./resource-index.md#toolbench-x) |
 | [TUA-Bench: A Benchmark for General-Purpose Terminal-Use Agents](https://arxiv.org/abs/2606.28480v1) | 2026-06-26 | terminal-use agent, long-horizon terminal tasks, benchmark | [TUA-Bench](./resource-index.md#tua-bench) |
 | [ToolPrivacyBench: Benchmarking Purpose-Bound Privacy in Tool-Using LLM Agents](https://arxiv.org/abs/2606.28061v1) | 2026-06-26 | trajectory, evaluation, benchmark, tool-using llm agents | [ToolPrivacyBench](./resource-index.md#toolprivacybench) |
-| [Building a Scalable, Reproducible, Evaluatable, and Closed-Loop Simulation Environment Foundation for Embodied Intelligence Cloud-Native Simulation Infrastructure for Embodied Intelligence Training, Evaluation, and Data Collection](https://arxiv.org/abs/2606.27962v1) | 2026-06-26 | trajectory, evaluation, benchmark, environment generation | [Cloud-Native Embodied Simulation Infrastructure](./resource-index.md#cloud-native-embodied-simulation-infrastructure) |
 | [It Lied to a Doctor to Buy Poison Ingredients: Quantifying Real-World Misuse of Phone-use Agents](https://arxiv.org/abs/2606.27944v1) | 2026-06-26 | phone-use misuse, safety-critical actions, real-world misuse study | [Phone-use Agent Misuse Study](./resource-index.md#phone-use-agent-misuse-study) |
 | [Internalizing the Future: A Unified Agentic Training Paradigm for World Model Planning](https://arxiv.org/abs/2606.27483v1) | 2026-06-25 | world model planning, agentic training, prospective state rollout, foresight-conditioned reinforcement learning, long-horizon tasks | [Internalizing the Future](./resource-index.md#internalizing-the-future) |
 | [Empowering GUI Agents via Autonomous Experience Exploration and Hindsight Experience Utilization for Task Planning](https://arxiv.org/abs/2606.27330v1) | 2026-06-25 | GUI agent, web agent, benchmark, planning experience exploration, hindsight experience | [PEEU / GUI Experience Exploration](./resource-index.md#peeu-gui-experience-exploration) |
@@ -92,11 +95,11 @@ Published date.
 | [VisCritic: Visual State Comparison as Process Reward for GUI Agents](https://arxiv.org/abs/2606.24525v1) | 2026-06-23 | visual state comparison, GUI process reward, before/after state critique, reward model | [VisCritic](./resource-index.md#viscritic) |
 | [Reinforcement Learning for Computer-Use Agents with Autonomous Evaluation](https://arxiv.org/abs/2606.24515v1) | 2026-06-23 | autonomous GUI evaluation, computer-use RL, rollout scoring, execution feedback | [Autonomous Evaluation for CUA RL](./resource-index.md#autonomous-evaluation-for-cua-rl) |
 | [GUI vs. CLI: Execution Bottlenecks in Screen-Only and Skill-Mediated Computer-Use Agents](https://arxiv.org/abs/2606.24551v1) | 2026-06-22 | matched GUI/CLI execution, screen-only bottlenecks, skill-mediated actions, computer-use benchmark | [GUI vs. CLI Execution Benchmark](./resource-index.md#gui-vs-cli-execution-benchmark) |
+| [EHR-Complex: Benchmarking Medical Agents for Complex Clinical Reasoning](https://arxiv.org/abs/2606.23301v1) | 2026-06-22 | sandbox, evaluation, benchmark, failed trajectories, clinical database reasoning | [EHR-Complex](./resource-index.md#ehr-complex) |
 | [Capable but Careless: Do Computer-Use Agents Follow Contextual Integrity?](https://arxiv.org/abs/2606.23189v1) | 2026-06-22 | contextual integrity, personal data handling, computer-use safety evaluation, privacy boundary | [AgentCIBench / Contextual Integrity](./resource-index.md#agentcibench-contextual-integrity) |
 | [MacAgentBench: Benchmarking AI Agents on Real-World macOS Desktop](https://arxiv.org/abs/2606.22557v1) | 2026-06-21 | computer use, agent benchmark, evaluation, benchmark, skill library | [MacAgentBench](./resource-index.md#macagentbench) |
 | [ChainWorld: Composing Long-Horizon Desktop Workloads from Atomic OSWorld Tasks](https://arxiv.org/abs/2606.21654v1) | 2026-06-19 | long-horizon desktop workloads, atomic OSWorld tasks, computer-use benchmark | [ChainWorld](./resource-index.md#chainworld) |
 | ["What Happens Locally, Leaks Globally": Detecting Privacy Leakage Risks in MCP Servers](https://arxiv.org/abs/2606.21338v1) | 2026-06-19 | MCP privacy leakage, cross-server data flow, credential boundary, agent tool ecosystem | [MCPPrivacyDetector](./resource-index.md#mcpprivacydetector) |
-| [How Your Credentials Are Leaked by LLM Agent Skills: An Empirical Study](https://arxiv.org/abs/2604.03070v2) | 2026-04-03 | sandbox, dynamic sandbox, third-party skills, malicious skill | [How Your Credentials Are Leaked by LLM Agent Skills](./resource-index.md#credential-leakage-agent-skills) |
 | [Current World Models Lack a Persistent State Core](https://arxiv.org/abs/2606.20545v1) | 2026-06-18 | persistent state core, generated-world consistency, return-view diagnostics, world-model evaluation | [WRBench / Persistent State Core](./resource-index.md#wrbench-persistent-state-core) |
 | [Fara-1.5: Scalable Learning Environments for Computer Use Agents](https://arxiv.org/abs/2606.20785v1) | 2026-06-18 | computer use, verifier, rollout, benchmark, synthetic environment | [Fara-1.5](./resource-index.md#fara-1-5) |
 | [NRT-Bench: LLM Agent Safety and Multi-Turn Red-Teaming in Safety-Critical Systems](https://arxiv.org/abs/2606.20408v1) | 2026-06-18 | multi-turn red-teaming, safety-critical systems, agent safety benchmark, simulated high-risk workflows | [NRT-Bench](./resource-index.md#nrt-bench) |
@@ -215,6 +218,7 @@ Published date.
 | [PhAIL / Physical AI Leaderboard](https://arxiv.org/abs/2605.29710v1) | 2026-05-28 | real-robot VLA benchmark, time-to-success distribution, rollout artifacts, physical-AI leaderboard | [PhAIL / Physical AI Leaderboard](./resource-index.md#phail-physical-ai-leaderboard) |
 | [World Models in Words: Auditing Physical State-Transition Commitments in Vision-Language Models](https://arxiv.org/abs/2605.29585v1) | 2026-05-28 | verifier, evaluation, benchmark, world model, hybrid verifier | [World Models in Words](./resource-index.md#world-models-in-words) |
 | [LiteCoder-Terminal: Scaling Long-Horizon Terminal Environments for Learning Language Agents](https://arxiv.org/abs/2605.29559v1) | 2026-05-28 | terminal environment synthesis, executable rewards, expert trajectories, trajectory-level preference optimization | [LiteCoder-Terminal](./resource-index.md#litecoder-terminal) |
+| [UI-KOBE: Knowledge-Oriented Behavior Exploration for Lightweight Graph-Guided GUI Agents](https://arxiv.org/abs/2605.29534v1) | 2026-05-28 | GUI agent, graph-guided gui agents, mobile GUI agent, benchmark | [UI-KOBE](./resource-index.md#ui-kobe) |
 | [PhoneWorld: Scaling Phone-Use Agent Environments](https://arxiv.org/abs/2605.29486v1) | 2026-05-28 | agent benchmark, verifier, rollout, evaluation, benchmark | [PhoneWorld](./resource-index.md#phoneworld) |
 | [Recovering Policy-Induced Errors: Benchmarking and Trajectory Synthesis for Robust GUI Agents](https://arxiv.org/abs/2605.29447v1) | 2026-05-28 | GUI agent, trajectory, evaluation, benchmark, trajectory synthesis | [RoTS / GUI-RobustEval](./resource-index.md#rots-gui-robusteval) |
 | [STAMP: Training Explicit Memory for Mobile GUI Agents in Controllable and Scalable Virtual Environments](https://arxiv.org/abs/2605.29324v1) | 2026-05-28 | stamp, memory-world, mobile GUI agent, controllable virtual environments, verifiable memory supervision | [STAMP / Memory-World](./resource-index.md#stamp-memory-world) |
@@ -227,9 +231,6 @@ Published date.
 | [Plant, Persist, Trigger: Sleeper Attack on Large Language Model Agents](https://arxiv.org/abs/2605.28201v1) | 2026-05-27 | sleeper attack, persistent adversarial content, agent state, tool-returned data, mcp context | [Sleeper Attack](./resource-index.md#sleeper-attack) |
 | [Tool Forge: A Validation-Carrying Toolchain for Governed Agentic Execution](https://arxiv.org/abs/2605.28000v1) | 2026-05-27 | tool forge, validation-carrying toolchain, governed agentic execution, sandbox-verified tools, intent-scoped routing | [Tool Forge](./resource-index.md#tool-forge) |
 | [AndroidDaily: A Verifiable Benchmark for Mobile GUI Agents on Real-World Closed-Source Applications](https://arxiv.org/abs/2605.27761v1) | 2026-05-26 | androiddaily, verifiable benchmark, mobile GUI agent, real-world closed-source applications, closed-source applications | [AndroidDaily](./resource-index.md#androiddaily) |
-| [GE-Sim 2.0: A Roadmap Towards Comprehensive Closed-loop Video World Simulators for Robotic Manipulation](https://arxiv.org/abs/2605.27491v1) | 2026-05-26 | trajectory, rollout, evaluation, world model, robot policy | [GE-Sim 2.0](./resource-index.md#ge-sim-2) |
-| [HyperSim: A Holistic Sim-To-Real Framework For Robust Robotic Manipulation](https://arxiv.org/abs/2605.26638v1) | 2026-05-26 | sim-to-real manipulation, environment synthesis, adversarial trajectories, real-robot evaluation | [HyperSim](./resource-index.md#hypersim-sim-to-real-robotic-manipulation) |
-| [PANDO: Efficient Multimodal AI Agents via Online Skill Distillation](https://arxiv.org/abs/2605.24785v2) | 2026-05-24 | online skill distillation, VisualWebArena trajectories, structured skill library, trajectory efficiency metrics | [PANDO](./resource-index.md#pando) |
 | [How Mobile World Model Guides GUI Agents?](https://arxiv.org/abs/2605.10347v2) | 2026-05-11 | GUI agent, mobile agent, verifier, rollout, world model | [How Mobile World Model Guides GUI Agents?](./resource-index.md#mobile-world-model-guidance) |
 | [Terminal-World: Scaling Terminal-Agent Environments via Agent Skills](https://arxiv.org/abs/2605.20876v1) | 2026-05-20 | terminal-world, terminal-agent environments, agent skills, teacher trajectories | [Terminal-World](./resource-index.md#terminal-world) |
 | [OpenComputer: Verifiable Software Worlds for Computer-Use Agents](https://arxiv.org/abs/2605.19769v1) | 2026-05-19 | opencomputer, verifiable software worlds, computer-use agent, state verifiers, partial-credit rewards | [OpenComputer](./resource-index.md#opencomputer) |
@@ -264,5 +265,5 @@ Published date.
 | [SWE-Universe: Scale Real-World Verifiable Environments to Millions](https://arxiv.org/abs/2602.02361v1) | 2026-02-02 | swe-universe, verifiable environments, software engineering, github pull requests, self-verification | [SWE-Universe](./resource-index.md#swe-universe) |
 
 This view is refreshed weekly. Main-index entries are retained only
-after first-party evidence confirms the world role, verifier or reward,
+after primary-source evidence confirms the world role, verifier or reward,
 trajectory access, sandbox boundary, and reproducibility signal.

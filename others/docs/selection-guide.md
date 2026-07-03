@@ -1,15 +1,23 @@
 # Selection Guide
+
 Use this guide when choosing an Agent World for evaluation, post-training, or
 product gating.
+
+Start with the reader starter pack that matches your role, then follow the
+decision tree for the target action surface. Use the comparison matrix to check
+the verifier, reset boundary, and main caveat before adopting a resource.
+
 ## Reader Starter Packs
+
 | Reader | Start with | Caution |
 |---|---|---|
 | Researcher | WebArena, OSWorld, SWE-bench, AppWorld, PaperBench, D3-Gym, Qwen-AgentWorld, Text World Models for LLM Agents, COMAP, Internalizing the Future | Do not compare scores without checking verifier reliability and contamination risk. |
-| Evaluation builder | OSWorld-Verified, OSWorld-Human, Windows Agent Arena, WebArena-Verified, BrowserGym, AndroidWorld, DynamicGUIBench / DynamicUI, MCPWorld, MobileWorld, tau-bench, ChainWorld, PPT-Eval, GameCraft-Bench | Prefer resettable or replayable worlds; live websites, apps, and generated artifacts drift. |
-| Post-training engineer | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence, PC Agent-E, Qwen-AgentWorld, WebRL, DynaWeb, AgentTrek, Go-Browse, LearnAct / LearnGUI, UI-S1, Agent-RLVR, GUI-GENESIS, Agent-as-Annotators, OpenMobile, TRACE / Capability-Targeted Agentic Training, Plan-RewardBench, PEEU / GUI Experience Exploration, Failure-Driven CUA Self-Improvement, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
+| Evaluation builder | OSWorld-Verified, OSWorld-Human, Windows Agent Arena, WebArena-Verified, BrowserGym, AndroidWorld, DynamicGUIBench / DynamicUI, MCPWorld, MobileWorld, FineState-Bench, VeriGUI / Action-Effect Verification, tau-bench, ChainWorld, PPT-Eval, GameCraft-Bench | Prefer resettable or replayable worlds; live websites, apps, and generated artifacts drift. |
+| Post-training engineer | AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence, PC Agent-E, Qwen-AgentWorld, WebRL, DynaWeb, AgentTrek, Go-Browse, LearnAct / LearnGUI, UI-S1, AgentProg, UI-Voyager, Agent-RLVR, GUI-GENESIS, COMFYCLAW, Agent-as-Annotators, OpenMobile, TRACE / Capability-Targeted Agentic Training, Plan-RewardBench, PEEU / GUI Experience Exploration, Failure-Driven CUA Self-Improvement, Orchard, RAGEN, VAGEN, rLLM, Agent Lightning | Public trajectories do not always imply reward quality or stable online RL. |
 | Infrastructure builder | Model Context Protocol, Agent2Agent Protocol, OpenAI Agents SDK Sandbox, ADK Arena, LUMOS, MCP-Flow, OpenAgenet / OAN Yellow Paper, MCP Runtime Fault Taxonomy, MCP Security Invariants Benchmark, Agent Protocol Governance Gaps | Separate protocol or runtime direction from runnable world evidence and public trajectory availability. |
 | Safety auditor | PhoneSafety / Safe, or Simply Incapable?, MyPhoneBench, SkillSafetyBench, CUAHarm, RiOSWorld, CORA / Phone-Harm, OS-Harm, OS-BLIND, AgentHazard, LPS-Bench, GUIGuard-Bench, WebPII, MCP-SafetyBench, MCPSecBench, MCPTox, SafeMCP, MCP Security Invariants Benchmark, AI-Infra-Guard, ATBench-Claw / ATBench-Codex, PlanGuard, Proteus Skill Red Team | Separate unsafe action, privacy exposure, and simple agent incapability before drawing safety conclusions. |
 | Product lead | OpenAI Computer-Using Agent, OpenAI Agents SDK Sandbox, Gemini 2.5 Computer Use, Claude Managed Agents, Project Mariner | Product signals show direction, not reproducible public training evidence. |
+
 ## Practitioner Decision Tree
 ```text
 What do you need the world to prove?
@@ -31,11 +39,11 @@ What do you need the world to prove?
 │   ├── Need forkable GUI workspaces for speculative execution or rollback? -> TClone
 │   ├── Need history-aware visual action critique? -> HiViG
 │   ├── Need dynamic video-bearing GUI screens? -> LivingScreen, DynamicGUIBench / DynamicUI
-│   ├── Need mobile interaction? -> AndroidWorld, AndroidDaily, MobileWorld, MobileGym, MyPhoneBench
+│   ├── Need mobile interaction, fine-grained state control, or action-effect recovery? -> AndroidWorld, AndroidDaily, MobileWorld, MobileGym, MyPhoneBench, FineState-Bench, VeriGUI / Action-Effect Verification
 │   ├── Need mixed GUI, CLI, and tool phone actions? -> PhoneHarness
 │   ├── Need CLI-capable mobile-agent evaluation? -> Beyond GUI Paradigm / CLI-Advantage
 │   ├── Need GUI-world synthesis or verified GUI trajectory search? -> ScaleWoB, PhoneWorld, MobileGym, ENVS
-│   ├── Need personalization, memory, demonstrations, Chinese-app coverage, shortcut hybrids, federated training, semi-online RL, diagnostics, or semantic world models on phones? -> iOSWorld, MemGUI-Agent, LearnAct / LearnGUI, AgentCPM-GUI / CAGUI, MAS-Bench, FedMABench, UI-S1, VenusBench-Mobile, PSPA-Bench, MobiBench, MobileWorldBench, ATMem / STR-GRPO, MemGUI-Bench, STAMP / Memory-World, Teach-and-Repeat
+│   ├── Need personalization, memory, demonstrations, Chinese-app coverage, shortcut hybrids, federated training, semi-online RL, diagnostics, self-evolution, or semantic world models on phones? -> iOSWorld, MemGUI-Agent, LearnAct / LearnGUI, AgentCPM-GUI / CAGUI, MAS-Bench, FedMABench, UI-S1, AgentProg, UI-Voyager, VenusBench-Mobile, PSPA-Bench, MobiBench, MobileWorldBench, ATMem / STR-GRPO, MemGUI-Bench, STAMP / Memory-World, Teach-and-Repeat
 │   ├── Need GUI/web RL, environment exploration, evaluation, and trajectory distillation? -> Agent-as-Annotators, ClawGUI, CUA-Gym, PRO-CUA, PEEU / GUI Experience Exploration, OpenMobile
 │   └── Need model-centered GUI grounding, real-device mobile rollout loops, semantic OS layers, or synthetic GUI rollouts? -> UI-TARS, Xiaomi-GUI-0, LUMOS, MCPWorld, DigiWorld, GUI-GENESIS, Video2GUI / WildGUI, OmniACT
 ├── Browser and web workflow ability
@@ -61,7 +69,7 @@ What do you need the world to prove?
 │   ├── Need MCP source attribution, malicious skill audits, skill composition risk, credential leakage checks, adaptive red-teaming, formal policy enforcement, planning consistency, trajectory safety customization, or skill runtime enforcement? -> ProvenanceGuard, Description-Code Inconsistency / DCIChecker, PACT / Argument-Level Provenance, MalSkillBench, SkillHarm, SCR-Bench / Skill Composition Risk, How Your Credentials Are Leaked by LLM Agent Skills, ShareLock, Agent Policy-as-Code Autoformalization, AI-Infra-Guard, Proteus Skill Red Team, PlanGuard, ATBench-Claw / ATBench-Codex, VIGIL
 │   ├── Need trust-governed agent resource identity, discovery, or protocol governance gaps? -> OpenAgenet / OAN Yellow Paper, Agent Protocol Governance Gaps
 │   ├── Need grounded tool-interaction synthesis? -> GAIS
-│   ├── Need personalized, biomedical, or clinical tool agents? -> MCP-Persona, MedCTA, BioManus / MCP-Native Biomedical Agent, MedCUA-Bench, CHI-Bench
+│   ├── Need personalized, biomedical, clinical tool agents, or EHR database reasoning? -> MCP-Persona, MedCTA, BioManus / MCP-Native Biomedical Agent, MedCUA-Bench, CHI-Bench, EHR-Complex
 │   ├── Need privacy leakage, memory drift, or trajectory-invariant execution rewards? -> Data Leakage Risks in Tool-Using LLM Agents, Memory-Induced Tool-Drift / MEMDRIFT, TIER
 │   └── Need geospatial or environmental API workflows? -> GeoNatureAgent Benchmark, TerraBench
 ├── Research or ML engineering ability
@@ -85,7 +93,7 @@ What do you need the world to prove?
 └── Training from interaction
     ├── Need a first training substrate? -> AgentGym, AgentGym-RL, Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence, PC Agent-E, Qwen-AgentWorld, Agent-as-Annotators, OpenMobile, WorldEvolver
     ├── Need scalable CUA/SWE/web environment generation? -> Fara-1.5, EnvScaler, ScaleEnv, SWE-Universe, daVinci-Env, TermiGen, VeriEnv, ENVS
-    ├── Need mobile GUI rollout loops, demonstrations, active task-state memory, semi-online RL, or federated mobile training? -> LearnAct / LearnGUI, AgentCPM-GUI / CAGUI, UI-S1, Xiaomi-GUI-0, ATMem / STR-GRPO, FedMABench, PhoneHarness
+    ├── Need mobile GUI rollout loops, demonstrations, active task-state memory, semi-online RL, self-evolution, or federated mobile training? -> LearnAct / LearnGUI, AgentCPM-GUI / CAGUI, UI-S1, AgentProg, UI-Voyager, Xiaomi-GUI-0, ATMem / STR-GRPO, FedMABench, PhoneHarness
     ├── Need live web, tutorial replay, structured web exploration, tool-use, or MCP rollout rewards? -> WebRL, DynaWeb, AgentTrek, AsyncWebRL, Go-Browse, OpenWebRL, PANDO, PROVE / Synthesize and Reward, MCP-Flow, ToolBench-X
     ├── Need embodied, robot, or scientific-discovery rollouts? -> GE-Sim 2.0, iMaC, A2World, WLA-0 / World-Language-Action Model, VERITAS, EmbodiedClaw, SurgVista, HyperSim, D3-Gym, EurekAgent
     ├── Need environment-grounded prompt optimization for game agents? -> Environment-Grounded Automated Prompt Optimization
@@ -96,7 +104,7 @@ What do you need the world to prove?
     ├── Need long-horizon tool-use credit assignment, graph credit assignment, tool-aware rollout filtering, or rollout budgeting? -> Sibling-Guided Credit Distillation, TACO, GraphGPO, TAO-RL, TRACE Rollout Budget Allocation
     ├── Need agent-arena trajectory distillation? -> ShoppingBench Trajectory Primitive
     ├── Need annotation-free mobile GUI adaptation? -> MobileForge
-    ├── Need self-evolution, skill evolution, procedural world-model training, environment probing, or foresight-conditioned planning? -> OpenSkill, SkillCAT, SkillSmith / Skill-Tool Co-Evolution, VASO, ProPlay, ADWM, COMAP, Agent-Authored World Modeling, Internalizing the Future, Ask the World Before Acting, Policy and World Modeling Co-Training, Game Code World Model Generation, SimWorld Studio
+    ├── Need self-evolution, skill evolution, procedural world-model training, environment probing, or foresight-conditioned planning? -> OpenSkill, SkillCAT, SkillSmith / Skill-Tool Co-Evolution, COMFYCLAW, VASO, ProPlay, ADWM, COMAP, Agent-Authored World Modeling, Internalizing the Future, Ask the World Before Acting, Policy and World Modeling Co-Training, Game Code World Model Generation, SimWorld Studio
     ├── Need learnable harness or contract-based scientific-agent construction? -> HarnessBridge, AgentBuild / Rietveld Refinement, MDForge
     ├── Need CUA, GUI/web process reward, trajectory reward modeling, failure-trajectory reuse, capability-targeted environment generation, or milestone-reward training? -> CUA-Gym, PRO-CUA, Plan-RewardBench, VisCritic, Autonomous Evaluation for CUA RL, Failure-Driven CUA Self-Improvement, TRACE / Capability-Targeted Agentic Training, StainFlow, ADMIRE / Adaptive Milestone Reward, BraveGuard / Open-World CUA Guard
     ├── Need RL over arbitrary agents? -> Agent Lightning, rLLM
@@ -133,7 +141,7 @@ What do you need the world to prove?
 | Mobile GUI privacy | CAPED | Task utility and seeded privacy-leakage evaluation | Prototype evidence should be treated as a device-cloud boundary control, not a complete mobile safety solution. |
 | Mobile prompt-injection safety | MIRAGE | Attack success and realism judgment | Screenshot realism does not guarantee deployment coverage. |
 | Long-horizon mobile context management | MemGUI-Agent | MemGUI-Bench and MobileWorld results | Model gains should be separated from benchmark coverage and dataset-replay evidence. |
-| Active mobile task-state memory | ATMem / STR-GRPO | Memory-on/off rollout ablations and scoped mobile task success | Active memory gains should be checked against benchmark scope, memory cost, and out-of-scope action rejection. |
+| Active mobile task-state tracking | ATMem / STR-GRPO; Task-State Representation / TSR | Memory-on/off rollout ablations, wrapper-level task-state tracking, and scoped mobile task success | Active memory and evaluation-wrapper gains should be checked against benchmark scope, memory cost, verifier behavior, and out-of-scope action rejection. |
 | Tool-agent data leakage | Data Leakage Risks in Tool-Using LLM Agents | Risk-type evaluation across realistic benign tasks | Non-adversarial leakage should be audited separately from prompt-injection exfiltration. |
 | Agent skill credential leakage | How Your Credentials Are Leaked by LLM Agent Skills | Static secret extraction, mock-credential sandbox tests, and description-code intent checks | Credential leakage can arise from benign-looking debug paths and cross-modal skill behavior. |
 | Memory and tool drift | Memory-Induced Tool-Drift / MEMDRIFT | Deflection-style drift scoring over MCP tools and agent-memory scenarios | Drift findings depend on memory representation, tool catalog coverage, and judge/model choice. |
@@ -175,6 +183,7 @@ What do you need the world to prove?
 | Compositional skill routing | CompSkillBench / Compositional Skill Routing | Decomposition, retrieval, and DAG-plan checks | Skill routing should be evaluated on composed tasks, not only single-skill retrieval. |
 | Personalized MCP agents | MCP-Persona | Simulated API task success | Persona realism and API diversity need source-level inspection. |
 | Biomedical MCP graph planning | BioManus / MCP-Native Biomedical Agent | Workflow execution and task success | Domain tools need typed graph planning and data-boundary review before reuse. |
+| Interactive EHR database reasoning | EHR-Complex | SQL/Python execution and exact-match clinical database answers | Deidentified EHR database reasoning should be separated from clinical deployment readiness and patient-facing safety. |
 | Environmental geospatial tools | GeoNatureAgent Benchmark | Self-hostable geospatial API case checks | Public code helps reproducibility, but model API keys and data boundaries still matter. |
 | MCP power regulation | SafeMCP | Environment-grounded tool-acquisition risk evaluation | Defense claims depend on threat coverage and MCP server boundaries. |
 | MCP execution-control invariants | MCP Security Invariants Benchmark | Invariant-level MCP execution-control checks | Invariant checks should be reviewed against concrete client, server, and policy boundaries. |
@@ -200,7 +209,7 @@ What do you need the world to prove?
 | Generated-world state persistence | WRBench / Persistent State Core | Camera-intervention and return-view consistency diagnostics over generated videos | Paper-only evidence should be treated as a diagnostic benchmark, not a released resettable runtime. |
 | Hidden world-model inference | Agentic Automata Learning | Oracle feedback and exact DFA checks | Controlled automata worlds test inference discipline, not direct GUI or web deployment readiness. |
 | Long-horizon multi-agent autonomy | Emergence World | Continuous simulation logs and governance metrics | Live external data and long-running dynamics complicate reset and reproducibility. |
-| Open-ended multi-agent coordination | Alem | Survival return and coordination reward | Current public repo status should be checked before treating it as runnable code. |
+| Open-ended multi-agent coordination | Alem | Survival return and coordination reward | Runnable status can change after the 2026-07-03 snapshot; verify repository availability before use. |
 | Terminal agents | Terminal-Bench | Command-line task success | Pin dependency and image versions before comparing agents, because environment maintenance can dominate reproducibility. |
 | General-purpose terminal use | TUA-Bench | Deterministic setup scripts and execution-based scoring | Live web and specialized tool tasks make network and dependency boundaries explicit. |
 | Terminal training environments | LiteCoder-Terminal | Executable terminal environment checks | Synthetic terminal worlds need diversity and hidden-test checks before broad coding-agent claims. |
@@ -268,7 +277,7 @@ What do you need the world to prove?
 | Multimodal CUA skills | VISUALSKILL | Gym-Anything / CUA-World and OSExpert / OSExpert-Eval benchmark deltas | Skill artifacts should be checked for application specificity and visual-context maintenance cost. |
 | Failure-driven tool-agent RL | SENTINEL | Pass-k and task-success metrics on targeted tasks | Failure-generated tasks should be checked for distribution drift and verifier coverage. |
 | Learnable agent harnesses | HarnessBridge | Terminal-Bench and SWE-bench Verified evaluation | Harness compression can hide environment details; inspect rejected actions and projection losses. |
-| Open-world skill self-evolution | OpenSkill | Self-built virtual verifier and final target evaluation | Code is not yet a public runnable artifact; treat as paper/project evidence. |
+| Open-world skill self-evolution | OpenSkill | Self-built virtual verifier and final target evaluation | As of the 2026-07-03 snapshot, public evidence supports the paper/project signal rather than a reusable runnable artifact. |
 | Trajectory-grounded skill evolution | SkillCAT | Replay-based skill-patch assessment | Source-task replay can overfit; check cross-domain transfer before treating skills as reusable. |
 | Skill-tool co-evolution | SkillSmith / Skill-Tool Co-Evolution | Execution-trace utility and benchmark success | Tool edits change capability boundaries; inspect side effects, conflicts, and anti-pattern vetoes before reuse. |
 | Tool-use credit distillation | Sibling-Guided Credit Distillation | Sibling rollout contrast and verifier-aligned credit reassignment | Dense credit references should be checked against shortcut amplification and verifier drift. |
@@ -280,21 +289,12 @@ What do you need the world to prove?
 | Executable game world-model distillation | Game Code World Model Generation | Syntax, mechanics, and playability verification | Generated code worlds should be sandboxed and checked against held-out game mechanics. |
 
 ## Inclusion Criteria
-A resource should enter the main index only when first-party evidence supports:
-- a clear environment or infrastructure role,
-- observation and action interfaces,
-- verifier or reward details,
-- reset, replay, or reproducibility status,
-- trajectory access or a clear reason it is unavailable,
-- sandbox or safety boundary,
-- source confidence and current public access.
+A resource enters the main index only when primary-source evidence identifies its environment or infrastructure role, observation/action interface, verifier or reward, reset/replay status, trajectory access, sandbox or safety boundary, source confidence, and current public access; unclear entries stay out of the main index.
 
-If these fields are still unclear, treat the resource as not yet catalog-ready rather than a main-index signal.
+## Scoring Methodology
+Readiness is a 14-point world-readiness score, not a measure of impact or model quality. It sums seven 0-2 evidence axes: runtime, verifier, reset, trajectories, trainability, sandbox, and production signal.
+Full credit requires runnable runtime evidence, strong verifier evidence, episode reset or dataset replay, public trajectories, public training readiness, a concrete sandbox boundary, and a production or deployment signal. Partial, private, synthetic, or benchmark-dependent evidence earns one point where applicable.
+`Score Limits` lists each axis whose score is below 2 as a deduction from the 14-point maximum; omitted axes earned full credit. Display labels map 0-4 to reference, 5-8 to eval candidate, 9-12 to training candidate, and 13-14 to production-grade, while protocols, safety controls, model releases, product signals, and infrastructure keep kind-specific labels.
 
 ## When Not To Use an Agent World
-Do not use these resources as capability claims when:
-- the evaluation depends only on final text similarity,
-- the environment cannot be reset or replayed,
-- the verifier is unavailable or opaque,
-- the task distribution is known to be contaminated,
-- the agent needs private credentials, live external side effects, or claims that cannot be tied to the cited source.
+Do not use these resources as capability claims when the evaluation is only final-text similarity, the environment cannot be reset or replayed, the verifier is unavailable or opaque, the task distribution is contaminated, or the agent needs private credentials, live external side effects, or claims that cannot be tied to the cited source.

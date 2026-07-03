@@ -30,11 +30,13 @@
 
 - [ ] New or changed resources are edited in `others/data/resources.yaml`.
 - [ ] New resources satisfy the [Selection Guide inclusion criteria](https://github.com/wwn1233/Awesome-Agent-Worlds/blob/main/others/docs/selection-guide.md#inclusion-criteria).
+- [ ] Readiness fields are consistent with the [scoring methodology](https://github.com/wwn1233/Awesome-Agent-Worlds/blob/main/others/docs/selection-guide.md#scoring-methodology).
 - [ ] Source support tags use the vocabulary already present in existing entries.
 - [ ] Reader paths and source confidence values use the public template vocabulary.
 - [ ] Each source URL has a `confidence` value inside the `sources` list.
 - [ ] Canonical category, resource kind, and Agent World surface use the public template vocabulary.
 - [ ] Evidence dates are current for newly added or materially updated resources.
 - [ ] Public copy is reader-facing and source-backed.
+- [ ] Scope, scale, verifier, trajectory, sandbox, training, and production-readiness claims are traceable to primary sources.
 - [ ] README, Resource Index, Hot Papers, public docs, and Static Explorer catalog stay consistent when source data changes.
 - [ ] `others/data/resources.yaml` remains the canonical resource source; `site/data.js` is only the Static Explorer browser bundle.
