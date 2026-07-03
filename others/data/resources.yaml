@@ -7728,6 +7728,83 @@
   - safety-audit
   - build-evals
   - release-gates
+- name: LIBERO-Safety
+  category: embodied-world
+  year: 2026
+  modality:
+  - vision_language_action
+  - robotics
+  - procedural_scenario_generation
+  - safety
+  action_space:
+  - safety_critical_scenario_generation
+  - keypose_driven_demonstration_generation
+  - vla_policy_execution
+  - cross_paradigm_safety_evaluation
+  reward_type: physical_and_semantic_safety_under_constraints
+  verifier: physical_semantic_safety_metrics_and_task_success_evaluation
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: synthetic
+  sandbox: procedural_vla_safety_benchmark
+  production_signal: procedurally_generated_safety_benchmark_for_vla_models
+  url: https://arxiv.org/abs/2606.23686
+  repo:
+  notes: Parametric VLA safety benchmark that procedurally generates
+    safety-critical manipulation scenarios, uses keypose-driven data generation
+    to curate 19,664 collision-free demonstrations, and evaluates eight VLA
+    models plus two embodied foundation models under physical and semantic
+    safety constraints.
+  why_it_matters: Gives embodied-agent release gates a procedural way to test
+    physical and semantic safety constraints instead of relying only on
+    average-case manipulation success.
+  demo_count: 19664
+  id: libero-safety
+  resource_kind: benchmark
+  canonical_category: embodied-world
+  subtype: procedural_vla_safety_benchmark
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2606.23686
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: keypose_generated_collision_free_demonstrations
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: procedural_scenario_generation_and_policy_execution_replay
+  trainability_status: framework_ready
+  sft_fit: candidate
+  rlvr_fit: limited
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  reward_family: safety_gate
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: procedural_safety_benchmark
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: generated_robot_safety_scenarios
+  runtime_host: benchmark_dependent
+  network_policy: not_applicable
+  credential_boundary: not_applicable
+  approval_policy: safety_constraint_review
+  audit_log: scenario_parameters_demonstration_filters_and_safety_evaluation_reports
+  telemetry_type: robot_policy_executions_safety_events_and_failure_modes
+  destructive_action_scope: simulated_or_benchmark_robot_scenarios
+  reader_paths:
+  - safety-audit
+  - build-evals
+  - release-gates
 - name: HyperSim
   category: embodied-world
   year: 2026
@@ -15899,6 +15976,83 @@
   audit_log: endpoint_selection_policy_and_end_state_reports
   telemetry_type: api_discovery_policy_and_state_correctness_metrics
   destructive_action_scope: simulated_business_state
+  reader_paths:
+  - build-evals
+  - release-gates
+  - production-direction
+- name: MANTRA
+  category: api-world
+  year: 2026
+  modality:
+  - tool_use
+  - procedural_manuals
+  - symbolic_world_model
+  - compliance_benchmark
+  action_space:
+  - tool_call_trace
+  - procedural_dependency_following
+  - compliance_check_execution
+  - task_complexity_generation
+  reward_type: smt_validated_trace_compliance
+  verifier: symbolic_world_model_and_trace_level_compliance_checks
+  trainable: partial
+  resettable: benchmark_dependent
+  trajectories: false
+  sandbox: synthetic_tool_compliance_benchmark
+  production_signal: formally_validated_tool_agent_compliance_benchmark_generation
+  url: https://arxiv.org/abs/2605.06334
+  repo:
+  notes: Framework for synthesizing machine-checkable compliance benchmarks from
+    natural-language manuals and tool schemas, independently generating symbolic
+    world models and trace-level checks, validating consistency with SMT solving,
+    and producing 285 tasks across six domains.
+  why_it_matters: Turns procedural compliance for tool-using agents into
+    machine-checkable trace obligations rather than relying on manual benchmark
+    authoring or opaque judge-only scoring.
+  task_count: 285
+  domain_count: 6
+  id: mantra
+  resource_kind: benchmark
+  canonical_category: api-world
+  subtype: tool_agent_compliance_benchmark_generation
+  status: documented
+  content_evidence: true
+  sources:
+  - url: https://arxiv.org/abs/2605.06334
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  trajectory_availability: none
+  trajectory_access: limited
+  trajectory_type: none
+  trajectory_public: false
+  reset_support: partial
+  reset_mechanism: generated_task_and_symbolic_state_replay
+  trainability_status: evaluation_only
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: weak
+  release_gate_fit: strong
+  reward_family: formal_compliance
+  verifier_family: programmatic
+  verifier_recomputable: partial
+  verifier_isolation: smt_validated_synthetic_task_suite
+  negative_side_effect_checks: explicit
+  reproducibility: paper_or_api
+  access: public_page
+  evidence_type: paper
+  isolation_boundary: synthetic_tool_execution_trace
+  runtime_host: unspecified
+  network_policy: not_specified
+  credential_boundary: synthetic_tool_accounts
+  approval_policy: procedural_manual_constraints
+  audit_log: symbolic_world_model_trace_checks_and_compliance_reports
+  telemetry_type: tool_call_traces_and_compliance_check_results
+  destructive_action_scope: synthetic_tool_state
   reader_paths:
   - build-evals
   - release-gates
@@ -31057,6 +31211,80 @@
   - train-rollouts
   - build-evals
   - foundations
+- name: RoboWorld
+  category: embodied-world
+  year: 2026
+  modality:
+  - robotics
+  - world_model
+  - neural_simulator
+  - policy_evaluation
+  action_space:
+  - action_conditioned_world_model_rollout
+  - step_forcing_context_update
+  - robot_policy_execution
+  - task_progress_scoring
+  reward_type: robot_policy_ranking_alignment_and_task_progress_score
+  reward_family: environment_state
+  verifier: task_progress_aware_vlm_scoring_and_real_robot_correlation
+  verifier_family: benchmark
+  verifier_recomputable: partial
+  verifier_isolation: neural_robot_policy_simulator
+  negative_side_effect_checks: implicit
+  trainable: partial
+  trainability_status: framework_ready
+  resettable: partial
+  reset_support: dataset_replay
+  reset_mechanism: world_model_rollout_replay
+  trajectories: synthetic
+  trajectory_availability: synthetic
+  trajectory_access: limited
+  trajectory_type: neural_world_model_robot_policy_rollouts
+  trajectory_public: false
+  sandbox: neural_robot_policy_simulator
+  reproducibility: paper_or_api
+  access: public_page
+  content_evidence: true
+  evidence_type: paper
+  sources:
+  - url: https://arxiv.org/abs/2607.01060
+    type: paper
+    supports:
+    - overview
+    - benchmark_design
+    checked_at: '2026-07-03'
+    confidence: high
+  production_signal: neural_simulator_pipeline_for_robot_policy_evaluation
+  url: https://arxiv.org/abs/2607.01060
+  repo:
+  notes: Automated robot-policy evaluation pipeline pairing a fast
+    autoregressive video world model with task-progress-aware VLM scoring and
+    Step Forcing to make long-horizon neural simulator rollouts more reliable.
+  id: roboworld
+  resource_kind: training_framework
+  canonical_category: embodied-world
+  subtype: neural_robot_policy_evaluation_simulator
+  status: documented
+  why_it_matters: Makes learned world models usable as a policy-evaluation
+    surface for robot agents, reducing dependence on costly physical rollouts
+    while keeping evaluation grounded against real-robot outcomes.
+  sft_fit: weak
+  rlvr_fit: candidate
+  online_rl_fit: limited
+  distillation_fit: candidate
+  release_gate_fit: strong
+  isolation_boundary: neural_world_model_rollout_environment
+  runtime_host: benchmark_dependent
+  network_policy: not_specified
+  credential_boundary: not_specified
+  approval_policy: benchmark_policy_dependent
+  audit_log: world_model_rollouts_task_progress_scores_and_policy_rankings
+  telemetry_type: robot_actions_generated_video_states_and_progress_scores
+  destructive_action_scope: simulated_robot_task_environment
+  reader_paths:
+  - train-rollouts
+  - build-evals
+  - production-direction
 - name: OpenMobile
   category: mobile-world
   year: 2026

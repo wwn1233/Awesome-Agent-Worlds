@@ -2,7 +2,7 @@
 
 ## 2026-07-03
 
-- Released the expanded 670-resource catalog with inclusion rationales for every entry.
+- Released the expanded 673-resource catalog with inclusion rationales for every entry.
 - Added primary-source coverage for GUIGuard-Bench, WebPII, OSWorld-Human, and GameCraft-Bench from project-page, repository, dataset, or arXiv sources.
 - Added primary-source coverage for WebArena-Infinity, GUI-360, CUA-Suite / VideoCUA, WebChain, WebSP-Eval, WebTestBench, CocoaBench, and HippoCamp from project-page, repository, dataset, or arXiv sources.
 - Added primary-source coverage for SGDR / State-Grounded Dynamic Retrieval, OPID / On-Policy Skill Distillation, CRAFT / Counterfactual Credit Assignment, and Tool-RL-Box / Tool-Use RL Collapse from arXiv and repository sources.
@@ -10,8 +10,10 @@
 - Added primary-source coverage for Task-State Representation / TSR from arXiv.
 - Added primary-source coverage for COMFYCLAW from arXiv.
 - Added primary-source coverage for EHR-Complex from arXiv.
+- Added primary-source coverage for MANTRA from arXiv.
+- Added primary-source coverage for LIBERO-Safety and RoboWorld from arXiv.
 - Added primary-source coverage for VeriGUI / Action-Effect Verification, FineState-Bench, AgentProg, UI-Voyager, UI-KOBE, Mobile-Agent-v3.5 / GUI-Owl-1.5, and BEAP-Agent from arXiv and repository sources.
-- Refreshed README routes, Resource Index, Flagship Matrix, Static Explorer data, Hot Papers, and public metadata for the 670-resource snapshot.
+- Refreshed README routes, Resource Index, Flagship Matrix, Static Explorer data, Hot Papers, and public metadata for the 673-resource snapshot.
 - Clarified Hot Papers cycle wording, compact Resource Index row semantics, and the public 14-point readiness scoring methodology.
 - Refined Static Explorer sorting and browser data fields so the public web view exposes reader-facing catalog evidence only.
 - Added a concise Selection Guide reading path that routes readers from starter packs to the decision tree and comparison matrix.

@@ -54,13 +54,13 @@ The reusable asset is the verified trajectory, not just the final score.
 |---|---:|
 | Snapshot date | 2026-07-03 |
 | Hot Papers cycle | 2026-07-03 weekly view |
-| Curated resources | 670 |
+| Curated resources | 673 |
 | Canonical categories | 11 |
 | Public runnable resources | 93 |
 | Weekly Hot Papers strip | 12 |
-| Resources with trajectory assets | 410 |
+| Resources with trajectory assets | 412 |
 | Resources with public repositories | 308 |
-| Resources with inclusion rationale | 670 |
+| Resources with inclusion rationale | 673 |
 | Average readiness score | 8.9 / 14 |
 
 Readiness scores summarize world-readiness evidence; they are not claims about
@@ -101,7 +101,7 @@ category, verifier, reset and trajectory evidence, source confidence, and caveat
 | Build agent evaluations | OSWorld-Verified; OSWorld 2.0; OSWorld-Human; BrowserGym; WebArena-Verified; AndroidWorld; KnowU-Bench; MobileBench-OL; Task-State Representation / TSR; SWE-bench Verified; GameCraft-Bench; ScienceBoard; SCUBA; HealthAdminBench; UI-CUBE; WebStep; ChainWorld; PPT-Eval; CocoaBench; HippoCamp; WebTestBench; ScratchWorld; WorldRoamBench; SIMMER; Inspect AI; Plan-RewardBench | [Selection Guide](./others/docs/selection-guide.md) and [Resource Index](./others/docs/resource-index.md). |
 | Audit agent safety | RedTeamCUA / RTC-Bench; PhoneSafety / Safe, or Simply Incapable?; SafeMCP; MCP Security Invariants Benchmark; AI-Infra-Guard; ToolPrivacyBench; GUIGuard-Bench; WebPII; ATBench-Claw / ATBench-Codex; PlanGuard; Proteus Skill Red Team; Web PII Leakage Benchmark; WebSP-Eval; Snyk Agent Scan | [Selection Guide](./others/docs/selection-guide.md) safety routes and [Hot Papers](./others/docs/hot-papers.md). |
 | Debug agent failures | AgentHijack; RoTS / GUI-RobustEval; Failure-Driven CUA Self-Improvement; WebStep; Terminal Wrench; FATE; BenchJack; Evidence-Supported Bounds for Interactive-Agent Evaluation | Search the [Static Explorer](./site/README.md) by verifier, trajectory, and failure mode. |
-| Train from rollouts | AgentGym; Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence; Gym-Anything / CUA-World; OSExpert / OSExpert-Eval; PC Agent-E; Qwen-AgentWorld; WebRL; WebWorld; WebArena-Infinity; InfiniteWeb; AutoWebWorld; DynaWeb; WebForge; AgentTrek; Go-Browse; GUI-360; CUA-Suite / VideoCUA; WebChain; LearnAct / LearnGUI; UI-S1; Agent-as-Annotators; OpenMobile; SGDR / State-Grounded Dynamic Retrieval; OPID / On-Policy Skill Distillation; CRAFT / Counterfactual Credit Assignment; Tool-RL-Box / Tool-Use RL Collapse; BrowserBC; TRIAGE; GraphGPO; TAO-RL; PreAct; Automating SKILL.md Generation; COMFYCLAW; A2World; VERITAS; ViPSim; EmbodiedClaw; QVal; ECHO; Agentic-Ideation | [Reading Order](./others/docs/reading-order.md) Level 4 and the training-framework section below. |
+| Train from rollouts | AgentGym; Agent-World: Scaling Real-World Environment Synthesis for Evolving General Agent Intelligence; Gym-Anything / CUA-World; OSExpert / OSExpert-Eval; PC Agent-E; Qwen-AgentWorld; WebRL; WebWorld; WebArena-Infinity; InfiniteWeb; AutoWebWorld; DynaWeb; WebForge; AgentTrek; Go-Browse; GUI-360; CUA-Suite / VideoCUA; WebChain; LearnAct / LearnGUI; UI-S1; Agent-as-Annotators; OpenMobile; SGDR / State-Grounded Dynamic Retrieval; OPID / On-Policy Skill Distillation; CRAFT / Counterfactual Credit Assignment; Tool-RL-Box / Tool-Use RL Collapse; BrowserBC; TRIAGE; GraphGPO; TAO-RL; PreAct; Automating SKILL.md Generation; COMFYCLAW; A2World; RoboWorld; VERITAS; ViPSim; EmbodiedClaw; QVal; ECHO; Agentic-Ideation | [Reading Order](./others/docs/reading-order.md) Level 4 and the training-framework section below. |
 | Track production direction | OpenAI Computer-Using Agent; OpenAI Agents SDK Sandbox; OpenAI Apps SDK; MCP Apps Extension; Gemini 2.5 Computer Use; Claude Managed Agents; Amazon Bedrock AgentCore; Cua / Cua Bench; Playwright MCP; Cloudflare Agents SDK; Agent Client Protocol; AG-UI; ContextForge MCP Gateway; OSWorld 2.0; LUMOS; ToolPro; PreAct; Agent JIT Compilation; MCP Inspector; MCP Security Invariants Benchmark; Agent Protocol Governance Gaps | [Hot Papers](./others/docs/hot-papers.md) and [Flagship Matrix](./others/docs/flagship-matrix.md). |
 | Study foundations | WebShop; WebArena; OSWorld; SWE-bench; AppWorld; tau-bench; AgentGym; MineDojo; Text World Models for LLM Agents | [Reading Order](./others/docs/reading-order.md) and the canonical sections below. |
 
@@ -684,6 +684,7 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [EnterpriseOps-Gym](https://enterpriseops-gym.github.io/) [[Code](https://github.com/ServiceNow/EnterpriseOps-Gym)] — Production-grade · Public trajectories
 - [GeoNatureAgent Benchmark](https://github.com/gabrielireland/GeoNatureAgent_Benchmark) [[Code](https://github.com/gabrielireland/GeoNatureAgent_Benchmark)] — Training Candidate · Environmental geospatial tool-agent benchmark
 - [Herculean](https://arxiv.org/abs/2605.14355) — Eval Candidate · Sandbox
+- [MANTRA](https://arxiv.org/abs/2605.06334) — Eval Candidate · SMT-validated tool compliance benchmark generation
 - [MCP-Persona](https://github.com/wwh0411/MCP-Persona) [[Code](https://github.com/wwh0411/MCP-Persona)] — Training Candidate · Personalized MCP tool simulation
 - [MCP-Atlas](https://arxiv.org/abs/2602.00933) [[Code](https://github.com/scaleapi/mcp-atlas)] — Eval Candidate · Runnable
 - [MCP-Cosmos](https://arxiv.org/abs/2605.09131) — Training Infrastructure · MCP world model
@@ -811,10 +812,12 @@ The README and Static Explorer group the 11 canonical categories into broader re
 - [Harness Engineering for Physical AI](https://arxiv.org/abs/2606.09416) — Infrastructure · Robot middleware harness layer
 - [HyperSim](https://arxiv.org/abs/2605.26638) — Training Infrastructure · Sim-to-real environment synthesis
 - [Kairos](https://arxiv.org/abs/2606.16533) [[Code](https://github.com/kairos-agi/kairos-sensenova)] — Model Release · Physical-AI world model stack
+- [LIBERO-Safety](https://arxiv.org/abs/2606.23686) — Eval Candidate · Procedural VLA safety benchmark
 - [LongAct / HoloMind](https://arxiv.org/abs/2605.14504) — Eval Candidate · Long-horizon household planning
 - [PhAIL / Physical AI Leaderboard](https://phail.ai) [[Code](https://github.com/Positronic-Robotics/phail-paper)] — Eval Candidate · Real-robot VLA benchmark
 - [PRISM](https://sj-li.com/PROJ/PRISM/) — Training Candidate · Embodied intent diagnostics
 - [Prisma-World](https://huiqiang-sun.github.io/prisma-world/) — Model Release · Multi-agent video world model
+- [RoboWorld](https://arxiv.org/abs/2607.01060) — Training Infrastructure · Neural robot-policy simulator
 - [SMH-Bench](https://arxiv.org/abs/2606.01912) — Eval Candidate · Smart-home environment-grounded benchmark
 - [Self-Driving Negotiator](https://arxiv.org/abs/2606.15139) — Training Candidate · Hidden-intent driving negotiation benchmark
 - [SIMMER](https://arxiv.org/abs/2606.14574) — Training Candidate · Latent planning failure benchmark

@@ -62,7 +62,7 @@ What do you need the world to prove?
 │   └── Need terminal generality or scalable terminal training worlds? -> Terminal-Bench, TUA-Bench, LiteCoder-Terminal, TermiGen
 ├── Tool/API and enterprise workflow ability
 │   ├── Need stateful apps? -> AppWorld
-│   ├── Need policy-following tool calls? -> tau-bench, tau2-bench
+│   ├── Need policy-following or manual-compliance tool calls? -> tau-bench, tau2-bench, MANTRA
 │   ├── Need agent-native CLI harnesses for existing software? -> CLI-Anything
 │   ├── Need MCP breadth, workflow repair, tool trajectories, governed tools, tool-environment hazards, or safety? -> Toolathlon, TOUCAN, MCP-Flow, Evoflux, Tool Forge, ADK Arena, MCP-AgentBench, CompSkillBench / Compositional Skill Routing, ToolBench-X, SafeMCP, MCP Security Invariants Benchmark, Attested Tool-Server Admission, MCP-SafetyBench
 │   ├── Need MCP runtime faults, privacy leakage, or API-drift regeneration? -> MCP Runtime Fault Taxonomy, MCPPrivacyDetector, DeltaMCP
@@ -86,7 +86,7 @@ What do you need the world to prove?
 │   ├── Need egocentric multimodal tool-agent evaluation? -> EgoBench
 │   ├── Need smart-home environment-grounded tasks? -> SMH-Bench, HomeFlow
 │   ├── Need cross-layer physical AI stack evaluation? -> DeepInsight
-│   ├── Need embodied simulation infrastructure, benchmark construction, or workflow execution? -> Cloud-Native Embodied Simulation Infrastructure, Embodied-BenchClaw, EmbodiedClaw, FATE-VLA
+│   ├── Need embodied simulation infrastructure, benchmark construction, or workflow execution? -> Cloud-Native Embodied Simulation Infrastructure, Embodied-BenchClaw, EmbodiedClaw, FATE-VLA, LIBERO-Safety
 │   ├── Need physical-AI harness or sandbox assurance? -> Harness Engineering for Physical AI, AI Sandboxes
 │   ├── Need real-robot VLA leaderboard-style evaluation? -> PhAIL / Physical AI Leaderboard
 │   └── Need broad knowledge tasks? -> GAIA, AgentBoard
@@ -95,11 +95,11 @@ What do you need the world to prove?
     ├── Need scalable CUA/SWE/web environment generation? -> Fara-1.5, EnvScaler, ScaleEnv, SWE-Universe, daVinci-Env, TermiGen, VeriEnv, ENVS
     ├── Need mobile GUI rollout loops, demonstrations, active task-state memory, semi-online RL, self-evolution, or federated mobile training? -> LearnAct / LearnGUI, AgentCPM-GUI / CAGUI, UI-S1, AgentProg, UI-Voyager, Xiaomi-GUI-0, ATMem / STR-GRPO, FedMABench, PhoneHarness
     ├── Need live web, tutorial replay, structured web exploration, tool-use, or MCP rollout rewards? -> WebRL, DynaWeb, AgentTrek, AsyncWebRL, Go-Browse, OpenWebRL, PANDO, PROVE / Synthesize and Reward, MCP-Flow, ToolBench-X
-    ├── Need embodied, robot, or scientific-discovery rollouts? -> GE-Sim 2.0, iMaC, A2World, WLA-0 / World-Language-Action Model, VERITAS, EmbodiedClaw, SurgVista, HyperSim, D3-Gym, EurekAgent
+    ├── Need embodied, robot, or scientific-discovery rollouts? -> GE-Sim 2.0, iMaC, A2World, RoboWorld, WLA-0 / World-Language-Action Model, VERITAS, EmbodiedClaw, SurgVista, HyperSim, D3-Gym, EurekAgent
     ├── Need environment-grounded prompt optimization for game agents? -> Environment-Grounded Automated Prompt Optimization
     ├── Need step-level agentic RL data middleware? -> Claw-R1
     ├── Need executable harness control flow for agent programs? -> LLM-as-Code Agentic Programming for Agent Harness
-    ├── Need action-conditioned embodied or surgical world-model rollouts? -> iMaC, A2World, WLA-0 / World-Language-Action Model, SurgVista
+    ├── Need action-conditioned embodied, neural robot-policy, or surgical world-model rollouts? -> iMaC, A2World, RoboWorld, WLA-0 / World-Language-Action Model, SurgVista
     ├── Need environment-dynamics auxiliary objectives for agentic RL? -> EnvRL
     ├── Need long-horizon tool-use credit assignment, graph credit assignment, tool-aware rollout filtering, or rollout budgeting? -> Sibling-Guided Credit Distillation, TACO, GraphGPO, TAO-RL, TRACE Rollout Budget Allocation
     ├── Need agent-arena trajectory distillation? -> ShoppingBench Trajectory Primitive
@@ -179,7 +179,7 @@ What do you need the world to prove?
 | MCP server admission control | Attested Tool-Server Admission | Signed clearance and tool-allowlist verification | Admission checks only help when trust roots, allowlists, and audit logs are enforced before tool execution. |
 | MCP description-code consistency | Description-Code Inconsistency / DCIChecker | Description-code pair audit | Natural-language tool descriptions can hide implementation and side-effect drift; use as a pre-execution MCP server review signal. |
 | Argument-level tool provenance | PACT / Argument-Level Provenance | Provenance-aware capability contracts | Tool-call gating should inspect authority-bearing arguments, not only whole invocations. |
-| Tool-composition rewards | TIER | Schema adherence, execution success, and answer correctness | Trajectory-invariant rewards reduce reference-trajectory brittleness but depend on simulated API fidelity. |
+| Tool compliance and rewards | MANTRA; TIER | SMT-validated trace compliance; schema adherence, execution success, and answer correctness | Formal compliance checks and trajectory-invariant rewards reduce judge brittleness but still depend on manual coverage and simulated API fidelity. |
 | Compositional skill routing | CompSkillBench / Compositional Skill Routing | Decomposition, retrieval, and DAG-plan checks | Skill routing should be evaluated on composed tasks, not only single-skill retrieval. |
 | Personalized MCP agents | MCP-Persona | Simulated API task success | Persona realism and API diversity need source-level inspection. |
 | Biomedical MCP graph planning | BioManus / MCP-Native Biomedical Agent | Workflow execution and task success | Domain tools need typed graph planning and data-boundary review before reuse. |
@@ -222,13 +222,13 @@ What do you need the world to prove?
 | AI sandbox assurance | AI Sandboxes | Fidelity, controllability, observability, containment, reproducibility, and governance measures | A sandbox can bound evidence only for the risks and fidelity regime it actually covers. |
 | Embodied benchmark construction | Embodied-BenchClaw | Agentic benchmark synthesis, quality control, and evaluation reporting | Generated benchmarks still need task solvability, verifier leakage, and maintenance checks. |
 | Embodied simulation infrastructure | Cloud-Native Embodied Simulation Infrastructure | Simulation task execution, trajectory collection, and benchmark evaluation | Cloud-scale simulation needs concrete asset, reset, and data-governance checks before production reuse. |
-| VLA failure discovery | FATE-VLA | Failure rate and trajectory/object failure-diversity metrics | Failure-seeking tests expose robustness gaps; they should not be confused with average-case benchmark scores. |
+| VLA safety and failure discovery | FATE-VLA; LIBERO-Safety | Failure rate, trajectory/object failure-diversity, physical safety, and semantic-safety metrics | Failure-seeking and procedural safety tests expose robustness gaps; they should not be confused with average-case benchmark scores. |
 | Real-robot VLA benchmarking | PhAIL / Physical AI Leaderboard | Per-rollout task artifacts plus HRT and KS distributional metrics | Real-robot coverage and lab setup constraints should be read before comparing leaderboard-style results. |
 | Verifiable physical skills | VASO | Model-checker temporal specifications and counterexample traces | Formal contracts improve trust evidence but depend on the completeness of state abstractions and specifications. |
 | Sim-to-real manipulation training | HyperSim | Synthetic scene generation, adversarial trajectories, and real-world execution metrics | Sim-to-real gains should be tied to task distribution, simulator fidelity, and real execution coverage. |
 | Multi-agent generative world models | Gamma-World / Prisma-World | Multi-agent rollout consistency and generation-quality evidence | Generated rollouts should be separated from resettable task environments until task verifiers are added. |
 | Closed-loop robot world simulation | GE-Sim 2.0 | World judge and robot rollout evaluation | Generated video rollouts need task-level judge and proprioceptive-state checks before policy training claims. |
-| Embodied world modeling and workflow execution | iMaC / A2World / WLA-0 / VERITAS / EmbodiedClaw | Robot-policy ranking, action-conditioned simulator rollouts, world-language-action task success, visual-verifier rollout selection, and executable workflow studies | Generated or automated rollouts need policy-rank, verifier, contact, action, state-transition, simulator-release, and public-trajectory checks before physical deployment claims. |
+| Embodied world modeling and workflow execution | iMaC / A2World / RoboWorld / WLA-0 / VERITAS / EmbodiedClaw | Robot-policy ranking, action-conditioned simulator rollouts, neural policy-simulator scoring, world-language-action task success, visual-verifier rollout selection, and executable workflow studies | Generated or automated rollouts need policy-rank, verifier, contact, action, state-transition, simulator-release, and public-trajectory checks before physical deployment claims. |
 | Surgical world modeling | SurgVista | SurgWorld-Bench metrics over long-horizon instrument-tissue dynamics | Medical and surgical rollouts require explicit domain-data boundaries and fidelity checks. |
 | Visual world-model robustness | BadWorld | Rollout degradation under unseen controls | Safety reviews should stress interactive world models under trajectory-adaptive perturbations. |
 | Embodied environment generation | SimWorld Studio | Compiler, physics, VLM-critique, and navigation-task feedback | UE5 generation is promising but should be checked against task diversity and reproducible rollout evidence. |
